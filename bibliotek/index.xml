@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bibliotek on Mikkes blogg</title>
-    <link>https://michaelhelgesen.github.io/michaelhelgesen/bibliotek/</link>
+    <link>/bibliotek/</link>
     <description>Recent content in Bibliotek on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/bibliotek/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/bibliotek/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/bibliotek/single/</link>
+      <link>/bibliotek/single/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/bibliotek/single/</guid>
+      <guid>/bibliotek/single/</guid>
       <description>test:w</description>
     </item>
     <item>
       <title>Show your work!: 10 ways to share your creativity and get discovered</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</link>
+      <link>/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</guid>
+      <guid>/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</guid>
       <description>Presents practical advice for increasing productivity on creative projects and improving their chances for success through strategies of networking and sharing works and ideas with like-minded members of the community and on the Internet.&#xA;Test 2 Ikke så lett å skrive via Zotero. test </description>
     </item>
   </channel>

@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tekster on Mikkes blogg</title>
-    <link>https://michaelhelgesen.github.io/michaelhelgesen/tekster/</link>
+    <link>/tekster/</link>
     <description>Recent content in Tekster on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/tekster/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tekster/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Les med intensjon for bedre effektivitet</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/tekster/les-med-intensjon-for-bedre-effektivitet/</link>
+      <link>/tekster/les-med-intensjon-for-bedre-effektivitet/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/tekster/les-med-intensjon-for-bedre-effektivitet/</guid>
+      <guid>/tekster/les-med-intensjon-for-bedre-effektivitet/</guid>
       <description>Å sette seg et mål før man leser en tekst har for meg vært en svært viktig lærdom.&#xA;Det høres kanskje absurd ut, at noe så enkelt kan være av betydning, men å lese med intensjon har økt min effektivitet betraktelig.&#xA;Overflod av informasjon Tidligere satt jeg min ære i å lese alle bøker jeg startet på fra perm til perm. Det krevde selvsagt både tid og energi. I tillegg skrev jeg mange notater og markerte en rekke setninger.</description>
     </item>
     <item>
       <title>Hvordan velge gode kilder</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/tekster/hvordan-velge-gode-kilder/</link>
+      <link>/tekster/hvordan-velge-gode-kilder/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/tekster/hvordan-velge-gode-kilder/</guid>
+      <guid>/tekster/hvordan-velge-gode-kilder/</guid>
       <description>I følge Kildekompasset.no finnes det to typer kilder å velge mellom:&#xA;primærkilder sekundærkilder. Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisartikkel som omtaler forskningsrapporten er en sekundærkilde.&#xA;Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.&#xA;Slikt sett bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller kan ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.</description>
     </item>
     <item>
       <title>Hvordan kan jeg håndtere kunnskap på en smart og effektiv måte?</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</link>
+      <link>/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</link>
       <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</guid>
+      <guid>/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</guid>
       <description>I mange år har jeg lest og lært om emner som interesserer meg. Formålet har alltid vært å utvikle meg som person, øke min forståelse samt videreformidle kunnskap til andre.&#xA;Jeg har selvsagt lært noe underveis, men hvis jeg sammenligner tid og penger brukt med hva jeg faktisk har produsert, er det er ingen tvil om at mine metoder har vært svært lite effektive. Jeg har blant annet:&#xA;Brukt tusenvis av kroner på bøker, kurs og materiell.</description>
     </item>
     <item>
       <title>Scenialitet: de beste ideene skapes i et fellesskap</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</link>
+      <link>/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</guid>
+      <guid>/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</guid>
       <description>Historien og populærkulturen fremstiller mange av menneskehetens store fremskritt som resultat av enslige geniers standhaftige arbeid i isolasjon fra omverdenen.&#xA;I følge musikeren og produsenten Brian Eno er denne forestillingen om det ensomme kreative geniet en myte. Han mener stort sett alle gode ideer har sitt utspring i et fellesskap 1. At kreativitet ikke er en antisosial handling, men blomstrer i et samfunn bestående av ulike individer med forskjellige talenter som påvirker, inspirerer og oppfordrer hverandre.</description>
     </item>
     <item>
       <title>Opprette sider i Hugo via API</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</link>
+      <link>/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</guid>
+      <guid>/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</guid>
       <description>Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til Zotero , slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.&#xA;Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.</description>
     </item>
     <item>
       <title>Jeg er en evig amatør</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/tekster/jeg-er-en-evig-amator/</link>
+      <link>/tekster/jeg-er-en-evig-amator/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/tekster/jeg-er-en-evig-amator/</guid>
+      <guid>/tekster/jeg-er-en-evig-amator/</guid>
       <description>«Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre», skriver Austin Kleon i sin bok «Show your work» . 1&#xA;Dette sitatet, og boken forøvrig, inspirerte meg til å ta Kleon på ordet.&#xA;Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende og forhåpentligvis inspirerende.&#xA;Nå er ikke jeg en kunstner slik som han eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser.</description>
     </item>
   </channel>

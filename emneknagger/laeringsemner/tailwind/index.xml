@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tailwind on Mikkes blogg</title>
-    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/tailwind/</link>
+    <link>/emneknagger/laeringsemner/tailwind/</link>
     <description>Recent content in Tailwind on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Fri, 16 Aug 2024 09:43:16 +0200</lastBuildDate>
-    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/tailwind/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/emneknagger/laeringsemner/tailwind/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-04-21</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-04-21/</link>
+      <link>/laeringslogg/2024-04-21/</link>
       <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-04-21/</guid>
+      <guid>/laeringslogg/2024-04-21/</guid>
       <description>Javascript hasOwnProperty(property): En metode for å sjekke om angit egenskap er definert i gjeldende objekt eller prototype. Object.setPrototypeOf(currentObject, targetObject): Angi et objekt (targetObject) som gjeldende objekt (currentTarget) skal arve fra. Man kan arve metoder og egenskaper fra mange ulike objekter. call(): En metode for å kopiere egenskaper fra en construktor til et annet objekt. Men skal de linkes må det gjøres med Object.setPropertyOf. Det oppstår ikke en automatisk link ved å bruke call.</description>
     </item>
   </channel>

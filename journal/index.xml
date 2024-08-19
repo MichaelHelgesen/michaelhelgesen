@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>journal on Mikkes blogg</title>
-    <link>https://michaelhelgesen.github.io/michaelhelgesen/journal/</link>
+    <link>/journal/</link>
     <description>Recent content in journal on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/journal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/journal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Min tredje seksjon i zettelkasten</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/journal/min-tredje-seksjon-i-zettelkasten/</link>
+      <link>/journal/min-tredje-seksjon-i-zettelkasten/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/journal/min-tredje-seksjon-i-zettelkasten/</guid>
+      <guid>/journal/min-tredje-seksjon-i-zettelkasten/</guid>
       <description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.&#xA;Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.&#xA;Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper (1).</description>
     </item>
     <item>
       <title>Endelig mulig å opprette sider i HUGO fra ekstern data!</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/journal/sider-fra-data-i-hugo/</link>
+      <link>/journal/sider-fra-data-i-hugo/</link>
       <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/journal/sider-fra-data-i-hugo/</guid>
+      <guid>/journal/sider-fra-data-i-hugo/</guid>
       <description>I dag kom jeg helt tilfeldig over en video på YouTube som opplyste om at HUGO nå endelig kan opprette sider fra ekstern data som blant annet JSON, YAML og XML.&#xA;Det er gode nyheter, for mangelen på en funksjon som kan opprette sider basert på data fra API-er har vært en av HUGOs størtste ulemper. Det har vært mulig å få til via egne scripts, men nå er det altså integrert i løsningen.</description>
     </item>
     <item>
       <title>Nullstilling av bokhyllen</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/journal/nullstilling-av-bokhyllen/</link>
+      <link>/journal/nullstilling-av-bokhyllen/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/journal/nullstilling-av-bokhyllen/</guid>
+      <guid>/journal/nullstilling-av-bokhyllen/</guid>
       <description>I dag startet jeg jobben med å tømme bokhyllene for bøker.&#xA;I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.&#xA;De færreste av bøkene er lest, mens de de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.&#xA;Dagens bokhylle representerer således sløsing av både penger, tid og energi, og skal dermed nullstilles, selv om noen mener det er fornuftig å ha et antilibrary .</description>
     </item>
   </channel>

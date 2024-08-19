@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Mikkes blogg</title>
-    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/linux/</link>
+    <link>/emneknagger/laeringsemner/linux/</link>
     <description>Recent content in Linux on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sat, 17 Aug 2024 08:57:50 +0200</lastBuildDate>
-    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/emneknagger/laeringsemner/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-06-07</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-06-07/</link>
+      <link>/laeringslogg/2024-06-07/</link>
       <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-06-07/</guid>
+      <guid>/laeringslogg/2024-06-07/</guid>
       <description>Hugo For å vise bilder fra HUGOs «assets»-mappe brukes følgende: {{ (resources.Get &amp;quot;[bane]&amp;quot;).RelPermalink }}. Man må huske på å angi «assets»-mappe i «config.toml»: [[module.mounts]] source = &amp;#34;assets&amp;#34; target = &amp;#34;assets&amp;#34; Man oppdaterer HUGO ved å blytte ny versjon til bin. For å starte server uten å bygge «public»-versjon: hugo server --renderToMemory Linux whereis er en kommando for å lokalisere en «package», for eksempel HUGO: whereis hugo </description>
     </item>
     <item>
       <title>2024-05-22</title>
-      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-05-22/</link>
+      <link>/laeringslogg/2024-05-22/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-05-22/</guid>
+      <guid>/laeringslogg/2024-05-22/</guid>
       <description>Hugo Jeg hadde et ønske om å markere eksterne lenker på nettsiden med et ikon. Det kan man gjøre i HUGO ved hjelp av såkalte «markup hooks ». Linux Lærte om «symlinks» eller «snarveier» i Linux. Opprette en symlink: ln -s [bane til fil / mappe] [snarvei] Eks: ln -s test/testfil.txt link.txt. link.txt peker til testfil.txt. Slette symlink: unlink [bane til symlink] Se etter symlink: ls -l [bane til symlink] </description>
     </item>
   </channel>
