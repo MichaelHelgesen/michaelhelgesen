@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zettelkasten on Mikkes blogg</title>
+    <link>/emneknagger/tekstemner/zettelkasten/</link>
+    <description>Recent content in Zettelkasten on Mikkes blogg</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <lastBuildDate>Tue, 13 Aug 2024 11:12:02 +0200</lastBuildDate>
+    <atom:link href="/emneknagger/tekstemner/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Min tredje seksjon i zettelkasten</title>
+      <link>/journal/min-tredje-seksjon-i-zettelkasten/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <guid>/journal/min-tredje-seksjon-i-zettelkasten/</guid>
+      <description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.&#xA;Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.&#xA;Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper (1).</description>
+    </item>
+  </channel>
+</rss>
