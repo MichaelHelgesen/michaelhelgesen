@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emneknagger on Mikkes blogg</title>
-    <link>/emneknagger/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/</link>
     <description>Recent content in Emneknagger on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <atom:link href="/emneknagger/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

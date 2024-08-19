@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Strapi on Mikkes blogg</title>
-    <link>/emneknagger/laeringsemner/strapi/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/strapi/</link>
     <description>Recent content in Strapi on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sat, 17 Aug 2024 08:41:10 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/strapi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/strapi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-06-03</title>
-      <link>/laeringslogg/2024-06-03/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-06-03/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-06-03/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-06-03/</guid>
       <description>Strapi Hvordan berike felter i API-kallet med ?populate[0]feltnavn&amp;amp;populate[1]feltnavn. Dette bygger en egen liste å jobbe med. Curl Legg til -g for å kunne bruke {} og [] uten å måtte «escape» dem. Curl overser dem. Bruk &amp;quot;&amp;amp;&amp;quot; i hermetegn for å inkludere tegn som «&amp;amp;» i en streng. </description>
     </item>
     <item>
       <title>2024-05-29</title>
-      <link>/laeringslogg/2024-05-29/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-05-29/</link>
       <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-05-29/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-05-29/</guid>
       <description>Strapi Installerte Strapi for første gang og testet det å lage innholds-komponenter, hvordan finne komponenter i API-kallet og gå «dypere» inn i dataene. </description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Mikkes blogg</title>
-    <link>/emneknagger/laeringsemner/git/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/git/</link>
     <description>Recent content in Git on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Fri, 16 Aug 2024 11:50:42 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-05-06</title>
-      <link>/laeringslogg/2024-05-06/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-05-06/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-05-06/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-05-06/</guid>
       <description>Git For å tilbakestille en «git commit» kan vi bruke git reset. Det vil kansellere alt som er i en «commit» men foreløpig ikke «pushed». Vær forsiktig med dette, da endringer utført kan forsvinne. Jeg snakker av erfaring. </description>
     </item>
     <item>
       <title>2024-04-23</title>
-      <link>/laeringslogg/2024-04-23/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-04-23/</link>
       <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-23/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-04-23/</guid>
       <description>Git Hvis man ønsker å angre git commit kan man skrive git reset. Hugo isset: Sjekker om nøkkel eksisterer. For eksempel {{ if isset .Type }} if: Sjekker om uttrykk er sant. if eq: Sammenligner to argumenter. if not: Returnerer bool av argument. dict &amp;quot;key&amp;quot; &amp;quot;value&amp;quot;: Kalles å lage en &amp;ldquo;map&amp;rdquo; fra en liste av nøkler og verdier. Er tilsvarende et objekt i JavaScript. Vi kan sende variabler i &amp;ldquo;partial templates&amp;rdquo;: {{ partial &amp;quot;list.</description>
     </item>
   </channel>

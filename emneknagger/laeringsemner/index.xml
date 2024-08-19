@@ -2,135 +2,135 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emneknagger i læringsloggen on Mikkes blogg</title>
-    <link>/emneknagger/laeringsemner/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/</link>
     <description>Recent content in Emneknagger i læringsloggen on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <atom:link href="/emneknagger/laeringsemner/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
-      <link>/emneknagger/laeringsemner/hugo/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/hugo/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/hugo/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>/emneknagger/laeringsemner/markdown/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/markdown/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/markdown/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Zotero</title>
-      <link>/emneknagger/laeringsemner/zotero/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/zotero/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/zotero/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/zotero/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>/emneknagger/laeringsemner/linux/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/linux/</link>
       <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/linux/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Curl</title>
-      <link>/emneknagger/laeringsemner/curl/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/curl/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/curl/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/curl/</guid>
       <description></description>
     </item>
     <item>
       <title>Strapi</title>
-      <link>/emneknagger/laeringsemner/strapi/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/strapi/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/strapi/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/strapi/</guid>
       <description></description>
     </item>
     <item>
       <title>Figma</title>
-      <link>/emneknagger/laeringsemner/figma/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/figma/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/figma/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/figma/</guid>
       <description></description>
     </item>
     <item>
       <title>Css</title>
-      <link>/emneknagger/laeringsemner/css/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/css/</link>
       <pubDate>Thu, 09 May 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/css/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>/emneknagger/laeringsemner/git/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/git/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/git/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Devtools</title>
-      <link>/emneknagger/laeringsemner/devtools/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/devtools/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/devtools/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/devtools/</guid>
       <description></description>
     </item>
     <item>
       <title>Gnome-Terminal</title>
-      <link>/emneknagger/laeringsemner/gnome-terminal/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/gnome-terminal/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/gnome-terminal/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/gnome-terminal/</guid>
       <description></description>
     </item>
     <item>
       <title>Html</title>
-      <link>/emneknagger/laeringsemner/html/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/html/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/html/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/html/</guid>
       <description></description>
     </item>
     <item>
       <title>Design</title>
-      <link>/emneknagger/laeringsemner/design/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/design/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/design/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/design/</guid>
       <description></description>
     </item>
     <item>
       <title>Nvim</title>
-      <link>/emneknagger/laeringsemner/nvim/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/nvim/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/nvim/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/nvim/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>/emneknagger/laeringsemner/javascript/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/javascript/</link>
       <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/javascript/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Tailwind</title>
-      <link>/emneknagger/laeringsemner/tailwind/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/tailwind/</link>
       <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/tailwind/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/tailwind/</guid>
       <description></description>
     </item>
     <item>
       <title>Jq</title>
-      <link>/emneknagger/laeringsemner/jq/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/jq/</link>
       <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/jq/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/jq/</guid>
       <description></description>
     </item>
     <item>
       <title>Fedora</title>
-      <link>/emneknagger/laeringsemner/fedora/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/fedora/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/fedora/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/fedora/</guid>
       <description></description>
     </item>
   </channel>

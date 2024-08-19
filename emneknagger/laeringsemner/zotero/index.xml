@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zotero on Mikkes blogg</title>
-    <link>/emneknagger/laeringsemner/zotero/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/zotero/</link>
     <description>Recent content in Zotero on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sat, 17 Aug 2024 09:12:47 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/zotero/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/zotero/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-07-18</title>
-      <link>/laeringslogg/2024-07-18/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-07-18/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-07-18/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-07-18/</guid>
       <description>Zotero Lærte å hente notater og vedlegg fra Zotero. api.zotero.org/groups/&amp;lt;ID&amp;gt;/items/&amp;lt;ID&amp;gt;/children </description>
     </item>
   </channel>

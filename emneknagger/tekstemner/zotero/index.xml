@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zotero on Mikkes blogg</title>
-    <link>/emneknagger/tekstemner/zotero/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/tekstemner/zotero/</link>
     <description>Recent content in Zotero on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Fri, 09 Aug 2024 22:42:09 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/tekstemner/zotero/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/tekstemner/zotero/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Opprette sider i Hugo via API</title>
-      <link>/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</guid>
       <description>Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til Zotero , slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.&#xA;Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.</description>
     </item>
   </channel>

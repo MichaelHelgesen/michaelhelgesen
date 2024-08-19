@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lenker on Mikkes blogg</title>
-    <link>/lenker/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/lenker/</link>
     <description>Recent content in lenker on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="/lenker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/lenker/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Devtools on Mikkes blogg</title>
-    <link>/emneknagger/laeringsemner/devtools/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/devtools/</link>
     <description>Recent content in Devtools on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Fri, 16 Aug 2024 11:11:10 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/devtools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/devtools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-04-30</title>
-      <link>/laeringslogg/2024-04-30/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-04-30/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-30/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-04-30/</guid>
       <description>Hugo Endret oppsett av HUGO til «branch»- og «leaf» bundles » for enklere håndtering av bilder og andre filer tilknyttet den enkelte side. På denne måten ligger alle ressurser samme sted som teksten, i motsetning til å ha alle ressurser i en og samme ressurs-mappe, som fort kan vokse seg stor og uoversiktlig. Lærte også om HUGOs bildeprosessor som lar oss manipulere bilder ved skalering, beskjæring, rotering og fargelegging, for å nevne noen.</description>
     </item>
   </channel>

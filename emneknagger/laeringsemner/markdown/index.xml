@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on Mikkes blogg</title>
-    <link>/emneknagger/laeringsemner/markdown/</link>
+    <link>https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/markdown/</link>
     <description>Recent content in Markdown on Mikkes blogg</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sat, 17 Aug 2024 09:26:14 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://michaelhelgesen.github.io/michaelhelgesen/emneknagger/laeringsemner/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-08-15</title>
-      <link>/laeringslogg/2024-08-15/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-08-15/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-08-15/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-08-15/</guid>
       <description>Hugo Lærte å kommentere ut kode, slik at man kan vise kode uten at den kjøres. &amp;lt;/* ref &amp;#34;om&amp;#34; */&amp;gt; Markdown Vi kan «escape» «backticks» i kodefelt ved å starte og avslutte kodefeltet med to «backticks» i stedet for en. `` kode `x` mer kode`` </description>
     </item>
     <item>
       <title>2024-04-29</title>
-      <link>/laeringslogg/2024-04-29/</link>
+      <link>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-04-29/</link>
       <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-29/</guid>
+      <guid>https://michaelhelgesen.github.io/michaelhelgesen/laeringslogg/2024-04-29/</guid>
       <description>Hugo Om man ønsker å legge til en tittel («title») i en «shortcode»-lenke angir man den i anførselstegn: [Dette er en lenke]({{&amp;lt; ref &amp;#34;../om&amp;#34;&amp;gt;}} &amp;#34;Tittel&amp;#34;) Markdown Lærte hvordan man angir kommentarer i «markdown»-filer: [comment]: &amp;lt;&amp;gt; (Teksten i denne parantesen vil ikke synes) </description>
     </item>
   </channel>
