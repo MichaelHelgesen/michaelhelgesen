@@ -8,10 +8,17 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>2024-09-04</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-04/</link>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-04/</guid>
+      <description>Hugo Når man lager public versjon av HUGO vil alle bilder som hentes med resources.Get.Remote havne på rot i public-mappen. Det synes jeg blir rotete. Man kan endre dette ved å angi en mappe foran filnavnet på ressursene man laster ned. Så i steden for bildenavn.jpg kan man angi images/bildenavn-jpg. Se mer her . Linux Ønsker man å fjerne alt i en mappe fortsett fra én fil kan man i terminalen skrive: rm -v -rf !</description>
+    </item>
+    <item>
       <title>2024-09-02</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-29/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-02/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-29/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-02/</guid>
       <description>Hugo Lærte å angi «site wide» og:image slik at jeg slipper å angi «open graph»-bilde manuelt på samtlige sider. HUGO ser etter Params.images i head.html. Finner den ingen, benyttes det globale bildet. Man kan sjekke om en side er en term ved å benytte data.term. </description>
     </item>
     <item>

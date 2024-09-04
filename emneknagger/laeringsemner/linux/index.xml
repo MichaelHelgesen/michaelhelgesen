@@ -6,8 +6,15 @@
     <description>Recent content in Linux on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Wed, 04 Sep 2024 10:48:24 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2024 20:21:54 +0200</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-04</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-04/</link>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-04/</guid>
+      <description>Hugo Når man lager public versjon av HUGO vil alle bilder som hentes med resources.Get.Remote havne på rot i public-mappen. Det synes jeg blir rotete. Man kan endre dette ved å angi en mappe foran filnavnet på ressursene man laster ned. Så i steden for bildenavn.jpg kan man angi images/bildenavn-jpg. Se mer her . Linux Ønsker man å fjerne alt i en mappe fortsett fra én fil kan man i terminalen skrive: rm -v -rf !</description>
+    </item>
     <item>
       <title>2024-08-22</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-22/</link>
