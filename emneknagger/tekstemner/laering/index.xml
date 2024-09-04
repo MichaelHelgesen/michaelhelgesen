@@ -1,46 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Læring on Michael Helgesen</title>
-    <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/laering/</link>
-    <description>Recent content in Læring on Michael Helgesen</description>
-    <generator>Hugo</generator>
-    <language>nb</language>
-    <atom:link href="http://www.michaelhelgesen.no/emneknagger/tekstemner/laering/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hvordan velge gode kilder</title>
-      <link>http://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</link>
-      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</guid>
-      <description>I følge Kildekompasset.no finnes det to typer kilder å velge mellom:&#xA;primærkilder sekundærkilder. Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisartikkel som omtaler forskningsrapporten er en sekundærkilde.&#xA;Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.&#xA;Derfor bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.</description>
-    </item>
-    <item>
-      <title>Min tredje seksjon i zettelkasten</title>
-      <link>http://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</link>
-      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</guid>
-      <description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.&#xA;Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.&#xA;Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper 1 .</description>
-    </item>
-    <item>
-      <title>Hvordan kan jeg håndtere kunnskap på en smart og effektiv måte?</title>
-      <link>http://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</link>
-      <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</guid>
-      <description>I mange år har jeg lest og lært om emner som interesserer meg. Formålet har alltid vært å utvikle meg som person, øke min forståelse samt videreformidle kunnskap til andre.&#xA;Jeg har selvsagt lært noe underveis, men hvis jeg sammenligner tid og penger brukt med hva jeg faktisk har produsert, er det er ingen tvil om at mine metoder har vært svært lite effektive. Jeg har blant annet:&#xA;Brukt tusenvis av kroner på bøker, kurs og materiell.</description>
-    </item>
-    <item>
-      <title>Jeg er en evig amatør</title>
-      <link>http://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</link>
-      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</guid>
-      <description>«Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre», skriver Austin Kleon i sin bok «Show your work» . 1&#xA;Dette sitatet, og boken forøvrig, inspirerte meg til å ta Kleon på ordet.&#xA;Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende og forhåpentligvis inspirerende.&#xA;Nå er ikke jeg en kunstner slik som Kleon eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser.</description>
-    </item>
-    <item>
-      <title>Nullstilling av bokhyllen</title>
-      <link>http://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</link>
-      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</guid>
-      <description>I dag startet jeg jobben med å tømme bokhyllene for bøker.&#xA;I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.&#xA;De færreste av bøkene er lest, mens de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.&#xA;Dagens bokhylle representerer således sløsing av både penger, tid og energi, og skal dermed nullstilles, selv om noen mener det er fornuftig å ha et antilibrary .</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Læring on Michael Helgesen</title><link>http://www.michaelhelgesen.no/emneknagger/tekstemner/laering/</link><description>Recent content in Læring on Michael Helgesen</description><generator>Hugo</generator><language>nb</language><atom:link href="http://www.michaelhelgesen.no/emneknagger/tekstemner/laering/index.xml" rel="self" type="application/rss+xml"/><item><title>Hvordan velge gode kilder</title><link>http://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</link><pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate><guid>http://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</guid><description>I følge Kildekompasset.no finnes det to typer kilder å velge mellom:
+primærkilder sekundærkilder. Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisartikkel som omtaler forskningsrapporten er en sekundærkilde.
+Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.
+Derfor bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.</description></item><item><title>Min tredje seksjon i zettelkasten</title><link>http://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</link><pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate><guid>http://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</guid><description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.
+Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.
+Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper 1 .</description></item><item><title>Hvordan kan jeg håndtere kunnskap på en smart og effektiv måte?</title><link>http://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</link><pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate><guid>http://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</guid><description>I mange år har jeg lest og lært om emner som interesserer meg. Formålet har alltid vært å utvikle meg som person, øke min forståelse samt videreformidle kunnskap til andre.
+Jeg har selvsagt lært noe underveis, men hvis jeg sammenligner tid og penger brukt med hva jeg faktisk har produsert, er det er ingen tvil om at mine metoder har vært svært lite effektive. Jeg har blant annet:
+Brukt tusenvis av kroner på bøker, kurs og materiell.</description></item><item><title>Jeg er en evig amatør</title><link>http://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</link><pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate><guid>http://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</guid><description>«Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre», skriver Austin Kleon i sin bok «Show your work» . 1
+Dette sitatet, og boken forøvrig, inspirerte meg til å ta Kleon på ordet.
+Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende og forhåpentligvis inspirerende.
+Nå er ikke jeg en kunstner slik som Kleon eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser.</description></item><item><title>Nullstilling av bokhyllen</title><link>http://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</link><pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate><guid>http://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</guid><description>I dag startet jeg jobben med å tømme bokhyllene for bøker.
+I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.
+De færreste av bøkene er lest, mens de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.
+Dagens bokhylle representerer således sløsing av både penger, tid og energi, og skal dermed nullstilles, selv om noen mener det er fornuftig å ha et antilibrary .</description></item></channel></rss>
