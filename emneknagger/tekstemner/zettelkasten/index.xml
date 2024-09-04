@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zettelkasten on Michael Helgesen</title>
-    <link>https://michaelhelgesen.no/emneknagger/tekstemner/zettelkasten/</link>
+    <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/zettelkasten/</link>
     <description>Recent content in Zettelkasten on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Wed, 04 Sep 2024 12:57:29 +0200</lastBuildDate>
-    <atom:link href="https://michaelhelgesen.no/emneknagger/tekstemner/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/tekstemner/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Min tredje seksjon i zettelkasten</title>
-      <link>https://michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</link>
+      <link>https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</guid>
+      <guid>https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</guid>
       <description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.&#xA;Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.&#xA;Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper 1 .</description>
     </item>
   </channel>
