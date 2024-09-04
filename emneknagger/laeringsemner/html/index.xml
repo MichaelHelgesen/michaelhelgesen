@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on Michael Helgesen</title>
-    <link>/emneknagger/laeringsemner/html/</link>
+    <link>http://www.michaelhelgesen.no/emneknagger/laeringsemner/html/</link>
     <description>Recent content in Html on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Wed, 28 Aug 2024 13:39:44 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Sep 2024 10:48:24 +0200</lastBuildDate>
+    <atom:link href="http://www.michaelhelgesen.no/emneknagger/laeringsemner/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-04-30</title>
-      <link>/laeringslogg/2024-04-30/</link>
+      <link>http://www.michaelhelgesen.no/laeringslogg/2024-04-30/</link>
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-30/</guid>
+      <guid>http://www.michaelhelgesen.no/laeringslogg/2024-04-30/</guid>
       <description>Hugo Endret oppsett av HUGO til «branch»- og «leaf» bundles » for enklere håndtering av bilder og andre filer tilknyttet den enkelte side. På denne måten ligger alle ressurser samme sted som teksten, i motsetning til å ha alle ressurser i en og samme ressurs-mappe, som fort kan vokse seg stor og uoversiktlig. Lærte også om HUGOs bildeprosessor som lar oss manipulere bilder ved skalering, beskjæring, rotering og fargelegging, for å nevne noen.</description>
     </item>
   </channel>

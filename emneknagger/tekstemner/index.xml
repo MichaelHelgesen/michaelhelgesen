@@ -2,86 +2,86 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tekstemner on Michael Helgesen</title>
-    <link>/emneknagger/tekstemner/</link>
+    <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/</link>
     <description>Recent content in Tekstemner on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <atom:link href="/emneknagger/tekstemner/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.michaelhelgesen.no/emneknagger/tekstemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Effektivitet</title>
-      <link>/emneknagger/tekstemner/effektivitet/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/effektivitet/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/effektivitet/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/effektivitet/</guid>
       <description></description>
     </item>
     <item>
       <title>Lesing</title>
-      <link>/emneknagger/tekstemner/lesing/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/lesing/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/lesing/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/lesing/</guid>
       <description></description>
     </item>
     <item>
       <title>Skriving</title>
-      <link>/emneknagger/tekstemner/skriving/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/skriving/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</guid>
       <description></description>
     </item>
     <item>
       <title>Zettelkasten</title>
-      <link>/emneknagger/tekstemner/zettelkasten/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/zettelkasten/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/zettelkasten/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/zettelkasten/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>/emneknagger/tekstemner/hugo/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/hugo/</link>
       <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/hugo/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Programmering</title>
-      <link>/emneknagger/tekstemner/programmering/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</link>
       <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/programmering/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</guid>
       <description></description>
     </item>
     <item>
       <title>Kreativitet</title>
-      <link>/emneknagger/tekstemner/kreativitet/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/kreativitet/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/kreativitet/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/kreativitet/</guid>
       <description></description>
     </item>
     <item>
       <title>Api</title>
-      <link>/emneknagger/tekstemner/api/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/api/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/api/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/api/</guid>
       <description></description>
     </item>
     <item>
       <title>Zotero</title>
-      <link>/emneknagger/tekstemner/zotero/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/zotero/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/zotero/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/zotero/</guid>
       <description></description>
     </item>
     <item>
       <title>Inspirasjon</title>
-      <link>/emneknagger/tekstemner/inspirasjon/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/inspirasjon/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/inspirasjon/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/inspirasjon/</guid>
       <description></description>
     </item>
     <item>
       <title>Læring</title>
-      <link>/emneknagger/tekstemner/laering/</link>
+      <link>http://www.michaelhelgesen.no/emneknagger/tekstemner/laering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/tekstemner/laering/</guid>
+      <guid>http://www.michaelhelgesen.no/emneknagger/tekstemner/laering/</guid>
       <description></description>
     </item>
   </channel>
