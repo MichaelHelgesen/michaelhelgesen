@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jq on Mikkes blogg</title>
+    <title>Jq on Michael Helgesen</title>
     <link>/emneknagger/laeringsemner/jq/</link>
-    <description>Recent content in Jq on Mikkes blogg</description>
+    <description>Recent content in Jq on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Fri, 16 Aug 2024 09:42:08 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 27 Aug 2024 17:24:51 +0200</lastBuildDate>
     <atom:link href="/emneknagger/laeringsemner/jq/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-04-20</title>

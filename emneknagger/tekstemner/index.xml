@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Emneknagger for tekstene og journalen on Mikkes blogg</title>
+    <title>Tekstemner on Michael Helgesen</title>
     <link>/emneknagger/tekstemner/</link>
-    <description>Recent content in Emneknagger for tekstene og journalen on Mikkes blogg</description>
+    <description>Recent content in Tekstemner on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <atom:link href="/emneknagger/tekstemner/index.xml" rel="self" type="application/rss+xml" />

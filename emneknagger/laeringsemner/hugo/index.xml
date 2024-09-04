@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Mikkes blogg</title>
+    <title>Hugo on Michael Helgesen</title>
     <link>/emneknagger/laeringsemner/hugo/</link>
-    <description>Recent content in Hugo on Mikkes blogg</description>
+    <description>Recent content in Hugo on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Sat, 17 Aug 2024 09:26:14 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2024 12:16:04 +0200</lastBuildDate>
     <atom:link href="/emneknagger/laeringsemner/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-02</title>
+      <link>/laeringslogg/2024-08-29/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-29/</guid>
+      <description>Hugo Lærte å angi «site wide» og:image slik at jeg slipper å angi «open graph»-bilde manuelt på samtlige sider. HUGO ser etter Params.images i head.html. Finner den ingen, benyttes det globale bildet. Man kan sjekke om en side er en term ved å benytte data.term. </description>
+    </item>
+    <item>
+      <title>2024-08-29</title>
+      <link>/laeringslogg/2024-08-27/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-27/</guid>
+      <description>Hugo Man kan bruke markdownify for å konvertere for eksempel «YAML» til «markdown». Det er viktig å forstå forskjellen på variabler med stor og liten forbokstav i «frontmatter» i HUGO. Stor forbokstav som .Title indikerer HUGOs standarder, mens liten forbokstav som .beskrivelse indikerer egendefinerte. --- title: Les siste om HUGO beskrivelse: Få med deg det siste nye om HUGO. --- I eksempelet over hentes «title» med .Title, mens «beskrivelse» hentes med .</description>
+    </item>
+    <item>
+      <title>2024-08-26</title>
+      <link>/laeringslogg/2024-08-26/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-26/</guid>
+      <description>Hugo md5 brukes for å kryptere en streng. Cloudinary For å hente metadata i URL: ...fields[]=width&amp;amp;fields[]=context </description>
+    </item>
+    <item>
+      <title>2024-08-20</title>
+      <link>/laeringslogg/2024-08-20/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-20/</guid>
+      <description>Cloudinary For å hente bilder fra en spesifikk mappe via API i HUGO kan man bruke følgende streng: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34; }} For sortering, begrensning på antall og utvalgte datafelter kan man gjøre som følger: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34;&amp;amp;max_results=&amp;#34; .number &amp;#34;&amp;amp;sort_by[][created_at]=desc&amp;amp;&amp;amp;fields[]=width&amp;amp;fields[]=height&amp;amp;fields[]=url&amp;amp;fields[]=filename&amp;amp;fields[]=context&amp;#34; }} Linux For å se hvilken versjon av BASH man kan man skrive echo &amp;quot;$SHELL&amp;quot; i terminalen.</description>
+    </item>
     <item>
       <title>2024-08-15</title>
       <link>/laeringslogg/2024-08-15/</link>
@@ -111,7 +139,7 @@
       <link>/laeringslogg/2024-04-27/</link>
       <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
       <guid>/laeringslogg/2024-04-27/</guid>
-      <description>Gnome-Terminal Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md. Hugo Shortcodes er kommandoer vi kan angi i &amp;ldquo;markdown&amp;rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter: {{ /* Metode 1 */ }} {{ &amp;lt; myShortcode data=&amp;#34;This is data&amp;#34; &amp;gt; }} {{ /* Metode 2 */ }} {{ &amp;lt; myShortcode &amp;gt; }} This is data {{ &amp;lt; /myShortcode &amp;gt;}} myShortcode over henviser til myShortcode.</description>
+      <description>Linux Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md. Hugo Shortcodes er kommandoer vi kan angi i &amp;ldquo;markdown&amp;rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter: {{ /* Metode 1 */ }} {{ &amp;lt; myShortcode data=&amp;#34;This is data&amp;#34; &amp;gt; }} {{ /* Metode 2 */ }} {{ &amp;lt; myShortcode &amp;gt; }} This is data {{ &amp;lt; /myShortcode &amp;gt;}} myShortcode over henviser til myShortcode.</description>
     </item>
     <item>
       <title>2024-04-26</title>

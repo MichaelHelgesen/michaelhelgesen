@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Markdown on Mikkes blogg</title>
+    <title>Markdown on Michael Helgesen</title>
     <link>/emneknagger/laeringsemner/markdown/</link>
-    <description>Recent content in Markdown on Mikkes blogg</description>
+    <description>Recent content in Markdown on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Sat, 17 Aug 2024 09:26:14 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2024 13:39:54 +0200</lastBuildDate>
     <atom:link href="/emneknagger/laeringsemner/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-08-15</title>

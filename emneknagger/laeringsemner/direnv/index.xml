@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Direnv on Michael Helgesen</title>
+    <link>/emneknagger/laeringsemner/direnv/</link>
+    <description>Recent content in Direnv on Michael Helgesen</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <lastBuildDate>Tue, 03 Sep 2024 11:54:39 +0200</lastBuildDate>
+    <atom:link href="/emneknagger/laeringsemner/direnv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-08-20</title>
+      <link>/laeringslogg/2024-08-20/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-20/</guid>
+      <description>Cloudinary For å hente bilder fra en spesifikk mappe via API i HUGO kan man bruke følgende streng: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34; }} For sortering, begrensning på antall og utvalgte datafelter kan man gjøre som følger: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34;&amp;amp;max_results=&amp;#34; .number &amp;#34;&amp;amp;sort_by[][created_at]=desc&amp;amp;&amp;amp;fields[]=width&amp;amp;fields[]=height&amp;amp;fields[]=url&amp;amp;fields[]=filename&amp;amp;fields[]=context&amp;#34; }} Linux For å se hvilken versjon av BASH man kan man skrive echo &amp;quot;$SHELL&amp;quot; i terminalen.</description>
+    </item>
+  </channel>
+</rss>

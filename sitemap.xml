@@ -2,191 +2,218 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/laeringslogg/2024-08-15/</loc>
-    <lastmod>2024-08-17T09:26:14+02:00</lastmod>
+    <loc>/laeringslogg/2024-08-29/</loc>
+    <lastmod>2024-09-03T12:16:04+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/hugo/</loc>
-    <lastmod>2024-08-17T09:26:14+02:00</lastmod>
+    <lastmod>2024-09-03T12:16:04+02:00</lastmod>
   </url><url>
-    <loc>/emneknagger/laeringsemner/markdown/</loc>
-    <lastmod>2024-08-17T09:26:14+02:00</lastmod>
+    <loc>/laeringslogg/2024-08-27/</loc>
+    <lastmod>2024-09-03T12:10:03+02:00</lastmod>
   </url><url>
-    <loc>/laeringslogg/2024-07-18/</loc>
-    <lastmod>2024-08-17T09:12:47+02:00</lastmod>
+    <loc>/laeringslogg/2024-08-26/</loc>
+    <lastmod>2024-09-03T12:02:51+02:00</lastmod>
   </url><url>
-    <loc>/emneknagger/laeringsemner/zotero/</loc>
-    <lastmod>2024-08-17T09:12:47+02:00</lastmod>
+    <loc>/emneknagger/laeringsemner/cloudinary/</loc>
+    <lastmod>2024-09-03T12:02:51+02:00</lastmod>
   </url><url>
-    <loc>/laeringslogg/2024-06-07/</loc>
-    <lastmod>2024-08-17T08:57:50+02:00</lastmod>
+    <loc>/laeringslogg/2024-08-22/</loc>
+    <lastmod>2024-09-03T11:59:04+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/linux/</loc>
-    <lastmod>2024-08-17T08:57:50+02:00</lastmod>
+    <lastmod>2024-09-03T11:59:04+02:00</lastmod>
+  </url><url>
+    <loc>/kunstig-intelligens/</loc>
+    <lastmod>2024-09-02T14:53:59+02:00</lastmod>
+  </url><url>
+    <loc>/laeringslogg/2024-08-20/</loc>
+    <lastmod>2024-09-03T11:54:39+02:00</lastmod>
+  </url><url>
+    <loc>/emneknagger/laeringsemner/direnv/</loc>
+    <lastmod>2024-09-03T11:54:39+02:00</lastmod>
+  </url><url>
+    <loc>/laeringslogg/2024-08-19/</loc>
+    <lastmod>2024-09-03T11:27:00+02:00</lastmod>
+  </url><url>
+    <loc>/emneknagger/laeringsemner/github/</loc>
+    <lastmod>2024-09-03T11:27:00+02:00</lastmod>
+  </url><url>
+    <loc>/laeringslogg/2024-08-15/</loc>
+    <lastmod>2024-08-28T13:35:01+02:00</lastmod>
+  </url><url>
+    <loc>/emneknagger/laeringsemner/markdown/</loc>
+    <lastmod>2024-08-28T13:39:54+02:00</lastmod>
+  </url><url>
+    <loc>/laeringslogg/2024-07-18/</loc>
+    <lastmod>2024-08-28T13:36:24+02:00</lastmod>
+  </url><url>
+    <loc>/emneknagger/laeringsemner/zotero/</loc>
+    <lastmod>2024-08-28T13:36:24+02:00</lastmod>
+  </url><url>
+    <loc>/laeringslogg/2024-06-07/</loc>
+    <lastmod>2024-08-28T13:36:38+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-06-03/</loc>
-    <lastmod>2024-08-17T08:41:10+02:00</lastmod>
+    <lastmod>2024-08-28T13:36:50+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/curl/</loc>
-    <lastmod>2024-08-17T08:41:10+02:00</lastmod>
+    <lastmod>2024-08-28T13:36:50+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/strapi/</loc>
-    <lastmod>2024-08-17T08:41:10+02:00</lastmod>
+    <lastmod>2024-08-28T13:36:58+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/effektivitet/</loc>
-    <lastmod>2024-08-09T22:25:13+02:00</lastmod>
+    <lastmod>2024-09-03T10:42:03+02:00</lastmod>
   </url><url>
     <loc>/tekster/les-med-intensjon-for-bedre-effektivitet/</loc>
-    <lastmod>2024-08-09T22:25:13+02:00</lastmod>
+    <lastmod>2024-09-03T10:42:03+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/lesing/</loc>
-    <lastmod>2024-08-11T13:53:53+02:00</lastmod>
+    <lastmod>2024-09-03T10:44:59+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-29/</loc>
-    <lastmod>2024-08-16T14:31:14+02:00</lastmod>
+    <lastmod>2024-08-28T13:36:58+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-25/</loc>
-    <lastmod>2024-08-16T14:29:18+02:00</lastmod>
+    <lastmod>2024-08-28T13:37:07+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/figma/</loc>
-    <lastmod>2024-08-16T14:29:18+02:00</lastmod>
+    <lastmod>2024-08-28T13:37:33+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-24/</loc>
-    <lastmod>2024-08-16T14:28:06+02:00</lastmod>
+    <lastmod>2024-08-28T13:37:16+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-23/</loc>
-    <lastmod>2024-08-16T14:25:18+02:00</lastmod>
+    <lastmod>2024-08-28T13:37:33+02:00</lastmod>
   </url><url>
     <loc>/tekster/hvordan-velge-gode-kilder/</loc>
-    <lastmod>2024-08-09T14:10:50+02:00</lastmod>
+    <lastmod>2024-09-03T10:38:04+02:00</lastmod>
   </url><url>
     <loc>/journal/min-tredje-seksjon-i-zettelkasten/</loc>
-    <lastmod>2024-08-13T11:12:02+02:00</lastmod>
+    <lastmod>2024-09-03T11:04:55+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/skriving/</loc>
-    <lastmod>2024-08-13T11:12:02+02:00</lastmod>
+    <lastmod>2024-09-03T11:04:55+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/zettelkasten/</loc>
-    <lastmod>2024-08-13T11:12:02+02:00</lastmod>
+    <lastmod>2024-09-03T11:04:55+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-22/</loc>
-    <lastmod>2024-08-16T14:17:08+02:00</lastmod>
+    <lastmod>2024-08-28T13:37:44+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-21/</loc>
-    <lastmod>2024-08-16T14:05:14+02:00</lastmod>
+    <lastmod>2024-08-28T13:37:54+02:00</lastmod>
   </url><url>
     <loc>/journal/sider-fra-data-i-hugo/</loc>
-    <lastmod>2024-08-09T23:13:16+02:00</lastmod>
+    <lastmod>2024-09-03T10:52:36+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/hugo/</loc>
-    <lastmod>2024-08-09T23:13:16+02:00</lastmod>
+    <lastmod>2024-09-03T10:52:36+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/programmering/</loc>
-    <lastmod>2024-08-09T23:13:16+02:00</lastmod>
+    <lastmod>2024-09-03T10:52:36+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-19/</loc>
-    <lastmod>2024-08-17T08:51:44+02:00</lastmod>
+    <lastmod>2024-08-28T13:38:10+02:00</lastmod>
   </url><url>
     <loc>/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</loc>
-    <lastmod>2024-08-09T22:26:31+02:00</lastmod>
+    <lastmod>2024-09-03T10:32:30+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-09/</loc>
-    <lastmod>2024-08-16T13:18:53+02:00</lastmod>
+    <lastmod>2024-08-28T13:38:21+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/css/</loc>
-    <lastmod>2024-08-16T13:18:53+02:00</lastmod>
+    <lastmod>2024-08-28T13:39:14+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-08/</loc>
-    <lastmod>2024-08-16T12:11:52+02:00</lastmod>
+    <lastmod>2024-08-28T13:38:34+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-07/</loc>
-    <lastmod>2024-08-16T11:59:12+02:00</lastmod>
+    <lastmod>2024-08-28T13:38:44+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-06/</loc>
-    <lastmod>2024-08-16T11:50:42+02:00</lastmod>
+    <lastmod>2024-08-28T13:38:54+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/git/</loc>
-    <lastmod>2024-08-16T11:50:42+02:00</lastmod>
+    <lastmod>2024-08-28T13:38:54+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-05/</loc>
-    <lastmod>2024-08-16T11:44:18+02:00</lastmod>
+    <lastmod>2024-08-28T13:39:04+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-03/</loc>
-    <lastmod>2024-08-16T11:35:14+02:00</lastmod>
+    <lastmod>2024-08-28T13:39:14+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-05-02/</loc>
-    <lastmod>2024-08-16T11:19:00+02:00</lastmod>
+    <lastmod>2024-08-28T13:39:25+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/kreativitet/</loc>
-    <lastmod>2024-08-09T12:34:31+02:00</lastmod>
+    <lastmod>2024-09-03T10:19:58+02:00</lastmod>
   </url><url>
     <loc>/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</loc>
-    <lastmod>2024-08-09T12:34:31+02:00</lastmod>
+    <lastmod>2024-09-03T10:19:58+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-30/</loc>
-    <lastmod>2024-08-16T11:11:10+02:00</lastmod>
+    <lastmod>2024-08-28T13:39:44+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/devtools/</loc>
-    <lastmod>2024-08-16T11:11:10+02:00</lastmod>
-  </url><url>
-    <loc>/emneknagger/laeringsemner/gnome-terminal/</loc>
-    <lastmod>2024-08-16T11:11:10+02:00</lastmod>
+    <lastmod>2024-08-28T13:39:44+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/html/</loc>
-    <lastmod>2024-08-16T11:11:10+02:00</lastmod>
+    <lastmod>2024-08-28T13:39:44+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-29/</loc>
-    <lastmod>2024-08-16T10:56:59+02:00</lastmod>
+    <lastmod>2024-08-28T13:39:54+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-28/</loc>
-    <lastmod>2024-08-16T09:47:06+02:00</lastmod>
+    <lastmod>2024-08-28T13:40:13+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-27/</loc>
-    <lastmod>2024-08-16T09:44:22+02:00</lastmod>
+    <lastmod>2024-08-28T13:41:52+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-26/</loc>
-    <lastmod>2024-08-16T09:43:59+02:00</lastmod>
+    <lastmod>2024-09-03T11:27:55+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/design/</loc>
-    <lastmod>2024-08-16T09:43:59+02:00</lastmod>
+    <lastmod>2024-09-03T11:27:55+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/nvim/</loc>
-    <lastmod>2024-08-16T09:43:59+02:00</lastmod>
+    <lastmod>2024-09-03T11:29:00+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-25/</loc>
-    <lastmod>2024-08-16T09:43:49+02:00</lastmod>
+    <lastmod>2024-08-28T13:43:25+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-24/</loc>
     <lastmod>2024-08-16T09:43:41+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/javascript/</loc>
-    <lastmod>2024-08-16T09:43:41+02:00</lastmod>
+    <lastmod>2024-08-27T17:25:25+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-23/</loc>
     <lastmod>2024-08-06T18:29:12+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-21/</loc>
-    <lastmod>2024-08-16T09:43:16+02:00</lastmod>
+    <lastmod>2024-08-27T17:25:25+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/tailwind/</loc>
-    <lastmod>2024-08-16T09:43:16+02:00</lastmod>
+    <lastmod>2024-08-27T17:25:25+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-20/</loc>
-    <lastmod>2024-08-16T09:42:08+02:00</lastmod>
+    <lastmod>2024-08-27T17:24:51+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/laeringsemner/jq/</loc>
-    <lastmod>2024-08-16T09:42:08+02:00</lastmod>
+    <lastmod>2024-08-27T17:24:51+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-19/</loc>
     <lastmod>2024-08-06T18:27:20+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/api/</loc>
-    <lastmod>2024-08-09T22:42:09+02:00</lastmod>
+    <lastmod>2024-09-03T10:00:40+02:00</lastmod>
   </url><url>
-    <loc>/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</loc>
-    <lastmod>2024-08-09T22:42:09+02:00</lastmod>
+    <loc>/tekster/opprette-sider-i-hugo-via-api/</loc>
+    <lastmod>2024-09-03T10:00:40+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/zotero/</loc>
-    <lastmod>2024-08-09T22:42:09+02:00</lastmod>
+    <lastmod>2024-09-03T10:00:40+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-18/</loc>
     <lastmod>2024-08-16T09:35:51+02:00</lastmod>
@@ -198,63 +225,63 @@
     <lastmod>2024-08-16T09:42:33+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/inspirasjon/</loc>
-    <lastmod>2024-08-09T12:36:08+02:00</lastmod>
+    <lastmod>2024-09-03T10:07:16+02:00</lastmod>
   </url><url>
     <loc>/tekster/jeg-er-en-evig-amator/</loc>
-    <lastmod>2024-08-09T12:36:08+02:00</lastmod>
+    <lastmod>2024-09-03T10:07:16+02:00</lastmod>
   </url><url>
     <loc>/journal/nullstilling-av-bokhyllen/</loc>
-    <lastmod>2024-08-11T13:53:53+02:00</lastmod>
+    <lastmod>2024-09-03T10:44:59+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-16/</loc>
-    <lastmod>2024-08-16T08:35:00+02:00</lastmod>
+    <lastmod>2024-09-03T11:29:00+02:00</lastmod>
   </url><url>
     <loc>/laeringslogg/2024-04-15/</loc>
     <lastmod>2024-08-16T08:37:16+02:00</lastmod>
   </url><url>
     <loc>/lenker/</loc>
-    <lastmod>2024-08-15T15:09:03+02:00</lastmod>
+    <lastmod>2024-09-02T10:36:59+02:00</lastmod>
   </url><url>
     <loc>/na/</loc>
-    <lastmod>2024-08-14T22:12:52+02:00</lastmod>
+    <lastmod>2024-09-02T15:06:03+02:00</lastmod>
   </url><url>
     <loc>/om/</loc>
-    <lastmod>2024-08-17T14:16:30+02:00</lastmod>
-  </url><url>
-    <loc>/bibliotek/single/</loc>
-    <lastmod>2024-07-08T15:09:26+02:00</lastmod>
+    <lastmod>2024-09-02T18:14:34+02:00</lastmod>
   </url><url>
     <loc>/bibliotek/</loc>
-    <lastmod>2024-08-15T14:46:59+02:00</lastmod>
+    <lastmod>2024-09-02T14:20:22+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/</loc>
-    <lastmod>2024-08-15T14:35:26+02:00</lastmod>
+    <lastmod>2024-09-02T13:49:08+02:00</lastmod>
   </url><url>
-    <loc>/emneknagger/tekstemner/</loc>
-    <lastmod>2024-08-15T14:41:06+02:00</lastmod>
-  </url><url>
-    <loc>/emneknagger/laeringsemner/</loc>
-    <lastmod>2024-08-15T14:41:59+02:00</lastmod>
+    <loc>/galleri/</loc>
+    <lastmod>2024-09-02T12:12:51+02:00</lastmod>
   </url><url>
     <loc>/journal/</loc>
-    <lastmod>2024-08-15T14:30:45+02:00</lastmod>
+    <lastmod>2024-09-02T13:46:25+02:00</lastmod>
   </url><url>
     <loc>/kilder/</loc>
-    <lastmod>2024-08-15T14:46:20+02:00</lastmod>
+    <lastmod>2024-09-02T14:19:33+02:00</lastmod>
   </url><url>
     <loc>/emneknagger/tekstemner/laering/</loc>
     <lastmod>2024-08-07T08:18:01+02:00</lastmod>
   </url><url>
+    <loc>/emneknagger/laeringsemner/</loc>
+    <lastmod>2024-09-02T13:52:33+02:00</lastmod>
+  </url><url>
     <loc>/laeringslogg/</loc>
-    <lastmod>2024-08-15T14:31:05+02:00</lastmod>
+    <lastmod>2024-09-03T12:50:17+02:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2024-08-15T14:38:30+02:00</lastmod>
+    <lastmod>2024-09-03T12:18:23+02:00</lastmod>
   </url><url>
     <loc>/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</loc>
     <priority>0</priority>
   </url><url>
+    <loc>/emneknagger/tekstemner/</loc>
+    <lastmod>2024-09-02T13:50:10+02:00</lastmod>
+  </url><url>
     <loc>/tekster/</loc>
-    <lastmod>2024-08-15T14:29:38+02:00</lastmod>
+    <lastmod>2024-09-02T13:46:47+02:00</lastmod>
   </url>
 </urlset>

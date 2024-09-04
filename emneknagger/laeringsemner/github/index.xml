@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Michael Helgesen</title>
+    <link>/emneknagger/laeringsemner/github/</link>
+    <description>Recent content in Github on Michael Helgesen</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <lastBuildDate>Tue, 03 Sep 2024 11:27:00 +0200</lastBuildDate>
+    <atom:link href="/emneknagger/laeringsemner/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-08-19</title>
+      <link>/laeringslogg/2024-08-19/</link>
+      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-19/</guid>
+      <description>Linux Dig (domain information groper) er en Linux-kommando som viser DNS (domain name system) informasjon. Det er et verktøy som sender spørringer til DNS-servere. dig [URL] +noall +answer viser bare svar-delen av spørringen. -t [TYPE] viser DNS-typen som A, AAA, MX og så videre. Github Opprettet personlig GitHub-side (Github Pages ) og koblet til eget domene. Fremgangsmåte her . </description>
+    </item>
+  </channel>
+</rss>

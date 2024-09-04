@@ -1,12 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mikke Helgesen on Mikkes blogg</title>
+    <title>Mikkes digitale hage on Michael Helgesen</title>
     <link>/</link>
-    <description>Recent content in Mikke Helgesen on Mikkes blogg</description>
+    <description>Recent content in Mikkes digitale hage on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-02</title>
+      <link>/laeringslogg/2024-08-29/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-29/</guid>
+      <description>Hugo Lærte å angi «site wide» og:image slik at jeg slipper å angi «open graph»-bilde manuelt på samtlige sider. HUGO ser etter Params.images i head.html. Finner den ingen, benyttes det globale bildet. Man kan sjekke om en side er en term ved å benytte data.term. </description>
+    </item>
+    <item>
+      <title>2024-08-29</title>
+      <link>/laeringslogg/2024-08-27/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-27/</guid>
+      <description>Hugo Man kan bruke markdownify for å konvertere for eksempel «YAML» til «markdown». Det er viktig å forstå forskjellen på variabler med stor og liten forbokstav i «frontmatter» i HUGO. Stor forbokstav som .Title indikerer HUGOs standarder, mens liten forbokstav som .beskrivelse indikerer egendefinerte. --- title: Les siste om HUGO beskrivelse: Få med deg det siste nye om HUGO. --- I eksempelet over hentes «title» med .Title, mens «beskrivelse» hentes med .</description>
+    </item>
+    <item>
+      <title>2024-08-26</title>
+      <link>/laeringslogg/2024-08-26/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-26/</guid>
+      <description>Hugo md5 brukes for å kryptere en streng. Cloudinary For å hente metadata i URL: ...fields[]=width&amp;amp;fields[]=context </description>
+    </item>
+    <item>
+      <title>2024-08-22</title>
+      <link>/laeringslogg/2024-08-22/</link>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-22/</guid>
+      <description>Linux For å sjekke egen IP-adresse kan man i terminalen skrive ip a eller ìfconfig`. Se etter «inet»-verdien. </description>
+    </item>
+    <item>
+      <title>Kunstig intelligens</title>
+      <link>/kunstig-intelligens/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/kunstig-intelligens/</guid>
+      <description>Kunstig intelligens (KI) vokser i en enorm fart, og har blitt skremmende god til å kreere tekst, bilder, video og tale.&#xA;Å vite hva og hvem man kan stole på blir stadig mer utfordrende. Derfor har jeg opprettet denne siden for å opplyse om mitt forhold til KI og generert innhold, etter inspirasjon og oppfordring fra Damola .&#xA;Foreløpig har jeg kun testet noen av tjenestene, men aldri brukt KI til å skrive tekster eller lage bilder på denne nettsiden.</description>
+    </item>
+    <item>
+      <title>2024-08-20</title>
+      <link>/laeringslogg/2024-08-20/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-20/</guid>
+      <description>Cloudinary For å hente bilder fra en spesifikk mappe via API i HUGO kan man bruke følgende streng: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34; }} For sortering, begrensning på antall og utvalgte datafelter kan man gjøre som følger: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34;&amp;amp;max_results=&amp;#34; .number &amp;#34;&amp;amp;sort_by[][created_at]=desc&amp;amp;&amp;amp;fields[]=width&amp;amp;fields[]=height&amp;amp;fields[]=url&amp;amp;fields[]=filename&amp;amp;fields[]=context&amp;#34; }} Linux For å se hvilken versjon av BASH man kan man skrive echo &amp;quot;$SHELL&amp;quot; i terminalen.</description>
+    </item>
+    <item>
+      <title>2024-08-19</title>
+      <link>/laeringslogg/2024-08-19/</link>
+      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2024-08-19/</guid>
+      <description>Linux Dig (domain information groper) er en Linux-kommando som viser DNS (domain name system) informasjon. Det er et verktøy som sender spørringer til DNS-servere. dig [URL] +noall +answer viser bare svar-delen av spørringen. -t [TYPE] viser DNS-typen som A, AAA, MX og så videre. Github Opprettet personlig GitHub-side (Github Pages ) og koblet til eget domene. Fremgangsmåte her . </description>
+    </item>
     <item>
       <title>2024-08-15</title>
       <link>/laeringslogg/2024-08-15/</link>
@@ -75,14 +124,14 @@
       <link>/tekster/hvordan-velge-gode-kilder/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
       <guid>/tekster/hvordan-velge-gode-kilder/</guid>
-      <description>I følge Kildekompasset.no finnes det to typer kilder å velge mellom:&#xA;primærkilder sekundærkilder. Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisartikkel som omtaler forskningsrapporten er en sekundærkilde.&#xA;Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.&#xA;Slikt sett bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller kan ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.</description>
+      <description>I følge Kildekompasset.no finnes det to typer kilder å velge mellom:&#xA;primærkilder sekundærkilder. Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisartikkel som omtaler forskningsrapporten er en sekundærkilde.&#xA;Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.&#xA;Derfor bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.</description>
     </item>
     <item>
       <title>Min tredje seksjon i zettelkasten</title>
       <link>/journal/min-tredje-seksjon-i-zettelkasten/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
       <guid>/journal/min-tredje-seksjon-i-zettelkasten/</guid>
-      <description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.&#xA;Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.&#xA;Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper (1).</description>
+      <description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.&#xA;Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.&#xA;Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper 1 .</description>
     </item>
     <item>
       <title>2024-05-22</title>
@@ -201,7 +250,7 @@
       <link>/laeringslogg/2024-04-27/</link>
       <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
       <guid>/laeringslogg/2024-04-27/</guid>
-      <description>Gnome-Terminal Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md. Hugo Shortcodes er kommandoer vi kan angi i &amp;ldquo;markdown&amp;rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter: {{ /* Metode 1 */ }} {{ &amp;lt; myShortcode data=&amp;#34;This is data&amp;#34; &amp;gt; }} {{ /* Metode 2 */ }} {{ &amp;lt; myShortcode &amp;gt; }} This is data {{ &amp;lt; /myShortcode &amp;gt;}} myShortcode over henviser til myShortcode.</description>
+      <description>Linux Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md. Hugo Shortcodes er kommandoer vi kan angi i &amp;ldquo;markdown&amp;rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter: {{ /* Metode 1 */ }} {{ &amp;lt; myShortcode data=&amp;#34;This is data&amp;#34; &amp;gt; }} {{ /* Metode 2 */ }} {{ &amp;lt; myShortcode &amp;gt; }} This is data {{ &amp;lt; /myShortcode &amp;gt;}} myShortcode over henviser til myShortcode.</description>
     </item>
     <item>
       <title>2024-04-26</title>
@@ -254,9 +303,9 @@
     </item>
     <item>
       <title>Opprette sider i Hugo via API</title>
-      <link>/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</link>
+      <link>/tekster/opprette-sider-i-hugo-via-api/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/tekster/opprette-sider-i-hugo-fra-data-i-et-api-kall/</guid>
+      <guid>/tekster/opprette-sider-i-hugo-via-api/</guid>
       <description>Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til Zotero , slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.&#xA;Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.</description>
     </item>
     <item>
@@ -278,21 +327,21 @@
       <link>/tekster/jeg-er-en-evig-amator/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
       <guid>/tekster/jeg-er-en-evig-amator/</guid>
-      <description>«Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre», skriver Austin Kleon i sin bok «Show your work» . 1&#xA;Dette sitatet, og boken forøvrig, inspirerte meg til å ta Kleon på ordet.&#xA;Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende og forhåpentligvis inspirerende.&#xA;Nå er ikke jeg en kunstner slik som han eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser.</description>
+      <description>«Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre», skriver Austin Kleon i sin bok «Show your work» . 1&#xA;Dette sitatet, og boken forøvrig, inspirerte meg til å ta Kleon på ordet.&#xA;Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende og forhåpentligvis inspirerende.&#xA;Nå er ikke jeg en kunstner slik som Kleon eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser.</description>
     </item>
     <item>
       <title>Nullstilling av bokhyllen</title>
       <link>/journal/nullstilling-av-bokhyllen/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
       <guid>/journal/nullstilling-av-bokhyllen/</guid>
-      <description>I dag startet jeg jobben med å tømme bokhyllene for bøker.&#xA;I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.&#xA;De færreste av bøkene er lest, mens de de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.&#xA;Dagens bokhylle representerer således sløsing av både penger, tid og energi, og skal dermed nullstilles, selv om noen mener det er fornuftig å ha et antilibrary .</description>
+      <description>I dag startet jeg jobben med å tømme bokhyllene for bøker.&#xA;I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.&#xA;De færreste av bøkene er lest, mens de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.&#xA;Dagens bokhylle representerer således sløsing av både penger, tid og energi, og skal dermed nullstilles, selv om noen mener det er fornuftig å ha et antilibrary .</description>
     </item>
     <item>
       <title>2024-04-16</title>
       <link>/laeringslogg/2024-04-16/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
       <guid>/laeringslogg/2024-04-16/</guid>
-      <description>NVIM For å legge til en ny fil i Explore-modus så taster man prosenttegn %. &amp;ldquo;Redo&amp;rdquo; i VIM er Ctrl + R. </description>
+      <description>NVIM For å legge til en ny fil i Explore-modus så taster man prosenttegn %. «Redo» i VIM er Ctrl + R. </description>
     </item>
     <item>
       <title>2024-04-15</title>
@@ -306,28 +355,21 @@
       <link>/na/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
       <guid>/na/</guid>
-      <description>Denne nå-siden er inspirert av Derek Sivers , og er dedikert til svaret på spørsmålet &amp;ldquo;hvordan står det til&amp;rdquo; 1. Det er rett og slett en oppdatering på livets tilstand samt en intern refleksjon over prioriteringer.&#xA;Besides answering the common question, “What are you up to these days?”, those who have a now page say it’s a good reminder of their priorities.Derek Sivers Tanker Akkurat nå er jeg opptatt av hvordan teknologi og teknologer påvirker oss som mennesker.</description>
+      <description>Denne nå-siden er inspirert av Derek Sivers , og er dedikert til svaret på spørsmålet «hvordan står det til» 1. Det er rett og slett en oppdatering på livets tilstand samt en intern refleksjon over prioriteringer.&#xA;Besides answering the common question, “What are you up to these days?”, those who have a now page say it’s a good reminder of their priorities. Derek Sivers Tanker Akkurat nå er jeg opptatt av hvordan teknologi og teknologer påvirker oss som mennesker.</description>
     </item>
     <item>
       <title>Om</title>
       <link>/om/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
       <guid>/om/</guid>
-      <description>Hei! Jeg er Mikke, en nysgjerrig entusiast som har valgt å dele både opp- og nedturer i søken etter kunnskap. Jeg deler tanker og innsikt for å lære mer og bedre, samt i håp om å være til inspirasjon og hjelp.&#xA;Jeg er en selvlært frontend-utvikler, og alt det jeg kan i dag er takket være andres interesse og innsats for å lære bort. Forhåpentligvis kan jeg gi noe tilbake.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>/bibliotek/single/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/bibliotek/single/</guid>
-      <description>test:w</description>
+      <description>Hei! Jeg er Mikke, en nysgjerrig entusiast som har valgt å dele både opp- og nedturer i søken etter kunnskap. Dessuten synes jeg det er viktig og givende med undring.&#xA;Jeg er en autodidakt1 frontend-utvikler, og alt det jeg kan i dag er takket være andres interesse og innsats for å lære bort. Forhåpentligvis kan jeg gi noe tilbake.&#xA;Målet med nettsiden er å skape mer, bli en bedre skribent, en bedre tenker, en bedre kunnskapsforvalter, og et bedre og lykkeligere menneske.</description>
     </item>
     <item>
       <title>Show your work!: 10 ways to share your creativity and get discovered</title>
       <link>/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</guid>
-      <description>Presents practical advice for increasing productivity on creative projects and improving their chances for success through strategies of networking and sharing works and ideas with like-minded members of the community and on the Internet.&#xA;Test 2 Ikke så lett å skrive via Zotero. test </description>
+      <description>Oppsummert i tre setninger: I «Show Your Work!» oppfordrer forfatter og kunstner Austin Kleon alle til å dele sitt kreativt arbeid, uansett om man er nybegynner eller erfaren.&#xA;Han mener myten om det ensomme geniet er falskt, og anbefaler heller å forplikte seg til å lære foran andre, med alt det innebærer at opp- og nedturer, fordi det du anser som gråstein kan være gull for mange.&#xA;Gjennom sitater, historier og bilder beskriver Kleon hvordan det å være kreativ sammen med likesinnede kan løfte din egen kreativitet, i tillegg til å servere en rekke konkrete tips til hva og hvor mye man bør dele, og hvordan, for effektiv selvpromotering.</description>
     </item>
   </channel>
 </rss>
