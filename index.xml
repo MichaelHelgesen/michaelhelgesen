@@ -1,27 +1,375 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mikkes digitale hage on Michael Helgesen</title><link>https://www.michaelhelgesen.no/</link><description>Recent content in Mikkes digitale hage on Michael Helgesen</description><generator>Hugo</generator><language>nb</language><atom:link href="https://www.michaelhelgesen.no/index.xml" rel="self" type="application/rss+xml"/><item><title>2024-09-02</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-08-29/</link><pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-29/</guid><description>Hugo Lærte å angi «site wide» og:image slik at jeg slipper å angi «open graph»-bilde manuelt på samtlige sider. HUGO ser etter Params.images i head.html. Finner den ingen, benyttes det globale bildet. Man kan sjekke om en side er en term ved å benytte data.term.</description></item><item><title>2024-08-29</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-08-27/</link><pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-27/</guid><description>Hugo Man kan bruke markdownify for å konvertere for eksempel «YAML» til «markdown». Det er viktig å forstå forskjellen på variabler med stor og liten forbokstav i «frontmatter» i HUGO. Stor forbokstav som .Title indikerer HUGOs standarder, mens liten forbokstav som .beskrivelse indikerer egendefinerte. --- title: Les siste om HUGO beskrivelse: Få med deg det siste nye om HUGO. --- I eksempelet over hentes «title» med .Title, mens «beskrivelse» hentes med .</description></item><item><title>2024-08-26</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-08-26/</link><pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-26/</guid><description>Hugo md5 brukes for å kryptere en streng. Cloudinary For å hente metadata i URL: ...fields[]=width&amp;amp;fields[]=context</description></item><item><title>2024-08-22</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-08-22/</link><pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-22/</guid><description>Linux For å sjekke egen IP-adresse kan man i terminalen skrive ip a eller ìfconfig`. Se etter «inet»-verdien.</description></item><item><title>Kunstig intelligens</title><link>https://www.michaelhelgesen.no/kunstig-intelligens/</link><pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/kunstig-intelligens/</guid><description>Kunstig intelligens (KI) vokser i en enorm fart, og har blitt skremmende god til å kreere tekst, bilder, video og tale.
-Å vite hva og hvem man kan stole på blir stadig mer utfordrende. Derfor har jeg opprettet denne siden for å opplyse om mitt forhold til KI og generert innhold, etter inspirasjon og oppfordring fra Damola .
-Foreløpig har jeg kun testet noen av tjenestene, men aldri brukt KI til å skrive tekster eller lage bilder på denne nettsiden.</description></item><item><title>2024-08-20</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-08-20/</link><pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-20/</guid><description>Cloudinary For å hente bilder fra en spesifikk mappe via API i HUGO kan man bruke følgende streng: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34; }} For sortering, begrensning på antall og utvalgte datafelter kan man gjøre som følger: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34;&amp;amp;max_results=&amp;#34; .number &amp;#34;&amp;amp;sort_by[][created_at]=desc&amp;amp;&amp;amp;fields[]=width&amp;amp;fields[]=height&amp;amp;fields[]=url&amp;amp;fields[]=filename&amp;amp;fields[]=context&amp;#34; }} Linux For å se hvilken versjon av BASH man kan man skrive echo &amp;quot;$SHELL&amp;quot; i terminalen.</description></item><item><title>2024-08-19</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-08-19/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-19/</guid><description>Linux Dig (domain information groper) er en Linux-kommando som viser DNS (domain name system) informasjon. Det er et verktøy som sender spørringer til DNS-servere. dig [URL] +noall +answer viser bare svar-delen av spørringen. -t [TYPE] viser DNS-typen som A, AAA, MX og så videre. Github Opprettet personlig GitHub-side (Github Pages ) og koblet til eget domene. Fremgangsmåte her .</description></item><item><title>2024-08-15</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-08-15/</link><pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-15/</guid><description>Hugo Lærte å kommentere ut kode, slik at man kan vise kode uten at den kjøres. &amp;lt;/* ref &amp;#34;om&amp;#34; */&amp;gt; Markdown Vi kan «escape» «backticks» i kodefelt ved å starte og avslutte kodefeltet med to «backticks» i stedet for en. `` kode `x` mer kode``</description></item><item><title>2024-07-18</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-07-18/</link><pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-07-18/</guid><description>Zotero Lærte å hente notater og vedlegg fra Zotero. api.zotero.org/groups/&amp;lt;ID&amp;gt;/items/&amp;lt;ID&amp;gt;/children</description></item><item><title>2024-06-07</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-06-07/</link><pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-06-07/</guid><description>Hugo For å vise bilder fra HUGOs «assets»-mappe brukes følgende: {{ (resources.Get &amp;quot;[bane]&amp;quot;).RelPermalink }}. Man må huske på å angi «assets»-mappe i «config.toml»: [[module.mounts]] source = &amp;#34;assets&amp;#34; target = &amp;#34;assets&amp;#34; Man oppdaterer HUGO ved å blytte ny versjon til bin. For å starte server uten å bygge «public»-versjon: hugo server --renderToMemory Linux whereis er en kommando for å lokalisere en «package», for eksempel HUGO: whereis hugo</description></item><item><title>2024-06-03</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</link><pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</guid><description>Strapi Hvordan berike felter i API-kallet med ?populate[0]feltnavn&amp;amp;populate[1]feltnavn. Dette bygger en egen liste å jobbe med. Curl Legg til -g for å kunne bruke {} og [] uten å måtte «escape» dem. Curl overser dem. Bruk &amp;quot;&amp;amp;&amp;quot; i hermetegn for å inkludere tegn som «&amp;amp;» i en streng.</description></item><item><title>Les med intensjon for bedre effektivitet</title><link>https://www.michaelhelgesen.no/tekster/les-med-intensjon-for-bedre-effektivitet/</link><pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/tekster/les-med-intensjon-for-bedre-effektivitet/</guid><description>Å sette seg et mål før man leser en tekst har for meg vært en svært viktig lærdom.
-Det høres kanskje absurd ut, at noe så enkelt kan være av betydning, men å lese med intensjon har økt min effektivitet betraktelig.
-Overflod av informasjon Tidligere satt jeg min ære i å lese alle bøker jeg startet på fra perm til perm. Det krevde selvsagt både tid og energi. I tillegg skrev jeg mange notater og markerte en rekke setninger.</description></item><item><title>2024-05-29</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-29/</link><pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-29/</guid><description>Strapi Installerte Strapi for første gang og testet det å lage innholds-komponenter, hvordan finne komponenter i API-kallet og gå «dypere» inn i dataene.</description></item><item><title>2024-05-25</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</link><pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</guid><description>Figma Opprette varianter av komponenter Benytte plugins</description></item><item><title>2024-05-24</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</link><pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</guid><description>Figma Opprette variabler Lage komponenter «Tokenization» «Frames» vs «groups»</description></item><item><title>2024-05-23</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</link><pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</guid><description>Hugo Jeg kom bort i et problem med at alle lenker viste et ekstra mellomrom. Det har visst noe med oppsettet å gjøre, som sier noe sånt som at «legg til ny linje i enden av alle filer». Jeg fikk det bort ved å legge til {{- &amp;quot;&amp;quot; -}} på slutten av «render_link.html hooken» som genererer koden til lenkene. Figma Lærte å opprette maler Lage 8-punkts rutenett Aktivere «nudge» for en smidigere flytting av bokser.</description></item><item><title>Hvordan velge gode kilder</title><link>https://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</link><pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</guid><description>I følge Kildekompasset.no finnes det to typer kilder å velge mellom:
-primærkilder sekundærkilder. Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisartikkel som omtaler forskningsrapporten er en sekundærkilde.
-Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.
-Derfor bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.</description></item><item><title>Min tredje seksjon i zettelkasten</title><link>https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</link><pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</guid><description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.
-Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.
-Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper 1 .</description></item><item><title>2024-05-22</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-22/</link><pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-22/</guid><description>Hugo Jeg hadde et ønske om å markere eksterne lenker på nettsiden med et ikon. Det kan man gjøre i HUGO ved hjelp av såkalte «markup hooks ». Linux Lærte om «symlinks» eller «snarveier» i Linux. Opprette en symlink: ln -s [bane til fil / mappe] [snarvei] Eks: ln -s test/testfil.txt link.txt. link.txt peker til testfil.txt. Slette symlink: unlink [bane til symlink] Se etter symlink: ls -l [bane til symlink]</description></item><item><title>2024-05-21</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-21/</link><pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-21/</guid><description>Hugo Når man jobber med API-er så holder HUGO tilbake oppdateringer fra kilden, slik at det ikke blir for mange spørringer. For tvinge frem endringer gjort i API-et kan vi slette HUGOs «cache». Finn TMP-mappen og se etter hugo_cache. Sletter man den og aktiverer HUGO server på nytt, vil all data oppdateres.</description></item><item><title>Endelig mulig å opprette sider i HUGO fra ekstern data!</title><link>https://www.michaelhelgesen.no/journal/sider-fra-data-i-hugo/</link><pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/journal/sider-fra-data-i-hugo/</guid><description>I dag kom jeg helt tilfeldig over en video på YouTube som opplyste om at HUGO nå endelig kan opprette sider fra ekstern data som blant annet JSON, YAML og XML.
-Det er gode nyheter, for mangelen på en funksjon som kan opprette sider basert på data fra API-er har vært en av HUGOs størtste ulemper. Det har vært mulig å få til via egne scripts, men nå er det altså integrert i løsningen.</description></item><item><title>2024-05-19</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-19/</link><pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-19/</guid><description>Hugo Jeg fant ut at HUGO ikke har støtte for «regular expressions» «look ahead» eller «capture groups». Jeg måtte derfor dele opp prosessen med å hente ut tekst fra en artikkel. Måtte først lage en regex-streng med $regExString := print `(?s)(?i)` $tag `&amp;lt;\/h[0-9]&amp;gt;.*?&amp;lt;h[0-9]|(?s)(?i)` $tag `&amp;lt;\/h[0-9]&amp;gt;.*` (?s) betyr «single line mode» og ignorerer «whitespace» inkludert mellomrom, tabulator og ny linje. (?i) betyr at det ikke tas hensyn til om bokstavene er minuskler eller versaler.</description></item><item><title>Hvordan kan jeg håndtere kunnskap på en smart og effektiv måte?</title><link>https://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</link><pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</guid><description>I mange år har jeg lest og lært om emner som interesserer meg. Formålet har alltid vært å utvikle meg som person, øke min forståelse samt videreformidle kunnskap til andre.
-Jeg har selvsagt lært noe underveis, men hvis jeg sammenligner tid og penger brukt med hva jeg faktisk har produsert, er det er ingen tvil om at mine metoder har vært svært lite effektive. Jeg har blant annet:
-Brukt tusenvis av kroner på bøker, kurs og materiell.</description></item><item><title>2024-05-09</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</link><pubDate>Thu, 09 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</guid><description>CSS Jeg fant ut at man kan benytte negative verdier i CSS-variabler. Jeg benyttet dette i footer for å få den til å strekke seg ut til begge sider av nettleseren ved å konvertere til negative verdier. footer { margin: var(--max) calc(clamp(var(--medium_2), 8vw, var(--large_2)) * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2)) * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2)) * -1) }</description></item><item><title>2024-05-08</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-08/</link><pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-08/</guid><description>Hugo I HUGO kan kan slå sammen en variabel og streng på følgende måte: {{ printf &amp;#34;%s%s&amp;#34; &amp;#34;Hei&amp;#34; $name }} I HUGO kan man dele en samling og en streng med henholdsvis index og split. I eksempelet under kommer et fullt navn inn fra en samling i et API, hvor navnet må splittes til for- og etternavn. {{ with .lastName }} {{$firstName = index (split . &amp;#34; &amp;#34;) 0 }} {{$lastName = index (split .</description></item><item><title>2024-05-07</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-07/</link><pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-07/</guid><description>Hugo Jeg slet lenge med oppsett og alias på emneknagg-sider («taxonomies») i HUGO. Svaret fant jeg i denne tråden .</description></item><item><title>2024-05-06</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-06/</link><pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-06/</guid><description>Git For å tilbakestille en «git commit» kan vi bruke git reset. Det vil kansellere alt som er i en «commit» men foreløpig ikke «pushed». Vær forsiktig med dette, da endringer utført kan forsvinne. Jeg snakker av erfaring.</description></item><item><title>2024-05-05</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-05/</link><pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-05/</guid><description>Hugo Med «page bundles» i HUGO kan man liste opp alle sider og tilhørende ressurser i en «bundle» eller seksjon. Med følgende oppsett&amp;hellip; ├───blogg │ ├───blogg-1 │ │ img-1.jpg │ │ index.md │ │ │ ├───blogg-2 │ │ img-1.jpg │ │ img-2.jpg │ │ index.md │ │ │ └───blogg-3 │ img-1.jpg │ img-2.jpg │ img-3.jpg │ index.md &amp;hellip; kan vi hente frem alt i «blogg-seksjonen» på følgende måte: {{range where .</description></item><item><title>2024-05-03</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-03/</link><pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-03/</guid><description>Hugo I HUGO kan vi gruppere og omrokkere på lister med henholdsvis range .Pages.GroupByDate og range .Pages.ByDateReverse. CSS Jeg knotet veldig med «HSL»-farger i CSS, men det består altså av «hue», «saturation» og «lightness». «Hue» er farge, fra 0 til 366. 0 er rød, 120 er grønn og 240 er blå. «Saturation» er hvor mange prosent grått man vil legge til. 0% er grått mens 100% er den fulle fargen. «Lightness» er hvor lys eller mørk en farge skal være.</description></item><item><title>2024-05-02</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-05-02/</link><pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-02/</guid><description>Hugo Jeg lærte at man i HUGO kan ha uttallige «taxonomies ». «Tags» og «categories» er standard, men man kan angi så mange man trenger, eller skru av alle. En tekst kan også ha så mange «taxonomies» som man behøver.</description></item><item><title>Scenialitet: de beste ideene skapes i et fellesskap</title><link>https://www.michaelhelgesen.no/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</guid><description>Historien og populærkulturen fremstiller mange av menneskehetens store fremskritt som resultat av enslige geniers standhaftige arbeid i isolasjon fra omverdenen.
-I følge musikeren og produsenten Brian Eno er denne forestillingen om det ensomme kreative geniet en myte. Han mener stort sett alle gode ideer har sitt utspring i et fellesskap 1. At kreativitet ikke er en antisosial handling, men blomstrer i et samfunn bestående av ulike individer med forskjellige talenter som påvirker, inspirerer og oppfordrer hverandre.</description></item><item><title>2024-04-30</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-30/</link><pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-30/</guid><description>Hugo Endret oppsett av HUGO til «branch»- og «leaf» bundles » for enklere håndtering av bilder og andre filer tilknyttet den enkelte side. På denne måten ligger alle ressurser samme sted som teksten, i motsetning til å ha alle ressurser i en og samme ressurs-mappe, som fort kan vokse seg stor og uoversiktlig. Lærte også om HUGOs bildeprosessor som lar oss manipulere bilder ved skalering, beskjæring, rotering og fargelegging, for å nevne noen.</description></item><item><title>2024-04-29</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-29/</link><pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-29/</guid><description>Hugo Om man ønsker å legge til en tittel («title») i en «shortcode»-lenke angir man den i anførselstegn: [Dette er en lenke]({{&amp;lt; ref &amp;#34;../om&amp;#34;&amp;gt;}} &amp;#34;Tittel&amp;#34;) Markdown Lærte hvordan man angir kommentarer i «markdown»-filer: [comment]: &amp;lt;&amp;gt; (Teksten i denne parantesen vil ikke synes)</description></item><item><title>2024-04-28</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-28/</link><pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-28/</guid><description>Hugo Vi kan angi ulike parametre for å vise når et dokument sist ble oppdatert. I config-toml definerte jeg følgende: [frontmatter] lastmod = [&amp;#34;lastmod&amp;#34;, &amp;#34;:fileModTime&amp;#34;, &amp;#34;:default&amp;#34;] lastmod betyr at Hugo ser etter variabelen i &amp;ldquo;frontmatter&amp;rdquo;. Er den ikke definert, velges heller :fileModTime som viser filens siste oppdatering, eller :default. Jeg fant også ut hvordan man definerer språk i config.toml for å vise datoer på norsk: defaultContentLanguage = &amp;quot;nb&amp;quot;</description></item><item><title>2024-04-27</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-27/</link><pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-27/</guid><description>Linux Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md. Hugo Shortcodes er kommandoer vi kan angi i &amp;ldquo;markdown&amp;rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter: {{ /* Metode 1 */ }} {{ &amp;lt; myShortcode data=&amp;#34;This is data&amp;#34; &amp;gt; }} {{ /* Metode 2 */ }} {{ &amp;lt; myShortcode &amp;gt; }} This is data {{ &amp;lt; /myShortcode &amp;gt;}} myShortcode over henviser til myShortcode.</description></item><item><title>2024-04-26</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</link><pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</guid><description>Hugo Det finnes ikke noe tilsvarende javascripts switch i Hugo. Man må bruke if else eller with. with endrer konteksten av &amp;ldquo;dott&amp;rdquo; til et uttrykk (&amp;ldquo;expression&amp;rdquo;) og utfører kodeblokken dersom uttrykket er sant. Man kan begrese antall poster i range med tall: Med where kan man &amp;ldquo;pipe&amp;rdquo; eller hekte på nummeret til slutt: {{ where EXPR | 5 }}. Med range bruker man first-nøkkelordet: {{ range first 5 . }} if and i hugo defineres på følgende måte: {{ if and (eq EXPR) (eq EXPR) }} .</description></item><item><title>2024-04-25</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-25/</link><pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-25/</guid><description>Hugo I Hugo oppretter man en dict på følgende måte: {{ $myDict := dict }}. dict kan sammenlignes med Javascripts objekt. For å slå opp i dict med variabel må vi benytte index: {{ index $myDict $myVar }}. For å legge til i dict må vi bruke merge: {{ $myDict = merge $myDict $newDict }}. For addere i Hugo brukes add: {{ add 1 1 }}`. For å kutte strenger brukes substr: {{ substr $myString # # }} .</description></item><item><title>2024-04-24</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-24/</link><pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-24/</guid><description>Javascript Lært om this i ulike kontekster: I &amp;ldquo;function invocation&amp;rdquo;, altså når man kaller eller kjører en funksjon (inkludert IIFE (immediately invoked function) / umiddelbart selvkallende funksjon) er this det globale objektet. Bruker man strict er det undefined. I et metodekall er this objektet som &amp;ldquo;eier&amp;rdquo; metoden, eller objektet hvor metoden er definert. Det er gjerne på venstre side av &amp;ldquo;dotten&amp;rdquo; når man kaller en metode, som her: person.fullName(). I dette tilfellet er this person-objektet.</description></item><item><title>2024-04-23</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-23/</link><pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-23/</guid><description>Git Hvis man ønsker å angre git commit kan man skrive git reset. Hugo isset: Sjekker om nøkkel eksisterer. For eksempel {{ if isset .Type }} if: Sjekker om uttrykk er sant. if eq: Sammenligner to argumenter. if not: Returnerer bool av argument. dict &amp;quot;key&amp;quot; &amp;quot;value&amp;quot;: Kalles å lage en &amp;ldquo;map&amp;rdquo; fra en liste av nøkler og verdier. Er tilsvarende et objekt i JavaScript. Vi kan sende variabler i &amp;ldquo;partial templates&amp;rdquo;: {{ partial &amp;quot;list.</description></item><item><title>2024-04-21</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</link><pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</guid><description>Javascript hasOwnProperty(property): En metode for å sjekke om angit egenskap er definert i gjeldende objekt eller prototype. Object.setPrototypeOf(currentObject, targetObject): Angi et objekt (targetObject) som gjeldende objekt (currentTarget) skal arve fra. Man kan arve metoder og egenskaper fra mange ulike objekter. call(): En metode for å kopiere egenskaper fra en construktor til et annet objekt. Men skal de linkes må det gjøres med Object.setPropertyOf. Det oppstår ikke en automatisk link ved å bruke call.</description></item><item><title>2024-04-20</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-20/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-20/</guid><description>Curl Curl er et kommandolinje-program for overføring av data med URLer. Det ble utviklet av en svenske i 1998, som fortsatt utvikler det. Det er open source. Skriver man curl URL så er GET satt som standard. Ønsker man å sende &amp;ldquo;bearer&amp;rdquo;-nøkkel kan det gjøres på følgende måte: curl URL - H &amp;#34;Accept: application/JSON&amp;#34; - H &amp;#34;Authorization: Bearer {token}&amp;#34; -H står for &amp;ldquo;headers&amp;rdquo; jq For en mer oversiktlig JSON kan vi bruke jq, som er en JSON prosessor, med curl: curl URL | jq &amp;#34;.</description></item><item><title>2024-04-19</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-19/</link><pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-19/</guid><description>Hugo Lærte at url i frontmatter brukes for å angi manuell adresse til en side. Lært at resources.Copy kan kopiere en ressurs. tags kan også få eget design ved å legge til `content/tags/[tagnavn]/_index.md NVIM :e [bane][filnavn]: åpne ny fil uten å lukke den gjeldende. :bn / br: Bytte mellom åpne filer. :w [filnavn]: Kopiere gjeldende fil til nytt filnavn, men holde gjeldende fil åpen. :sav [filnavn]: Kopiere gjeldende fil til nytt filnavn, og åpne den nye filen.</description></item><item><title>Opprette sider i Hugo via API</title><link>https://www.michaelhelgesen.no/tekster/opprette-sider-i-hugo-via-api/</link><pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/tekster/opprette-sider-i-hugo-via-api/</guid><description>Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til Zotero , slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.
-Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.</description></item><item><title>2024-04-18</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-18/</link><pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-18/</guid><description>Hugo Lærte om og benyttet Hugos OS-funksjon fileExists for å sjekke om filer eksisterer i en mappe ved nedlasting fra API. Lærte at JSON tolkes som Frontmatter i Hugo. Man kan dermed importere et JSON-objekt i en fil, uten å tenke på formatering, for deretter å bruke innholdet som Frontmatter. Lærte også hvordan man oppretter filer med resources.FromString og RelPermalink.</description></item><item><title>2024-04-17</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</link><pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</guid><description>Hugo printf &amp;quot;%#v&amp;quot; printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst. transform.Unmarshal endrer data til &amp;ldquo;map&amp;rdquo; eller &amp;ldquo;array&amp;rdquo; og fungerer med JSON, CSV, XML med mer. resource.GetRemote URL brukes for å koble til eksterne API-er. Å lage sider av data fra eksternt API Fedora Man kan angi tastatursnarveier for terminal-kommandoer under innstillinger / tastatur / egendefinert. Jeg satt opp Alt + Home som snarvei for å åpne terminalen.</description></item><item><title>Jeg er en evig amatør</title><link>https://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</link><pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</guid><description>«Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre», skriver Austin Kleon i sin bok «Show your work» . 1
-Dette sitatet, og boken forøvrig, inspirerte meg til å ta Kleon på ordet.
-Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende og forhåpentligvis inspirerende.
-Nå er ikke jeg en kunstner slik som Kleon eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser.</description></item><item><title>Nullstilling av bokhyllen</title><link>https://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</link><pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</guid><description>I dag startet jeg jobben med å tømme bokhyllene for bøker.
-I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.
-De færreste av bøkene er lest, mens de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.
-Dagens bokhylle representerer således sløsing av både penger, tid og energi, og skal dermed nullstilles, selv om noen mener det er fornuftig å ha et antilibrary .</description></item><item><title>2024-04-16</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-16/</link><pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-16/</guid><description>NVIM For å legge til en ny fil i Explore-modus så taster man prosenttegn %. «Redo» i VIM er Ctrl + R.</description></item><item><title>2024-04-15</title><link>https://www.michaelhelgesen.no/laeringslogg/2024-04-15/</link><pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-15/</guid><description>Hugo Man looper gjennom sider i Hugo med {{ range .Site.RegularPages }}. Det er det samme som en for loop i javascript. .Site er forøvrig en global funksjon som gir tilgang til gjeldende &amp;ldquo;site&amp;rdquo;, som omtales som et objekt i dokumentasjonen.
-Man kan bruke både site og .Site. Hugo anbefaler å benytte site i &amp;ldquo;templates&amp;rdquo;. .RegularPages er en &amp;ldquo;site&amp;rdquo;-metode som returnerer en samling (&amp;ldquo;collection&amp;rdquo;) av alle standard-sider. Variabler i Hugo angis på følgende måte: {{ $name := &amp;quot;Mikke&amp;quot; }}.</description></item><item><title>Nå</title><link>https://www.michaelhelgesen.no/na/</link><pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/na/</guid><description>Denne nå-siden er inspirert av Derek Sivers , og er dedikert til svaret på spørsmålet «hvordan står det til» 1. Det er rett og slett en oppdatering på livets tilstand samt en intern refleksjon over prioriteringer.
-Besides answering the common question, “What are you up to these days?”, those who have a now page say it’s a good reminder of their priorities. Derek Sivers Tanker Akkurat nå er jeg opptatt av hvordan teknologi og teknologer påvirker oss som mennesker.</description></item><item><title>Om</title><link>https://www.michaelhelgesen.no/om/</link><pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/om/</guid><description>Hei! Jeg er Mikke, en nysgjerrig entusiast som har valgt å dele både opp- og nedturer i søken etter kunnskap. Dessuten synes jeg det er viktig og givende med undring.
-Jeg er en autodidakt1 frontend-utvikler, og alt det jeg kan i dag er takket være andres interesse og innsats for å lære bort. Forhåpentligvis kan jeg gi noe tilbake.
-Målet med nettsiden er å skape mer, bli en bedre skribent, en bedre tenker, en bedre kunnskapsforvalter, og et bedre og lykkeligere menneske.</description></item><item><title>Show your work!: 10 ways to share your creativity and get discovered</title><link>https://www.michaelhelgesen.no/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.michaelhelgesen.no/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</guid><description>Oppsummert i tre setninger: I «Show Your Work!» oppfordrer forfatter og kunstner Austin Kleon alle til å dele sitt kreativt arbeid, uansett om man er nybegynner eller erfaren.
-Han mener myten om det ensomme geniet er falskt, og anbefaler heller å forplikte seg til å lære foran andre, med alt det innebærer at opp- og nedturer, fordi det du anser som gråstein kan være gull for mange.
-Gjennom sitater, historier og bilder beskriver Kleon hvordan det å være kreativ sammen med likesinnede kan løfte din egen kreativitet, i tillegg til å servere en rekke konkrete tips til hva og hvor mye man bør dele, og hvordan, for effektiv selvpromotering.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mikkes digitale hage on Michael Helgesen</title>
+    <link>https://www.michaelhelgesen.no/</link>
+    <description>Recent content in Mikkes digitale hage on Michael Helgesen</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <atom:link href="https://www.michaelhelgesen.no/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-02</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-29/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-29/</guid>
+      <description>Hugo Lærte å angi «site wide» og:image slik at jeg slipper å angi «open graph»-bilde manuelt på samtlige sider. HUGO ser etter Params.images i head.html. Finner den ingen, benyttes det globale bildet. Man kan sjekke om en side er en term ved å benytte data.term. </description>
+    </item>
+    <item>
+      <title>2024-08-29</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-27/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-27/</guid>
+      <description>Hugo Man kan bruke markdownify for å konvertere for eksempel «YAML» til «markdown». Det er viktig å forstå forskjellen på variabler med stor og liten forbokstav i «frontmatter» i HUGO. Stor forbokstav som .Title indikerer HUGOs standarder, mens liten forbokstav som .beskrivelse indikerer egendefinerte. --- title: Les siste om HUGO beskrivelse: Få med deg det siste nye om HUGO. --- I eksempelet over hentes «title» med .Title, mens «beskrivelse» hentes med .</description>
+    </item>
+    <item>
+      <title>2024-08-26</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-26/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-26/</guid>
+      <description>Hugo md5 brukes for å kryptere en streng. Cloudinary For å hente metadata i URL: ...fields[]=width&amp;amp;fields[]=context </description>
+    </item>
+    <item>
+      <title>2024-08-22</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-22/</link>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-22/</guid>
+      <description>Linux For å sjekke egen IP-adresse kan man i terminalen skrive ip a eller ìfconfig`. Se etter «inet»-verdien. </description>
+    </item>
+    <item>
+      <title>Kunstig intelligens</title>
+      <link>https://www.michaelhelgesen.no/kunstig-intelligens/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/kunstig-intelligens/</guid>
+      <description>Kunstig intelligens (KI) vokser i en enorm fart, og har blitt skremmende god til å kreere tekst, bilder, video og tale.&#xA;Å vite hva og hvem man kan stole på blir stadig mer utfordrende. Derfor har jeg opprettet denne siden for å opplyse om mitt forhold til KI og generert innhold, etter inspirasjon og oppfordring fra Damola .&#xA;Foreløpig har jeg kun testet noen av tjenestene, men aldri brukt KI til å skrive tekster eller lage bilder på denne nettsiden.</description>
+    </item>
+    <item>
+      <title>2024-08-20</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-20/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-20/</guid>
+      <description>Cloudinary For å hente bilder fra en spesifikk mappe via API i HUGO kan man bruke følgende streng: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34; }} For sortering, begrensning på antall og utvalgte datafelter kan man gjøre som følger: {{ $url := print &amp;#34;https://&amp;#34; $cloudinary_key &amp;#34;:&amp;#34; $cloudinary_secret &amp;#34;@api.cloudinary.com/v1_1/&amp;#34; $cloudinary_name &amp;#34;/resources/search?expression=folder:&amp;#34; $cloudinary_folder &amp;#34;&amp;amp;max_results=&amp;#34; .number &amp;#34;&amp;amp;sort_by[][created_at]=desc&amp;amp;&amp;amp;fields[]=width&amp;amp;fields[]=height&amp;amp;fields[]=url&amp;amp;fields[]=filename&amp;amp;fields[]=context&amp;#34; }} Linux For å se hvilken versjon av BASH man kan man skrive echo &amp;quot;$SHELL&amp;quot; i terminalen.</description>
+    </item>
+    <item>
+      <title>2024-08-19</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-19/</link>
+      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-19/</guid>
+      <description>Linux Dig (domain information groper) er en Linux-kommando som viser DNS (domain name system) informasjon. Det er et verktøy som sender spørringer til DNS-servere. dig [URL] +noall +answer viser bare svar-delen av spørringen. -t [TYPE] viser DNS-typen som A, AAA, MX og så videre. Github Opprettet personlig GitHub-side (Github Pages ) og koblet til eget domene. Fremgangsmåte her . </description>
+    </item>
+    <item>
+      <title>2024-08-15</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-08-15/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-08-15/</guid>
+      <description>Hugo Lærte å kommentere ut kode, slik at man kan vise kode uten at den kjøres. &amp;lt;/* ref &amp;#34;om&amp;#34; */&amp;gt; Markdown Vi kan «escape» «backticks» i kodefelt ved å starte og avslutte kodefeltet med to «backticks» i stedet for en. `` kode `x` mer kode`` </description>
+    </item>
+    <item>
+      <title>2024-07-18</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-07-18/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-07-18/</guid>
+      <description>Zotero Lærte å hente notater og vedlegg fra Zotero. api.zotero.org/groups/&amp;lt;ID&amp;gt;/items/&amp;lt;ID&amp;gt;/children </description>
+    </item>
+    <item>
+      <title>2024-06-07</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-06-07/</link>
+      <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-06-07/</guid>
+      <description>Hugo For å vise bilder fra HUGOs «assets»-mappe brukes følgende: {{ (resources.Get &amp;quot;[bane]&amp;quot;).RelPermalink }}. Man må huske på å angi «assets»-mappe i «config.toml»: [[module.mounts]] source = &amp;#34;assets&amp;#34; target = &amp;#34;assets&amp;#34; Man oppdaterer HUGO ved å blytte ny versjon til bin. For å starte server uten å bygge «public»-versjon: hugo server --renderToMemory Linux whereis er en kommando for å lokalisere en «package», for eksempel HUGO: whereis hugo </description>
+    </item>
+    <item>
+      <title>2024-06-03</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</guid>
+      <description>Strapi Hvordan berike felter i API-kallet med ?populate[0]feltnavn&amp;amp;populate[1]feltnavn. Dette bygger en egen liste å jobbe med. Curl Legg til -g for å kunne bruke {} og [] uten å måtte «escape» dem. Curl overser dem. Bruk &amp;quot;&amp;amp;&amp;quot; i hermetegn for å inkludere tegn som «&amp;amp;» i en streng. </description>
+    </item>
+    <item>
+      <title>Les med intensjon for bedre effektivitet</title>
+      <link>https://www.michaelhelgesen.no/tekster/les-med-intensjon-for-bedre-effektivitet/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/tekster/les-med-intensjon-for-bedre-effektivitet/</guid>
+      <description>Å sette seg et mål før man leser en tekst har for meg vært en svært viktig lærdom.&#xA;Det høres kanskje absurd ut, at noe så enkelt kan være av betydning, men å lese med intensjon har økt min effektivitet betraktelig.&#xA;Overflod av informasjon Tidligere satt jeg min ære i å lese alle bøker jeg startet på fra perm til perm. Det krevde selvsagt både tid og energi. I tillegg skrev jeg mange notater og markerte en rekke setninger.</description>
+    </item>
+    <item>
+      <title>2024-05-29</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-29/</link>
+      <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-29/</guid>
+      <description>Strapi Installerte Strapi for første gang og testet det å lage innholds-komponenter, hvordan finne komponenter i API-kallet og gå «dypere» inn i dataene. </description>
+    </item>
+    <item>
+      <title>2024-05-25</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</guid>
+      <description>Figma Opprette varianter av komponenter Benytte plugins </description>
+    </item>
+    <item>
+      <title>2024-05-24</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</guid>
+      <description>Figma Opprette variabler Lage komponenter «Tokenization» «Frames» vs «groups» </description>
+    </item>
+    <item>
+      <title>2024-05-23</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</guid>
+      <description>Hugo Jeg kom bort i et problem med at alle lenker viste et ekstra mellomrom. Det har visst noe med oppsettet å gjøre, som sier noe sånt som at «legg til ny linje i enden av alle filer». Jeg fikk det bort ved å legge til {{- &amp;quot;&amp;quot; -}} på slutten av «render_link.html hooken» som genererer koden til lenkene. Figma Lærte å opprette maler Lage 8-punkts rutenett Aktivere «nudge» for en smidigere flytting av bokser.</description>
+    </item>
+    <item>
+      <title>Hvordan velge gode kilder</title>
+      <link>https://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</guid>
+      <description>I følge Kildekompasset.no finnes det to typer kilder å velge mellom:&#xA;primærkilder sekundærkilder. Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisartikkel som omtaler forskningsrapporten er en sekundærkilde.&#xA;Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.&#xA;Derfor bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.</description>
+    </item>
+    <item>
+      <title>Min tredje seksjon i zettelkasten</title>
+      <link>https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</guid>
+      <description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.&#xA;Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.&#xA;Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper 1 .</description>
+    </item>
+    <item>
+      <title>2024-05-22</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-22/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-22/</guid>
+      <description>Hugo Jeg hadde et ønske om å markere eksterne lenker på nettsiden med et ikon. Det kan man gjøre i HUGO ved hjelp av såkalte «markup hooks ». Linux Lærte om «symlinks» eller «snarveier» i Linux. Opprette en symlink: ln -s [bane til fil / mappe] [snarvei] Eks: ln -s test/testfil.txt link.txt. link.txt peker til testfil.txt. Slette symlink: unlink [bane til symlink] Se etter symlink: ls -l [bane til symlink] </description>
+    </item>
+    <item>
+      <title>2024-05-21</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-21/</link>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-21/</guid>
+      <description>Hugo Når man jobber med API-er så holder HUGO tilbake oppdateringer fra kilden, slik at det ikke blir for mange spørringer. For tvinge frem endringer gjort i API-et kan vi slette HUGOs «cache». Finn TMP-mappen og se etter hugo_cache. Sletter man den og aktiverer HUGO server på nytt, vil all data oppdateres. </description>
+    </item>
+    <item>
+      <title>Endelig mulig å opprette sider i HUGO fra ekstern data!</title>
+      <link>https://www.michaelhelgesen.no/journal/sider-fra-data-i-hugo/</link>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/journal/sider-fra-data-i-hugo/</guid>
+      <description>I dag kom jeg helt tilfeldig over en video på YouTube som opplyste om at HUGO nå endelig kan opprette sider fra ekstern data som blant annet JSON, YAML og XML.&#xA;Det er gode nyheter, for mangelen på en funksjon som kan opprette sider basert på data fra API-er har vært en av HUGOs størtste ulemper. Det har vært mulig å få til via egne scripts, men nå er det altså integrert i løsningen.</description>
+    </item>
+    <item>
+      <title>2024-05-19</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-19/</link>
+      <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-19/</guid>
+      <description>Hugo Jeg fant ut at HUGO ikke har støtte for «regular expressions» «look ahead» eller «capture groups». Jeg måtte derfor dele opp prosessen med å hente ut tekst fra en artikkel. Måtte først lage en regex-streng med $regExString := print `(?s)(?i)` $tag `&amp;lt;\/h[0-9]&amp;gt;.*?&amp;lt;h[0-9]|(?s)(?i)` $tag `&amp;lt;\/h[0-9]&amp;gt;.*` (?s) betyr «single line mode» og ignorerer «whitespace» inkludert mellomrom, tabulator og ny linje. (?i) betyr at det ikke tas hensyn til om bokstavene er minuskler eller versaler.</description>
+    </item>
+    <item>
+      <title>Hvordan kan jeg håndtere kunnskap på en smart og effektiv måte?</title>
+      <link>https://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</link>
+      <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</guid>
+      <description>I mange år har jeg lest og lært om emner som interesserer meg. Formålet har alltid vært å utvikle meg som person, øke min forståelse samt videreformidle kunnskap til andre.&#xA;Jeg har selvsagt lært noe underveis, men hvis jeg sammenligner tid og penger brukt med hva jeg faktisk har produsert, er det er ingen tvil om at mine metoder har vært svært lite effektive. Jeg har blant annet:&#xA;Brukt tusenvis av kroner på bøker, kurs og materiell.</description>
+    </item>
+    <item>
+      <title>2024-05-09</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</link>
+      <pubDate>Thu, 09 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</guid>
+      <description>CSS Jeg fant ut at man kan benytte negative verdier i CSS-variabler. Jeg benyttet dette i footer for å få den til å strekke seg ut til begge sider av nettleseren ved å konvertere til negative verdier. footer { margin: var(--max) calc(clamp(var(--medium_2), 8vw, var(--large_2)) * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2)) * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2)) * -1) } </description>
+    </item>
+    <item>
+      <title>2024-05-08</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-08/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-08/</guid>
+      <description>Hugo I HUGO kan kan slå sammen en variabel og streng på følgende måte: {{ printf &amp;#34;%s%s&amp;#34; &amp;#34;Hei&amp;#34; $name }} I HUGO kan man dele en samling og en streng med henholdsvis index og split. I eksempelet under kommer et fullt navn inn fra en samling i et API, hvor navnet må splittes til for- og etternavn. {{ with .lastName }} {{$firstName = index (split . &amp;#34; &amp;#34;) 0 }} {{$lastName = index (split .</description>
+    </item>
+    <item>
+      <title>2024-05-07</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-07/</link>
+      <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-07/</guid>
+      <description>Hugo Jeg slet lenge med oppsett og alias på emneknagg-sider («taxonomies») i HUGO. Svaret fant jeg i denne tråden . </description>
+    </item>
+    <item>
+      <title>2024-05-06</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-06/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-06/</guid>
+      <description>Git For å tilbakestille en «git commit» kan vi bruke git reset. Det vil kansellere alt som er i en «commit» men foreløpig ikke «pushed». Vær forsiktig med dette, da endringer utført kan forsvinne. Jeg snakker av erfaring. </description>
+    </item>
+    <item>
+      <title>2024-05-05</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-05/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-05/</guid>
+      <description>Hugo Med «page bundles» i HUGO kan man liste opp alle sider og tilhørende ressurser i en «bundle» eller seksjon. Med følgende oppsett&amp;hellip; ├───blogg │ ├───blogg-1 │ │ img-1.jpg │ │ index.md │ │ │ ├───blogg-2 │ │ img-1.jpg │ │ img-2.jpg │ │ index.md │ │ │ └───blogg-3 │ img-1.jpg │ img-2.jpg │ img-3.jpg │ index.md &amp;hellip; kan vi hente frem alt i «blogg-seksjonen» på følgende måte: {{range where .</description>
+    </item>
+    <item>
+      <title>2024-05-03</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-03/</link>
+      <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-03/</guid>
+      <description>Hugo I HUGO kan vi gruppere og omrokkere på lister med henholdsvis range .Pages.GroupByDate og range .Pages.ByDateReverse. CSS Jeg knotet veldig med «HSL»-farger i CSS, men det består altså av «hue», «saturation» og «lightness». «Hue» er farge, fra 0 til 366. 0 er rød, 120 er grønn og 240 er blå. «Saturation» er hvor mange prosent grått man vil legge til. 0% er grått mens 100% er den fulle fargen. «Lightness» er hvor lys eller mørk en farge skal være.</description>
+    </item>
+    <item>
+      <title>2024-05-02</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-02/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-02/</guid>
+      <description>Hugo Jeg lærte at man i HUGO kan ha uttallige «taxonomies ». «Tags» og «categories» er standard, men man kan angi så mange man trenger, eller skru av alle. En tekst kan også ha så mange «taxonomies» som man behøver. </description>
+    </item>
+    <item>
+      <title>Scenialitet: de beste ideene skapes i et fellesskap</title>
+      <link>https://www.michaelhelgesen.no/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</guid>
+      <description>Historien og populærkulturen fremstiller mange av menneskehetens store fremskritt som resultat av enslige geniers standhaftige arbeid i isolasjon fra omverdenen.&#xA;I følge musikeren og produsenten Brian Eno er denne forestillingen om det ensomme kreative geniet en myte. Han mener stort sett alle gode ideer har sitt utspring i et fellesskap 1. At kreativitet ikke er en antisosial handling, men blomstrer i et samfunn bestående av ulike individer med forskjellige talenter som påvirker, inspirerer og oppfordrer hverandre.</description>
+    </item>
+    <item>
+      <title>2024-04-30</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-30/</link>
+      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-30/</guid>
+      <description>Hugo Endret oppsett av HUGO til «branch»- og «leaf» bundles » for enklere håndtering av bilder og andre filer tilknyttet den enkelte side. På denne måten ligger alle ressurser samme sted som teksten, i motsetning til å ha alle ressurser i en og samme ressurs-mappe, som fort kan vokse seg stor og uoversiktlig. Lærte også om HUGOs bildeprosessor som lar oss manipulere bilder ved skalering, beskjæring, rotering og fargelegging, for å nevne noen.</description>
+    </item>
+    <item>
+      <title>2024-04-29</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-29/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-29/</guid>
+      <description>Hugo Om man ønsker å legge til en tittel («title») i en «shortcode»-lenke angir man den i anførselstegn: [Dette er en lenke]({{&amp;lt; ref &amp;#34;../om&amp;#34;&amp;gt;}} &amp;#34;Tittel&amp;#34;) Markdown Lærte hvordan man angir kommentarer i «markdown»-filer: [comment]: &amp;lt;&amp;gt; (Teksten i denne parantesen vil ikke synes) </description>
+    </item>
+    <item>
+      <title>2024-04-28</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-28/</link>
+      <pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-28/</guid>
+      <description>Hugo Vi kan angi ulike parametre for å vise når et dokument sist ble oppdatert. I config-toml definerte jeg følgende: [frontmatter] lastmod = [&amp;#34;lastmod&amp;#34;, &amp;#34;:fileModTime&amp;#34;, &amp;#34;:default&amp;#34;] lastmod betyr at Hugo ser etter variabelen i &amp;ldquo;frontmatter&amp;rdquo;. Er den ikke definert, velges heller :fileModTime som viser filens siste oppdatering, eller :default. Jeg fant også ut hvordan man definerer språk i config.toml for å vise datoer på norsk: defaultContentLanguage = &amp;quot;nb&amp;quot; </description>
+    </item>
+    <item>
+      <title>2024-04-27</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-27/</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-27/</guid>
+      <description>Linux Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md. Hugo Shortcodes er kommandoer vi kan angi i &amp;ldquo;markdown&amp;rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter: {{ /* Metode 1 */ }} {{ &amp;lt; myShortcode data=&amp;#34;This is data&amp;#34; &amp;gt; }} {{ /* Metode 2 */ }} {{ &amp;lt; myShortcode &amp;gt; }} This is data {{ &amp;lt; /myShortcode &amp;gt;}} myShortcode over henviser til myShortcode.</description>
+    </item>
+    <item>
+      <title>2024-04-26</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</guid>
+      <description>Hugo Det finnes ikke noe tilsvarende javascripts switch i Hugo. Man må bruke if else eller with. with endrer konteksten av &amp;ldquo;dott&amp;rdquo; til et uttrykk (&amp;ldquo;expression&amp;rdquo;) og utfører kodeblokken dersom uttrykket er sant. Man kan begrese antall poster i range med tall: Med where kan man &amp;ldquo;pipe&amp;rdquo; eller hekte på nummeret til slutt: {{ where EXPR | 5 }}. Med range bruker man first-nøkkelordet: {{ range first 5 . }} if and i hugo defineres på følgende måte: {{ if and (eq EXPR) (eq EXPR) }} .</description>
+    </item>
+    <item>
+      <title>2024-04-25</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-25/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-25/</guid>
+      <description>Hugo I Hugo oppretter man en dict på følgende måte: {{ $myDict := dict }}. dict kan sammenlignes med Javascripts objekt. For å slå opp i dict med variabel må vi benytte index: {{ index $myDict $myVar }}. For å legge til i dict må vi bruke merge: {{ $myDict = merge $myDict $newDict }}. For addere i Hugo brukes add: {{ add 1 1 }}`. For å kutte strenger brukes substr: {{ substr $myString # # }} .</description>
+    </item>
+    <item>
+      <title>2024-04-24</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-24/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-24/</guid>
+      <description>Javascript Lært om this i ulike kontekster: I &amp;ldquo;function invocation&amp;rdquo;, altså når man kaller eller kjører en funksjon (inkludert IIFE (immediately invoked function) / umiddelbart selvkallende funksjon) er this det globale objektet. Bruker man strict er det undefined. I et metodekall er this objektet som &amp;ldquo;eier&amp;rdquo; metoden, eller objektet hvor metoden er definert. Det er gjerne på venstre side av &amp;ldquo;dotten&amp;rdquo; når man kaller en metode, som her: person.fullName(). I dette tilfellet er this person-objektet.</description>
+    </item>
+    <item>
+      <title>2024-04-23</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-23/</link>
+      <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-23/</guid>
+      <description>Git Hvis man ønsker å angre git commit kan man skrive git reset. Hugo isset: Sjekker om nøkkel eksisterer. For eksempel {{ if isset .Type }} if: Sjekker om uttrykk er sant. if eq: Sammenligner to argumenter. if not: Returnerer bool av argument. dict &amp;quot;key&amp;quot; &amp;quot;value&amp;quot;: Kalles å lage en &amp;ldquo;map&amp;rdquo; fra en liste av nøkler og verdier. Er tilsvarende et objekt i JavaScript. Vi kan sende variabler i &amp;ldquo;partial templates&amp;rdquo;: {{ partial &amp;quot;list.</description>
+    </item>
+    <item>
+      <title>2024-04-21</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</guid>
+      <description>Javascript hasOwnProperty(property): En metode for å sjekke om angit egenskap er definert i gjeldende objekt eller prototype. Object.setPrototypeOf(currentObject, targetObject): Angi et objekt (targetObject) som gjeldende objekt (currentTarget) skal arve fra. Man kan arve metoder og egenskaper fra mange ulike objekter. call(): En metode for å kopiere egenskaper fra en construktor til et annet objekt. Men skal de linkes må det gjøres med Object.setPropertyOf. Det oppstår ikke en automatisk link ved å bruke call.</description>
+    </item>
+    <item>
+      <title>2024-04-20</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-20/</link>
+      <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-20/</guid>
+      <description>Curl Curl er et kommandolinje-program for overføring av data med URLer. Det ble utviklet av en svenske i 1998, som fortsatt utvikler det. Det er open source. Skriver man curl URL så er GET satt som standard. Ønsker man å sende &amp;ldquo;bearer&amp;rdquo;-nøkkel kan det gjøres på følgende måte: curl URL - H &amp;#34;Accept: application/JSON&amp;#34; - H &amp;#34;Authorization: Bearer {token}&amp;#34; -H står for &amp;ldquo;headers&amp;rdquo; jq For en mer oversiktlig JSON kan vi bruke jq, som er en JSON prosessor, med curl: curl URL | jq &amp;#34;.</description>
+    </item>
+    <item>
+      <title>2024-04-19</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-19/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-19/</guid>
+      <description>Hugo Lærte at url i frontmatter brukes for å angi manuell adresse til en side. Lært at resources.Copy kan kopiere en ressurs. tags kan også få eget design ved å legge til `content/tags/[tagnavn]/_index.md NVIM :e [bane][filnavn]: åpne ny fil uten å lukke den gjeldende. :bn / br: Bytte mellom åpne filer. :w [filnavn]: Kopiere gjeldende fil til nytt filnavn, men holde gjeldende fil åpen. :sav [filnavn]: Kopiere gjeldende fil til nytt filnavn, og åpne den nye filen.</description>
+    </item>
+    <item>
+      <title>Opprette sider i Hugo via API</title>
+      <link>https://www.michaelhelgesen.no/tekster/opprette-sider-i-hugo-via-api/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/tekster/opprette-sider-i-hugo-via-api/</guid>
+      <description>Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til Zotero , slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.&#xA;Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.</description>
+    </item>
+    <item>
+      <title>2024-04-18</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-18/</link>
+      <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-18/</guid>
+      <description>Hugo Lærte om og benyttet Hugos OS-funksjon fileExists for å sjekke om filer eksisterer i en mappe ved nedlasting fra API. Lærte at JSON tolkes som Frontmatter i Hugo. Man kan dermed importere et JSON-objekt i en fil, uten å tenke på formatering, for deretter å bruke innholdet som Frontmatter. Lærte også hvordan man oppretter filer med resources.FromString og RelPermalink. </description>
+    </item>
+    <item>
+      <title>2024-04-17</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</guid>
+      <description>Hugo printf &amp;quot;%#v&amp;quot; printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst. transform.Unmarshal endrer data til &amp;ldquo;map&amp;rdquo; eller &amp;ldquo;array&amp;rdquo; og fungerer med JSON, CSV, XML med mer. resource.GetRemote URL brukes for å koble til eksterne API-er. Å lage sider av data fra eksternt API Fedora Man kan angi tastatursnarveier for terminal-kommandoer under innstillinger / tastatur / egendefinert. Jeg satt opp Alt + Home som snarvei for å åpne terminalen.</description>
+    </item>
+    <item>
+      <title>Jeg er en evig amatør</title>
+      <link>https://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</guid>
+      <description>«Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre», skriver Austin Kleon i sin bok «Show your work» . 1&#xA;Dette sitatet, og boken forøvrig, inspirerte meg til å ta Kleon på ordet.&#xA;Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende og forhåpentligvis inspirerende.&#xA;Nå er ikke jeg en kunstner slik som Kleon eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser.</description>
+    </item>
+    <item>
+      <title>Nullstilling av bokhyllen</title>
+      <link>https://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</guid>
+      <description>I dag startet jeg jobben med å tømme bokhyllene for bøker.&#xA;I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.&#xA;De færreste av bøkene er lest, mens de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.&#xA;Dagens bokhylle representerer således sløsing av både penger, tid og energi, og skal dermed nullstilles, selv om noen mener det er fornuftig å ha et antilibrary .</description>
+    </item>
+    <item>
+      <title>2024-04-16</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-16/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-16/</guid>
+      <description>NVIM For å legge til en ny fil i Explore-modus så taster man prosenttegn %. «Redo» i VIM er Ctrl + R. </description>
+    </item>
+    <item>
+      <title>2024-04-15</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-15/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-15/</guid>
+      <description>Hugo Man looper gjennom sider i Hugo med {{ range .Site.RegularPages }}. Det er det samme som en for loop i javascript. .Site er forøvrig en global funksjon som gir tilgang til gjeldende &amp;ldquo;site&amp;rdquo;, som omtales som et objekt i dokumentasjonen.&#xA;Man kan bruke både site og .Site. Hugo anbefaler å benytte site i &amp;ldquo;templates&amp;rdquo;. .RegularPages er en &amp;ldquo;site&amp;rdquo;-metode som returnerer en samling (&amp;ldquo;collection&amp;rdquo;) av alle standard-sider. Variabler i Hugo angis på følgende måte: {{ $name := &amp;quot;Mikke&amp;quot; }}.</description>
+    </item>
+    <item>
+      <title>Nå</title>
+      <link>https://www.michaelhelgesen.no/na/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/na/</guid>
+      <description>Denne nå-siden er inspirert av Derek Sivers , og er dedikert til svaret på spørsmålet «hvordan står det til» 1. Det er rett og slett en oppdatering på livets tilstand samt en intern refleksjon over prioriteringer.&#xA;Besides answering the common question, “What are you up to these days?”, those who have a now page say it’s a good reminder of their priorities. Derek Sivers Tanker Akkurat nå er jeg opptatt av hvordan teknologi og teknologer påvirker oss som mennesker.</description>
+    </item>
+    <item>
+      <title>Om</title>
+      <link>https://www.michaelhelgesen.no/om/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/om/</guid>
+      <description>Hei! Jeg er Mikke, en nysgjerrig entusiast som har valgt å dele både opp- og nedturer i søken etter kunnskap. Dessuten synes jeg det er viktig og givende med undring.&#xA;Jeg er en autodidakt1 frontend-utvikler, og alt det jeg kan i dag er takket være andres interesse og innsats for å lære bort. Forhåpentligvis kan jeg gi noe tilbake.&#xA;Målet med nettsiden er å skape mer, bli en bedre skribent, en bedre tenker, en bedre kunnskapsforvalter, og et bedre og lykkeligere menneske.</description>
+    </item>
+    <item>
+      <title>Show your work!: 10 ways to share your creativity and get discovered</title>
+      <link>https://www.michaelhelgesen.no/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</guid>
+      <description>Oppsummert i tre setninger: I «Show Your Work!» oppfordrer forfatter og kunstner Austin Kleon alle til å dele sitt kreativt arbeid, uansett om man er nybegynner eller erfaren.&#xA;Han mener myten om det ensomme geniet er falskt, og anbefaler heller å forplikte seg til å lære foran andre, med alt det innebærer at opp- og nedturer, fordi det du anser som gråstein kan være gull for mange.&#xA;Gjennom sitater, historier og bilder beskriver Kleon hvordan det å være kreativ sammen med likesinnede kan løfte din egen kreativitet, i tillegg til å servere en rekke konkrete tips til hva og hvor mye man bør dele, og hvordan, for effektiv selvpromotering.</description>
+    </item>
+  </channel>
+</rss>

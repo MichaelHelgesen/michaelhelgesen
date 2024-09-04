@@ -1,24 +1,653 @@
-<!doctype html><html lang=nb><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Linux</title>
-<link rel=stylesheet href=https://www.michaelhelgesen.no/css/normalize.min.9bd625ca5b1c6d7ac349d367513b9500861d8c3475424bc36cc608cfe28494bd.css><link rel=stylesheet href=https://www.michaelhelgesen.no/css/style.min.bc3c6df6b1e36399d2bad5b06cff0ae420586f6c4a2a182585b8d7e121b7bc1f.css><meta name=author content><link rel=canonical href=https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/ itemprop=url><meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/"><meta property="og:site_name" content="Michael Helgesen"><meta property="og:title" content="Linux"><meta property="og:locale" content="nb"><meta property="og:type" content="website"><meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"><meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"><meta name=description content="Ting jeg har lært om Linux i læringsloggen."><meta property="og:description" content="Ting jeg har lært om Linux i læringsloggen."></head><body><header><div class=logo><a href=/>MH</a></div><div><nav><ul><li><a href=/>Hjem</a></li><li><a href=/tekster/>Tekster</a></li><li><a href=/journal/>Journal</a></li><li><a href=/laeringslogg/>Læringslogg</a></li><li><a aria-current=true class=ancestor href=/emneknagger/>Emneknagger</a></li><li><a href=/kilder/>Kilder</a></li><li><a href=/bibliotek/>Bibliotek</a></li><li><a href=/lenker/>Lenker</a></li><li><a href=/galleri/>Galleri</a></li><li><a href=/kunstig-intelligens/>KI</a></li><li><a href=/na/>Nå</a></li><li><a href=/om/>Om</a></li></ul></nav><ol class=breadcrumb itemscope itemtype=https://schema.org/BreadcrumbList><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=/><span itemprop=name>Hjem</span></a>
-/&nbsp;
-<meta itemprop=position content='1'></li><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=/emneknagger><span itemprop=name>Emneknagger</span></a>
-/&nbsp;
-<meta itemprop=position content='2'></li><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=https://www.michaelhelgesen.no/emneknagger/laeringsemner/><span itemprop=name>Læringsemner</span></a>
-/&nbsp;
-<meta itemprop=position content='3'></li><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/><span itemprop=name>Linux</span>
-</a><meta itemprop=position content='4'></li></ol></div></header><main><div class="intro sider tag"><h1>#linux <sup>9</sup></h1><p class=ingress>Ting jeg har lært om linux</p><span></span></div><ul class=last-posts-list><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-08-22/>22. august 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 22. aug. 2024 | </span><a href=/emneknagger/laeringsemner/linux/>#linux</a></p></div><article class=logg><ul><li>For å sjekke egen IP-adresse kan man i terminalen skrive <code>ip a</code> eller ìfconfig`. Se etter «inet»-verdien.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-08-20/>20. august 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 20. aug. 2024 | </span><a href=/emneknagger/laeringsemner/cloudinary/>#cloudinary</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a>,
-<a href=/emneknagger/laeringsemner/direnv/>#direnv</a>,
-<a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>For å se hvilken versjon av BASH man kan man skrive <code>echo "$SHELL"</code> i terminalen.</li><li>BASH-filen ligger som regel i «home»-banen.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-08-19/>19. august 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 19. aug. 2024 | </span><a href=/emneknagger/laeringsemner/linux/>#linux</a>,
-<a href=/emneknagger/laeringsemner/github/>#github</a></p></div><article class=logg><ul><li>Dig (domain information groper) er en Linux-kommando som viser DNS (domain name system) informasjon. Det er et verktøy som sender spørringer til DNS-servere.</li><li><code>dig [URL] +noall +answer</code> viser bare svar-delen av spørringen.</li><li><code>-t [TYPE]</code> viser DNS-typen som A, AAA, MX og så videre.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-06-07/>7. juni 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 7. jun. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a></p></div><article class=logg><ul><li><code>whereis</code> er en kommando for å lokalisere en «package», for eksempel HUGO: <code>whereis hugo</code></li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-22/>22. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 22. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a></p></div><article class=logg><ul><li>Lærte om «symlinks» eller «snarveier» i Linux.<ul><li>Opprette en symlink: <code>ln -s [bane til fil / mappe] [snarvei]</code> Eks: <code>ln -s test/testfil.txt link.txt</code>. <code>link.txt</code> peker til <code>testfil.txt</code>.</li><li>Slette symlink: <code>unlink [bane til symlink]</code></li><li>Se etter symlink: <code>ls -l [bane til symlink]</code></li></ul></li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-30/>30. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 30. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a>,
-<a href=/emneknagger/laeringsemner/html/>#html</a>,
-<a href=/emneknagger/laeringsemner/devtools/>#devtools</a></p></div><article class=logg><ul><li>Bruk <code>ls -l</code> («long») for mer informasjon om filene i en mappe.</li><li><code>ls -l --block-size=MB</code> viser størrelsen på filer i megabit.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-27/>27. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 27. apr. 2024 | </span><a href=/emneknagger/laeringsemner/linux/>#linux</a>,
-<a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-21/>21. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 21. apr. 2024 | </span><a href=/emneknagger/laeringsemner/linux/>#linux</a>,
-<a href=/emneknagger/laeringsemner/javascript/>#javascript</a>,
-<a href=/emneknagger/laeringsemner/tailwind/>#tailwind</a></p></div><article class=logg><ul><li><code>| less</code>: &ldquo;Pipe less&rdquo; er en funksjon som stopper terminal fra å scrolle, og man kan selv styre visningen med piltastene. Et alternativ til <code>| more</code> hvor man flytter seg en side av gangen ved å trykke mellomrom-tasten.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-20/>20. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 20. apr. 2024 | </span><a href=/emneknagger/laeringsemner/curl/>#curl</a>,
-<a href=/emneknagger/laeringsemner/jq/>#jq</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a></p></div><article class=logg><ul><li>For å navigere opp og ned i terminal bruker man Shift + PgUp eller PgDown.</li><li>Hvis vi &ldquo;piper&rdquo; på &ldquo;more&rdquo; etter en kommando i terminalen vil terminalen pause ved scroll, og man fortsetter med mellomrom-tasten.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>curl URL | more
-</span></span></code></pre></div></article></li><li><hr></li></ul></main><footer class="mt-16 border-t border-white text-center pt-8 pb-4"><nav><ul><li><a href=/>Hjem</a></li><li><a href=/tekster/>Tekster</a></li><li><a href=/journal/>Journal</a></li><li><a href=/laeringslogg/>Læringslogg</a></li><li><a aria-current=true class=ancestor href=/emneknagger/>Emneknagger</a></li><li><a href=/kilder/>Kilder</a></li><li><a href=/bibliotek/>Bibliotek</a></li><li><a href=/lenker/>Lenker</a></li><li><a href=/galleri/>Galleri</a></li><li><a href=/kunstig-intelligens/>KI</a></li><li><a href=/na/>Nå</a></li><li><a href=/om/>Om</a></li></ul></nav><p>Nettsiden er laget av <a href=/om>meg</a>, med <a href=https://www.gohugo.io>Hugo</a>.</p><p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style=display:inline-block;margin-top:1rem href=https://ko-fi.com/s/4662b19f61 target=_blank><img loading=lazy alt="Merkelapp med teksten «Made by a human»" width=88 height=31 title="Laget av et menneske" src=/images/MadeByAHuman_01.png }}></a></footer></body></html>
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux</title>
+
+<link rel="stylesheet" href="https://www.michaelhelgesen.no/css/normalize.min.9bd625ca5b1c6d7ac349d367513b9500861d8c3475424bc36cc608cfe28494bd.css">
+
+<link rel="stylesheet" href="https://www.michaelhelgesen.no/css/style.min.bc3c6df6b1e36399d2bad5b06cff0ae420586f6c4a2a182585b8d7e121b7bc1f.css">
+    
+
+    <meta name="author" content="">
+ <link rel="canonical" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="Linux">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="website">
+
+
+
+
+
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+          
+
+          
+
+    
+
+
+<meta name="description" content="Ting jeg har lært om Linux i læringsloggen.">
+<meta property="og:description" content="Ting jeg har lært om Linux i læringsloggen.">
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp; 
+                <meta itemprop="position" content='1' />
+            </li>         
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/emneknagger">
+                    <span itemprop="name">Emneknagger</span></a>
+                /&nbsp; 
+                <meta itemprop="position" content='2' />
+            </li>
+                
+                
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/">
+                    <span itemprop="name">Læringsemner</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='3' />
+            </li>         
+            
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/">
+                    <span itemprop="name">Linux</span>
+                </a>
+                <meta itemprop="position" content='4' />
+            </li>
+    </ol>
+
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+       
+
+
+
+
+
+<div class="intro sider tag">
+<h1>
+    #linux <sup>9</sup>
+</h1>
+    <p class="ingress">Ting jeg har lært om linux</p>
+    <span>
+    
+    </span>
+</div>
+
+    <ul class="last-posts-list">
+        
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-08-22/">
+                    22. august 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 22. aug. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>For å sjekke egen IP-adresse kan man i terminalen skrive <code>ip a</code> eller ìfconfig`. Se etter «inet»-verdien.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-08-20/">
+                    20. august 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 20. aug. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/cloudinary/"> 
+        
+        #cloudinary</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/direnv/"> 
+        
+        #direnv</a>, 
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+            #hugo</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>For å se hvilken versjon av BASH man kan man skrive <code>echo &quot;$SHELL&quot;</code> i terminalen.</li>
+<li>BASH-filen ligger som regel i «home»-banen.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-08-19/">
+                    19. august 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 19. aug. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/github/"> 
+        
+            #github</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Dig (domain information groper) er en Linux-kommando som viser DNS (domain name system) informasjon. Det er et verktøy som sender spørringer til DNS-servere.</li>
+<li><code>dig [URL] +noall +answer</code> viser bare svar-delen av spørringen.</li>
+<li><code>-t [TYPE]</code> viser DNS-typen som A, AAA, MX og så videre.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-06-07/">
+                    7. juni 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 7. jun. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+            #linux</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>whereis</code> er en kommando for å lokalisere en «package», for eksempel HUGO: <code>whereis hugo</code></li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-22/">
+                    22. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 22. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+            #linux</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Lærte om «symlinks» eller «snarveier» i Linux.
+<ul>
+<li>Opprette en symlink: <code>ln -s [bane til fil / mappe] [snarvei]</code> Eks: <code>ln -s test/testfil.txt link.txt</code>. <code>link.txt</code> peker til <code>testfil.txt</code>.</li>
+<li>Slette symlink: <code>unlink [bane til symlink]</code></li>
+<li>Se etter symlink: <code>ls -l [bane til symlink]</code></li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-30/">
+                    30. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 30. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/html/"> 
+        
+        #html</a>, 
+         <a href="/emneknagger/laeringsemner/devtools/"> 
+        
+            #devtools</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Bruk <code>ls -l</code> («long») for mer informasjon om filene i en mappe.</li>
+<li><code>ls -l --block-size=MB</code> viser størrelsen på filer i megabit.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-27/">
+                    27. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 27. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+            #hugo</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-21/">
+                    21. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 21. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/javascript/"> 
+        
+        #javascript</a>, 
+         <a href="/emneknagger/laeringsemner/tailwind/"> 
+        
+            #tailwind</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>| less</code>: &ldquo;Pipe less&rdquo; er en funksjon som stopper terminal fra å scrolle, og man kan selv styre visningen med piltastene. Et alternativ til <code>| more</code> hvor man flytter seg en side av gangen ved å trykke mellomrom-tasten.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-20/">
+                    20. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 20. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/curl/"> 
+        
+        #curl</a>, 
+         <a href="/emneknagger/laeringsemner/jq/"> 
+        
+        #jq</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+            #linux</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>For å navigere opp og ned i terminal bruker man Shift + PgUp eller PgDown.</li>
+<li>Hvis vi &ldquo;piper&rdquo; på &ldquo;more&rdquo; etter en kommando i terminalen vil terminalen pause ved scroll, og man fortsetter med mellomrom-tasten.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>curl URL | more
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        </ul>
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

@@ -1,107 +1,1569 @@
-<!doctype html><html lang=nb><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Hugo</title>
-<link rel=stylesheet href=https://www.michaelhelgesen.no/css/normalize.min.9bd625ca5b1c6d7ac349d367513b9500861d8c3475424bc36cc608cfe28494bd.css><link rel=stylesheet href=https://www.michaelhelgesen.no/css/style.min.bc3c6df6b1e36399d2bad5b06cff0ae420586f6c4a2a182585b8d7e121b7bc1f.css><meta name=author content><link rel=canonical href=https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/ itemprop=url><meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/"><meta property="og:site_name" content="Michael Helgesen"><meta property="og:title" content="Hugo"><meta property="og:locale" content="nb"><meta property="og:type" content="website"><meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"><meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"><meta name=description content="Ting jeg har lært om Hugo i læringsloggen."><meta property="og:description" content="Ting jeg har lært om Hugo i læringsloggen."></head><body><header><div class=logo><a href=/>MH</a></div><div><nav><ul><li><a href=/>Hjem</a></li><li><a href=/tekster/>Tekster</a></li><li><a href=/journal/>Journal</a></li><li><a href=/laeringslogg/>Læringslogg</a></li><li><a aria-current=true class=ancestor href=/emneknagger/>Emneknagger</a></li><li><a href=/kilder/>Kilder</a></li><li><a href=/bibliotek/>Bibliotek</a></li><li><a href=/lenker/>Lenker</a></li><li><a href=/galleri/>Galleri</a></li><li><a href=/kunstig-intelligens/>KI</a></li><li><a href=/na/>Nå</a></li><li><a href=/om/>Om</a></li></ul></nav><ol class=breadcrumb itemscope itemtype=https://schema.org/BreadcrumbList><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=/><span itemprop=name>Hjem</span></a>
-/&nbsp;
-<meta itemprop=position content='1'></li><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=/emneknagger><span itemprop=name>Emneknagger</span></a>
-/&nbsp;
-<meta itemprop=position content='2'></li><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=https://www.michaelhelgesen.no/emneknagger/laeringsemner/><span itemprop=name>Læringsemner</span></a>
-/&nbsp;
-<meta itemprop=position content='3'></li><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/><span itemprop=name>Hugo</span>
-</a><meta itemprop=position content='4'></li></ol></div></header><main><div class="intro sider tag"><h1>#hugo <sup>26</sup></h1><p class=ingress>Ting jeg har lært om hugo</p><span>Jeg har også skrevet tekster om denne emneknaggen. <a href=/emneknagger/tekstemner/hugo>Se dem her.</a></span></div><ul class=last-posts-list><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-08-29/>2. september 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 2. sep. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Lærte å angi «site wide» <code>og:image</code> slik at jeg slipper å angi «open graph»-bilde manuelt på samtlige sider. HUGO ser etter <code>Params.images</code> i <code>head.html</code>. Finner den ingen, benyttes det globale bildet.</li><li>Man kan sjekke om en side er en <code>term</code> ved å benytte <code>data.term</code>.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-08-27/>29. august 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 29. aug. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Man kan bruke <code>markdownify</code> for å konvertere for eksempel «YAML» til «markdown».</li><li>Det er viktig å forstå forskjellen på variabler med stor og liten forbokstav i «frontmatter» i HUGO. Stor forbokstav som <code>.Title</code> indikerer HUGOs standarder, mens liten forbokstav som <code>.beskrivelse</code> indikerer egendefinerte.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>---
-</span></span><span style=display:flex><span><span style=color:#f92672>title</span>: <span style=color:#ae81ff>Les siste om HUGO</span>
-</span></span><span style=display:flex><span><span style=color:#f92672>beskrivelse</span>: <span style=color:#ae81ff>Få med deg det siste nye om HUGO.</span>
-</span></span><span style=display:flex><span>---
-</span></span></code></pre></div><ul><li>I eksempelet over hentes «title» med <code>.Title</code>, mens «beskrivelse» hentes med <code>.beskrivelse</code>.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-08-26/>26. august 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 26. aug. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/cloudinary/>#cloudinary</a></p></div><article class=logg><ul><li><code>md5</code> brukes for å kryptere en streng.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-08-20/>20. august 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 20. aug. 2024 | </span><a href=/emneknagger/laeringsemner/cloudinary/>#cloudinary</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a>,
-<a href=/emneknagger/laeringsemner/direnv/>#direnv</a>,
-<a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>For å gi HUGO tilgang til eksterne ENV-variabler må det aktiveres i <code>hugo.toml</code>.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[<span style=color:#a6e22e>security</span>]
-</span></span><span style=display:flex><span>    [<span style=color:#a6e22e>security</span>.<span style=color:#a6e22e>funcs</span>]
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>getenv</span> = [<span style=color:#e6db74>&#39;^HUGO_&#39;</span>, <span style=color:#e6db74>&#39;^CI$&#39;</span>, <span style=color:#e6db74>&#39;^USERS$&#39;</span>, <span style=color:#e6db74>&#39;^HOME$&#39;</span>]
-</span></span></code></pre></div><ul><li>For å få tilgang i «templates»: <code>{{ getenv "HUGO_secret}}</code> hvor «HUGO_secret» er navnet på ENV-variabelen.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-08-15/>15. august 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 15. aug. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/markdown/>#markdown</a></p></div><article class=logg><ul><li>Lærte å kommentere ut kode, slik at man kan vise kode uten at den kjøres.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>&lt;</span>/* ref &#34;om&#34; */&gt; 
-</span></span></code></pre></div></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-06-07/>7. juni 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 7. jun. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a></p></div><article class=logg><ul><li>For å vise bilder fra HUGOs «assets»-mappe brukes følgende: <code>{{ (resources.Get "[bane]").RelPermalink }}</code>.</li><li>Man må huske på å angi «assets»-mappe i «config.toml»:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[[<span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>mounts</span>]]
-</span></span><span style=display:flex><span>    <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;assets&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#a6e22e>target</span> = <span style=color:#e6db74>&#34;assets&#34;</span>
-</span></span></code></pre></div><ul><li>Man oppdaterer HUGO ved å blytte ny versjon til <code>bin</code>.</li><li>For å starte server uten å bygge «public»-versjon: <code>hugo server --renderToMemory</code></li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-23/>23. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 23. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/figma/>#figma</a></p></div><article class=logg><ul><li>Jeg kom bort i et problem med at alle lenker viste et ekstra mellomrom. Det har visst noe med oppsettet å gjøre, som sier noe sånt som at «legg til ny linje i enden av alle filer». Jeg fikk det bort ved å legge til <code>{{- "" -}}</code> på slutten av «render_link.html hooken» som genererer koden til lenkene.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-22/>22. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 22. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a></p></div><article class=logg><ul><li>Jeg hadde et ønske om å markere eksterne lenker på nettsiden med et ikon. Det kan man gjøre i HUGO ved hjelp av såkalte «<a href=https://gohugo.io/render-hooks/links/ target=_blank class=external_link>markup hooks<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Interface / External_Link"><path id="Vector" d="M10.0002 5h-1.8c-1.12011.0-1.68058.0-2.1084.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918 5 6.51962 5 7.08009 5 8.2002v7.6c0 1.1201.0 1.6799.21799 2.1077C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822 6.5192 19 7.07899 19 8.19691 19H15.8031c1.1179.0 1.6769.0 2.1043-.2178C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076 19 17.4802 19 16.921 19 15.8031V14m1-5V4m0 0H15m5 0-7 7" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a>».</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-21/>21. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 21. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Når man jobber med API-er så holder HUGO tilbake oppdateringer fra kilden, slik at det ikke blir for mange spørringer. For tvinge frem endringer gjort i API-et kan vi slette HUGOs «cache». Finn <code>TMP</code>-mappen og se etter <code>hugo_cache</code>. Sletter man den og aktiverer HUGO server på nytt, vil all data oppdateres.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-19/>19. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 19. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Jeg fant ut at HUGO ikke har støtte for «regular expressions» «look ahead» eller «capture groups». Jeg måtte derfor dele opp prosessen med å hente ut tekst fra en artikkel.</li></ul><ol><li>Måtte først lage en regex-streng med <code>$regExString := print `(?s)(?i)` $tag `&lt;\/h[0-9]>.*?&lt;h[0-9]|(?s)(?i)` $tag `&lt;\/h[0-9]>.*`</code><ul><li><code>(?s)</code> betyr «single line mode» og ignorerer «whitespace» inkludert mellomrom, tabulator og ny linje.</li><li><code>(?i)</code> betyr at det ikke tas hensyn til om bokstavene er minuskler eller versaler.</li><li><code>|</code> betyr enten det før eller etter <code>|</code> (pipe). Får den ikke treff på søket før <code>|</code>, så søkes etter det på høyre siden.</li></ul></li><li>Deretter lage en variabel av søket.<ul><li><code>{{ $regExMatch := .Content | findRE $regExString }}</code></li></ul></li><li>Av punktet over fikk jeg en liste med treff som deretter måtte itereres over <code>{{ range $regExmatch }}</code>.</li><li>Deretter måtte jeg opprette en ny regex for å luke bort uønsket HTML-kode.</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>{{ range $regExMatch}}
-</span></span><span style=display:flex><span>    {{ $contentMatch := . | findRE `(?s)&lt;<span style=color:#f92672>ul</span>&gt;.*?&lt;<span style=color:#f92672>h</span><span style=color:#960050;background-color:#1e0010>|(?</span><span style=color:#a6e22e>s</span><span style=color:#960050;background-color:#1e0010>)&lt;</span><span style=color:#a6e22e>ul</span>&gt;.*`}}
-</span></span><span style=display:flex><span>    {{ $content := strings.TrimRight &#34;&lt;<span style=color:#f92672>h</span><span style=color:#960050;background-color:#1e0010>&#34;</span> <span style=color:#960050;background-color:#1e0010>(</span><span style=color:#a6e22e>index</span> <span style=color:#960050;background-color:#1e0010>$</span><span style=color:#a6e22e>contentMatch</span> <span style=color:#a6e22e>0</span><span style=color:#960050;background-color:#1e0010>)}}</span>
-</span></span><span style=display:flex><span>    <span style=color:#960050;background-color:#1e0010>{{</span> <span style=color:#960050;background-color:#1e0010>$</span><span style=color:#a6e22e>content</span> <span style=color:#960050;background-color:#1e0010>|</span> <span style=color:#a6e22e>safeHTML</span><span style=color:#960050;background-color:#1e0010>}}</span>
-</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>{{</span> <span style=color:#a6e22e>end</span> <span style=color:#960050;background-color:#1e0010>}}</span>
-</span></span></code></pre></div><ul><li>En navigasjonsmeny defineres i <code>config.toml</code> i HUGO:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[<span style=color:#a6e22e>menus</span>]
-</span></span><span style=display:flex><span>    [[<span style=color:#a6e22e>menu</span> <span style=color:#a6e22e>main</span>]]
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;Hjem&#34;</span>
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>pageref</span> = <span style=color:#e6db74>&#34;/&#34;</span>
-</span></span><span style=display:flex><span>        <span style=color:#a6e22e>weight</span> = <span style=color:#ae81ff>10</span>
-</span></span></code></pre></div><ul><li>Menyen kan vises i maler på følgende vis: <code>{{ range site.Menus.main }}</code>. Med <code>{{- if $page.IsMenuCurrent "main" . }}</code> kan vi gi en menyelement en egen klasse om det er den aktive siden. Og med <code>$page.HasMenuCurrent "main"</code> kan vi gi sørge for at toppnivået i menyen får en egen klasse, selv om vi er på en underside.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-08/>8. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 8. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>I HUGO kan kan slå sammen en variabel og streng på følgende måte:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>{{ printf &#34;%s%s&#34; &#34;Hei&#34; $name }}
-</span></span></code></pre></div><ul><li>I HUGO kan man dele en samling og en streng med henholdsvis <code>index</code> og <code>split</code>. I eksempelet under kommer et fullt navn inn fra en samling i et API, hvor navnet må splittes til for- og etternavn.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>{{ with .lastName }}
-</span></span><span style=display:flex><span>    {{$firstName = index (split . &#34; &#34;) 0 }}
-</span></span><span style=display:flex><span>    {{$lastName = index (split . &#34; &#34;) 1 }}
-</span></span><span style=display:flex><span>{{ end }}
-</span></span></code></pre></div></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-07/>7. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 7. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Jeg slet lenge med oppsett og alias på emneknagg-sider («taxonomies») i HUGO. Svaret fant jeg <a href=https://discourse.gohugo.io/t/change-the-root-of-a-taxonomy/20021 target=_blank class=external_link>i denne tråden<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Interface / External_Link"><path id="Vector" d="M10.0002 5h-1.8c-1.12011.0-1.68058.0-2.1084.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918 5 6.51962 5 7.08009 5 8.2002v7.6c0 1.1201.0 1.6799.21799 2.1077C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822 6.5192 19 7.07899 19 8.19691 19H15.8031c1.1179.0 1.6769.0 2.1043-.2178C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076 19 17.4802 19 16.921 19 15.8031V14m1-5V4m0 0H15m5 0-7 7" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a>.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-05/>5. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 5. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Med «page bundles» i HUGO kan man liste opp alle sider og tilhørende ressurser i en «bundle» eller seksjon. Med følgende oppsett&mldr;</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>├───blogg
-</span></span><span style=display:flex><span>│   ├───blogg-1
-</span></span><span style=display:flex><span>│   │       img-1.jpg
-</span></span><span style=display:flex><span>│   │       index.md
-</span></span><span style=display:flex><span>│   │
-</span></span><span style=display:flex><span>│   ├───blogg-2
-</span></span><span style=display:flex><span>│   │       img-1.jpg
-</span></span><span style=display:flex><span>│   │       img-2.jpg
-</span></span><span style=display:flex><span>│   │       index.md
-</span></span><span style=display:flex><span>│   │
-</span></span><span style=display:flex><span>│   └───blogg-3
-</span></span><span style=display:flex><span>│           img-1.jpg
-</span></span><span style=display:flex><span>│           img-2.jpg
-</span></span><span style=display:flex><span>│           img-3.jpg
-</span></span><span style=display:flex><span>│           index.md
-</span></span></code></pre></div><ul><li>&mldr; kan vi hente frem alt i «blogg-seksjonen» på følgende måte:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>{{range where .Pages &#34;Section&#34; &#34;blogg&#34; }}
-</span></span><span style=display:flex><span>  {{ .Title }}
-</span></span><span style=display:flex><span>  {{ with .Resources.ByType &#34;image&#34; }}
-</span></span><span style=display:flex><span>    {{ range . }}
-</span></span><span style=display:flex><span>      {{ .Title }}
-</span></span><span style=display:flex><span>    {{ end }}
-</span></span><span style=display:flex><span>  {{ end }}
-</span></span><span style=display:flex><span>{{ end }}
-</span></span></code></pre></div><ul><li>Det vil gi oss dette resultatet:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Post 3
-</span></span><span style=display:flex><span>    img-1.jpg
-</span></span><span style=display:flex><span>    img-2.jpg
-</span></span><span style=display:flex><span>    img-3.jpg
-</span></span><span style=display:flex><span>Post 2
-</span></span><span style=display:flex><span>    img-1.jpg
-</span></span><span style=display:flex><span>    img-2.jpg
-</span></span><span style=display:flex><span>Post 1
-</span></span><span style=display:flex><span>    img-1.jpg
-</span></span></code></pre></div></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-03/>3. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 3. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/css/>#css</a></p></div><article class=logg><ul><li>I HUGO kan vi gruppere og omrokkere på lister med henholdsvis <code>range .Pages.GroupByDate</code> og <code>range .Pages.ByDateReverse</code>.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-05-02/>2. mai 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 2. mai 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Jeg lærte at man i HUGO kan ha uttallige «<a href=https://gohugo.io/content-management/taxonomies/ title="Taxonomies i Hugo" target=_blank class=external_link>taxonomies<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Interface / External_Link"><path id="Vector" d="M10.0002 5h-1.8c-1.12011.0-1.68058.0-2.1084.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918 5 6.51962 5 7.08009 5 8.2002v7.6c0 1.1201.0 1.6799.21799 2.1077C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822 6.5192 19 7.07899 19 8.19691 19H15.8031c1.1179.0 1.6769.0 2.1043-.2178C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076 19 17.4802 19 16.921 19 15.8031V14m1-5V4m0 0H15m5 0-7 7" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a>». «Tags» og «categories» er standard, men man kan angi så mange man trenger, eller skru av alle.</li><li>En tekst kan også ha så mange «taxonomies» som man behøver.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-30/>30. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 30. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/linux/>#linux</a>,
-<a href=/emneknagger/laeringsemner/html/>#html</a>,
-<a href=/emneknagger/laeringsemner/devtools/>#devtools</a></p></div><article class=logg><ul><li>Endret oppsett av HUGO til <a href=https://gohugo.io/content-management/page-bundles/ title="Hugo page and leaf bundles" target=_blank class=external_link>«branch»- og «leaf» bundles<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Interface / External_Link"><path id="Vector" d="M10.0002 5h-1.8c-1.12011.0-1.68058.0-2.1084.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918 5 6.51962 5 7.08009 5 8.2002v7.6c0 1.1201.0 1.6799.21799 2.1077C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822 6.5192 19 7.07899 19 8.19691 19H15.8031c1.1179.0 1.6769.0 2.1043-.2178C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076 19 17.4802 19 16.921 19 15.8031V14m1-5V4m0 0H15m5 0-7 7" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a>» for enklere håndtering av bilder og andre filer tilknyttet den enkelte side. På denne måten ligger alle ressurser samme sted som teksten, i motsetning til å ha <em>alle</em> ressurser i en og samme ressurs-mappe, som fort kan vokse seg stor og uoversiktlig.</li><li>Lærte også om HUGOs <a href=https://gohugo.io/content-management/image-processing/ title="Hugos Image Processing" target=_blank class=external_link>bildeprosessor<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Interface / External_Link"><path id="Vector" d="M10.0002 5h-1.8c-1.12011.0-1.68058.0-2.1084.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918 5 6.51962 5 7.08009 5 8.2002v7.6c0 1.1201.0 1.6799.21799 2.1077C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822 6.5192 19 7.07899 19 8.19691 19H15.8031c1.1179.0 1.6769.0 2.1043-.2178C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076 19 17.4802 19 16.921 19 15.8031V14m1-5V4m0 0H15m5 0-7 7" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a> som lar oss manipulere bilder ved skalering, beskjæring, rotering og fargelegging, for å nevne noen. Og med «page bundles» som nevnt over, kan vi hente frem tilhørende ressurser på følgende måte:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>{{$image := .Resources.Get &#34;sunset.jpg&#34; }}
-</span></span></code></pre></div><ul><li>En global ressurs hentes derimot slik:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>{{ $image := resources.Get &#34;images/sunset.jpg&#34; }}
-</span></span></code></pre></div><ul><li><code>len</code> er HUGOs metode for å hente lengden på en liste.</li><li><code>substr</code> er HUGOs metode for å returnere en del av en streng.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-29/>29. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 29. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/markdown/>#markdown</a></p></div><article class=logg><ul><li>Om man ønsker å legge til en tittel («title») i en «shortcode»-lenke angir man den i anførselstegn:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>[<span style=color:#f92672>Dette er en lenke</span>](<span style=color:#a6e22e>{{&lt; ref &#34;../om&#34;&gt;}} &#34;Tittel&#34;</span>)
-</span></span></code></pre></div></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-28/>28. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 28. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Vi kan angi ulike parametre for å vise når et dokument sist ble oppdatert. I <code>config-toml</code> definerte jeg følgende:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>[frontmatter]
-</span></span><span style=display:flex><span>    lastmod = [&#34;lastmod&#34;, &#34;:fileModTime&#34;, &#34;:default&#34;]
-</span></span></code></pre></div><ul><li><code>lastmod</code> betyr at Hugo ser etter variabelen i &ldquo;frontmatter&rdquo;. Er den ikke definert, velges heller <code>:fileModTime</code> som viser filens siste oppdatering, eller <code>:default</code>.</li><li>Jeg fant også ut hvordan man definerer språk i <code>config.toml</code> for å vise datoer på norsk: <code>defaultContentLanguage = "nb"</code></li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-27/>27. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 27. apr. 2024 | </span><a href=/emneknagger/laeringsemner/linux/>#linux</a>,
-<a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Shortcodes er kommandoer vi kan angi i &ldquo;markdown&rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-md data-lang=md><span style=display:flex><span>{{ /* Metode 1 */ }}
-</span></span><span style=display:flex><span>{{ &lt; <span style=color:#f92672>myShortcode</span> <span style=color:#a6e22e>data</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;This is data&#34;</span> &gt; }}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>{{ /* Metode 2 */ }}
-</span></span><span style=display:flex><span>{{ &lt; <span style=color:#f92672>myShortcode</span> &gt; }}
-</span></span><span style=display:flex><span>    This is data
-</span></span><span style=display:flex><span>{{ &lt; /<span style=color:#f92672>myShortcode</span> &gt;}}
-</span></span></code></pre></div><ul><li><code>myShortcode</code> over henviser til <code>myShortcode.html</code> som må plasseres i <code>/layout/shortcodes/myShortcode.html</code>. Dataene hentes henholdsvis på følgende måte:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span>{{ <span style=color:#75715e>/* Metode 1 */</span>}}
-</span></span><span style=display:flex><span>{{ .<span style=color:#a6e22e>Get</span> <span style=color:#a6e22e>data</span>}}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>{{ <span style=color:#75715e>/* Metode 2 */</span> }}
-</span></span><span style=display:flex><span>{{ .<span style=color:#a6e22e>Inner</span> }}
-</span></span></code></pre></div></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-26/>26. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 26. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/design/>#design</a>,
-<a href=/emneknagger/laeringsemner/nvim/>#nvim</a></p></div><article class=logg><ul><li>Det finnes ikke noe tilsvarende javascripts <code>switch</code> i Hugo. Man må bruke <code>if else</code> eller <code>with</code>.</li><li><code>with</code> endrer konteksten av &ldquo;dott&rdquo; til et uttrykk (&ldquo;expression&rdquo;) og utfører kodeblokken dersom uttrykket er sant.</li><li>Man kan begrese antall poster i <code>range</code> med tall:<ul><li>Med <code>where</code> kan man &ldquo;pipe&rdquo; eller hekte på nummeret til slutt: <code>{{ where EXPR | 5 }}</code>.</li><li>Med <code>range</code> bruker man <code>first</code>-nøkkelordet: <code>{{ range first 5 . }}</code></li></ul></li><li><code>if and</code> i hugo defineres på følgende måte: <code>{{ if and (eq EXPR) (eq EXPR) }}</code></li><li><code>.Kind</code> i Hugo returnerer typen side, for eksempel <code>home</code> <code>page</code> <code>term</code> og lignende.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-25/>25. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 25. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>I Hugo oppretter man en <code>dict</code> på følgende måte: <code>{{ $myDict := dict }}</code>.</li><li><code>dict</code> kan sammenlignes med Javascripts objekt.</li><li>For å slå opp i <code>dict</code> med variabel må vi benytte <code>index</code>: <code>{{ index $myDict $myVar }}</code>.</li><li>For å legge til i <code>dict</code> må vi bruke <code>merge</code>: <code>{{ $myDict = merge $myDict $newDict }}</code>.</li><li>For addere i Hugo brukes <code>add</code>: {{ add 1 1 }}`.</li><li>For å kutte strenger brukes <code>substr</code>: {{ substr $myString # # }}</li><li><code>.Site.GetPage</code> er en side-metode i Hugo som returnerer side(r) fra gitt bane: <code>{{ with .GetPage }}</code>. Det kan være både seksjon og vanlig side.</li><li>For å ignorere &ldquo;cache&rdquo; under bygging kan man legge til <code>--ignoreCache</code>: <code>hugo server --ignoreCache</code>.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-23/>23. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 23. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/git/>#git</a></p></div><article class=logg><ul><li><code>isset</code>: Sjekker om nøkkel eksisterer. For eksempel <code>{{ if isset .Type }}</code></li><li><code>if</code>: Sjekker om uttrykk er sant.</li><li><code>if eq</code>: Sammenligner to argumenter.</li><li><code>if not</code>: Returnerer <code>bool</code> av argument.</li><li><code>dict "key" "value"</code>: Kalles å lage en &ldquo;map&rdquo; fra en liste av nøkler og verdier. Er tilsvarende et objekt i JavaScript.</li><li>Vi kan sende variabler i &ldquo;partial templates&rdquo;: <code>{{ partial "list.html" (dict "A" 1 "B" 2)}}</code>.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-19/>19. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 19. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a>,
-<a href=/emneknagger/laeringsemner/nvim/>#nvim</a></p></div><article class=logg><ul><li>Lærte at <code>url</code> i frontmatter brukes for å angi manuell adresse til en side.</li><li>Lært at <code>resources.Copy</code> kan kopiere en ressurs.</li><li><code>tags</code> kan også få eget design ved å legge til `content/tags/[tagnavn]/_index.md</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-18/>18. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 18. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Lærte om og benyttet Hugos OS-funksjon <code>fileExists</code> for å sjekke om filer eksisterer i en mappe ved nedlasting fra API.</li><li>Lærte at JSON tolkes som Frontmatter i Hugo. Man kan dermed importere et JSON-objekt i en fil, uten å tenke på formatering, for deretter å bruke innholdet som Frontmatter.</li><li>Lærte også hvordan man oppretter filer med <code>resources.FromString</code> og <code>RelPermalink</code>.</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-17/>17. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 17. apr. 2024 | </span><a href=/emneknagger/laeringsemner/nvim/>#nvim</a>,
-<a href=/emneknagger/laeringsemner/fedora/>#fedora</a>,
-<a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li><code>printf "%#v"</code> printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst.</li><li><code>transform.Unmarshal</code> endrer data til &ldquo;map&rdquo; eller &ldquo;array&rdquo; og fungerer med JSON, CSV, XML med mer.</li><li><code>resource.GetRemote URL</code> brukes for å koble til eksterne API-er.</li><li>Å lage sider av data fra eksternt API</li></ul></article></li><li><hr></li><li><h2><a href=https://www.michaelhelgesen.no/laeringslogg/2024-04-15/>15. april 2024</a></h2><div><p class=last-posts-list__meta><span>Red: 4. sep. 2024 | </span><span>Pub: 15. apr. 2024 | </span><a href=/emneknagger/laeringsemner/hugo/>#hugo</a></p></div><article class=logg><ul><li>Man <strong>looper gjennom sider</strong> i Hugo med <code>{{ range .Site.RegularPages }}</code>. Det er det samme som en <code>for loop</code> i javascript.<ul><li><strong><code>.Site</code></strong> er forøvrig en <strong>global funksjon</strong> som gir <strong>tilgang til gjeldende &ldquo;site&rdquo;</strong>, som omtales som et objekt i dokumentasjonen.<br>Man kan bruke både <code>site</code> og <code>.Site</code>. Hugo anbefaler å benytte <code>site</code> i &ldquo;templates&rdquo;.</li><li><strong><code>.RegularPages</code></strong> er en &ldquo;site&rdquo;-metode som <strong>returnerer en samling (&ldquo;collection&rdquo;) av alle standard-sider</strong>.</li></ul></li><li><strong>Variabler i Hugo</strong> angis på følgende måte: <code>{{ $name := "Mikke" }}</code>.</li><li><strong><code>{{ PAGE.RawContent }}</code></strong> returnerer <strong>innholdet på en side som rå tekst</strong>, uten &ldquo;frontmatter&rdquo; og kode.</li><li><strong>&ldquo;if-statement&rdquo;</strong> i Hugo:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-GO data-lang=GO><span style=display:flex><span>{{ <span style=color:#66d9ef>if</span> <span style=color:#a6e22e>STATEMENT</span> }}
-</span></span><span style=display:flex><span>    <span style=color:#f92672>...</span>
-</span></span><span style=display:flex><span>{{ <span style=color:#a6e22e>end</span> }}
-</span></span></code></pre></div><ul><li><strong>Slå sammen variabel og streng:</strong> <code>print "Hello" $name "!"</code>.</li><li><strong><code>in</code>:</strong> Sjekke om en <strong>angitt verdi finnes i en samling</strong>, som kan være array, slice eller string. <code>{{ if in $l (print "&lt; ref \"" $o "\" >") }}</code>.</li></ul></article></li><li><hr></li></ul></main><footer class="mt-16 border-t border-white text-center pt-8 pb-4"><nav><ul><li><a href=/>Hjem</a></li><li><a href=/tekster/>Tekster</a></li><li><a href=/journal/>Journal</a></li><li><a href=/laeringslogg/>Læringslogg</a></li><li><a aria-current=true class=ancestor href=/emneknagger/>Emneknagger</a></li><li><a href=/kilder/>Kilder</a></li><li><a href=/bibliotek/>Bibliotek</a></li><li><a href=/lenker/>Lenker</a></li><li><a href=/galleri/>Galleri</a></li><li><a href=/kunstig-intelligens/>KI</a></li><li><a href=/na/>Nå</a></li><li><a href=/om/>Om</a></li></ul></nav><p>Nettsiden er laget av <a href=/om>meg</a>, med <a href=https://www.gohugo.io>Hugo</a>.</p><p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style=display:inline-block;margin-top:1rem href=https://ko-fi.com/s/4662b19f61 target=_blank><img loading=lazy alt="Merkelapp med teksten «Made by a human»" width=88 height=31 title="Laget av et menneske" src=/images/MadeByAHuman_01.png }}></a></footer></body></html>
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo</title>
+
+<link rel="stylesheet" href="https://www.michaelhelgesen.no/css/normalize.min.9bd625ca5b1c6d7ac349d367513b9500861d8c3475424bc36cc608cfe28494bd.css">
+
+<link rel="stylesheet" href="https://www.michaelhelgesen.no/css/style.min.bc3c6df6b1e36399d2bad5b06cff0ae420586f6c4a2a182585b8d7e121b7bc1f.css">
+    
+
+    <meta name="author" content="">
+ <link rel="canonical" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="Hugo">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="website">
+
+
+
+
+
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+          
+
+          
+
+    
+
+
+<meta name="description" content="Ting jeg har lært om Hugo i læringsloggen.">
+<meta property="og:description" content="Ting jeg har lært om Hugo i læringsloggen.">
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp; 
+                <meta itemprop="position" content='1' />
+            </li>         
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/emneknagger">
+                    <span itemprop="name">Emneknagger</span></a>
+                /&nbsp; 
+                <meta itemprop="position" content='2' />
+            </li>
+                
+                
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/">
+                    <span itemprop="name">Læringsemner</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='3' />
+            </li>         
+            
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/">
+                    <span itemprop="name">Hugo</span>
+                </a>
+                <meta itemprop="position" content='4' />
+            </li>
+    </ol>
+
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+       
+
+
+
+
+
+<div class="intro sider tag">
+<h1>
+    #hugo <sup>26</sup>
+</h1>
+    <p class="ingress">Ting jeg har lært om hugo</p>
+    <span>
+    
+    Jeg har også skrevet tekster om denne emneknaggen. <a href=/emneknagger/tekstemner/hugo> Se dem her.</a>
+    
+    </span>
+</div>
+
+    <ul class="last-posts-list">
+        
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-08-29/">
+                    2. september 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 2. sep. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Lærte å angi «site wide» <code>og:image</code> slik at jeg slipper å angi «open graph»-bilde manuelt på samtlige sider. HUGO ser etter <code>Params.images</code> i <code>head.html</code>. Finner den ingen, benyttes det globale bildet.</li>
+<li>Man kan sjekke om en side er en <code>term</code> ved å benytte <code>data.term</code>.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-08-27/">
+                    29. august 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 29. aug. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Man kan bruke <code>markdownify</code> for å konvertere for eksempel «YAML» til «markdown».</li>
+<li>Det er viktig å forstå forskjellen på variabler med stor og liten forbokstav i «frontmatter» i HUGO. Stor forbokstav som <code>.Title</code> indikerer HUGOs standarder, mens liten forbokstav som <code>.beskrivelse</code> indikerer egendefinerte.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">Les siste om HUGO</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">beskrivelse</span>: <span style="color:#ae81ff">Få med deg det siste nye om HUGO.</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><ul>
+<li>I eksempelet over hentes «title» med <code>.Title</code>, mens «beskrivelse» hentes med <code>.beskrivelse</code>.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-08-26/">
+                    26. august 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 26. aug. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/cloudinary/"> 
+        
+            #cloudinary</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>md5</code> brukes for å kryptere en streng.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-08-20/">
+                    20. august 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 20. aug. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/cloudinary/"> 
+        
+        #cloudinary</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/direnv/"> 
+        
+        #direnv</a>, 
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+            #hugo</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>For å gi HUGO tilgang til eksterne ENV-variabler må det aktiveres i <code>hugo.toml</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">security</span>]
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">security</span>.<span style="color:#a6e22e">funcs</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">getenv</span> = [<span style="color:#e6db74">&#39;^HUGO_&#39;</span>, <span style="color:#e6db74">&#39;^CI$&#39;</span>, <span style="color:#e6db74">&#39;^USERS$&#39;</span>, <span style="color:#e6db74">&#39;^HOME$&#39;</span>]
+</span></span></code></pre></div><ul>
+<li>For å få tilgang i «templates»: <code>{{ getenv &quot;HUGO_secret}}</code> hvor «HUGO_secret» er navnet på ENV-variabelen.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-08-15/">
+                    15. august 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 15. aug. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/markdown/"> 
+        
+            #markdown</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Lærte å kommentere ut kode, slik at man kan vise kode uten at den kjøres.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;</span>/* ref &#34;om&#34; */&gt; 
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-06-07/">
+                    7. juni 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 7. jun. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+            #linux</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>For å vise bilder fra HUGOs «assets»-mappe brukes følgende: <code>{{ (resources.Get &quot;[bane]&quot;).RelPermalink }}</code>.</li>
+<li>Man må huske på å angi «assets»-mappe i «config.toml»:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[[<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">mounts</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">source</span> = <span style="color:#e6db74">&#34;assets&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">target</span> = <span style="color:#e6db74">&#34;assets&#34;</span>
+</span></span></code></pre></div><ul>
+<li>Man oppdaterer HUGO ved å blytte ny versjon til <code>bin</code>.</li>
+<li>For å starte server uten å bygge «public»-versjon: <code>hugo server --renderToMemory</code></li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-23/">
+                    23. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 23. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/figma/"> 
+        
+            #figma</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Jeg kom bort i et problem med at alle lenker viste et ekstra mellomrom. Det har visst noe med oppsettet å gjøre, som sier noe sånt som at «legg til ny linje i enden av alle filer». Jeg fikk det bort ved å legge til <code>{{- &quot;&quot; -}}</code> på slutten av «render_link.html hooken» som genererer koden til lenkene.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-22/">
+                    22. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 22. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+            #linux</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Jeg hadde et ønske om å markere eksterne lenker på nettsiden med et ikon. Det kan man gjøre i HUGO ved hjelp av såkalte «<a href="https://gohugo.io/render-hooks/links/" target="_blank" class="external_link">markup hooks<svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Interface / External_Link">
+<path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></svg></a>».</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-21/">
+                    21. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 21. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Når man jobber med API-er så holder HUGO tilbake oppdateringer fra kilden, slik at det ikke blir for mange spørringer. For tvinge frem endringer gjort i API-et kan vi slette HUGOs «cache». Finn <code>TMP</code>-mappen og se etter <code>hugo_cache</code>. Sletter man den og aktiverer HUGO server på nytt, vil all data oppdateres.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-19/">
+                    19. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 19. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Jeg fant ut at HUGO ikke har støtte for «regular expressions» «look ahead» eller «capture groups». Jeg måtte derfor dele opp prosessen med å hente ut tekst fra en artikkel.</li>
+</ul>
+<ol>
+<li>Måtte først lage en regex-streng med <code>$regExString := print `(?s)(?i)` $tag `&lt;\/h[0-9]&gt;.*?&lt;h[0-9]|(?s)(?i)` $tag `&lt;\/h[0-9]&gt;.*` </code>
+<ul>
+<li><code>(?s)</code> betyr «single line mode» og ignorerer «whitespace» inkludert mellomrom, tabulator og ny linje.</li>
+<li><code>(?i)</code> betyr at det ikke tas hensyn til om bokstavene er minuskler eller versaler.</li>
+<li><code>|</code> betyr enten det før eller etter <code>|</code> (pipe). Får den ikke treff på søket før <code>|</code>, så søkes etter det på høyre siden.</li>
+</ul>
+</li>
+<li>Deretter lage en variabel av søket.
+<ul>
+<li><code>{{ $regExMatch := .Content | findRE $regExString }}</code></li>
+</ul>
+</li>
+<li>Av punktet over fikk jeg en liste med treff som deretter måtte itereres over <code>{{ range $regExmatch }}</code>.</li>
+<li>Deretter måtte jeg opprette en ny regex for å luke bort uønsket HTML-kode.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ range $regExMatch}}
+</span></span><span style="display:flex;"><span>    {{ $contentMatch := . | findRE `(?s)&lt;<span style="color:#f92672">ul</span>&gt;.*?&lt;<span style="color:#f92672">h</span><span style="color:#960050;background-color:#1e0010">|(?</span><span style="color:#a6e22e">s</span><span style="color:#960050;background-color:#1e0010">)&lt;</span><span style="color:#a6e22e">ul</span>&gt;.*`}}
+</span></span><span style="display:flex;"><span>    {{ $content := strings.TrimRight &#34;&lt;<span style="color:#f92672">h</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">contentMatch</span> <span style="color:#a6e22e">0</span><span style="color:#960050;background-color:#1e0010">)}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">content</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">safeHTML</span><span style="color:#960050;background-color:#1e0010">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span>
+</span></span></code></pre></div><ul>
+<li>En navigasjonsmeny defineres i <code>config.toml</code> i HUGO:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">menus</span>]
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">menu</span> <span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Hjem&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">pageref</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><ul>
+<li>Menyen kan vises i maler på følgende vis: <code>{{ range site.Menus.main }}</code>. Med <code>{{- if $page.IsMenuCurrent &quot;main&quot; . }}</code> kan vi gi en menyelement en egen klasse om det er den aktive siden. Og med <code>$page.HasMenuCurrent &quot;main&quot;</code> kan vi gi sørge for at toppnivået i menyen får en egen klasse, selv om vi er på en underside.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-08/">
+                    8. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 8. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>I HUGO kan kan slå sammen en variabel og streng på følgende måte:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>{{ printf &#34;%s%s&#34; &#34;Hei&#34; $name }}
+</span></span></code></pre></div><ul>
+<li>I HUGO kan man dele en samling og en streng med henholdsvis <code>index</code> og <code>split</code>. I eksempelet under kommer et fullt navn inn fra en samling i et API, hvor navnet må splittes til for- og etternavn.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>{{ with .lastName }}
+</span></span><span style="display:flex;"><span>    {{$firstName = index (split . &#34; &#34;) 0 }}
+</span></span><span style="display:flex;"><span>    {{$lastName = index (split . &#34; &#34;) 1 }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-07/">
+                    7. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 7. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Jeg slet lenge med oppsett og alias på emneknagg-sider («taxonomies») i HUGO. Svaret fant jeg <a href="https://discourse.gohugo.io/t/change-the-root-of-a-taxonomy/20021" target="_blank" class="external_link">i denne tråden<svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Interface / External_Link">
+<path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></svg></a>.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-05/">
+                    5. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 5. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Med «page bundles» i HUGO kan man liste opp alle sider og tilhørende ressurser i en «bundle» eller seksjon. Med følgende oppsett&hellip;</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>├───blogg
+</span></span><span style="display:flex;"><span>│   ├───blogg-1
+</span></span><span style="display:flex;"><span>│   │       img-1.jpg
+</span></span><span style="display:flex;"><span>│   │       index.md
+</span></span><span style="display:flex;"><span>│   │
+</span></span><span style="display:flex;"><span>│   ├───blogg-2
+</span></span><span style="display:flex;"><span>│   │       img-1.jpg
+</span></span><span style="display:flex;"><span>│   │       img-2.jpg
+</span></span><span style="display:flex;"><span>│   │       index.md
+</span></span><span style="display:flex;"><span>│   │
+</span></span><span style="display:flex;"><span>│   └───blogg-3
+</span></span><span style="display:flex;"><span>│           img-1.jpg
+</span></span><span style="display:flex;"><span>│           img-2.jpg
+</span></span><span style="display:flex;"><span>│           img-3.jpg
+</span></span><span style="display:flex;"><span>│           index.md
+</span></span></code></pre></div><ul>
+<li>&hellip; kan vi hente frem alt i «blogg-seksjonen» på følgende måte:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{range where .Pages &#34;Section&#34; &#34;blogg&#34; }}
+</span></span><span style="display:flex;"><span>  {{ .Title }}
+</span></span><span style="display:flex;"><span>  {{ with .Resources.ByType &#34;image&#34; }}
+</span></span><span style="display:flex;"><span>    {{ range . }}
+</span></span><span style="display:flex;"><span>      {{ .Title }}
+</span></span><span style="display:flex;"><span>    {{ end }}
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><ul>
+<li>Det vil gi oss dette resultatet:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Post 3
+</span></span><span style="display:flex;"><span>    img-1.jpg
+</span></span><span style="display:flex;"><span>    img-2.jpg
+</span></span><span style="display:flex;"><span>    img-3.jpg
+</span></span><span style="display:flex;"><span>Post 2
+</span></span><span style="display:flex;"><span>    img-1.jpg
+</span></span><span style="display:flex;"><span>    img-2.jpg
+</span></span><span style="display:flex;"><span>Post 1
+</span></span><span style="display:flex;"><span>    img-1.jpg
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-03/">
+                    3. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 3. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/css/"> 
+        
+            #css</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>I HUGO kan vi gruppere og omrokkere på lister med henholdsvis <code>range .Pages.GroupByDate</code> og <code>range .Pages.ByDateReverse</code>.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-05-02/">
+                    2. mai 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 2. mai 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Jeg lærte at man i HUGO kan ha uttallige «<a href="https://gohugo.io/content-management/taxonomies/"title="Taxonomies i Hugo" target="_blank" class="external_link">taxonomies<svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Interface / External_Link">
+<path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></svg></a>». «Tags» og «categories» er standard, men man kan angi så mange man trenger, eller skru av alle.</li>
+<li>En tekst kan også ha så mange «taxonomies» som man behøver.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-30/">
+                    30. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 30. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/html/"> 
+        
+        #html</a>, 
+         <a href="/emneknagger/laeringsemner/devtools/"> 
+        
+            #devtools</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Endret oppsett av HUGO til <a href="https://gohugo.io/content-management/page-bundles/"title="Hugo page and leaf bundles" target="_blank" class="external_link">«branch»- og «leaf» bundles<svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Interface / External_Link">
+<path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></svg></a>» for enklere håndtering av bilder og andre filer tilknyttet den enkelte side. På denne måten ligger alle ressurser samme sted som teksten, i motsetning til å ha <em>alle</em> ressurser i en og samme ressurs-mappe, som fort kan vokse seg stor og uoversiktlig.</li>
+<li>Lærte også om HUGOs <a href="https://gohugo.io/content-management/image-processing/"title="Hugos Image Processing" target="_blank" class="external_link">bildeprosessor<svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Interface / External_Link">
+<path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></svg></a> som lar oss manipulere bilder ved skalering, beskjæring, rotering og fargelegging, for å nevne noen. Og med «page bundles» som nevnt over, kan vi hente frem tilhørende ressurser på følgende måte:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{$image := .Resources.Get &#34;sunset.jpg&#34; }}
+</span></span></code></pre></div><ul>
+<li>En global ressurs hentes derimot slik:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>{{ $image := resources.Get &#34;images/sunset.jpg&#34; }}
+</span></span></code></pre></div><ul>
+<li><code>len</code> er HUGOs metode for å hente lengden på en liste.</li>
+<li><code>substr</code> er HUGOs metode for å returnere en del av en streng.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-29/">
+                    29. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 29. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/markdown/"> 
+        
+            #markdown</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Om man ønsker å legge til en tittel («title») i en «shortcode»-lenke angir man den i anførselstegn:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>[<span style="color:#f92672">Dette er en lenke</span>](<span style="color:#a6e22e">{{&lt; ref &#34;../om&#34;&gt;}} &#34;Tittel&#34;</span>)
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-28/">
+                    28. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 28. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Vi kan angi ulike parametre for å vise når et dokument sist ble oppdatert. I <code>config-toml</code> definerte jeg følgende:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>[frontmatter]
+</span></span><span style="display:flex;"><span>    lastmod = [&#34;lastmod&#34;, &#34;:fileModTime&#34;, &#34;:default&#34;]
+</span></span></code></pre></div><ul>
+<li><code>lastmod</code> betyr at Hugo ser etter variabelen i &ldquo;frontmatter&rdquo;. Er den ikke definert, velges heller <code>:fileModTime</code> som viser filens siste oppdatering, eller <code>:default</code>.</li>
+<li>Jeg fant også ut hvordan man definerer språk i <code>config.toml</code> for å vise datoer på norsk: <code>defaultContentLanguage = &quot;nb&quot;</code></li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-27/">
+                    27. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 27. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+            #hugo</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Shortcodes er kommandoer vi kan angi i &ldquo;markdown&rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>{{ /* Metode 1 */ }}
+</span></span><span style="display:flex;"><span>{{ &lt; <span style="color:#f92672">myShortcode</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;This is data&#34;</span> &gt; }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ /* Metode 2 */ }}
+</span></span><span style="display:flex;"><span>{{ &lt; <span style="color:#f92672">myShortcode</span> &gt; }}
+</span></span><span style="display:flex;"><span>    This is data
+</span></span><span style="display:flex;"><span>{{ &lt; /<span style="color:#f92672">myShortcode</span> &gt;}}
+</span></span></code></pre></div><ul>
+<li><code>myShortcode</code> over henviser til <code>myShortcode.html</code> som må plasseres i <code>/layout/shortcodes/myShortcode.html</code>. Dataene hentes henholdsvis på følgende måte:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#75715e">/* Metode 1 */</span>}}
+</span></span><span style="display:flex;"><span>{{ .<span style="color:#a6e22e">Get</span> <span style="color:#a6e22e">data</span>}}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ <span style="color:#75715e">/* Metode 2 */</span> }}
+</span></span><span style="display:flex;"><span>{{ .<span style="color:#a6e22e">Inner</span> }}
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-26/">
+                    26. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 26. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/design/"> 
+        
+        #design</a>, 
+         <a href="/emneknagger/laeringsemner/nvim/"> 
+        
+            #nvim</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Det finnes ikke noe tilsvarende javascripts <code>switch</code> i Hugo. Man må bruke <code>if else</code> eller <code>with</code>.</li>
+<li><code>with</code> endrer konteksten av &ldquo;dott&rdquo; til et uttrykk (&ldquo;expression&rdquo;) og utfører kodeblokken dersom uttrykket er sant.</li>
+<li>Man kan begrese antall poster i <code>range</code> med tall:
+<ul>
+<li>Med <code>where</code> kan man &ldquo;pipe&rdquo; eller hekte på nummeret til slutt: <code>{{ where EXPR | 5 }}</code>.</li>
+<li>Med <code>range</code> bruker man <code>first</code>-nøkkelordet: <code>{{ range first 5 . }}</code></li>
+</ul>
+</li>
+<li><code>if and</code> i hugo defineres på følgende måte: <code>{{ if and (eq EXPR) (eq EXPR) }}</code></li>
+<li><code>.Kind</code> i Hugo returnerer typen side, for eksempel <code>home</code> <code>page</code> <code>term</code> og lignende.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-25/">
+                    25. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 25. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>I Hugo oppretter man en <code>dict</code> på følgende måte: <code>{{ $myDict := dict }}</code>.</li>
+<li><code>dict</code> kan sammenlignes med Javascripts objekt.</li>
+<li>For å slå opp i <code>dict</code> med variabel må vi benytte <code>index</code>: <code>{{ index $myDict $myVar }}</code>.</li>
+<li>For å legge til i <code>dict</code> må vi bruke <code>merge</code>: <code>{{ $myDict = merge $myDict $newDict }}</code>.</li>
+<li>For addere i Hugo brukes <code>add</code>: {{ add 1 1 }}`.</li>
+<li>For å kutte strenger brukes <code>substr</code>: {{ substr $myString # # }}</li>
+<li><code>.Site.GetPage</code> er en side-metode i Hugo som returnerer side(r) fra gitt bane: <code>{{ with .GetPage }}</code>. Det kan være både seksjon og vanlig side.</li>
+<li>For å ignorere &ldquo;cache&rdquo; under bygging kan man legge til <code>--ignoreCache</code>: <code>hugo server --ignoreCache</code>.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-23/">
+                    23. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 23. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/git/"> 
+        
+            #git</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>isset</code>: Sjekker om nøkkel eksisterer. For eksempel <code>{{ if isset .Type }}</code></li>
+<li><code>if</code>: Sjekker om uttrykk er sant.</li>
+<li><code>if eq</code>: Sammenligner to argumenter.</li>
+<li><code>if not</code>: Returnerer <code>bool</code> av argument.</li>
+<li><code>dict &quot;key&quot; &quot;value&quot;</code>: Kalles å lage en &ldquo;map&rdquo; fra en liste av nøkler og verdier. Er tilsvarende et objekt i JavaScript.</li>
+<li>Vi kan sende variabler i &ldquo;partial templates&rdquo;: <code>{{ partial &quot;list.html&quot; (dict &quot;A&quot; 1 &quot;B&quot; 2)}}</code>.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-19/">
+                    19. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 19. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/laeringsemner/nvim/"> 
+        
+            #nvim</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Lærte at <code>url</code> i frontmatter brukes for å angi manuell adresse til en side.</li>
+<li>Lært at <code>resources.Copy</code> kan kopiere en ressurs.</li>
+<li><code>tags</code> kan også få eget design ved å legge til `content/tags/[tagnavn]/_index.md</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-18/">
+                    18. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 18. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Lærte om og benyttet Hugos OS-funksjon <code>fileExists</code> for å sjekke om filer eksisterer i en mappe ved nedlasting fra API.</li>
+<li>Lærte at JSON tolkes som Frontmatter i Hugo. Man kan dermed importere et JSON-objekt i en fil, uten å tenke på formatering, for deretter å bruke innholdet som Frontmatter.</li>
+<li>Lærte også hvordan man oppretter filer med <code>resources.FromString</code> og <code>RelPermalink</code>.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-17/">
+                    17. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 17. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/nvim/"> 
+        
+        #nvim</a>, 
+         <a href="/emneknagger/laeringsemner/fedora/"> 
+        
+        #fedora</a>, 
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+        
+            #hugo</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>printf &quot;%#v&quot;</code> printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst.</li>
+<li><code>transform.Unmarshal</code> endrer data til &ldquo;map&rdquo; eller &ldquo;array&rdquo; og fungerer med JSON, CSV, XML med mer.</li>
+<li><code>resource.GetRemote URL</code> brukes for å koble til eksterne API-er.</li>
+<li>Å lage sider av data fra eksternt API</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-04-15/">
+                    15. april 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 4. sep. 2024 | </span>
+                
+                <span>Pub: 15. apr. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Man <strong>looper gjennom sider</strong> i Hugo med <code>{{ range .Site.RegularPages }}</code>. Det er det samme som en <code>for loop</code> i javascript.
+<ul>
+<li><strong><code>.Site</code></strong> er forøvrig en <strong>global funksjon</strong> som gir <strong>tilgang til gjeldende &ldquo;site&rdquo;</strong>, som omtales som et objekt i dokumentasjonen.<br>
+Man kan bruke både <code>site</code> og <code>.Site</code>. Hugo anbefaler å benytte <code>site</code> i &ldquo;templates&rdquo;.</li>
+<li><strong><code>.RegularPages</code></strong> er en &ldquo;site&rdquo;-metode som <strong>returnerer en samling (&ldquo;collection&rdquo;) av alle standard-sider</strong>.</li>
+</ul>
+</li>
+<li><strong>Variabler i Hugo</strong> angis på følgende måte: <code>{{ $name := &quot;Mikke&quot; }}</code>.</li>
+<li><strong><code>{{ PAGE.RawContent }}</code></strong> returnerer <strong>innholdet på en side som rå tekst</strong>, uten &ldquo;frontmatter&rdquo; og kode.</li>
+<li><strong>&ldquo;if-statement&rdquo;</strong> i Hugo:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-GO" data-lang="GO"><span style="display:flex;"><span>{{ <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">STATEMENT</span> }}
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><ul>
+<li><strong>Slå sammen variabel og streng:</strong> <code>print &quot;Hello&quot; $name &quot;!&quot;</code>.</li>
+<li><strong><code>in</code>:</strong> Sjekke om en <strong>angitt verdi finnes i en samling</strong>, som kan være array, slice eller string. <code>{{ if in $l (print &quot;&lt; ref \&quot;&quot; $o &quot;\&quot; &gt;&quot;) }}</code>.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        </ul>
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>
