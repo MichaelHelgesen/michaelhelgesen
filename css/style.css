@@ -552,7 +552,7 @@ footer nav {
 footer nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 6px;
     justify-content: center;
 }
 footer nav ul li::after {
