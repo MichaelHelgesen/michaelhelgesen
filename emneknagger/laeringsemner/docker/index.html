@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zotero</title>
+    <title>Docker</title>
  <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
     
 
     <meta name="author" content="">
- <link rel="canonical" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/zotero/" itemprop="url" />
-<meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/zotero/">
+ <link rel="canonical" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/">
   <meta property="og:site_name" content="Michael Helgesen">
-  <meta property="og:title" content="Zotero">
+  <meta property="og:title" content="Docker">
   <meta property="og:locale" content="nb">
   <meta property="og:type" content="website">
 
@@ -32,8 +32,8 @@
     
 
 
-<meta name="description" content="Ting jeg har lært om Zotero i læringsloggen.">
-<meta property="og:description" content="Ting jeg har lært om Zotero i læringsloggen.">
+<meta name="description" content="Ting jeg har lært om Docker i læringsloggen.">
+<meta property="og:description" content="Ting jeg har lært om Docker i læringsloggen.">
 
 
 </head>
@@ -121,8 +121,8 @@
             </li>         
             
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/zotero/">
-                    <span itemprop="name">Zotero</span>
+                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/">
+                    <span itemprop="name">Docker</span>
                 </a>
                 <meta itemprop="position" content='4' />
             </li>
@@ -145,12 +145,10 @@
 
 <div class="intro sider tag">
 <h1>
-    #zotero <sup>1</sup>
+    #docker <sup>1</sup>
 </h1>
-    <p class="ingress">Ting jeg har lært om zotero</p>
+    <p class="ingress">Ting jeg har lært om docker</p>
     <span>
-    
-    Jeg har også skrevet tekster om denne emneknaggen. <a href=/emneknagger/tekstemner/zotero> Se dem her.</a>
     
     </span>
 </div>
@@ -160,25 +158,25 @@
         
         <li>
             <h2>
-                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-07-18/">
-                    18. juli 2024
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-09-08/">
+                    8. september 2024
 
                 </a>
             </h2>
             <div>
                 <p class="last-posts-list__meta">
                 
-                <span>Red: 4. sep. 2024 | </span>
+                <span>Red: 9. sep. 2024 | </span>
                 
-                <span>Pub: 18. jul. 2024 | </span>    
+                <span>Pub: 8. sep. 2024 | </span>    
                  
  
 
     
     
-         <a href="/emneknagger/laeringsemner/zotero/"> 
+         <a href="/emneknagger/laeringsemner/docker/"> 
          
-            #zotero</a>
+            #docker</a>
          
 
 
@@ -191,10 +189,25 @@
                 
                         
                 <ul>
-<li>Lærte å hente notater og vedlegg fra Zotero.</li>
+<li>Docker er en tjeneste som leverer standariserte enheter av mykvare som de kaller «container».</li>
+<li>En «container» er som en pakke med kode og tilhørende «packages» og verktøy. Man kan kjøre programmer uten å hente noe fra et annet sted.</li>
+<li>«Container» kan sammenlignes med en piknikkurv. I kurven har man alt man trenger for å sprise et måltid: tallerkner, glass, bestikk og mat. Den kan også leveres til en venn, og vennen trenger ikke bekymre seg for innholdet. Alt er samlet i kurven.</li>
+<li>En «container» fylles altså med det man trenger, uten behov for å mikse med innhold i andre «containere». Den kan modifiseres, og den virker for seg selv («stand-alone»). Den vil også virke alle andre steder som kan håndtere en «container».</li>
+<li>Docker gjør opprettelsen og håndteringen av slike «containere» enkelt.</li>
+<li>Hvorfor ikke virtuelle maskiner? Det er også et innkapslet område, men de krever mye mer ressurser og tar mye plass på harddisken.</li>
+<li>To konsepter i Docker:
+<ul>
+<li>«Images»</li>
+<li>«containers»</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>api.zotero.org/groups/&lt;ID&gt;/items/&lt;ID&gt;/children
-</span></span></code></pre></div>
+</li>
+<li>«Images» er som en mal for å skape «containere». En «container» er en instans av et «image». Man kan etablere mange «containere» fra en «image».</li>
+<li>«Images» er en mal som inneholder koden, verktøyene og rutinene, mens en «container» er den kjørende / aktiverte mykvare-enheten.</li>
+<li>Installere en «container» fra en «image»: <code>docker run IMAGE-NAVN</code></li>
+<li>For å «åpne dørene» til en «container» og starte en interaktiv «session» fra «containeren» til vår maskin: <code>docker run -it IMAGE-NAVN</code></li>
+<li>Se alle Docker-prosesser på maskinen: <code>docker ps -a</code>. <code>ps</code> står for «processes» og <code>-a</code> betyr «all».</li>
+</ul>
+
             
         </article>
 

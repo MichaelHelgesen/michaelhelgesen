@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Michael Helgesen</title>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/</link>
+    <description>Recent content in Docker on Michael Helgesen</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <lastBuildDate>Mon, 09 Sep 2024 09:29:30 +0200</lastBuildDate>
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-08</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-08/</link>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-08/</guid>
+      <description>Docker Docker er en tjeneste som leverer standariserte enheter av mykvare som de kaller «container». En «container» er som en pakke med kode og tilhørende «packages» og verktøy. Man kan kjøre programmer uten å hente noe fra et annet sted. «Container» kan sammenlignes med en piknikkurv. I kurven har man alt man trenger for å sprise et måltid: tallerkner, glass, bestikk og mat. Den kan også leveres til en venn, og vennen trenger ikke bekymre seg for innholdet.</description>
+    </item>
+  </channel>
+</rss>
