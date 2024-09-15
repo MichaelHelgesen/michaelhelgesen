@@ -145,7 +145,7 @@
 
 <div class="intro sider tag">
 <h1>
-    #docker <sup>1</sup>
+    #docker <sup>3</sup>
 </h1>
     <p class="ingress">Ting jeg har lært om docker</p>
     <span>
@@ -155,6 +155,121 @@
 
     <ul class="last-posts-list">
         
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-09-12/">
+                    12. september 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 15. sep. 2024 | </span>
+                
+                <span>Pub: 12. sep. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/docker/"> 
+        
+        #docker</a>, 
+         <a href="/emneknagger/laeringsemner/bash/"> 
+        
+            #bash</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>For å se status på alle «containere» kan vi skrive <code>docker ps -a</code>.</li>
+<li>For å avslutte en «container» skriver man `docker stop ID/NAVN</li>
+<li>Vi kan kjøre en «container» med et ekstra «volum» som synkroniserer med «containeren». Det er praktisk under utvikling, slik at man slipper å bygge nye bilder hele tiden eller oppdatere dem.
+<ul>
+<li>Kommando:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>docker run -dp 5000:5000 -w /BANE -v &#34;${pwd}:/BANE&#34; IMAGE-NAVN
+</span></span></code></pre></div></li>
+<li>For å se kontinuerlig «container log»: `docker logs -f NAVN/ID</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-09-11/">
+                    11. september 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 15. sep. 2024 | </span>
+                
+                <span>Pub: 11. sep. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/nvim/"> 
+        
+        #nvim</a>, 
+         <a href="/emneknagger/laeringsemner/curl/"> 
+        
+        #curl</a>, 
+         <a href="/emneknagger/laeringsemner/docker/"> 
+        
+            #docker</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>For å lage et Docker «image» fra en Dockerfil skriver man <code>docker build .</code> fra banen med Dockerfilen i.</li>
+<li>Ønsker man å gi den en emneknagg kan man skrive følgende: <code>docker build -t EMNEKNAGG .</code>.</li>
+<li>For å starte en Docker «deamon»: <code>systemctl start docker</code>.</li>
+<li>Se alle «images»: <code>docker images</code>.</li>
+<li>Starte en Docker «container» fra «image»: <code>docker run IMAGE-NAVN</code>.</li>
+<li>Angi port ved opprettelse av «container»: <code>docker run -d -p NY_PORT:CONTAINER_PORT IMAGE-NAVN</code>. <code>-d</code> betyr at prosessen skal kjøre i bakgrunnen, mens <code>-p</code> står for port.</li>
+<li>Docker «compose» lar oss kjøre flere «images» med felles innstillinger. Da slipper man å gjøre det manuelt flere ganger. Først må man lage en fil <code>docker-compose.yml</code>, med for eksempel følgende kode:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>: 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>: <span style="color:#ae81ff">.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>: 
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;5000:5000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>: 
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">.:/app</span>
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
         
         <li>
             <h2>

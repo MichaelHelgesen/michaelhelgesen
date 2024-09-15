@@ -6,8 +6,29 @@
     <description>Recent content in Linux on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Mon, 09 Sep 2024 09:05:58 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2024 08:52:47 +0200</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-14</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-14/</link>
+      <pubDate>Sat, 14 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-14/</guid>
+      <description>Linux Navigere kommandolinjen i Linux: Til starten og enden av linjen: CTRL + A / E. Navigere ett ord frem og tilbake: ALT + F / B. Slette fra markør bakover og fremover: CTRL + K / U Semikolon for å slå sammen kommandoer. For å stoppe hvis en kommando i rekken feiler, bruk heller &amp;amp;&amp;amp;. Gå inn i .bashrc for å lage aliaser for kommandoer. For eksempel: alias gpom = git push origin main.</description>
+    </item>
+    <item>
+      <title>2024-09-13</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-13/</link>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-13/</guid>
+      <description>Linux For å se alle installerte «packages»: dnf list installed. Bash «wildcards» er nyttige for søk. *: matcher ingen eller flere tegn. ?: matcher kun ett tegn. [abc]: kaller «character class». Matcher en av tegnene mellom klammene. [!abc]: Matcher alle tegn som ikke er mellom klammene. [1-10]: Kalles «range» og matcher alt mellom to parametre, for eksempel [1-10] eller [B-T]. Det finnes mange predefinerte «wildcards» som [[:alpha:]], [[:digit:]], [[:upper:]] og så videre.</description>
+    </item>
+    <item>
+      <title>2024-09-09</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-09/</link>
+      <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-09/</guid>
+      <description>Linux For å kjøre en prosess og se dens ID kan vi legge til &amp;amp;. For eksempel hugo server &amp;amp;. Tegnet indikerer at prosessen skal kjøre i bakgrunnen, i et «subshell». Prosessen må dermed gjerne termineres med «kill PROSESS-ID». For å se informasjon om en prosess kan vi skrive ps -fp PROSESS-ID. -f viser ekstra informasjon, mens -p lar oss filtrere på ID. Bash Et Bash-script er et kommandolinjeprogram som inneholder kommandoer som leses av en interpreterer.</description>
+    </item>
     <item>
       <title>2024-09-07</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-07/</link>

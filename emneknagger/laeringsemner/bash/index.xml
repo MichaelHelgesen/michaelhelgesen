@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Michael Helgesen</title>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/bash/</link>
+    <description>Recent content in Bash on Michael Helgesen</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <lastBuildDate>Sun, 15 Sep 2024 08:41:20 +0200</lastBuildDate>
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-13</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-13/</link>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-13/</guid>
+      <description>Linux For å se alle installerte «packages»: dnf list installed. Bash «wildcards» er nyttige for søk. *: matcher ingen eller flere tegn. ?: matcher kun ett tegn. [abc]: kaller «character class». Matcher en av tegnene mellom klammene. [!abc]: Matcher alle tegn som ikke er mellom klammene. [1-10]: Kalles «range» og matcher alt mellom to parametre, for eksempel [1-10] eller [B-T]. Det finnes mange predefinerte «wildcards» som [[:alpha:]], [[:digit:]], [[:upper:]] og så videre.</description>
+    </item>
+    <item>
+      <title>2024-09-12</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-12/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-12/</guid>
+      <description>Docker For å se status på alle «containere» kan vi skrive docker ps -a. For å avslutte en «container» skriver man `docker stop ID/NAVN Vi kan kjøre en «container» med et ekstra «volum» som synkroniserer med «containeren». Det er praktisk under utvikling, slik at man slipper å bygge nye bilder hele tiden eller oppdatere dem. Kommando: docker run -dp 5000:5000 -w /BANE -v &amp;#34;${pwd}:/BANE&amp;#34; IMAGE-NAVN For å se kontinuerlig «container log»: `docker logs -f NAVN/ID Bash Funksjoner i Bash må defineres før de brukes.</description>
+    </item>
+    <item>
+      <title>2024-09-09</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-09/</link>
+      <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-09/</guid>
+      <description>Linux For å kjøre en prosess og se dens ID kan vi legge til &amp;amp;. For eksempel hugo server &amp;amp;. Tegnet indikerer at prosessen skal kjøre i bakgrunnen, i et «subshell». Prosessen må dermed gjerne termineres med «kill PROSESS-ID». For å se informasjon om en prosess kan vi skrive ps -fp PROSESS-ID. -f viser ekstra informasjon, mens -p lar oss filtrere på ID. Bash Et Bash-script er et kommandolinjeprogram som inneholder kommandoer som leses av en interpreterer.</description>
+    </item>
+  </channel>
+</rss>

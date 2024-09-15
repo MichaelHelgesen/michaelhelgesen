@@ -6,8 +6,15 @@
     <description>Recent content in Curl on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Wed, 04 Sep 2024 10:48:24 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2024 08:12:03 +0200</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/curl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-11</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-11/</link>
+      <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-11/</guid>
+      <description>Curl For å se statusinformasjon om forespørselen så legger man til -i. Ønsker man å skrive en kommando over flere linjer i kommandolinjen kan vi benytte \ deretter linjeskift, for å gå til neste linje. NVIM For å se terminalen i Neovim kan vi skrive :terminal eller :term. Docker For å lage et Docker «image» fra en Dockerfil skriver man docker build . fra banen med Dockerfilen i. Ønsker man å gi den en emneknagg kan man skrive følgende: docker build -t EMNEKNAGG .</description>
+    </item>
     <item>
       <title>2024-06-03</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</link>

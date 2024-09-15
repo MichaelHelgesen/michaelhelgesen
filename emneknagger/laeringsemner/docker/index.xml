@@ -6,8 +6,22 @@
     <description>Recent content in Docker on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Mon, 09 Sep 2024 09:29:30 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2024 08:32:33 +0200</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-12</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-12/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-12/</guid>
+      <description>Docker For å se status på alle «containere» kan vi skrive docker ps -a. For å avslutte en «container» skriver man `docker stop ID/NAVN Vi kan kjøre en «container» med et ekstra «volum» som synkroniserer med «containeren». Det er praktisk under utvikling, slik at man slipper å bygge nye bilder hele tiden eller oppdatere dem. Kommando: docker run -dp 5000:5000 -w /BANE -v &amp;#34;${pwd}:/BANE&amp;#34; IMAGE-NAVN For å se kontinuerlig «container log»: `docker logs -f NAVN/ID Bash Funksjoner i Bash må defineres før de brukes.</description>
+    </item>
+    <item>
+      <title>2024-09-11</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-11/</link>
+      <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-11/</guid>
+      <description>Curl For å se statusinformasjon om forespørselen så legger man til -i. Ønsker man å skrive en kommando over flere linjer i kommandolinjen kan vi benytte \ deretter linjeskift, for å gå til neste linje. NVIM For å se terminalen i Neovim kan vi skrive :terminal eller :term. Docker For å lage et Docker «image» fra en Dockerfil skriver man docker build . fra banen med Dockerfilen i. Ønsker man å gi den en emneknagg kan man skrive følgende: docker build -t EMNEKNAGG .</description>
+    </item>
     <item>
       <title>2024-09-08</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-08/</link>

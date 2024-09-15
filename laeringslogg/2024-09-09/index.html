@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024-09-09</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+    <meta name="author" content="">
+ <link rel="canonical" href="https://www.michaelhelgesen.no/laeringslogg/2024-09-09/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/laeringslogg/2024-09-09/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="2024-09-09">
+  <meta property="og:description" content="Linux For å kjøre en prosess og se dens ID kan vi legge til &amp;. For eksempel hugo server &amp;. Tegnet indikerer at prosessen skal kjøre i bakgrunnen, i et «subshell». Prosessen må dermed gjerne termineres med «kill PROSESS-ID». For å se informasjon om en prosess kan vi skrive ps -fp PROSESS-ID. -f viser ekstra informasjon, mens -p lar oss filtrere på ID. Bash Et Bash-script er et kommandolinjeprogram som inneholder kommandoer som leses av en interpreterer.">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2024-09-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-09-15T07:45:34+02:00">
+
+
+
+
+
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+          
+
+          
+
+    
+        
+        
+            
+                
+                
+                      
+                
+            
+                
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om  linux og bash.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om  linux og bash.">
+
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/laeringslogg/2024-09-09/">
+                    <span itemprop="name">2024-09-09</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>9. september 2024</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 15. sep. 2024 | </span>
+            
+            <span>Pub: 9. sep. 2024 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/bash/"> 
+        
+            #bash</a>
+        
+
+
+        </p>
+    
+        </div>
+        <section>
+    
+            
+        
+    <h2 id="linux">Linux</h2>
+<ul>
+<li>For å kjøre en prosess og se dens ID kan vi legge til <code>&amp;</code>. For eksempel <code>hugo server &amp;</code>. Tegnet indikerer at prosessen skal kjøre i bakgrunnen, i et «subshell». Prosessen må dermed gjerne termineres med «kill PROSESS-ID».</li>
+<li>For å se informasjon om en prosess kan vi skrive <code>ps -fp PROSESS-ID</code>. <code>-f</code> viser ekstra informasjon, mens <code>-p</code> lar oss filtrere på ID.</li>
+</ul>
+<h2 id="bash">Bash</h2>
+<ul>
+<li>Et Bash-script er et kommandolinjeprogram som inneholder kommandoer som leses av en interpreterer. For shell-scripter er det shell som er interpreter.</li>
+<li>Alle kommandoer som kan kjøres i kommandolinjen kan også kjøres i et shell-script. Bash-script er et shell-script.</li>
+<li>Alle bash-script starter med <code>#!/bin/bash</code>. <code>#!</code> kalles «shebang», og følges av banen til interpretereren. Scriptet blir sendt til interpretereren som et argument.</li>
+<li>For å kjøre et script må vi først gi tilgang ved å angi for eksempel <code>chmod 755 script.sh</code>.</li>
+<li>For å kjøre et script kan vi skrive <code>./script.sh</code> eller bare <code>script.sh</code> om det er gjort tilgjengelig på systemnivå.</li>
+<li>Variabler angis uten mellomrom og angis som regel med store bokstaver: <code>VARIABEL=&quot;Hei&quot;</code>.</li>
+<li>For å henvise til en variabel: <code>$VARIABEL_NAVN</code>.</li>
+<li>Man bruker krøllparentes rundt en variabel om man ønsker å legge til noe rett etter variabelen: <code>${VARIABEL}-</code>.</li>
+<li>Vi kan også definere en variabel med resultatet av en kommando ved å angi kommandoen i parentes: <code>VAR=$(KOMMANDO)</code>.
+*Variabler kan ikke starte med tall, inneholde spesielle tegn eller ha bindestrek.</li>
+<li>For å sjekke om noe er sant eller falskt kan vi «teste» ved å angi påstanden i klammer <code>[ -d ]</code> eller ved å skrive «test»: <code>test -d</code>. Se manualen <code>man test</code> for mer.</li>
+<li>If / else:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> condition <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    commando
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> condition <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    commando
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    commando
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span></code></pre></div><ul>
+<li>For-løkke:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ITEM in LIST
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    commando
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><ul>
+<li>Posisjonelle parametre refereres med <code>$1 $2 $3</code> og så videre. <code>$0</code> henviser til selve scriptet.</li>
+<li>Alle parametere kan samles i en liste med <code>$@</code>.</li>
+<li>For å be om inndata fra bruker: <code>read -p &quot;PROMPT&quot; VARIABEL</code>. «Prompt» er teksten som skal vises i kommandolinjen, og «VARIABEL» er navnet på variabelen som lagrer inndataene.</li>
+<li>Alle kommandoer har en «exit-status» eller «exit-kode» fra 0-255. 0 er suksess.</li>
+<li>For å se en kommandos statuskode skriver man <code>$?</code> rett etter kommandoen.</li>
+<li><code>&amp;&amp;</code> betyr «og», mens <code>||</code> betyr «eller».</li>
+<li>Vi kan bruke semikolon for å lenke flere kommandoer. Alle kjøres uansett foregående kommandos statuskode.</li>
+<li>Vi kan angi en statuskode manuelt for å spesifisere spesifikke statuser.</li>
+</ul>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-dfaefaf6.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-dfaefaf6"></span>&#32;
+
+<script id="script-dfaefaf6">
+  var scriptTag = document.getElementById("script-dfaefaf6");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "90-90-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

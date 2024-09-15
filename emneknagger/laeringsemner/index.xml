@@ -8,17 +8,38 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Linux</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</link>
+      <pubDate>Sat, 14 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/bash/</link>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/bash/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Docker</title>
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/</link>
-      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/</guid>
       <description></description>
     </item>
     <item>
-      <title>Linux</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</link>
-      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</guid>
+      <title>Curl</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/curl/</link>
+      <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/curl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nvim</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/</link>
+      <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/</guid>
       <description></description>
     </item>
     <item>
@@ -61,13 +82,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/zotero/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/zotero/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Curl</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/curl/</link>
-      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/curl/</guid>
       <description></description>
     </item>
     <item>
@@ -117,13 +131,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/design/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nvim</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/</link>
-      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/</guid>
       <description></description>
     </item>
     <item>

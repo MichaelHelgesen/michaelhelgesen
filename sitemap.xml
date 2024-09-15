@@ -2,16 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-14/</loc>
+    <lastmod>2024-09-15T08:52:47+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</loc>
+    <lastmod>2024-09-15T08:52:47+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-13/</loc>
+    <lastmod>2024-09-15T08:41:20+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/bash/</loc>
+    <lastmod>2024-09-15T08:41:20+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-12/</loc>
+    <lastmod>2024-09-15T08:32:33+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/</loc>
+    <lastmod>2024-09-15T08:32:33+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-11/</loc>
+    <lastmod>2024-09-15T08:12:03+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/curl/</loc>
+    <lastmod>2024-09-15T08:12:03+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/</loc>
+    <lastmod>2024-09-15T08:12:03+02:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-09/</loc>
+    <lastmod>2024-09-15T07:45:34+02:00</lastmod>
+  </url><url>
     <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-08/</loc>
     <lastmod>2024-09-09T09:29:30+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/</loc>
-    <lastmod>2024-09-09T09:29:30+02:00</lastmod>
-  </url><url>
     <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-07/</loc>
-    <lastmod>2024-09-09T09:05:58+02:00</lastmod>
-  </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</loc>
     <lastmod>2024-09-09T09:05:58+02:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-04/</loc>
@@ -66,9 +90,6 @@
     <lastmod>2024-09-04T10:48:24+02:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</loc>
-    <lastmod>2024-09-04T10:48:24+02:00</lastmod>
-  </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/curl/</loc>
     <lastmod>2024-09-04T10:48:24+02:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/strapi/</loc>
@@ -186,9 +207,6 @@
     <lastmod>2024-09-04T10:48:24+02:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/design/</loc>
-    <lastmod>2024-09-04T10:48:24+02:00</lastmod>
-  </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/</loc>
     <lastmod>2024-09-04T10:48:24+02:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-25/</loc>
