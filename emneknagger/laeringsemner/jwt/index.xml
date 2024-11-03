@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jwt on Michael Helgesen</title>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/</link>
+    <description>Recent content in Jwt on Michael Helgesen</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <lastBuildDate>Sun, 03 Nov 2024 20:14:01 +0100</lastBuildDate>
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-09-16</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-16/</link>
+      <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-16/</guid>
+      <description>&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å ta omstart fra kommando-linjen: &lt;code&gt;sudo restart now&lt;/code&gt; eller &lt;code&gt;sudo shutdown -r now&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Man kan justere fontstørrelsen på kommando-linjen med &lt;code&gt;setfont&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;jwt&#34;&gt;JWT&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;JWT er et slags signert JSON-objekt, et objekt med en unik nøkkel som for eksempel kan brukes for å sjekke om noen er registrerte brukere, og om de er logget inn.&lt;/li&gt;&#xA;&lt;li&gt;En type «access token».&lt;/li&gt;&#xA;&lt;li&gt;Man angir gjerne en «token refresh» for sikkerhet, slik at bruker må logge seg inn på nytt etter gitt tid.&lt;/li&gt;&#xA;&lt;li&gt;Klient -&amp;gt; oppgir brukernavn og passord -&amp;gt; sendes via API til validering -&amp;gt; hvis validert så lages «access token» med unik ID for brukeren -&amp;gt; sendes tilbake til klienten for lagring og senere bruk.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

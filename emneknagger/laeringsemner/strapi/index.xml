@@ -6,21 +6,21 @@
     <description>Recent content in Strapi on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Wed, 04 Sep 2024 10:48:24 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/strapi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-06-03</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</link>
       <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</guid>
-      <description>Strapi Hvordan berike felter i API-kallet med ?populate[0]feltnavn&amp;amp;populate[1]feltnavn. Dette bygger en egen liste å jobbe med. Curl Legg til -g for å kunne bruke {} og [] uten å måtte «escape» dem. Curl overser dem. Bruk &amp;quot;&amp;amp;&amp;quot; i hermetegn for å inkludere tegn som «&amp;amp;» i en streng. </description>
+      <description>&lt;h2 id=&#34;strapi&#34;&gt;Strapi&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hvordan berike felter i API-kallet med &lt;code&gt;?populate[0]feltnavn&amp;amp;populate[1]feltnavn&lt;/code&gt;. Dette bygger en egen liste å jobbe med.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;curl&#34;&gt;Curl&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Legg til &lt;code&gt;-g&lt;/code&gt; for å kunne bruke &lt;code&gt;{}&lt;/code&gt; og &lt;code&gt;[]&lt;/code&gt; uten å måtte «escape» dem. Curl overser dem.&lt;/li&gt;&#xA;&lt;li&gt;Bruk &lt;code&gt;&amp;quot;&amp;amp;&amp;quot;&lt;/code&gt; i hermetegn for å inkludere tegn som «&amp;amp;» i en streng.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-05-29</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-29/</link>
       <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-29/</guid>
-      <description>Strapi Installerte Strapi for første gang og testet det å lage innholds-komponenter, hvordan finne komponenter i API-kallet og gå «dypere» inn i dataene. </description>
+      <description>&lt;h2 id=&#34;strapi&#34;&gt;Strapi&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Installerte Strapi for første gang og testet det å lage innholds-komponenter, hvordan finne komponenter i API-kallet og gå «dypere» inn i dataene.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

@@ -6,28 +6,28 @@
     <description>Recent content in Figma on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Wed, 04 Sep 2024 10:48:24 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/figma/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-05-25</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</guid>
-      <description>Figma Opprette varianter av komponenter Benytte plugins </description>
+      <description>&lt;h2 id=&#34;figma&#34;&gt;Figma&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Opprette varianter av komponenter&lt;/li&gt;&#xA;&lt;li&gt;Benytte plugins&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-05-24</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</link>
       <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</guid>
-      <description>Figma Opprette variabler Lage komponenter «Tokenization» «Frames» vs «groups» </description>
+      <description>&lt;h2 id=&#34;figma&#34;&gt;Figma&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Opprette variabler&lt;/li&gt;&#xA;&lt;li&gt;Lage komponenter&lt;/li&gt;&#xA;&lt;li&gt;«Tokenization»&lt;/li&gt;&#xA;&lt;li&gt;«Frames» vs «groups»&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-05-23</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</guid>
-      <description>Hugo Jeg kom bort i et problem med at alle lenker viste et ekstra mellomrom. Det har visst noe med oppsettet å gjøre, som sier noe sånt som at «legg til ny linje i enden av alle filer». Jeg fikk det bort ved å legge til {{- &amp;quot;&amp;quot; -}} på slutten av «render_link.html hooken» som genererer koden til lenkene. Figma Lærte å opprette maler Lage 8-punkts rutenett Aktivere «nudge» for en smidigere flytting av bokser.</description>
+      <description>&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jeg kom bort i et problem med at alle lenker viste et ekstra mellomrom. Det har visst noe med oppsettet å gjøre, som sier noe sånt som at «legg til ny linje i enden av alle filer». Jeg fikk det bort ved å legge til &lt;code&gt;{{- &amp;quot;&amp;quot; -}}&lt;/code&gt; på slutten av «render_link.html hooken» som genererer koden til lenkene.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;figma&#34;&gt;Figma&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lærte å opprette maler&lt;/li&gt;&#xA;&lt;li&gt;Lage 8-punkts rutenett&lt;/li&gt;&#xA;&lt;li&gt;Aktivere «nudge» for en smidigere flytting av bokser. I menyen: «quick actions» -&amp;gt; «nudge»&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

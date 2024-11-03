@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jwt</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+    <meta name="author" content="">
+ <link rel="canonical" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="Jwt">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="website">
+
+
+
+
+
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+          
+
+          
+
+    
+
+
+<meta name="description" content="Ting jeg har lært om Jwt i læringsloggen.">
+<meta property="og:description" content="Ting jeg har lært om Jwt i læringsloggen.">
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp; 
+                <meta itemprop="position" content='1' />
+            </li>         
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/emneknagger">
+                    <span itemprop="name">Emneknagger</span></a>
+                /&nbsp; 
+                <meta itemprop="position" content='2' />
+            </li>
+                
+                
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/">
+                    <span itemprop="name">Læringsemner</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='3' />
+            </li>         
+            
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/">
+                    <span itemprop="name">Jwt</span>
+                </a>
+                <meta itemprop="position" content='4' />
+            </li>
+    </ol>
+
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+       
+
+
+
+
+
+<div class="intro sider tag">
+<h1>
+    #jwt <sup>1</sup>
+</h1>
+    <p class="ingress">Ting jeg har lært om jwt</p>
+    <span>
+    
+    </span>
+</div>
+
+    <ul class="last-posts-list">
+        
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-09-16/">
+                    16. september 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 3. nov. 2024 | </span>
+                
+                <span>Pub: 16. sep. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+        
+        #linux</a>, 
+         <a href="/emneknagger/laeringsemner/jwt/"> 
+        
+            #jwt</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>JWT er et slags signert JSON-objekt, et objekt med en unik nøkkel som for eksempel kan brukes for å sjekke om noen er registrerte brukere, og om de er logget inn.</li>
+<li>En type «access token».</li>
+<li>Man angir gjerne en «token refresh» for sikkerhet, slik at bruker må logge seg inn på nytt etter gitt tid.</li>
+<li>Klient -&gt; oppgir brukernavn og passord -&gt; sendes via API til validering -&gt; hvis validert så lages «access token» med unik ID for brukeren -&gt; sendes tilbake til klienten for lagring og senere bruk.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        </ul>
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

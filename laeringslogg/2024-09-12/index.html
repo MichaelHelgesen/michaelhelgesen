@@ -16,12 +16,12 @@
 <meta property="og:url" content="https://www.michaelhelgesen.no/laeringslogg/2024-09-12/">
   <meta property="og:site_name" content="Michael Helgesen">
   <meta property="og:title" content="2024-09-12">
-  <meta property="og:description" content="Docker For å se status på alle «containere» kan vi skrive docker ps -a. For å avslutte en «container» skriver man `docker stop ID/NAVN Vi kan kjøre en «container» med et ekstra «volum» som synkroniserer med «containeren». Det er praktisk under utvikling, slik at man slipper å bygge nye bilder hele tiden eller oppdatere dem. Kommando: docker run -dp 5000:5000 -w /BANE -v &#34;${pwd}:/BANE&#34; IMAGE-NAVN For å se kontinuerlig «container log»: `docker logs -f NAVN/ID Bash Funksjoner i Bash må defineres før de brukes.">
+  <meta property="og:description" content="Docker For å se status på alle «containere» kan vi skrive docker ps -a. For å avslutte en «container» skriver man `docker stop ID/NAVN Vi kan kjøre en «container» med et ekstra «volum» som synkroniserer med «containeren». Det er praktisk under utvikling, slik at man slipper å bygge nye bilder hele tiden eller oppdatere dem. Kommando: docker run -dp 5000:5000 -w /BANE -v &#34;${pwd}:/BANE&#34; IMAGE-NAVN For å se kontinuerlig «container log»: `docker logs -f NAVN/ID Bash Funksjoner i Bash må defineres før de brukes. To måter å angi dem på: function my-function() { # kode } my-function() { # kode } Vi angir navnet på funksjonen for å kjøre den. Ikke med parentes etter. Kun my-function. Funksjoner kan kalle andre funksjoner. Funksjoner kan måtta argumenter. I funksjonen henvises de til med $1, $2, $3 og så videre. $@ samler alle, og $0 er selve scriptet. For å sende argumenter til en funksjon skriver man det etter kallet: my-function Peter Alle variabler er globale, og må defineres før de brukes. Variabler i funksjoner blir ikke globale før funksjonen har kjørt. local MY_VAR er en variabel som kun vil være tilgjengelig i en funksjon. Det er best practice. Lokale variabler brukes kun første gang variabelen etableres. Funksjoner returnerer «exit status». Den kan man definere selv også med return KODE. Hvis ikke angitt er det siste kommando som bestemmer. Kan kun angi manuell kode mellom 0-255. ">
   <meta property="og:locale" content="nb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="laeringslogg">
     <meta property="article:published_time" content="2024-09-12T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-09-15T08:32:33+02:00">
+    <meta property="article:modified_time" content="2024-10-27T18:27:43+01:00">
 
 
 
@@ -155,7 +155,7 @@
         <h1>12. september 2024</h1>
         <p class="last-posts-list__meta">
             
-                <span>Red: 15. sep. 2024 | </span>
+                <span>Red: 27. okt. 2024 | </span>
             
             <span>Pub: 12. sep. 2024 | </span>    
              
@@ -221,16 +221,16 @@
 <p> 
 Send meg gjerne 
 <style>
-  #span-4805392d.cloaked-e-mail:before {
+  #span-35e9514d.cloaked-e-mail:before {
     content:attr(data-domain) "\0040" attr(data-user);
     unicode-bidi:bidi-override;
     direction:rtl;
   }
 </style>
-&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-4805392d"></span>&#32;
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-35e9514d"></span>&#32;
 
-<script id="script-4805392d">
-  var scriptTag = document.getElementById("script-4805392d");
+<script id="script-35e9514d">
+  var scriptTag = document.getElementById("script-35e9514d");
   var link = document.createElement("a");
   var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "21-90-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
   link.href = "mailto" + ":" + address;
@@ -246,6 +246,22 @@ Send meg gjerne
 
 
 
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 

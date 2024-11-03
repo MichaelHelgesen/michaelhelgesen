@@ -8,17 +8,24 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/tekstemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Effektivitet</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/effektivitet/</link>
-      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/effektivitet/</guid>
+      <title>Filosofi</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/filosofi/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/filosofi/</guid>
       <description></description>
     </item>
     <item>
       <title>Lesing</title>
       <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/lesing/</link>
-      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/lesing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Effektivitet</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/effektivitet/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/effektivitet/</guid>
       <description></description>
     </item>
     <item>

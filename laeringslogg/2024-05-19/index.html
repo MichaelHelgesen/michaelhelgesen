@@ -16,12 +16,12 @@
 <meta property="og:url" content="https://www.michaelhelgesen.no/laeringslogg/2024-05-19/">
   <meta property="og:site_name" content="Michael Helgesen">
   <meta property="og:title" content="2024-05-19">
-  <meta property="og:description" content="Hugo Jeg fant ut at HUGO ikke har støtte for «regular expressions» «look ahead» eller «capture groups». Jeg måtte derfor dele opp prosessen med å hente ut tekst fra en artikkel. Måtte først lage en regex-streng med $regExString := print `(?s)(?i)` $tag `&lt;\/h[0-9]&gt;.*?&lt;h[0-9]|(?s)(?i)` $tag `&lt;\/h[0-9]&gt;.*` (?s) betyr «single line mode» og ignorerer «whitespace» inkludert mellomrom, tabulator og ny linje. (?i) betyr at det ikke tas hensyn til om bokstavene er minuskler eller versaler.">
+  <meta property="og:description" content="Hugo Jeg fant ut at HUGO ikke har støtte for «regular expressions» «look ahead» eller «capture groups». Jeg måtte derfor dele opp prosessen med å hente ut tekst fra en artikkel. Måtte først lage en regex-streng med $regExString := print `(?s)(?i)` $tag `&lt;\/h[0-9]&gt;.*?&lt;h[0-9]|(?s)(?i)` $tag `&lt;\/h[0-9]&gt;.*` (?s) betyr «single line mode» og ignorerer «whitespace» inkludert mellomrom, tabulator og ny linje. (?i) betyr at det ikke tas hensyn til om bokstavene er minuskler eller versaler. | betyr enten det før eller etter | (pipe). Får den ikke treff på søket før |, så søkes etter det på høyre siden. Deretter lage en variabel av søket. {{ $regExMatch := .Content | findRE $regExString }} Av punktet over fikk jeg en liste med treff som deretter måtte itereres over {{ range $regExmatch }}. Deretter måtte jeg opprette en ny regex for å luke bort uønsket HTML-kode. {{ range $regExMatch}} {{ $contentMatch := . | findRE `(?s)&lt;ul&gt;.*?&lt;h|(?s)&lt;ul&gt;.*`}} {{ $content := strings.TrimRight &#34;&lt;h&#34; (index $contentMatch 0)}} {{ $content | safeHTML}} {{ end }} En navigasjonsmeny defineres i config.toml i HUGO: [menus] [[menu main]] name = &#34;Hjem&#34; pageref = &#34;/&#34; weight = 10 Menyen kan vises i maler på følgende vis: {{ range site.Menus.main }}. Med {{- if $page.IsMenuCurrent &#34;main&#34; . }} kan vi gi en menyelement en egen klasse om det er den aktive siden. Og med $page.HasMenuCurrent &#34;main&#34; kan vi gi sørge for at toppnivået i menyen får en egen klasse, selv om vi er på en underside. ">
   <meta property="og:locale" content="nb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="laeringslogg">
     <meta property="article:published_time" content="2024-05-19T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-09-04T10:48:24+02:00">
+    <meta property="article:modified_time" content="2024-09-19T09:19:02+02:00">
 
 
 
@@ -151,7 +151,7 @@
         <h1>19. mai 2024</h1>
         <p class="last-posts-list__meta">
             
-                <span>Red: 4. sep. 2024 | </span>
+                <span>Red: 19. sep. 2024 | </span>
             
             <span>Pub: 19. mai 2024 | </span>    
              
@@ -216,16 +216,16 @@
 <p> 
 Send meg gjerne 
 <style>
-  #span-70647d98.cloaked-e-mail:before {
+  #span-0a979f03.cloaked-e-mail:before {
     content:attr(data-domain) "\0040" attr(data-user);
     unicode-bidi:bidi-override;
     direction:rtl;
   }
 </style>
-&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-70647d98"></span>&#32;
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-0a979f03"></span>&#32;
 
-<script id="script-70647d98">
-  var scriptTag = document.getElementById("script-70647d98");
+<script id="script-0a979f03">
+  var scriptTag = document.getElementById("script-0a979f03");
   var link = document.createElement("a");
   var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "91-50-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
   link.href = "mailto" + ":" + address;
@@ -241,6 +241,22 @@ Send meg gjerne
 
 
 
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
