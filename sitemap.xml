@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-11-21/</loc>
+    <lastmod>2024-11-21T22:50:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</loc>
+    <lastmod>2024-11-21T22:50:10+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-11-24/</loc>
+    <lastmod>2024-11-21T22:29:26+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/</loc>
+    <lastmod>2024-11-21T22:29:26+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-11-14/</loc>
+    <lastmod>2024-11-21T22:38:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</loc>
+    <lastmod>2024-11-21T22:38:30+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/fyllepenn/</loc>
+    <lastmod>2024-11-21T21:47:31+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/tekster/kaweco-pebble-blue/</loc>
+    <lastmod>2024-11-21T21:47:31+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/hobby/</loc>
+    <lastmod>2024-11-21T21:47:31+01:00</lastmod>
+  </url><url>
+    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</loc>
+    <lastmod>2024-11-21T21:47:31+01:00</lastmod>
+  </url><url>
     <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/filosofi/</loc>
     <lastmod>2024-10-28T18:53:07+01:00</lastmod>
   </url><url>
@@ -36,9 +66,6 @@
     <lastmod>2024-11-03T20:14:01+01:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/</loc>
-    <lastmod>2024-11-03T20:14:01+01:00</lastmod>
-  </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</loc>
     <lastmod>2024-11-03T20:14:01+01:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-14/</loc>
@@ -155,9 +182,6 @@
     <loc>https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</loc>
-    <lastmod>2024-09-19T09:19:02+02:00</lastmod>
-  </url><url>
     <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/zettelkasten/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
@@ -183,9 +207,6 @@
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</loc>
-    <lastmod>2024-09-19T09:19:02+02:00</lastmod>
-  </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-08/</loc>
@@ -282,10 +303,10 @@
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/inspirasjon/</loc>
-    <lastmod>2024-09-19T09:19:02+02:00</lastmod>
+    <lastmod>2024-11-21T21:03:12+01:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</loc>
-    <lastmod>2024-09-19T09:19:02+02:00</lastmod>
+    <lastmod>2024-11-21T21:03:12+01:00</lastmod>
   </url><url>
     <loc>https://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>

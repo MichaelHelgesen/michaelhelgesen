@@ -8,6 +8,27 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Linux</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</link>
+      <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C#</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Javascript</title>
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/javascript/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
@@ -33,13 +54,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/</link>
       <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</link>
-      <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</guid>
       <description></description>
     </item>
     <item>
@@ -117,13 +131,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/figma/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/figma/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Css</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</link>
-      <pubDate>Thu, 09 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</guid>
       <description></description>
     </item>
     <item>

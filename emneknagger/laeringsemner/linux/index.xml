@@ -6,8 +6,15 @@
     <description>Recent content in Linux on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Sun, 03 Nov 2024 20:14:01 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 21 Nov 2024 22:50:10 +0100</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-11-21</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-11-21/</link>
+      <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-11-21/</guid>
+      <description>&lt;h2 id=&#34;linux&#34;&gt;linux&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;rfkill&lt;/code&gt;: RF står for &amp;ldquo;radio frequency&amp;rdquo;, og &amp;ldquo;rfkill&amp;rdquo; har et konsept om &amp;ldquo;hard-&amp;rdquo; og &amp;ldquo;soft block&amp;rdquo;. Wifi sluttet å virke, så jeg måtte skrive &lt;code&gt;rfkill&lt;/code&gt; for oversikt. Wlan sto som &amp;ldquo;soft blocked&amp;rdquo;. For å aktivere måtte jeg skrive &lt;code&gt;rfkill unblock wifi&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>2024-09-16</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-16/</link>

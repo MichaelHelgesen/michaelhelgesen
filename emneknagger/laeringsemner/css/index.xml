@@ -6,8 +6,15 @@
     <description>Recent content in Css on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 21 Nov 2024 22:38:30 +0100</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-11-14</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-11-14/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-11-14/</guid>
+      <description>&lt;h2 id=&#34;css&#34;&gt;css&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Når man angir &lt;code&gt;display: flex&lt;/code&gt; kan man også skrive &lt;code&gt;flex-flow: row wrap&lt;/code&gt; for å slippe å skrive &lt;code&gt;flex-wrap: wrap&lt;/code&gt; og &lt;code&gt;flex-direction: row&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>2024-05-09</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</link>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on Michael Helgesen</title>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/</link>
+    <description>Recent content in C# on Michael Helgesen</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <lastBuildDate>Thu, 21 Nov 2024 22:29:26 +0100</lastBuildDate>
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-11-20</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-11-24/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-11-24/</guid>
+      <description>&lt;h2 id=&#34;c&#34;&gt;C#&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;Console.Write(&amp;quot;Hello World!&amp;quot;);&lt;/code&gt; printer ord.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Console.WriteLine(&amp;quot;Hello World!&amp;quot;);&lt;/code&gt; printer ord og legger til ny linje.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;Console&lt;/code&gt;er en klasse, og &lt;code&gt;Write&lt;/code&gt; er en metode. Punktum i mellom klasse og metode kalles &amp;ldquo;member access operator&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;Parentesen kalles &amp;ldquo;method invocation operator&amp;rdquo;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Ord mellom anførselstegn kalles &amp;ldquo;sting literal&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;C# krever semikolon for å fortelle at kommandoen skal avsluttes.&lt;/li&gt;&#xA;&lt;li&gt;Enkle anførselstegn &lt;code&gt;&#39;A&#39;&lt;/code&gt; indikerer &amp;ldquo;char&amp;rdquo;, altså én enkelt karakter. Kalles &amp;ldquo;character literal&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;Hele nummer, &amp;ldquo;int literal&amp;rdquo;, skrives uten anførselstegn.&lt;/li&gt;&#xA;&lt;li&gt;Desimaltall, &amp;ldquo;floating point, har tre typer.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;float&lt;/code&gt;: 6-9 tall. Bruker &amp;ldquo;literal suffix&amp;rdquo; &lt;code&gt;f&lt;/code&gt; eller &lt;code&gt;F&lt;/code&gt; &lt;code&gt;0.25F&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;double&lt;/code&gt;: 15-17 tall. Ingen &amp;ldquo;literal suffix&amp;rdquo;. Tall med desimal og uten suffiks er automatisk en &lt;code&gt;double&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;decimal&lt;/code&gt;: 28-29 tall. Bruker suffiks &lt;code&gt;m&lt;/code&gt; eller &lt;code&gt;M&lt;/code&gt; &lt;code&gt;12.381m&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Bool defineres som &lt;code&gt;true&lt;/code&gt; eller &lt;code&gt;false&lt;/code&gt;. Kalles &amp;ldquo;bool literal&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;C# er &amp;ldquo;strongly typed language&amp;rdquo;. Det legges stor vekt på datatyper for å unngå bugs.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;var&lt;/code&gt; brukes for implisitt definisjoner av variabler. C# ser hva som følger etter likhetstegnet og låser typen for oss.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;var message = &amp;quot;Hello&amp;quot;&lt;/code&gt; låses til &amp;ldquo;sting literal&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;var&lt;/code&gt; må initieres. Kan ikke ha tom definisjon som &lt;code&gt;var message&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
