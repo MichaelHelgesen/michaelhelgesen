@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024-11-22</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+    <meta name="author" content="">
+ <link rel="canonical" href="/laeringslogg/2024-11-22/" itemprop="url" />
+<meta property="og:url" content="/laeringslogg/2024-11-22/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="2024-11-22">
+  <meta property="og:description" content="Csharp \n og \t står for henholdsvis ny linje og tabulator. Sistnevnte lager mellomrom på størrelsen med fire karakterer. For å vise en bakstrek i tekst uten at det blir registrert som en «escape» skriver vi to bakstreker. Bakstrek kan også brukes for å vise UTF-karakterer, som \u3053. Microsoft skriver at man bør unngå å bruke midlertidig variabel før den brukes slik som dette: string hilsen = $&#34;Hei {navn}&#34;; Console.WriteLine(hilsen); De anbefaler at strengen kombineres der den faktisk skal brukes: Console.WriteLine($&#34;Hei {navn}&#34;); Strenger: «Verbatim string literal ‘@’» brukes for å beholde alle mellomrom i en streng, og for å slippe å omgå bakstrek som tolkes som «escape». «String interpolation» (strenginterpolering) er C#s måte å benytte variabler i strenger, som konverteres til en streng, lik Javascripts «template literals». $&#34;{}&#34;. Man kan slå sammen verbatim og strenginterpolering: $@&#34;Hei!\n\t{navn}&#34;. C# kan midlertidig konvertere fra nummer til streng om man slår sammen «string» og «int», &#34;Jeg er &#34; &#43; 174 &#43; &#34; høy&#34;, men det er best å unngå. Bruk heller strenginterpolering. Variabler: Desimal-operasjoner bør benyttes på en eller flere tall som faktisk er desimaltall: 3.14m &#43; 3; «Typecasting» eller typekonvertering foregår ved å angi ønsket konvertering i parentes foran variabelen som skal konverteres: decimal quotient = (decimal)first / (decimal)second;. .NET: .NET er en utviklingsplattform fra Microsoft som brukes til å lage en rekke applikasjoner, blant annet nettsider, mobil-apper og program. Den inneholder flere ulike programmeringsspråk og et stort bibliotek av metoder og funksjoner med mer. .NET er også kjøremiljøet («runtime environment») for applikasjonene som utvikles. Man må ha .NET for å kjøre C#, men ikke for å skrive det. Strukturen C#-prosjekter er løsninger/prosjekter. Man samler altså flere prosjekter under en løsning («solution»). Det er også flere ulike typer prosjekter å velge mellom. For å opprette et prosjekt i «solutions»-mappen skriver man dotnet new console - MyApp. console er typen prosjekt. _ -o betyr å opprette banen som følger i kommandoen. I prosjekt-mappen opprettes ytterligere to mapper: obj og bin. Førstnevnte inneholder alle objekter som trengs for å lage en EXE-versjon av applikasjonen, mens bin inneholder det faktiske prgrammet etter at det er kompilert. Det opprettes også to filer: selve .cs-fila, som er der vi skriver koden, samt prosjekt.csproj som er en prosjekt-fil med informasjon. Den får samme navn som prosjektet når man oppretter det. For å kompilere en versjon skriver vi dotnet build. For å kjøre prosjektet skriver vi dotnet run. ">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2024-11-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-24T20:41:41+01:00">
+
+
+
+
+
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
+          
+
+          
+
+    
+        
+        
+            
+                
+                 
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om csharp.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om csharp.">
+
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/2024-11-22/">
+                    <span itemprop="name">2024-11-22</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>22. november 2024</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 24. nov. 2024 | </span>
+            
+            <span>Pub: 22. nov. 2024 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+        </p>
+    
+        </div>
+        <section>
+    
+            
+        
+    <h2 id="csharp">Csharp</h2>
+<ul>
+<li><code>\n</code> og <code>\t</code> står for henholdsvis ny linje og tabulator. Sistnevnte lager mellomrom på størrelsen med fire karakterer. For å vise en bakstrek i tekst uten at det blir registrert som en «escape» skriver vi to bakstreker.</li>
+<li>Bakstrek kan også brukes for å vise UTF-karakterer, som <code>\u3053</code>.</li>
+<li>Microsoft skriver at man bør unngå å bruke midlertidig variabel før den brukes slik som dette:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> hilsen = <span style="color:#e6db74">$&#34;Hei {navn}&#34;</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(hilsen);
+</span></span></code></pre></div><ul>
+<li>De anbefaler at strengen kombineres der den faktisk skal brukes:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Hei {navn}&#34;</span>);
+</span></span></code></pre></div><ul>
+<li>Strenger:
+<ul>
+<li>«Verbatim string literal &lsquo;@&rsquo;» brukes for å beholde alle mellomrom i en streng, og for å slippe å omgå bakstrek som tolkes som «escape».</li>
+<li>«String interpolation» (strenginterpolering) er C#s måte å benytte variabler i strenger, som konverteres til en streng, lik Javascripts «template literals». <code>$&quot;{}&quot;</code>.</li>
+<li>Man kan slå sammen verbatim og strenginterpolering: <code>$@&quot;Hei!\n\t{navn}&quot;</code>.</li>
+<li>C# kan midlertidig konvertere fra nummer til streng om man slår sammen «string» og «int», <code>&quot;Jeg er &quot; + 174 + &quot; høy&quot;</code>, men det er best å unngå. Bruk heller strenginterpolering.</li>
+</ul>
+</li>
+<li>Variabler:
+<ul>
+<li>Desimal-operasjoner bør benyttes på en eller flere tall som faktisk er desimaltall: <code>3.14m + 3</code>;</li>
+<li>«Typecasting» eller typekonvertering foregår ved å angi ønsket konvertering i parentes foran variabelen som skal konverteres: <code>decimal quotient = (decimal)first / (decimal)second;</code>.</li>
+</ul>
+</li>
+<li>.NET:
+<ul>
+<li>.NET er en utviklingsplattform fra Microsoft som brukes til å lage en rekke applikasjoner, blant annet nettsider, mobil-apper og program. Den inneholder flere ulike programmeringsspråk og et stort bibliotek av metoder og funksjoner med mer. .NET er også kjøremiljøet («runtime environment») for applikasjonene som utvikles. Man må ha .NET for å kjøre C#, men ikke for å skrive det.</li>
+<li>Strukturen C#-prosjekter er <code>løsninger/prosjekter</code>. Man samler altså flere prosjekter under en løsning («solution»). Det er også flere ulike typer prosjekter å velge mellom.</li>
+<li>For å opprette et prosjekt i «solutions»-mappen skriver man <code>dotnet new console - MyApp</code>.
+<ul>
+<li><code>console</code> er typen prosjekt.
+_ <code>-o</code> betyr å opprette banen som følger i kommandoen.</li>
+</ul>
+</li>
+<li>I prosjekt-mappen opprettes ytterligere to mapper: <code>obj</code> og <code>bin</code>. Førstnevnte inneholder alle objekter som trengs for å lage en EXE-versjon av applikasjonen, mens <code>bin</code> inneholder det faktiske prgrammet etter at det er kompilert.</li>
+<li>Det opprettes også to filer: selve <code>.cs</code>-fila, som er der vi skriver koden, samt <code>prosjekt.csproj</code> som er en prosjekt-fil med informasjon. Den får samme navn som prosjektet når man oppretter det.</li>
+<li>For å kompilere en versjon skriver vi <code>dotnet build</code>.</li>
+<li>For å kjøre prosjektet skriver vi <code>dotnet run</code>.</li>
+</ul>
+</li>
+</ul>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-29c5b114.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-29c5b114"></span>&#32;
+
+<script id="script-29c5b114">
+  var scriptTag = document.getElementById("script-29c5b114");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "22-11-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

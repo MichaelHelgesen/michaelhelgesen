@@ -6,34 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C#</title>
+    <title>2024-11-20</title>
  <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
     
 
     <meta name="author" content="">
- <link rel="canonical" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/" itemprop="url" />
-<meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/">
+ <link rel="canonical" href="/laeringslogg/2024-11-20/" itemprop="url" />
+<meta property="og:url" content="/laeringslogg/2024-11-20/">
   <meta property="og:site_name" content="Michael Helgesen">
-  <meta property="og:title" content="C#">
+  <meta property="og:title" content="2024-11-20">
+  <meta property="og:description" content="Csharp Console.Write(&#34;Hello World!&#34;); printer ord. Console.WriteLine(&#34;Hello World!&#34;); printer ord og legger til ny linje. Consoleer en klasse, og Write er en metode. Punktum i mellom klasse og metode kalles “member access operator”. Parentesen kalles “method invocation operator”. Ord mellom anførselstegn kalles “sting literal”. C# krever semikolon for å fortelle at kommandoen skal avsluttes. Enkle anførselstegn &#39;A&#39; indikerer “char”, altså én enkelt karakter. Kalles “character literal”. Hele nummer, “int literal”, skrives uten anførselstegn. Desimaltall, “floating point, har tre typer. float: 6-9 tall. Bruker “literal suffix” f eller F 0.25F. double: 15-17 tall. Ingen “literal suffix”. Tall med desimal og uten suffiks er automatisk en double. decimal: 28-29 tall. Bruker suffiks m eller M 12.381m. Bool defineres som true eller false. Kalles “bool literal”. C# er “strongly typed language”. Det legges stor vekt på datatyper for å unngå bugs. var brukes for implisitt definisjoner av variabler. C# ser hva som følger etter likhetstegnet og låser typen for oss. var message = &#34;Hello&#34; låses til “sting literal”. var må initieres. Kan ikke ha tom definisjon som var message. ">
   <meta property="og:locale" content="nb">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2024-11-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-24T18:38:43+01:00">
 
 
 
 
 
-<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
-          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
           
 
           
 
     
+        
+        
+            
+                
+                 
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om csharp.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om csharp.">
 
 
-<meta name="description" content="Ting jeg har lært om C# i læringsloggen.">
-<meta property="og:description" content="Ting jeg har lært om C# i læringsloggen.">
 
 
 </head>
@@ -62,10 +75,10 @@
       <a href="/journal/">Journal</a>
     </li>
 <li>
-      <a href="/laeringslogg/">Læringslogg</a>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
     </li>
 <li>
-      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+      <a href="/emneknagger/">Emneknagger</a>
     </li>
 <li>
       <a href="/kilder/">Kilder</a>
@@ -102,32 +115,23 @@
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a itemprop="item" href="/">
                     <span itemprop="name">Hjem</span></a>
-                /&nbsp; 
+                /&nbsp;
                 <meta itemprop="position" content='1' />
-            </li>         
+            </li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="/emneknagger">
-                    <span itemprop="name">Emneknagger</span></a>
-                /&nbsp; 
+                <a itemprop="item" href="/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
                 <meta itemprop="position" content='2' />
             </li>
-                
-                
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/">
-                    <span itemprop="name">Læringsemner</span></a>
-                /&nbsp;
-                <meta itemprop="position" content='3' />
-            </li>         
-            
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/">
-                    <span itemprop="name">C#</span>
+                <a itemprop="item" href="/laeringslogg/2024-11-20/">
+                    <span itemprop="name">2024-11-20</span>
                 </a>
-                <meta itemprop="position" content='4' />
+                <meta itemprop="position" content='3' />
             </li>
     </ol>
-
+    
 
         
     </div>
@@ -137,58 +141,39 @@
 
    
    <main>
-       
+         
 
-
-
-
-
-<div class="intro sider tag">
-<h1>
-    #c# <sup>1</sup>
-</h1>
-    <p class="ingress">Ting jeg har lært om c#</p>
-    <span>
+<article>
     
-    </span>
-</div>
-
-    <ul class="last-posts-list">
-        
-        
-        <li>
-            <h2>
-                <a href="https://www.michaelhelgesen.no/laeringslogg/2024-11-24/">
-                    20. november 2024
-
-                </a>
-            </h2>
-            <div>
-                <p class="last-posts-list__meta">
-                
-                <span>Red: 21. nov. 2024 | </span>
-                
-                <span>Pub: 20. nov. 2024 | </span>    
-                 
+        <div class="intro blogg">
+    
+    
+        <h1>20. november 2024</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 24. nov. 2024 | </span>
+            
+            <span>Pub: 20. nov. 2024 | </span>    
+             
  
 
     
     
-         <a href="/emneknagger/laeringsemner/c/"> 
+         <a href="/emneknagger/laeringsemner/csharp/"> 
          
-            #c#</a>
+            #csharp</a>
          
 
 
-                </p>
-            </div>
-             
-        <article class="logg">
+        </p>
+    
+        </div>
+        <section>
+    
             
-            
-                
-                        
-                <ul>
+        
+    <h2 id="csharp">Csharp</h2>
+<ul>
 <li><code>Console.Write(&quot;Hello World!&quot;);</code> printer ord.</li>
 <li><code>Console.WriteLine(&quot;Hello World!&quot;);</code> printer ord og legger til ny linje.
 <ul>
@@ -216,14 +201,190 @@
 </ul>
 </li>
 </ul>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-c1853ceb.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-c1853ceb"></span>&#32;
 
-            
-        </article>
+<script id="script-c1853ceb">
+  var scriptTag = document.getElementById("script-c1853ceb");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "02-11-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
 
-        </li>
-                    <li><hr></li>
-        
-        </ul>
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
 
 
    </main>
@@ -249,10 +410,10 @@
       <a href="/journal/">Journal</a>
     </li>
 <li>
-      <a href="/laeringslogg/">Læringslogg</a>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
     </li>
 <li>
-      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+      <a href="/emneknagger/">Emneknagger</a>
     </li>
 <li>
       <a href="/kilder/">Kilder</a>

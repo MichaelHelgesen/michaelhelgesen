@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csharp</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+    <meta name="author" content="">
+ <link rel="canonical" href="/emneknagger/laeringsemner/csharp/" itemprop="url" />
+<meta property="og:url" content="/emneknagger/laeringsemner/csharp/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="Csharp">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="website">
+
+
+
+
+
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
+          
+
+          
+
+    
+
+
+<meta name="description" content="Ting jeg har lært om Csharp i læringsloggen.">
+<meta property="og:description" content="Ting jeg har lært om Csharp i læringsloggen.">
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp; 
+                <meta itemprop="position" content='1' />
+            </li>         
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/emneknagger">
+                    <span itemprop="name">Emneknagger</span></a>
+                /&nbsp; 
+                <meta itemprop="position" content='2' />
+            </li>
+                
+                
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/emneknagger/laeringsemner/">
+                    <span itemprop="name">Læringsemner</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='3' />
+            </li>         
+            
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/emneknagger/laeringsemner/csharp/">
+                    <span itemprop="name">Csharp</span>
+                </a>
+                <meta itemprop="position" content='4' />
+            </li>
+    </ol>
+
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+       
+
+
+
+
+
+<div class="intro sider tag">
+<h1>
+    #csharp <sup>4</sup>
+</h1>
+    <p class="ingress">Ting jeg har lært om csharp</p>
+    <span>
+    
+    </span>
+</div>
+
+    <ul class="last-posts-list">
+        
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-24/">
+                    24. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Pub: 24. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Array er en samling av samme type data. Man må angi datatype og størrelse på array:</li>
+</ul>
+<pre tabindex="0"><code>string[] ordreID = new string[3];
+</code></pre><ul>
+<li>Det er også mulig å angi en array på følgende måte:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span>[] id = [<span style="color:#e6db74">&#34;B13&#34;</span>, <span style="color:#e6db74">&#34;B45&#34;</span>, <span style="color:#e6db74">&#34;B67&#34;</span>]; <span style="color:#75715e">// Innført i C# 12</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span>[] id = {<span style="color:#e6db74">&#34;B13&#34;</span>, <span style="color:#e6db74">&#34;B45&#34;</span>, <span style="color:#e6db74">&#34;B67&#34;</span>};
+</span></span></code></pre></div><ul>
+<li><code>foreach</code> brukes til å iterere over elementer i en array:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">string</span> id <span style="color:#66d9ef">in</span> ids)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-23/">
+                    23. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 24. nov. 2024 | </span>
+                
+                <span>Pub: 23. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Klasser («class») kan sees på som en container med en masse metoder.</li>
+<li>«Statefull vs stateless» metoder:
+<ul>
+<li>«State» refererer til en status eller en tilstand av kjøremiljøet til en hver tid. Noen metoder er avhengig av denne tilstanden, andre ikke. Vi kan kanskje kalle dem statusavhengig eller tilstandsavhengig og statusuavhengig eller tilstandsuavhengig. Men de omtales også som statiske og instans-metoder, noe som er litt kortere og kanskje enklere å huske.</li>
+<li>Statiske metoder er ikke avhengig av variabler lagret i minnet, og skaper ingen endringer i programmet. Et eksempel på dette er <code>Console.WriteLine()</code>.</li>
+<li>Instans-metodene derimot lagrer verdier eller data, og opprettholder derfor en form for tilstand mellom hvert kall. Eksempel:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Teller</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> _teller = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> OkTeller()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        _teller++;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> _teller;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>I og med at instans-metodene skal holde styr på verdier mellom kjøringen må de ha egne variabler som kan lagre data. Det er derfor vi må opprette en instans per unike klasse før vi utfører kjøringer. Grunnen til det er at vi må ha plass i minnet for å holde på de ulike variablene.</li>
+<li>En instans av en klase kalles et objekt, og opprettes med <code>new</code>-nøkkelordet.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>Random dice = <span style="color:#66d9ef">new</span> Random();
+</span></span></code></pre></div><ul>
+<li>I eksempelet over oppretter vi en ny instans av klassen <code>Random</code>. Det kalles å opprette et objekt. Dette objektet får en minneadresse og dermed egen «state» eller tilstand. Denne minneadresen kobler vi til variabelen <code>dice</code>.</li>
+<li>Metoder:
+<ul>
+<li>Metoder som ikke returnerer noe kalles «void»-metoder.</li>
+<li>Argumenter er variabler som sendes til en metode, mens parametre er variabler som benyttes inne i metoden.</li>
+<li>Overlastede metoder («overloaded methods») er metoder som kan motta ulike antall argumenter, og gjerne i ulik rekkefølge. De kan altså kalles på ulike måter. De kan også returnere ulike typer data basert på kallet. De gjør ulike ting basert på argumentene den mottar. Eksempel:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>Console.WriteLine(); <span style="color:#75715e">// Ingen argumenter.</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;Hei&#34;</span>); <span style="color:#75715e">// Streng som argument.</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(num); <span style="color:#75715e">// Variabel av typen «int» som argument.</span>
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-22/">
+                    22. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 24. nov. 2024 | </span>
+                
+                <span>Pub: 22. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>\n</code> og <code>\t</code> står for henholdsvis ny linje og tabulator. Sistnevnte lager mellomrom på størrelsen med fire karakterer. For å vise en bakstrek i tekst uten at det blir registrert som en «escape» skriver vi to bakstreker.</li>
+<li>Bakstrek kan også brukes for å vise UTF-karakterer, som <code>\u3053</code>.</li>
+<li>Microsoft skriver at man bør unngå å bruke midlertidig variabel før den brukes slik som dette:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> hilsen = <span style="color:#e6db74">$&#34;Hei {navn}&#34;</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(hilsen);
+</span></span></code></pre></div><ul>
+<li>De anbefaler at strengen kombineres der den faktisk skal brukes:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Hei {navn}&#34;</span>);
+</span></span></code></pre></div><ul>
+<li>Strenger:
+<ul>
+<li>«Verbatim string literal &lsquo;@&rsquo;» brukes for å beholde alle mellomrom i en streng, og for å slippe å omgå bakstrek som tolkes som «escape».</li>
+<li>«String interpolation» (strenginterpolering) er C#s måte å benytte variabler i strenger, som konverteres til en streng, lik Javascripts «template literals». <code>$&quot;{}&quot;</code>.</li>
+<li>Man kan slå sammen verbatim og strenginterpolering: <code>$@&quot;Hei!\n\t{navn}&quot;</code>.</li>
+<li>C# kan midlertidig konvertere fra nummer til streng om man slår sammen «string» og «int», <code>&quot;Jeg er &quot; + 174 + &quot; høy&quot;</code>, men det er best å unngå. Bruk heller strenginterpolering.</li>
+</ul>
+</li>
+<li>Variabler:
+<ul>
+<li>Desimal-operasjoner bør benyttes på en eller flere tall som faktisk er desimaltall: <code>3.14m + 3</code>;</li>
+<li>«Typecasting» eller typekonvertering foregår ved å angi ønsket konvertering i parentes foran variabelen som skal konverteres: <code>decimal quotient = (decimal)first / (decimal)second;</code>.</li>
+</ul>
+</li>
+<li>.NET:
+<ul>
+<li>.NET er en utviklingsplattform fra Microsoft som brukes til å lage en rekke applikasjoner, blant annet nettsider, mobil-apper og program. Den inneholder flere ulike programmeringsspråk og et stort bibliotek av metoder og funksjoner med mer. .NET er også kjøremiljøet («runtime environment») for applikasjonene som utvikles. Man må ha .NET for å kjøre C#, men ikke for å skrive det.</li>
+<li>Strukturen C#-prosjekter er <code>løsninger/prosjekter</code>. Man samler altså flere prosjekter under en løsning («solution»). Det er også flere ulike typer prosjekter å velge mellom.</li>
+<li>For å opprette et prosjekt i «solutions»-mappen skriver man <code>dotnet new console - MyApp</code>.
+<ul>
+<li><code>console</code> er typen prosjekt.
+_ <code>-o</code> betyr å opprette banen som følger i kommandoen.</li>
+</ul>
+</li>
+<li>I prosjekt-mappen opprettes ytterligere to mapper: <code>obj</code> og <code>bin</code>. Førstnevnte inneholder alle objekter som trengs for å lage en EXE-versjon av applikasjonen, mens <code>bin</code> inneholder det faktiske prgrammet etter at det er kompilert.</li>
+<li>Det opprettes også to filer: selve <code>.cs</code>-fila, som er der vi skriver koden, samt <code>prosjekt.csproj</code> som er en prosjekt-fil med informasjon. Den får samme navn som prosjektet når man oppretter det.</li>
+<li>For å kompilere en versjon skriver vi <code>dotnet build</code>.</li>
+<li>For å kjøre prosjektet skriver vi <code>dotnet run</code>.</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-20/">
+                    20. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 24. nov. 2024 | </span>
+                
+                <span>Pub: 20. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>Console.Write(&quot;Hello World!&quot;);</code> printer ord.</li>
+<li><code>Console.WriteLine(&quot;Hello World!&quot;);</code> printer ord og legger til ny linje.
+<ul>
+<li><code>Console</code>er en klasse, og <code>Write</code> er en metode. Punktum i mellom klasse og metode kalles &ldquo;member access operator&rdquo;.</li>
+<li>Parentesen kalles &ldquo;method invocation operator&rdquo;.</li>
+</ul>
+</li>
+<li>Ord mellom anførselstegn kalles &ldquo;sting literal&rdquo;.</li>
+<li>C# krever semikolon for å fortelle at kommandoen skal avsluttes.</li>
+<li>Enkle anførselstegn <code>'A'</code> indikerer &ldquo;char&rdquo;, altså én enkelt karakter. Kalles &ldquo;character literal&rdquo;.</li>
+<li>Hele nummer, &ldquo;int literal&rdquo;, skrives uten anførselstegn.</li>
+<li>Desimaltall, &ldquo;floating point, har tre typer.
+<ul>
+<li><code>float</code>: 6-9 tall. Bruker &ldquo;literal suffix&rdquo; <code>f</code> eller <code>F</code> <code>0.25F</code>.</li>
+<li><code>double</code>: 15-17 tall. Ingen &ldquo;literal suffix&rdquo;. Tall med desimal og uten suffiks er automatisk en <code>double</code>.</li>
+<li><code>decimal</code>: 28-29 tall. Bruker suffiks <code>m</code> eller <code>M</code> <code>12.381m</code>.</li>
+</ul>
+</li>
+<li>Bool defineres som <code>true</code> eller <code>false</code>. Kalles &ldquo;bool literal&rdquo;.</li>
+<li>C# er &ldquo;strongly typed language&rdquo;. Det legges stor vekt på datatyper for å unngå bugs.</li>
+<li><code>var</code> brukes for implisitt definisjoner av variabler. C# ser hva som følger etter likhetstegnet og låser typen for oss.
+<ul>
+<li><code>var message = &quot;Hello&quot;</code> låses til &ldquo;sting literal&rdquo;.</li>
+<li><code>var</code> må initieres. Kan ikke ha tom definisjon som <code>var message</code>.</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        </ul>
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

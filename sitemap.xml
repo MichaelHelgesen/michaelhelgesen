@@ -2,370 +2,382 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-11-21/</loc>
+    <loc>/laeringslogg/2024-11-24/</loc>
+    <lastmod>2024-11-24T20:49:55+01:00</lastmod>
+  </url><url>
+    <loc>/emneknagger/laeringsemner/csharp/</loc>
+    <lastmod>2024-11-24T20:49:55+01:00</lastmod>
+  </url><url>
+    <loc>/journal/linuxmaskin-som-disk-i-windows/</loc>
+    <lastmod>2024-11-24T22:38:18+01:00</lastmod>
+  </url><url>
+    <loc>/emneknagger/tekstemner/programmering/</loc>
+    <lastmod>2024-11-24T22:38:18+01:00</lastmod>
+  </url><url>
+    <loc>/laeringslogg/2024-11-23/</loc>
+    <lastmod>2024-11-24T18:34:37+01:00</lastmod>
+  </url><url>
+    <loc>/laeringslogg/2024-11-22/</loc>
+    <lastmod>2024-11-24T20:41:41+01:00</lastmod>
+  </url><url>
+    <loc>/laeringslogg/2024-11-21/</loc>
     <lastmod>2024-11-21T22:50:10+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</loc>
+    <loc>/emneknagger/laeringsemner/linux/</loc>
     <lastmod>2024-11-21T22:50:10+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-11-24/</loc>
-    <lastmod>2024-11-21T22:29:26+01:00</lastmod>
+    <loc>/laeringslogg/2024-11-20/</loc>
+    <lastmod>2024-11-24T18:38:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/c/</loc>
-    <lastmod>2024-11-21T22:29:26+01:00</lastmod>
-  </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-11-14/</loc>
+    <loc>/laeringslogg/2024-11-14/</loc>
     <lastmod>2024-11-21T22:38:30+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</loc>
+    <loc>/emneknagger/laeringsemner/css/</loc>
     <lastmod>2024-11-21T22:38:30+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/fyllepenn/</loc>
+    <loc>/emneknagger/tekstemner/fyllepenn/</loc>
     <lastmod>2024-11-21T21:47:31+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/tekster/kaweco-pebble-blue/</loc>
+    <loc>/tekster/kaweco-pebble-blue/</loc>
     <lastmod>2024-11-21T21:47:31+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/hobby/</loc>
+    <loc>/emneknagger/tekstemner/hobby/</loc>
     <lastmod>2024-11-21T21:47:31+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</loc>
+    <loc>/emneknagger/tekstemner/skriving/</loc>
     <lastmod>2024-11-21T21:47:31+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/filosofi/</loc>
+    <loc>/emneknagger/tekstemner/filosofi/</loc>
     <lastmod>2024-10-28T18:53:07+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/journal/master-and-emissary/</loc>
+    <loc>/journal/master-and-emissary/</loc>
     <lastmod>2024-10-28T18:53:07+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/lesing/</loc>
+    <loc>/emneknagger/tekstemner/lesing/</loc>
     <lastmod>2024-10-28T18:53:07+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-10-01/</loc>
+    <loc>/laeringslogg/2024-10-01/</loc>
     <lastmod>2024-11-03T20:36:04+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/javascript/</loc>
+    <loc>/emneknagger/laeringsemner/javascript/</loc>
     <lastmod>2024-11-03T20:36:04+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/journal/nye-boker-i-bokhyllen-2024-09/</loc>
+    <loc>/journal/nye-boker-i-bokhyllen-2024-09/</loc>
     <lastmod>2024-10-27T21:56:02+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-24/</loc>
+    <loc>/laeringslogg/2024-09-24/</loc>
     <lastmod>2024-11-03T20:33:42+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/docker/</loc>
+    <loc>/emneknagger/laeringsemner/docker/</loc>
     <lastmod>2024-11-03T20:33:42+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-17/</loc>
+    <loc>/laeringslogg/2024-09-17/</loc>
     <lastmod>2024-11-03T20:30:35+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/arch_linux/</loc>
+    <loc>/emneknagger/laeringsemner/arch_linux/</loc>
     <lastmod>2024-11-03T20:30:35+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-16/</loc>
+    <loc>/laeringslogg/2024-09-16/</loc>
     <lastmod>2024-11-03T20:14:01+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/jwt/</loc>
+    <loc>/emneknagger/laeringsemner/jwt/</loc>
     <lastmod>2024-11-03T20:14:01+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-14/</loc>
+    <loc>/laeringslogg/2024-09-14/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-13/</loc>
+    <loc>/laeringslogg/2024-09-13/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/bash/</loc>
+    <loc>/emneknagger/laeringsemner/bash/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-12/</loc>
+    <loc>/laeringslogg/2024-09-12/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-11/</loc>
+    <loc>/laeringslogg/2024-09-11/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/curl/</loc>
+    <loc>/emneknagger/laeringsemner/curl/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/</loc>
+    <loc>/emneknagger/laeringsemner/nvim/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-09/</loc>
+    <loc>/laeringslogg/2024-09-09/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-08/</loc>
+    <loc>/laeringslogg/2024-09-08/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-07/</loc>
+    <loc>/laeringslogg/2024-09-07/</loc>
     <lastmod>2024-10-27T18:27:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-04/</loc>
+    <loc>/laeringslogg/2024-09-04/</loc>
     <lastmod>2024-10-27T18:21:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/github/</loc>
+    <loc>/emneknagger/laeringsemner/github/</loc>
     <lastmod>2024-10-27T18:21:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/</loc>
+    <loc>/emneknagger/laeringsemner/hugo/</loc>
     <lastmod>2024-10-27T18:21:43+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-09-02/</loc>
+    <loc>/laeringslogg/2024-09-02/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-08-27/</loc>
+    <loc>/laeringslogg/2024-08-27/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-08-26/</loc>
+    <loc>/laeringslogg/2024-08-26/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/cloudinary/</loc>
+    <loc>/emneknagger/laeringsemner/cloudinary/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-08-22/</loc>
+    <loc>/laeringslogg/2024-08-22/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/kunstig-intelligens/</loc>
+    <loc>/kunstig-intelligens/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-08-20/</loc>
+    <loc>/laeringslogg/2024-08-20/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/direnv/</loc>
+    <loc>/emneknagger/laeringsemner/direnv/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-08-19/</loc>
+    <loc>/laeringslogg/2024-08-19/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-08-15/</loc>
+    <loc>/laeringslogg/2024-08-15/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/markdown/</loc>
+    <loc>/emneknagger/laeringsemner/markdown/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-07-18/</loc>
+    <loc>/laeringslogg/2024-07-18/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/zotero/</loc>
+    <loc>/emneknagger/laeringsemner/zotero/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-06-07/</loc>
+    <loc>/laeringslogg/2024-06-07/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-06-03/</loc>
+    <loc>/laeringslogg/2024-06-03/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/strapi/</loc>
+    <loc>/emneknagger/laeringsemner/strapi/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/effektivitet/</loc>
+    <loc>/emneknagger/tekstemner/effektivitet/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/tekster/les-med-intensjon-for-bedre-effektivitet/</loc>
+    <loc>/tekster/les-med-intensjon-for-bedre-effektivitet/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-29/</loc>
+    <loc>/laeringslogg/2024-05-29/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</loc>
+    <loc>/laeringslogg/2024-05-25/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/figma/</loc>
+    <loc>/emneknagger/laeringsemner/figma/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</loc>
+    <loc>/laeringslogg/2024-05-24/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</loc>
+    <loc>/laeringslogg/2024-05-23/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/tekster/hvordan-velge-gode-kilder/</loc>
+    <loc>/tekster/hvordan-velge-gode-kilder/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/</loc>
+    <loc>/journal/min-tredje-seksjon-i-zettelkasten/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/zettelkasten/</loc>
+    <loc>/emneknagger/tekstemner/zettelkasten/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-22/</loc>
+    <loc>/laeringslogg/2024-05-22/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-21/</loc>
+    <loc>/laeringslogg/2024-05-21/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/journal/sider-fra-data-i-hugo/</loc>
+    <loc>/journal/sider-fra-data-i-hugo/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/hugo/</loc>
+    <loc>/emneknagger/tekstemner/hugo/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</loc>
+    <loc>/laeringslogg/2024-05-19/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-19/</loc>
+    <loc>/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</loc>
+    <loc>/laeringslogg/2024-05-09/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</loc>
+    <loc>/laeringslogg/2024-05-08/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-08/</loc>
+    <loc>/laeringslogg/2024-05-07/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-07/</loc>
+    <loc>/laeringslogg/2024-05-06/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-06/</loc>
+    <loc>/emneknagger/laeringsemner/git/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/git/</loc>
+    <loc>/laeringslogg/2024-05-05/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-05/</loc>
+    <loc>/laeringslogg/2024-05-03/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-03/</loc>
+    <loc>/laeringslogg/2024-05-02/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-05-02/</loc>
+    <loc>/emneknagger/tekstemner/kreativitet/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/kreativitet/</loc>
+    <loc>/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/tekster/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</loc>
+    <loc>/laeringslogg/2024-04-30/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-30/</loc>
+    <loc>/emneknagger/laeringsemner/devtools/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/devtools/</loc>
+    <loc>/emneknagger/laeringsemner/html/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/html/</loc>
+    <loc>/laeringslogg/2024-04-29/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-29/</loc>
+    <loc>/laeringslogg/2024-04-28/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-28/</loc>
+    <loc>/laeringslogg/2024-04-27/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-27/</loc>
+    <loc>/laeringslogg/2024-04-26/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</loc>
+    <loc>/emneknagger/laeringsemner/design/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/design/</loc>
+    <loc>/laeringslogg/2024-04-25/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-25/</loc>
+    <loc>/laeringslogg/2024-04-24/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-24/</loc>
+    <loc>/laeringslogg/2024-04-23/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-23/</loc>
+    <loc>/laeringslogg/2024-04-21/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</loc>
+    <loc>/emneknagger/laeringsemner/tailwind/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/tailwind/</loc>
+    <loc>/laeringslogg/2024-04-20/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-20/</loc>
+    <loc>/emneknagger/laeringsemner/jq/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/jq/</loc>
+    <loc>/laeringslogg/2024-04-19/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-19/</loc>
+    <loc>/emneknagger/tekstemner/api/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/api/</loc>
+    <loc>/tekster/opprette-sider-i-hugo-via-api/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/tekster/opprette-sider-i-hugo-via-api/</loc>
+    <loc>/emneknagger/tekstemner/zotero/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/zotero/</loc>
+    <loc>/laeringslogg/2024-04-18/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-18/</loc>
+    <loc>/laeringslogg/2024-04-17/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</loc>
+    <loc>/emneknagger/laeringsemner/fedora/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/fedora/</loc>
-    <lastmod>2024-09-19T09:19:02+02:00</lastmod>
-  </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/inspirasjon/</loc>
+    <loc>/emneknagger/tekstemner/inspirasjon/</loc>
     <lastmod>2024-11-21T21:03:12+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/tekster/jeg-er-en-evig-amator/</loc>
+    <loc>/tekster/jeg-er-en-evig-amator/</loc>
     <lastmod>2024-11-21T21:03:12+01:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/</loc>
+    <loc>/journal/nullstilling-av-bokhyllen/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-16/</loc>
+    <loc>/laeringslogg/2024-04-16/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/2024-04-15/</loc>
+    <loc>/laeringslogg/2024-04-15/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/lenker/</loc>
+    <loc>/lenker/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/na/</loc>
+    <loc>/na/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/om/</loc>
+    <loc>/om/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/bibliotek/a-mind-for-numbers-how-to-excel-at-math-and-science-even-if-you-flunked-algebra/</loc>
+    <loc>/bibliotek/a-mind-for-numbers-how-to-excel-at-math-and-science-even-if-you-flunked-algebra/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/bibliotek/</loc>
+    <loc>/bibliotek/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/</loc>
+    <loc>/emneknagger/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/galleri/</loc>
+    <loc>/galleri/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/journal/</loc>
+    <loc>/journal/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/kilder/</loc>
+    <loc>/kilder/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/laering/</loc>
+    <loc>/emneknagger/tekstemner/laering/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/laeringsemner/</loc>
+    <loc>/emneknagger/laeringsemner/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/laeringslogg/</loc>
+    <loc>/laeringslogg/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/bibliotek/mastery-the-keys-to-success-and-long-term-fulfillment/</loc>
+    <loc>/bibliotek/mastery-the-keys-to-success-and-long-term-fulfillment/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/</loc>
+    <loc>/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</loc>
+    <loc>/bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/</loc>
+    <loc>/emneknagger/tekstemner/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.michaelhelgesen.no/tekster/</loc>
+    <loc>/tekster/</loc>
     <lastmod>2024-09-19T09:19:02+02:00</lastmod>
   </url>
 </urlset>

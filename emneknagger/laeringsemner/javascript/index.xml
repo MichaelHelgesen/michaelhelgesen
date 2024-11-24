@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/javascript/</link>
+    <link>/emneknagger/laeringsemner/javascript/</link>
     <description>Recent content in Javascript on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sun, 03 Nov 2024 20:36:04 +0100</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/emneknagger/laeringsemner/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-10-01</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-10-01/</link>
+      <link>/laeringslogg/2024-10-01/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-10-01/</guid>
+      <guid>/laeringslogg/2024-10-01/</guid>
       <description>&lt;h2 id=&#34;javascript&#34;&gt;Javascript&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lærte at man kan fylle en liste som opprettes med &lt;code&gt;fill&lt;/code&gt;: &lt;code&gt;Array(N).fill(N)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-04-24</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-24/</link>
+      <link>/laeringslogg/2024-04-24/</link>
       <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-24/</guid>
+      <guid>/laeringslogg/2024-04-24/</guid>
       <description>&lt;h2 id=&#34;javascript&#34;&gt;Javascript&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lært om &lt;code&gt;this&lt;/code&gt; i ulike kontekster:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I &amp;ldquo;function invocation&amp;rdquo;, altså når man kaller eller kjører en funksjon (inkludert IIFE (immediately invoked function) / umiddelbart selvkallende funksjon) er &lt;code&gt;this&lt;/code&gt; det globale objektet.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bruker man &lt;code&gt;strict&lt;/code&gt; er det &lt;code&gt;undefined&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;I et metodekall er &lt;code&gt;this&lt;/code&gt; objektet som &amp;ldquo;eier&amp;rdquo; metoden, eller objektet hvor metoden er definert. Det er gjerne på venstre side av &amp;ldquo;dotten&amp;rdquo; når man kaller en metode, som her: &lt;code&gt;person.fullName()&lt;/code&gt;. I dette tilfellet er &lt;code&gt;this&lt;/code&gt; person-objektet.&lt;/li&gt;&#xA;&lt;li&gt;I både funksjon- og metodekall kan man spørre seg selv &amp;ldquo;hvordan invokeres denne funksjonen&amp;rdquo;? som et hjelpemiddel for å huske hva &lt;code&gt;this&lt;/code&gt; refererer til.&lt;/li&gt;&#xA;&lt;li&gt;I &amp;ldquo;arrow&amp;rdquo;-funksjoner er &lt;code&gt;this&lt;/code&gt; den omkringliggende konteksten hvor &amp;ldquo;arrow&amp;rdquo;-funksjonen selv er definert. På engelsk sier man i dette tilfellet at &lt;code&gt;this&lt;/code&gt; er &amp;ldquo;lexically&amp;rdquo;. Og &lt;code&gt;this&lt;/code&gt; er bundet til konteksten for alltid. Den kan ikke endres.&lt;/li&gt;&#xA;&lt;li&gt;For å lettere huske hva &lt;code&gt;this&lt;/code&gt; er ved &amp;ldquo;arrow&amp;rdquo;-funksjoner kan man spørre seg selv &amp;ldquo;hva er &amp;ldquo;this&amp;rdquo; i den ytre konteksten hvor &amp;ldquo;arrow&amp;rdquo;-funksjonen selv er definert?&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;I &amp;ldquo;constructor invocation&amp;rdquo; eller objektkall(?) er &lt;code&gt;this&lt;/code&gt; en del av det nye objektet.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-04-21</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</link>
+      <link>/laeringslogg/2024-04-21/</link>
       <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</guid>
+      <guid>/laeringslogg/2024-04-21/</guid>
       <description>&lt;h2 id=&#34;javascript&#34;&gt;Javascript&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;hasOwnProperty(property)&lt;/code&gt;: En metode for å sjekke om angit egenskap er definert i gjeldende objekt eller prototype.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Object.setPrototypeOf(currentObject, targetObject)&lt;/code&gt;: Angi et objekt (targetObject) som gjeldende objekt (currentTarget) skal arve fra. Man kan arve metoder og egenskaper fra mange ulike objekter.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;call()&lt;/code&gt;: En metode for å kopiere egenskaper fra en construktor til et annet objekt. Men skal de linkes må det gjøres med &lt;code&gt;Object.setPropertyOf&lt;/code&gt;. Det oppstår ikke en automatisk link ved å bruke &lt;code&gt;call&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;this&lt;/code&gt;: I et objekt eller en prototype-metode refererer &lt;code&gt;this&lt;/code&gt; alltid til objektet før &amp;ldquo;dott&amp;rdquo; (.). Metoder deles, men ikke &amp;ldquo;state&amp;rdquo; eller tilstand.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;| less&lt;/code&gt;: &amp;ldquo;Pipe less&amp;rdquo; er en funksjon som stopper terminal fra å scrolle, og man kan selv styre visningen med piltastene. Et alternativ til &lt;code&gt;| more&lt;/code&gt; hvor man flytter seg en side av gangen ved å trykke mellomrom-tasten.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;tail-wind&#34;&gt;Tail wind&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Installerte Tailwind.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jq on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/jq/</link>
+    <link>/emneknagger/laeringsemner/jq/</link>
     <description>Recent content in Jq on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/jq/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/emneknagger/laeringsemner/jq/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-04-20</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-20/</link>
+      <link>/laeringslogg/2024-04-20/</link>
       <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-20/</guid>
+      <guid>/laeringslogg/2024-04-20/</guid>
       <description>&lt;h2 id=&#34;curl&#34;&gt;Curl&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Curl er et kommandolinje-program for overføring av data med URLer. Det ble utviklet av en svenske i 1998, som fortsatt utvikler det. Det er open source.&lt;/li&gt;&#xA;&lt;li&gt;Skriver man &lt;code&gt;curl URL&lt;/code&gt; så er &lt;code&gt;GET&lt;/code&gt; satt som standard.&lt;/li&gt;&#xA;&lt;li&gt;Ønsker man å sende &amp;ldquo;bearer&amp;rdquo;-nøkkel kan det gjøres på følgende måte:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl URL&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- H &amp;#34;Accept: application/JSON&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- H &amp;#34;Authorization: Bearer {token}&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;-H&lt;/code&gt; står for &amp;ldquo;headers&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;jq&#34;&gt;jq&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For en mer oversiktlig JSON kan vi bruke &lt;code&gt;jq&lt;/code&gt;, som er en JSON prosessor, med curl:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl URL | jq &amp;#34;.&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- H &amp;#34;Accept: application/JSON&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- H &amp;#34;Authorization: Bearer {token}&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å navigere opp og ned i terminal bruker man Shift + PgUp eller PgDown.&lt;/li&gt;&#xA;&lt;li&gt;Hvis vi &amp;ldquo;piper&amp;rdquo; på &amp;ldquo;more&amp;rdquo; etter en kommando i terminalen vil terminalen pause ved scroll, og man fortsetter med mellomrom-tasten.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl URL | more&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>

@@ -12,8 +12,8 @@
     
 
     <meta name="author" content="">
- <link rel="canonical" href="https://www.michaelhelgesen.no/journal/" itemprop="url" />
-<meta property="og:url" content="https://www.michaelhelgesen.no/journal/">
+ <link rel="canonical" href="/journal/" itemprop="url" />
+<meta property="og:url" content="/journal/">
   <meta property="og:site_name" content="Michael Helgesen">
   <meta property="og:title" content="Journal">
   <meta property="og:description" content="I journalen noterer jeg fra små glimt fra hverdagen som gjør inntrykk på meg eller som er av spesiell betydning.">
@@ -24,8 +24,8 @@
 
 
 
-<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
-          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
           
 
           
@@ -98,13 +98,13 @@
 
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://www.michaelhelgesen.no/">
+                <a itemprop="item" href="/">
                     <span itemprop="name">Hjem</span></a>
                 /&nbsp;
                 <meta itemprop="position" content='1' />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://www.michaelhelgesen.no/journal/">
+                <a itemprop="item" href="/journal/">
                     <span itemprop="name">Journal</span>
                 </a>
                 <meta itemprop="position" content='2' />
@@ -134,6 +134,72 @@
 
     <ul class="last-posts-list"> 
     
+    
+                    <li class="journal-wrap">
+                        <article >
+                            <section>
+                                <p class="date">24. november 2024:</p>
+                                <h2 class="journal">
+                                    Min Linux-maskin som en disk i Windows
+                                </h2>
+                                <div>
+                                    <p class="last-posts-list__meta">
+                                        
+                                         
+ 
+
+    
+    
+         <a href="/emneknagger/tekstemner/programmering/"> 
+         
+        #programmering</a>
+         
+
+
+                                    </p>
+                                </div>
+                            </section>
+                        <section class="journal">
+                            <p>Jeg fikk nylig en Windows-maskin på jobben i forbindelse med læring av C# og .NET. Det ble min fjerde laptop.</p>
+<p>Nå har jeg en med iOS, to med Linux og en med Windows. Jeg liker best å jobbe med nettsiden via kommandolinjen i Linux, og lurte derfor på om det var mulig å koble seg til Linux-maskinen via Windows, slik at jeg slipper å ha så mange maskiner å forholde meg til.</p>
+<p>Det er lenge siden jeg har jobbet i Windows, og først og fremst ble jeg positivt overrasket over PowerShell. Derfra koblet jeg meg til Linux-maskinen via SSH uten problem. Men å kopiere mellom maskinene var litt mer kronglete.</p>
+<p>Etter et søk kom jeg over <a href="https://github.com/winfsp/sshfs-win" target="_blank" class="external_link">SSHFS-WIN<svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Interface / External_Link">
+<path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></svg></a>, en Windows filsystem-tjener (proxy) som gjør at Linux-maskinen blir som en disk på Windows-maskinen. Det er kjempepraktisk og fungerer utmerket!</p>
+<p>Applikasjonen installeres enkelt via WinGet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>winget install SSHFS-Win.SSHFS-Win
+</span></span></code></pre></div><p>Deretter kan man i Windows Explorer opprette ønsket disk og angi sti til ekstern maskin som følger:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>\\sshfs\REMUSER@HOST[\PATH]
+</span></span></code></pre></div>
+
+
+<figure>
+<div class="relative bg-center imgB-9b51031c37ad8c79995dc6e2b7b15b5a-GIP">
+	<picture>
+		<source type="image/webp" srcset="/journal/linuxmaskin-som-disk-i-windows/linuxmaskin-som-disk-i-windows_hu16621161297948897045.webp 640w, /journal/linuxmaskin-som-disk-i-windows/linuxmaskin-som-disk-i-windows_hu4549105246751768554.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+		<source type="image/jpeg" srcset="/journal/linuxmaskin-som-disk-i-windows/linuxmaskin-som-disk-i-windows_hu1022530779764176847.JPEG 640w, /journal/linuxmaskin-som-disk-i-windows/linuxmaskin-som-disk-i-windows_hu2071279804432557700.JPEG 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+		<img class="w-full h-auto animate-fade" src="/journal/linuxmaskin-som-disk-i-windows/linuxmaskin-som-disk-i-windows_hu1022530779764176847.JPEG" width="1000" height="750" alt="Nærbilde av en PC-skjerm med en annen PC i bakgrunnen." title="Linux-maskin som disk i Windows" loading="lazy" />
+	</picture>
+</div><figcaption>Linux-maskinen i bakgrunnen er nå en disk på min Windows-maskin.</figcaption></figure>
+
+
+                        </section>
+                        </article>
+                        <section class="journal_link">
+
+
+                <ul class="taglist-index" style="list-style-type: none; margin: 0; margin-top: 1rem;">
+                    <li>
+                        <a href="/journal/linuxmaskin-som-disk-i-windows/">Se som egen side</a>
+                    </li>
+                </ul>
+
+                        </section>
+                    </li>
+                    
+                    <li><hr></li>
+                    
     
                     <li class="journal-wrap">
                         <article >
@@ -189,7 +255,7 @@
 
                 <ul class="taglist-index" style="list-style-type: none; margin: 0; margin-top: 1rem;">
                     <li>
-                        <a href="https://www.michaelhelgesen.no/journal/master-and-emissary/">Se som egen side</a>
+                        <a href="/journal/master-and-emissary/">Se som egen side</a>
                     </li>
                 </ul>
 
@@ -257,7 +323,7 @@
 
                 <ul class="taglist-index" style="list-style-type: none; margin: 0; margin-top: 1rem;">
                     <li>
-                        <a href="https://www.michaelhelgesen.no/journal/nye-boker-i-bokhyllen-2024-09/">Se som egen side</a>
+                        <a href="/journal/nye-boker-i-bokhyllen-2024-09/">Se som egen side</a>
                     </li>
                 </ul>
 
@@ -325,7 +391,7 @@
 
                 <ul class="taglist-index" style="list-style-type: none; margin: 0; margin-top: 1rem;">
                     <li>
-                        <a href="https://www.michaelhelgesen.no/journal/min-tredje-seksjon-i-zettelkasten/">Se som egen side</a>
+                        <a href="/journal/min-tredje-seksjon-i-zettelkasten/">Se som egen side</a>
                     </li>
                 </ul>
 
@@ -390,7 +456,7 @@
 
                 <ul class="taglist-index" style="list-style-type: none; margin: 0; margin-top: 1rem;">
                     <li>
-                        <a href="https://www.michaelhelgesen.no/journal/sider-fra-data-i-hugo/">Se som egen side</a>
+                        <a href="/journal/sider-fra-data-i-hugo/">Se som egen side</a>
                     </li>
                 </ul>
 
@@ -464,7 +530,7 @@
 	</picture>
 </div></figure>
 
-<p>Førstnevnte er en kilde til notat- og kunnskapssystemet Zettelkasten, og skal forhåpentligvis lære meg å systematisere mine notater og min kunnskap, noe <a href="https://www.michaelhelgesen.no/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/">jeg har vært dårlig på</a>.</p>
+<p>Førstnevnte er en kilde til notat- og kunnskapssystemet Zettelkasten, og skal forhåpentligvis lære meg å systematisere mine notater og min kunnskap, noe <a href="/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/">jeg har vært dårlig på</a>.</p>
 <p>Sistnevnte er en enkel bok som inspirerer deg til å komme i gang med dine kreative prosjekter, og som oppfordrer til å dele prosessen online. Den er som et effektivt spark bak.</p>
 <p>Dette blir spennende!</p>
 
@@ -475,7 +541,7 @@
 
                 <ul class="taglist-index" style="list-style-type: none; margin: 0; margin-top: 1rem;">
                     <li>
-                        <a href="https://www.michaelhelgesen.no/journal/nullstilling-av-bokhyllen/">Se som egen side</a>
+                        <a href="/journal/nullstilling-av-bokhyllen/">Se som egen side</a>
                     </li>
                 </ul>
 
