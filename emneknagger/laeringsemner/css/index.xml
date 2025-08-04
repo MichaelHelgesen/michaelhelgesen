@@ -6,8 +6,15 @@
     <description>Recent content in Css on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Thu, 21 Nov 2024 22:38:30 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jun 2025 23:54:04 +0200</lastBuildDate>
     <atom:link href="/emneknagger/laeringsemner/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025-03-25</title>
+      <link>/laeringslogg/2025-03-25/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2025-03-25/</guid>
+      <description>&lt;h2 id=&#34;css&#34;&gt;css&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bakgrunnsbilder bør alltiv være et designelement, og ikke en del av konteksten i innholdet. Dersom man ønsker kontekstuelle bilder som bakgrunn, bør de være vanlig &lt;code&gt;img&lt;/code&gt;-element, med position &amp;ldquo;absolute&amp;rdquo;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;typografi&#34;&gt;typografi&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;ldquo;woff2&amp;rdquo; er font-formatet man ideelt sett bør bruke på nettsider i skrivende stund.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>2024-11-14</title>
       <link>/laeringslogg/2024-11-14/</link>

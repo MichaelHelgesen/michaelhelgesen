@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024-12-06</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="">
+  <link rel="canonical" href="/laeringslogg/2024-12-06/" itemprop="url" />
+<meta property="og:url" content="/laeringslogg/2024-12-06/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="2024-12-06">
+  <meta property="og:description" content="csharp lastIndexOf() finner siste tegn i en streng. -1 hvis ikke noe. substring() without specifying a length input parameter, it will return every character after the starting position you specify indexOfAny() returnerer første treff av tegn i en array. charsToFind = {&#34;a&#34;, &#34;e&#34;, &#34;i&#34;}; message.IndexOfAny(charsToFind). Kan brukes med «overload», som er en startposisjon. remove(): Fjerne noe fra en array. Typisk bruk av denne funksjonen er når man har en standard og regelmessig posisjon av tegnene man ønsker å fjerne fra en streng. replace(): Erstatter en karakter fra array. Brukes når man trenger å erstatte en eller flere tegn med en annen tegn (eller ingen tegn). Den erstatter alle instanser av gitt tegn, ikke bare første eller siste. ">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2024-12-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-21T22:14:15+02:00">
+
+
+
+
+
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
+          
+
+          
+
+    
+        
+        
+            
+                
+                 
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om csharp.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om csharp.">
+
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/2024-12-06/">
+                    <span itemprop="name">2024-12-06</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>6. desember 2024</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 21. jun. 2025 | </span>
+            
+            <span>Pub: 6. des. 2024 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+        </p>
+    
+        </div>
+        <section>
+    
+            
+        
+    <h2 id="csharp">csharp</h2>
+<ul>
+<li><code>lastIndexOf()</code> finner siste tegn i en streng. -1 hvis ikke noe.</li>
+<li><code>substring()</code> without specifying a length input parameter, it will return every character after the starting position you specify</li>
+<li><code>indexOfAny()</code> returnerer første treff av tegn i en array. <code>charsToFind = {&quot;a&quot;, &quot;e&quot;, &quot;i&quot;}; message.IndexOfAny(charsToFind)</code>. Kan brukes med «overload», som er en startposisjon.</li>
+<li><code>remove()</code>: Fjerne noe fra en array. Typisk bruk av denne funksjonen er når man har en standard og regelmessig posisjon av tegnene man ønsker å fjerne fra en streng.</li>
+<li><code>replace()</code>: Erstatter en karakter fra array. Brukes når man trenger å erstatte en eller flere tegn med en annen tegn (eller ingen tegn). Den erstatter alle instanser av gitt tegn, ikke bare første eller siste.</li>
+</ul>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-7b7ad6b6.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-7b7ad6b6"></span>&#32;
+
+<script id="script-7b7ad6b6">
+  var scriptTag = document.getElementById("script-7b7ad6b6");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "60-21-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

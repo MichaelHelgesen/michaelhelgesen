@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tcp on Michael Helgesen</title>
+    <link>/emneknagger/laeringsemner/tcp/</link>
+    <description>Recent content in Tcp on Michael Helgesen</description>
+    <generator>Hugo</generator>
+    <language>nb</language>
+    <lastBuildDate>Sat, 05 Jul 2025 12:01:46 +0200</lastBuildDate>
+    <atom:link href="/emneknagger/laeringsemner/tcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025-06-27</title>
+      <link>/laeringslogg/2025-06-27/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2025-06-27/</guid>
+      <description>&lt;h2 id=&#34;tcp&#34;&gt;tcp&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;TCP: «transmission control protocol».&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Grunnleggende kommunikasjonsprotokoll brukt på internett og i de fleste nettverk.&lt;/li&gt;&#xA;&lt;li&gt;Solid protokoll som sørger for at data overleveres i riktig rekkefølge og uten feil.&lt;/li&gt;&#xA;&lt;li&gt;SSH, HTTPS, HTTP, SMTP bruker alle TCP.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

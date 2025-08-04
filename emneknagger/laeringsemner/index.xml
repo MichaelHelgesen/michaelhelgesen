@@ -8,24 +8,73 @@
     <language>nb</language>
     <atom:link href="/emneknagger/laeringsemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Csharp</title>
-      <link>/emneknagger/laeringsemner/csharp/</link>
-      <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/csharp/</guid>
+      <title>Linux</title>
+      <link>/emneknagger/laeringsemner/linux/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/linux/</guid>
       <description></description>
     </item>
     <item>
-      <title>Linux</title>
-      <link>/emneknagger/laeringsemner/linux/</link>
-      <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/linux/</guid>
+      <title>Tcp</title>
+      <link>/emneknagger/laeringsemner/tcp/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/tcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personvern</title>
+      <link>/emneknagger/laeringsemner/personvern/</link>
+      <pubDate>Sun, 25 May 2025 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/personvern/</guid>
       <description></description>
     </item>
     <item>
       <title>Css</title>
       <link>/emneknagger/laeringsemner/css/</link>
-      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
       <guid>/emneknagger/laeringsemner/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typografi</title>
+      <link>/emneknagger/laeringsemner/typografi/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/typografi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>/emneknagger/laeringsemner/bash/</link>
+      <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sanity</title>
+      <link>/emneknagger/laeringsemner/sanity/</link>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/sanity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Groq</title>
+      <link>/emneknagger/laeringsemner/groq/</link>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/groq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Csharp</title>
+      <link>/emneknagger/laeringsemner/csharp/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/csharp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jquery</title>
+      <link>/emneknagger/laeringsemner/jquery/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>/emneknagger/laeringsemner/jquery/</guid>
       <description></description>
     </item>
     <item>
@@ -54,13 +103,6 @@
       <link>/emneknagger/laeringsemner/jwt/</link>
       <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
       <guid>/emneknagger/laeringsemner/jwt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Bash</title>
-      <link>/emneknagger/laeringsemner/bash/</link>
-      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/emneknagger/laeringsemner/bash/</guid>
       <description></description>
     </item>
     <item>

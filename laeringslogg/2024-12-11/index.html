@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024-12-11</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="">
+  <link rel="canonical" href="/laeringslogg/2024-12-11/" itemprop="url" />
+<meta property="og:url" content="/laeringslogg/2024-12-11/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="2024-12-11">
+  <meta property="og:description" content="csharp «Exception»-klasse i C#: Data: Diverse data i nøkkel-verdi-par. HelpLink: Kan inneholde en URL til en hjelpefil for mer informasjon om feilen. HResult: Kan gi tilgang til nummer-verdi tilknyttet feilen. InnerException: Kan brukes til å lage og lagre en serie feil under feilhåndteringen. Message: Beskjed med mer detaljer om feilen. Source: Kan brukes for å gi tilgang til navnet på applikasjonen eller objektet som forårsaker feilen. StackTrace: Inneholder stien til «stack»-en, for å kunne se når feilen oppsto. TargetSite: Kan brukes for å få tak i metoden som sender den gjeldende feilen. catch (Exception ex) { Console.WriteLine($&#34;Exception caught in Process1: {ex.Message}); } I koden over fanger vi en instans av «Exception»-klassen i et objekt kalt «ex». Å skape og fange «exceptions» er en viktig del av C#-programmering for å sørge for funksjonelle applikasjoner. Noen vanlige «exceptions»-typer når man skal skape «exceptions»: ArgumentException / ArgumentNullException: Brukes når en metode eller «constructor» kalles med ugyldig argument eller null. InvalidOperationException: Brukes når en metode ikke støtter fullføring av et metode-kall. NotSupportedException: Brukes når en operasjon eller egenskap ikke støttes. IOException: Brukes når «input/output»-operasjon feiler. FormatException: Brukes når formateringen av en streng eller data er feil. new-nøkkelordet benytten når man skal opprette en instans av en «exception». throw benyttes for å «kaste» objektet. Et «exception»-objekt kan også opprettes direkte i en «throw-statement». Metoder bør melde en «exception» hver gang de ikke kan fullføre tiltenkt formål. Ting å unngå med «exceptions»: Ikke bruk det for å endre flyten av et program som en del av den originale kjøringen. Bruk det kun for å håndtere feil. «Exceptions» bør ikke returneres som retur-verdier eller parameter. Kun kastes. Ikke kast «System.Exception, System.SystemException, System.NullReferenceException» eller «System.IndexOutOfRangeException» med vilje fra egen kildekode. Ikke opprett «exceptions» som kan kastes i «debug»-modus men ikke i «release»-modus. For å identifisere «runtime errors» i utviklingsfasen bør man heller benytte «Debug.Assert». ">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2024-12-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-21T22:14:15+02:00">
+
+
+
+
+
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
+          
+
+          
+
+    
+        
+        
+            
+                
+                 
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om csharp.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om csharp.">
+
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/2024-12-11/">
+                    <span itemprop="name">2024-12-11</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>11. desember 2024</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 21. jun. 2025 | </span>
+            
+            <span>Pub: 11. des. 2024 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+        </p>
+    
+        </div>
+        <section>
+    
+            
+        
+    <h2 id="csharp">csharp</h2>
+<ul>
+<li>«Exception»-klasse i C#:
+<ul>
+<li>Data: Diverse data i nøkkel-verdi-par.</li>
+<li>HelpLink: Kan inneholde en URL til en hjelpefil for mer informasjon om feilen.</li>
+<li>HResult: Kan gi tilgang til nummer-verdi tilknyttet feilen.</li>
+<li>InnerException: Kan brukes til å lage og lagre en serie feil under feilhåndteringen.</li>
+<li>Message: Beskjed med mer detaljer om feilen.</li>
+<li>Source: Kan brukes for å gi tilgang til navnet på applikasjonen eller objektet som forårsaker feilen.</li>
+<li>StackTrace: Inneholder stien til «stack»-en, for å kunne se når feilen oppsto.</li>
+<li>TargetSite: Kan brukes for å få tak i metoden som sender den gjeldende feilen.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">catch</span> (Exception ex)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#e6db74">&#34;Exception caught in Process1: {ex.Message});
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>    }
+</span></span></code></pre></div><ul>
+<li>I koden over fanger vi en instans av «Exception»-klassen i et objekt kalt «ex».</li>
+<li>Å skape og fange «exceptions» er en viktig del av C#-programmering for å sørge for funksjonelle applikasjoner.</li>
+<li>Noen vanlige «exceptions»-typer når man skal skape «exceptions»:
+<ul>
+<li>ArgumentException / ArgumentNullException: Brukes når en metode eller «constructor» kalles med ugyldig argument eller null.</li>
+<li>InvalidOperationException: Brukes når en metode ikke støtter fullføring av et metode-kall.</li>
+<li>NotSupportedException: Brukes når en operasjon eller egenskap ikke støttes.</li>
+<li>IOException: Brukes når «input/output»-operasjon feiler.</li>
+<li>FormatException: Brukes når formateringen av en streng eller data er feil.</li>
+</ul>
+</li>
+<li><code>new</code>-nøkkelordet benytten når man skal opprette en instans av en «exception». <code>throw</code> benyttes for å «kaste» objektet.</li>
+<li>Et «exception»-objekt kan også opprettes direkte i en «throw-statement».</li>
+<li>Metoder bør melde en «exception» hver gang de ikke kan fullføre tiltenkt formål.</li>
+<li>Ting å unngå med «exceptions»:
+<ul>
+<li>Ikke bruk det for å endre flyten av et program som en del av den originale kjøringen. Bruk det kun for å håndtere feil.</li>
+<li>«Exceptions» bør ikke returneres som retur-verdier eller parameter. Kun kastes.</li>
+<li>Ikke kast «System.Exception, System.SystemException, System.NullReferenceException» eller «System.IndexOutOfRangeException» med vilje fra egen kildekode.</li>
+<li>Ikke opprett «exceptions» som kan kastes i «debug»-modus men ikke i «release»-modus. For å identifisere «runtime errors» i utviklingsfasen bør man heller benytte «Debug.Assert».</li>
+</ul>
+</li>
+</ul>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-cf251360.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-cf251360"></span>&#32;
+
+<script id="script-cf251360">
+  var scriptTag = document.getElementById("script-cf251360");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "11-21-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

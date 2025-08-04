@@ -6,14 +6,14 @@
     <description>Recent content in Programmering on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Sun, 24 Nov 2024 22:38:18 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jun 2025 22:34:37 +0200</lastBuildDate>
     <atom:link href="/emneknagger/tekstemner/programmering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Min Linux-maskin som en disk i Windows</title>
       <link>/journal/linuxmaskin-som-disk-i-windows/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
       <guid>/journal/linuxmaskin-som-disk-i-windows/</guid>
-      <description>&lt;p&gt;Jeg fikk nylig en Windows-maskin på jobben i forbindelse med læring av C# og .NET. Det ble min fjerde laptop.&lt;/p&gt;&#xA;&lt;p&gt;Nå har jeg en med iOS, to med Linux og en med Windows. Jeg liker best å jobbe med nettsiden via kommandolinjen i Linux, og lurte derfor på om det var mulig å koble seg til Linux-maskinen via Windows, slik at jeg slipper å ha så mange maskiner å forholde meg til.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Jeg fikk nylig en Windows-maskin på jobben i forbindelse med læring av C# og .NET. Det ble min fjerde laptop.&lt;/p&gt;&#xA;&lt;p&gt;Nå har jeg en med macOS, to med Linux og en med Windows. Jeg liker best å jobbe med nettsiden via kommandolinjen i Linux, og lurte derfor på om det var mulig å koble seg til Linux-maskinen via Windows, slik at jeg slipper å ha så mange maskiner å forholde meg til.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Endelig mulig å opprette sider i HUGO fra ekstern data!</title>

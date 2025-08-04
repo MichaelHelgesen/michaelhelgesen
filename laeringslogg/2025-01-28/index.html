@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-01-28</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="">
+  <link rel="canonical" href="/laeringslogg/2025-01-28/" itemprop="url" />
+<meta property="og:url" content="/laeringslogg/2025-01-28/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="2025-01-28">
+  <meta property="og:description" content="sanity Fullførte kurset Handling schema changes confidently og lærte om endringer av skjema, migrering av data, eksport og import av data. Vi kan laste opp hele datasett npx sanity@latest dataset import ~/path/to/production.tar.gz production. Kan validere med npx sanity@latest documents validate. For å endre navn på et felt kan man gå frem på følgende måte: Legge til nytt felt med nytt navn. Deaktivere gammelt felt deprecated: { reason: &#34;Use the event Format field insteda.&#34;} Oppdatere spørringen for å hente fra den nye feltet, med mulighet til å falle tilbake på gammelt felt. Oppdatere GROQ-spørring i front-end filer til å støtte begge felt ved bruk av «coalesce»: &#34;eventType&#34;: coalesce(format, eventType). Koden over betyr at man skal bruke format, om den har verdi, og knytte den til eventType. Om format er tom, skal eventType brukes. Lag et migrasjonsscript for å forberede flytting av data fra gammelt felt til nytt: npx sanity@latest migration create &#34;Replace event type with event format&#34;. I scriptet sett to og from til korrekte feltnavn. Kjør npx sanity@latest migration listfor å vise migrasjonslister. Kjør en «dry run» for å se hvordan en migrasjon vil påvirke studio: npx sanity@latest migration run replace-event-type-with-event-format. Eksporter gammel database: npx sanity@latest dataset export production. Ønsker du å tilbakestille til et stadie før migreringen, bruk: npx sanity@latest dataset import production.tar.gz production --replace. Kjør migrering med npx sanity@latest migration run replace-event-type-with-event-format --no-dry-run. Kjør validate på nytt for å se etter 0 errors: npx sanity@latest documents validate -y Fjern støtten for gammelt felt. Slett fra GROQ i front-end: &#34;eventType&#34;: coalesce(format, eventType) Endre i front-end. I dette tilfellet fra eventType til format Man kan også bruke en tilnærming Sanity kaller «indempotent». Betyr at man skal kunne kjøre migrasjonen flere ganger med samme resultat. Hindre at migrering skaper uønskede endringer. Kan bruke filter i scriptet for å velge kun de dokumentene som skal migreres. Ikke alltid filter kan brukes, da kan vi legge til en nøkkel når vi migrerer og hoppe over dokumenter som allerede har nøkler. Filter: import {defineMigration, at, setIfMissing, unset} from &#39;sanity/migrate&#39; const from = &#39;eventType&#39; const to = &#39;format&#39; export default defineMigration({ title: &#39;Replace event type with event format&#39;, // documentTypes: [&#39;event&#39;], filter: &#39;_type == &#34;event&#34; &amp;&amp; defined(eventType) &amp;&amp; !defined(format)&#39;, migrate: { document(doc, context) { return [at(to, setIfMissing(doc[from])), at(from, unset())] }, }, }) idempotenceKey (nøkkel): import {defineMigration, at, setIfMissing, unset, insert} from &#39;sanity/migrate&#39; // should be unique for the migration but never change const idempotenceKey = &#39;xyz&#39; const from = &#39;eventType&#39; const to = &#39;format&#39; export default defineMigration({ title: &#39;Replace event type with event format&#39;, // documentTypes: [&#39;event&#39;], filter: &#39;_type == &#34;event&#34; &amp;&amp; defined(eventType) &amp;&amp; !defined(format)&#39;, migrate: { document(doc, context) { if ((doc?._migrations as string[] || []).includes(idempotenceKey)) { // Document already migrated, so we can skip return } return [ at(to, setIfMissing(doc[from])), at(from, unset()), //… add idempotence key at(&#39;_migrations&#39;, setIfMissing([])), at(&#39;_migrations&#39;, insert(idempotenceKey, &#39;after&#39;, 0)), ] }, }, }) ">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2025-01-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-21T22:14:15+02:00">
+
+
+
+
+
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
+          
+
+          
+
+    
+        
+        
+            
+                
+                 
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om sanity.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om sanity.">
+
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/2025-01-28/">
+                    <span itemprop="name">2025-01-28</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>28. januar 2025</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 21. jun. 2025 | </span>
+            
+            <span>Pub: 28. jan. 2025 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/sanity/"> 
+         
+            #sanity</a>
+         
+
+
+        </p>
+    
+        </div>
+        <section>
+    
+            
+        
+    <h2 id="sanity">sanity</h2>
+<ul>
+<li>Fullførte kurset <a href="https://www.sanity.io/learn/course/handling-schema-changes-confidently/introduction-to-schema-change-management" target="_blank" class="external_link">Handling schema changes confidently<svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Interface / External_Link">
+<path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g></svg></a> og lærte om endringer av skjema, migrering av data, eksport og import av data.</li>
+<li>Vi kan laste opp hele datasett <code>npx sanity@latest dataset import ~/path/to/production.tar.gz production</code>.</li>
+<li>Kan validere med <code>npx sanity@latest documents validate</code>.</li>
+<li>For å endre navn på et felt kan man gå frem på følgende måte:
+<ul>
+<li>Legge til nytt felt med nytt navn.</li>
+<li>Deaktivere gammelt felt <code>deprecated: { reason: &quot;Use the event Format field insteda.&quot;}</code></li>
+<li>Oppdatere spørringen for å hente fra den nye feltet, med mulighet til å falle tilbake på gammelt felt.</li>
+<li>Oppdatere GROQ-spørring i front-end filer til å støtte begge felt ved bruk av «coalesce»: <code> &quot;eventType&quot;: coalesce(format, eventType)</code>.
+<ul>
+<li>Koden over betyr at man skal bruke <code>format</code>, om den har verdi, og knytte den til <code>eventType</code>. Om <code>format</code> er tom, skal <code>eventType</code> brukes.</li>
+</ul>
+</li>
+<li>Lag et migrasjonsscript for å forberede flytting av data fra gammelt felt til nytt: <code>npx sanity@latest migration create &quot;Replace event type with event format&quot;</code>.</li>
+<li>I scriptet sett <code>to</code> og <code>from</code> til korrekte feltnavn.</li>
+<li>Kjør <code>npx sanity@latest migration list</code>for å vise migrasjonslister.</li>
+<li>Kjør en «dry run» for å se hvordan en migrasjon vil påvirke studio: <code>npx sanity@latest migration run replace-event-type-with-event-format</code>.</li>
+<li>Eksporter gammel database: <code>npx sanity@latest dataset export production</code>.</li>
+<li>Ønsker du å tilbakestille til et stadie før migreringen, bruk: <code>npx sanity@latest dataset import production.tar.gz production --replace</code>.</li>
+<li>Kjør migrering med <code>npx sanity@latest migration run replace-event-type-with-event-format --no-dry-run</code>.</li>
+<li>Kjør validate på nytt for å se etter 0 errors: <code>npx sanity@latest documents validate -y</code></li>
+<li>Fjern støtten for gammelt felt.
+<ul>
+<li>Slett fra GROQ i front-end: <code>&quot;eventType&quot;: coalesce(format, eventType)</code></li>
+<li>Endre i front-end. I dette tilfellet fra <code>eventType</code> til <code>format</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Man kan også bruke en tilnærming Sanity kaller «indempotent».
+<ul>
+<li>Betyr at man skal kunne kjøre migrasjonen flere ganger med samme resultat.</li>
+<li>Hindre at migrering skaper uønskede endringer.
+<ul>
+<li>Kan bruke filter i scriptet for å velge kun de dokumentene som skal migreres.</li>
+<li>Ikke alltid filter kan brukes, da kan vi legge til en nøkkel når vi migrerer og hoppe over dokumenter som allerede har nøkler.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Filter:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">defineMigration</span>, <span style="color:#a6e22e">at</span>, <span style="color:#a6e22e">setIfMissing</span>, <span style="color:#a6e22e">unset</span>} <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;sanity/migrate&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">from</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;eventType&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">to</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;format&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">defineMigration</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Replace event type with event format&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// documentTypes: [&#39;event&#39;],
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">filter</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;_type == &#34;event&#34; &amp;&amp; defined(eventType) &amp;&amp; !defined(format)&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">migrate</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    document(<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">context</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">at</span>(<span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">setIfMissing</span>(<span style="color:#a6e22e">doc</span>[<span style="color:#66d9ef">from</span>])), <span style="color:#a6e22e">at</span>(<span style="color:#66d9ef">from</span>, <span style="color:#a6e22e">unset</span>())]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><ul>
+<li>idempotenceKey (nøkkel):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">defineMigration</span>, <span style="color:#a6e22e">at</span>, <span style="color:#a6e22e">setIfMissing</span>, <span style="color:#a6e22e">unset</span>, <span style="color:#a6e22e">insert</span>} <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;sanity/migrate&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// should be unique for the migration but never change
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">idempotenceKey</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;xyz&#39;</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">from</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;eventType&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">to</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;format&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">defineMigration</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Replace event type with event format&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// documentTypes: [&#39;event&#39;],
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">filter</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;_type == &#34;event&#34; &amp;&amp; defined(eventType) &amp;&amp; !defined(format)&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">migrate</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    document(<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">context</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> ((<span style="color:#a6e22e">doc</span><span style="color:#f92672">?</span>.<span style="color:#a6e22e">_migrations</span> <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">string</span>[] <span style="color:#f92672">||</span> []).<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">idempotenceKey</span>)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Document already migrated, so we can skip
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">at</span>(<span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">setIfMissing</span>(<span style="color:#a6e22e">doc</span>[<span style="color:#66d9ef">from</span>])),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">at</span>(<span style="color:#66d9ef">from</span>, <span style="color:#a6e22e">unset</span>()),
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//… add idempotence key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">at</span>(<span style="color:#e6db74">&#39;_migrations&#39;</span>, <span style="color:#a6e22e">setIfMissing</span>([])),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">at</span>(<span style="color:#e6db74">&#39;_migrations&#39;</span>, <span style="color:#a6e22e">insert</span>(<span style="color:#a6e22e">idempotenceKey</span>, <span style="color:#e6db74">&#39;after&#39;</span>, <span style="color:#ae81ff">0</span>)),
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div></section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-edaa5af9.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-edaa5af9"></span>&#32;
+
+<script id="script-edaa5af9">
+  var scriptTag = document.getElementById("script-edaa5af9");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "82-10-5202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

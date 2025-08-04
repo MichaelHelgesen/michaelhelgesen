@@ -10,9 +10,8 @@
  <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
     
-
     <meta name="author" content="">
- <link rel="canonical" href="/emneknagger/laeringsemner/csharp/" itemprop="url" />
+  <link rel="canonical" href="/emneknagger/laeringsemner/csharp/" itemprop="url" />
 <meta property="og:url" content="/emneknagger/laeringsemner/csharp/">
   <meta property="og:site_name" content="Michael Helgesen">
   <meta property="og:title" content="Csharp">
@@ -145,7 +144,7 @@
 
 <div class="intro sider tag">
 <h1>
-    #csharp <sup>4</sup>
+    #csharp <sup>17</sup>
 </h1>
     <p class="ingress">Ting jeg har lært om csharp</p>
     <span>
@@ -158,6 +157,757 @@
         
         <li>
             <h2>
+                <a href="/laeringslogg/2024-12-11/">
+                    11. desember 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 11. des. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>«Exception»-klasse i C#:
+<ul>
+<li>Data: Diverse data i nøkkel-verdi-par.</li>
+<li>HelpLink: Kan inneholde en URL til en hjelpefil for mer informasjon om feilen.</li>
+<li>HResult: Kan gi tilgang til nummer-verdi tilknyttet feilen.</li>
+<li>InnerException: Kan brukes til å lage og lagre en serie feil under feilhåndteringen.</li>
+<li>Message: Beskjed med mer detaljer om feilen.</li>
+<li>Source: Kan brukes for å gi tilgang til navnet på applikasjonen eller objektet som forårsaker feilen.</li>
+<li>StackTrace: Inneholder stien til «stack»-en, for å kunne se når feilen oppsto.</li>
+<li>TargetSite: Kan brukes for å få tak i metoden som sender den gjeldende feilen.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">catch</span> (Exception ex)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#e6db74">&#34;Exception caught in Process1: {ex.Message});
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>    }
+</span></span></code></pre></div><ul>
+<li>I koden over fanger vi en instans av «Exception»-klassen i et objekt kalt «ex».</li>
+<li>Å skape og fange «exceptions» er en viktig del av C#-programmering for å sørge for funksjonelle applikasjoner.</li>
+<li>Noen vanlige «exceptions»-typer når man skal skape «exceptions»:
+<ul>
+<li>ArgumentException / ArgumentNullException: Brukes når en metode eller «constructor» kalles med ugyldig argument eller null.</li>
+<li>InvalidOperationException: Brukes når en metode ikke støtter fullføring av et metode-kall.</li>
+<li>NotSupportedException: Brukes når en operasjon eller egenskap ikke støttes.</li>
+<li>IOException: Brukes når «input/output»-operasjon feiler.</li>
+<li>FormatException: Brukes når formateringen av en streng eller data er feil.</li>
+</ul>
+</li>
+<li><code>new</code>-nøkkelordet benytten når man skal opprette en instans av en «exception». <code>throw</code> benyttes for å «kaste» objektet.</li>
+<li>Et «exception»-objekt kan også opprettes direkte i en «throw-statement».</li>
+<li>Metoder bør melde en «exception» hver gang de ikke kan fullføre tiltenkt formål.</li>
+<li>Ting å unngå med «exceptions»:
+<ul>
+<li>Ikke bruk det for å endre flyten av et program som en del av den originale kjøringen. Bruk det kun for å håndtere feil.</li>
+<li>«Exceptions» bør ikke returneres som retur-verdier eller parameter. Kun kastes.</li>
+<li>Ikke kast «System.Exception, System.SystemException, System.NullReferenceException» eller «System.IndexOutOfRangeException» med vilje fra egen kildekode.</li>
+<li>Ikke opprett «exceptions» som kan kastes i «debug»-modus men ikke i «release»-modus. For å identifisere «runtime errors» i utviklingsfasen bør man heller benytte «Debug.Assert».</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-12-09/">
+                    9. desember 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 9. des. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>I C#-utvikling er feil som oppstår under applikasjonsens kjøretid (i motsetning til konstruksjons-feil som oppstår under konstruksjon-prosessen) refereres til som «exceptions», og «exception handling» er prosessen som utvikleren benytter for å håndtere disse kjøre-tid feilene i koden.</li>
+<li>«Errors» som oppstår under konstruksjons-prosessen refereres til som «errors» og er ikke en del av «exception handling process».</li>
+<li><code>.snl</code> er en «solution»-fil som benyttes av Visual Studio Code for å håndtere prosjekter og opprettes som regel automatisk når man oppretter et nytt prosjekt i VS-Code.</li>
+<li><code>.snl</code>fil benyttes av debugger for å identifisere prosjektet som skal kjøres i debug-miljø.</li>
+<li>launch.json inneholder en eller flere kjøre-konfigurasjoner i konfigurasjonslisten. Kjøre-konfigurasjonen inneholder en eller flere attributter for å støtte ulike debugging-scenarier. Følgende er påkrevd for hver kjøre-konfigurasjon:
+<ul>
+<li>name: Lesevennlig navn på kjøre-konfigurasjonen.</li>
+<li>type: Typen debugger å benytte.</li>
+<li>request: Typen kjøre-konfigurator.</li>
+<li>PreLaunchTask: Spesifiserer en oppgave å kjøre før debugging av pgorammet.</li>
+<li>Program: Banen til applikasjonens <code>.dll</code>-fil eller .NET.</li>
+<li>Where: Rammeverk som debug-prosjektet bygges for.</li>
+</ul>
+</li>
+<li><code>.dll</code> endelsen indikerer at filen er en såkalt «dynamic link library»-fil.</li>
+<li>Typiske scenarier som krever «exception handling»:
+<ul>
+<li>Dataprosessering</li>
+<li>Fil input/output</li>
+<li>Database-operasjoner</li>
+<li>Nettverkskommunikasjon</li>
+<li>Andre eksterne ressurser</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>try { // try code block - kode som kan generere feil }
+</span></span><span style="display:flex;"><span>catch { // catch code block - kode som håndterer feil }
+</span></span><span style="display:flex;"><span>finally { // finally code block - kode som rydder opp i resurser }
+</span></span></code></pre></div><ul>
+<li>«try code block» inneholder overvåket kode som kan forårsake feil. Hvis koden forårsaker en feil, håndteres den av korresponderende «catch»-blokken.</li>
+<li>«catch»-blokken inneholder kode som kjører dersom det oppstår feil i «try»-blokken. «Catch»-blokken kan håndtere feilen, logge den eller ignorere den. Kan kjøres når alle feil skjer, eller kun spesifikke.</li>
+<li>«Finally»-blokken inneholder kode som kjører uavhengig av om det har oppstått en feil eller ikke. Brukes gjerne for opprydning av ressurser, som å sørge for at variabler har korrekte verdier og annet.</li>
+<li>«Exceptions» representeres som objekter, og dermed en instans av en klasse, og inneholder en rekke informasjon.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-12-08/">
+                    8. desember 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 8. des. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Når et argument sendes til en metode, vil variabler av verdi-type kopieres inn i metoden. Hver variabel har sin egen kopi, så original-variabelen modifiseres ikke.</li>
+<li>Med referanse-typer så kopieres adressen til verdien inn i metoden. Variabelen som gis til metoden refererer til verdien på adressen, så operasjoner på den variabelen vil påvirke variabelen referert til av den andre.</li>
+<li>Det er viktig å huske at <code>string</code> er en referanse-type, men den er «immutable». Den kan altså ikke endres. Når metoder og operander benyttes for å modifisere en streng i C# er det et nytt streng-objekt som returneres.</li>
+<li>Man kan navngi parametre i en metode ved å angi et navn, etterfølgt av kolon og en verdi. Det definerer et navngitt argument.</li>
+<li>Når navngitte argumenter brukes med posisjonelle argumenter er kun gyldige om de angis i riktig rekkefølge.</li>
+<li>Navngitte argumenter er også gyldige så lenge de ikke etterfølges av posisjonelle argumenter.</li>
+<li>Navngitte argumenter trenger ikke å oppføres i den originale rekkefølgen.</li>
+<li>En parameter blir valgfri når den tildeles en standard verdi. Hvis en valgfri parameter ikke inkluderes i argumentene, brukes standardverdien når metoden kjører.</li>
+<li>Påkrevde argumenter bør defineres før de valgfrie.</li>
+<li>Retur-verdien i en metode må matche data-typen spesifisert i metoden.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-12-06/">
+                    6. desember 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 6. des. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>lastIndexOf()</code> finner siste tegn i en streng. -1 hvis ikke noe.</li>
+<li><code>substring()</code> without specifying a length input parameter, it will return every character after the starting position you specify</li>
+<li><code>indexOfAny()</code> returnerer første treff av tegn i en array. <code>charsToFind = {&quot;a&quot;, &quot;e&quot;, &quot;i&quot;}; message.IndexOfAny(charsToFind)</code>. Kan brukes med «overload», som er en startposisjon.</li>
+<li><code>remove()</code>: Fjerne noe fra en array. Typisk bruk av denne funksjonen er når man har en standard og regelmessig posisjon av tegnene man ønsker å fjerne fra en streng.</li>
+<li><code>replace()</code>: Erstatter en karakter fra array. Brukes når man trenger å erstatte en eller flere tegn med en annen tegn (eller ingen tegn). Den erstatter alle instanser av gitt tegn, ikke bare første eller siste.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-12-05/">
+                    5. desember 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 5. des. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>«Composite formating» bruker nummererte «placeholders» i f.eks. streng, etterfulgt av variablene. <code>string.Format(&quot;{0} {1}!&quot;), first, second);</code></li>
+<li>«Placeholders» kan plasseres hvor som helst i uvilkårlig rekkefølge, og gjentas så mange ganger som ønskelig.</li>
+<li><code>:C</code> kan brukes for valutta. <code>{price:c}</code> blir automatisk formatert som valutta.</li>
+<li><code>:N</code> gjør nummer mer leselige.</li>
+<li><code>:P</code> formaterer prosent og runder til to desimaler. Legg til et tall bak for å kontrollere antall siffer etter dedimal <code>:P2</code></li>
+<li>Man kan gjøre utregninger direkte med streng interpolasjon og «composite formating». <code>$&quot;A discount of {((price - salePrice)/price):P2}!&quot;</code></li>
+<li>«PadLeft#» angir mellomrom foran en streng til hele strengen har ønsket lengde: <code>PadLeft(12)</code>.</li>
+<li>Man kan også angi tegn fremfor mellomrom med <code>PadLeft(12, &quot;-&quot;)</code>.</li>
+<li>Bruk <code>indexOf()</code> for å finne plasseringen av et tegn i en streng.</li>
+<li><code>Substring(index, lengde)</code> henter ut tegn fra en streng fra angitt plassering («index») til angitt lengde.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> openingPosition = message.IndexOf(<span style="color:#e6db74">&#34;&lt;span&gt;&#34;</span>); 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> closingPosition = message.IndexOf(<span style="color:#e6db74">&#34;&lt;/span&gt;&#34;</span>); openingPosition += <span style="color:#ae81ff">6</span>; 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> length = closingPosition - openingPosition; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(message.Substring(openingPosition, length));
+</span></span></code></pre></div><ul>
+<li>Hardkodede strenger som «<!-- raw HTML omitted -->» i eksempelet over kalles «magic strings» og hardkodede verdier som 6 kalles «magic numbers». Disse &ldquo;magiske nummerne&rdquo; er best å prøve å unngå.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-12-03/">
+                    3. desember 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 3. des. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>Array.Sort()</code>: sortere array.</li>
+<li><code>Array.Reverse()</code>: reversere array.</li>
+<li><code>Array.Clear(arr, startindex, antall)</code>: fjerner innhold og setter null for streng og 0 for int. Fjerner kobling til minnet. Sjekk for null om mistenker dette.</li>
+<li>`Array.Resize(ref arr, antall å utvide / slette): legger til og sletter fra slutten. ref betyr å henvise til referanse fremfor selve verdien (standard).</li>
+<li>String.ToCharArray(): Streng til array med char. Kan bruke <code>new string(arrOfChar)</code> for å endre array av char til streng.</li>
+<li><code>String.Join(&quot;,&quot;, arr)</code>: Lager streng av array med char og inkluderer separator.</li>
+<li><code>arr.split(&quot;,&quot;)</code>:Deler streng til array av strenger. Velg hva som skal indikere splittingen. Splitten blir ikke med i array.</li>
+<li>Beste måten å tømme en array for tomme elementer er å iterere med counter for hver element med noe. Lag ny array med størrelse på counter. Loop gjennom original og kopier over alle ikke null til ny array.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-12-02/">
+                    2. desember 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 2. des. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>«Widening conversion» betyr å konvertere en datatype som kan romme mindre data til en type som kan holde mer data - implisitt konvertering.</li>
+<li>Typekonvertering («cast») kan utføres med «cast-operatøren» &ldquo;()&rdquo;. <code>(int)myDecimal</code>.</li>
+<li>«Cast»-operatøren forteller C#-kompilatøren at du har kontroll på konverteringen, og at du forstår at du kan miste data. En eksplisitt konvertering utfører man ved en «narrowing».</li>
+<li>Hvis man er usikker på å miste data, så kan man utføre tester på to ulike måter for sjekke resultatene.
+<ul>
+<li><code>ToString()</code>: tall til streng.</li>
+<li><code>Parce()</code>: Streng til tall, men <code>TryParce()</code> er bedre i tilfelle streng ikke kan bli tall.</li>
+<li><code>Convert.ToInt32()</code>: Streng til tall. Best for konvertering av desimal til hele nummer fordi den runder opp og ned på standard måte.</li>
+</ul>
+</li>
+<li>«Casting» avkorter og «convert» avrunder.</li>
+<li>Det er ikke alle konverteringer som er lov, som streng til decimal.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-12-01/">
+                    1. desember 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 1. des. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>float</code> (flyttall) brukes for desimaltall. Hvilken presisjon man ønsker er avgjørende for valg av type.</li>
+<li><code>float</code> og <code>double</code> er «base2», som betyr cirkatall. De tar mindre minne.</li>
+<li><code>decimal</code> er «base10», som betyr mer nøyaktig. De bruker mer minne.</li>
+<li><code>decimal</code> har «E»-notasjon, som betyr ti opphøyd i to. 5E+2 = 5 * 10² = 5 * 100.</li>
+<li>Referansetyper (peker til heap) deles av mange applikasjoner i OS.
+<ul>
+<li>Eks: lister, klasser og strenger. Kan holde større verdier. Ny instans av referansetype opprettes med <code>new</code>-nøkkelordet.</li>
+</ul>
+</li>
+<li><code>int[] data</code> er en nullreferanse, og peker dermed ikke til en minne-adresse enda. <code>int[] data = new int[3]</code> lager en instans av en liste og kobler variabelen til adressen.</li>
+<li><code>string</code> er også en referanse, men brukes så ofte så man trenger ikke bruke <code>new</code>.</li>
+<li>Verdityper kopieres til ny plass i minne, og overskriver derfor ikke. Referansetype peker til samme adresse, og vil således påvirke alle «kopier».</li>
+<li>Valg av datatyper:
+<ul>
+<li>Bruk de som er nærmest grensen for behovet.</li>
+<li>Bruk de som passer fremfor optimal ytelse.</li>
+<li>Velg datatyper basert på inn- og utdata.</li>
+<li>Hvis i tvil, så hold deg til standard / grunnleggende: int (hele tall), decimal (penger), bool (true / false), string (alfanumerisk).</li>
+</ul>
+</li>
+<li>Er det komplekst så bruk følgende:
+<ul>
+<li>byte: enkodet data fra andre dataer eller karakter-sett.</li>
+<li>double: geometrisk / vitenskapelig. For eksempel en bevegelse.</li>
+<li>System.DateTime: dato / tid.</li>
+<li>System.TimeSpan: Tidsforløp.</li>
+</ul>
+</li>
+<li>Typekonvertering kommer an på to spørsmål:
+<ol>
+<li>Vil konverteringen skape en feil ved kjøring?</li>
+<li>Vil konverteringen kunne føre til tap av informasjon?</li>
+</ol>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> first = <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> second = <span style="color:#e6db74">&#34;4&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> result = first + second <span style="color:#75715e">// OK som streng (implisitt)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> result2 = first + second <span style="color:#75715e">// Feil. Tenk om second f.eks. er &#34;hallo&#34;.</span>
+</span></span></code></pre></div><ul>
+<li>For å konvertere kan man:
+<ul>
+<li>Hjelpemetode på datatypen.</li>
+<li>Hjelpemetode på variabelen.</li>
+<li>«Convert class»-metoden.</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-30/">
+                    30. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 30. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Datatyper er måten programmeringsspråk definerer hvor mye minne som skal lagres (tilgjengeliggjøres) for variabelen.</li>
+<li>To hovedkategorier av datatyper: referansetyper og verdityper.
+<ul>
+<li>Referansetyper: Vi håndterer pekeren til et sted i minnet (heap).</li>
+<li>Verditype: Håndterer verdien direkte (stack).</li>
+</ul>
+</li>
+<li><code>int</code> er en alias for <code>System.Int32</code>.</li>
+<li>«Integral»-type er en enkel verdi som representerer hele tall som -1, 0, 1, 2 og så videre (integrale tall / heltall).
+<ul>
+<li>To typer: «signed» og «unsigned».</li>
+<li>«Signed»: Bruker sine bytes for å representere likt av positive og negative tall.</li>
+<li>«Unsigned»: Bare positive, og kan dermed være større positivt tall.</li>
+</ul>
+</li>
+<li>Eksempel på typer integrale typer:
+<ul>
+<li>int</li>
+<li>byte</li>
+<li>short</li>
+<li>long</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-28/">
+                    28. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 30. nov. 2024 | </span>
+                
+                <span>Pub: 28. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>foreach</code> er nyttig å bruke når antallet elementer i en array er ukjent, og indeksen til elementene ikke er så viktig. Metoden kan også i følge Microsoft være raskere om elementet brukes flere ganger i kodeblokken.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-27/">
+                    27. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 30. nov. 2024 | </span>
+                
+                <span>Pub: 27. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>En hovedgrunn til å velge <code>do while</code> er hvis noe i kodeblokken påvirker «exit»-statusen.</li>
+<li>Enkelte ganger kan det være vi ønsker å hoppe over resterende kode i kodeblokken til en <code>do while</code>. Da kan vi bruke nøkkelordet <code>continue</code>. Da forteller vi at vi ønsker å hoppe rett til bool-uttrykket i <code>while</code>. Altså å gå direkte til neste iterasjon.</li>
+<li>«nullable type» tillater variabler å ha <code>null</code>-verdi. Det markeres med et spørsmålstegn: <code>string? input = null</code>. «Nullable type» er nyttig for verdier som ikke skal være <code>null</code>, og man kan sjekke opp mot dette: <code>variabel != null</code>.</li>
+<li><code>TryParse</code> prøver å konvertere en streng til en annen type som <code>int</code> eller <code>double</code>, og returnerer en boolsk verdi basert på resultatet av konverteringen.
+<ul>
+<li>Tar to parametre: en streng som skal konverteres og en <code>out</code> variabel som inneholder resultatet av konverteringen, hvis vellykket.</li>
+<li><code>TryParse(string, out result)</code>.</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-26/">
+                    26. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
+                
+                <span>Pub: 26. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Opprette en tilfeldig bool: <code>rand.Next(2) == 0;</code></li>
+<li>«Ternary» i streng-interpolasjon må være i parentes.</li>
+<li>Logisk negasjon <code>!</code>: Invertere boolsk verdi.</li>
+<li>Ulikhet (inequality) <code>!=</code>: Sammenligne to verdier for å se om de er like.</li>
+<li>Kodeblokk med en linje trenger ikke krøllparentes.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2024-11-25/">
+                    25. november 2024
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 26. nov. 2024 | </span>
+                
+                <span>Pub: 25. nov. 2024 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>using system</code> gjør at vi kan bruke kode som tilhører «system»-gruppen («namespace»). Da slipper vi for eksempel å skrive <code>System.Console.WriteLine()</code>. Det holder med <code>System.Console.WriteLine()</code>.</li>
+<li>Hvis verdiene i en array mest sannsynlig ikke vil endres, kan de defineres sammen med arrayen. Hvis det motsatte angir man heller antallet variabler arrayen skal ha.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span>[] numbers = [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]; <span style="color:#75715e">// Om verdiene ikke skal endres</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span>[] numbers = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[<span style="color:#ae81ff">3</span>] <span style="color:#75715e">// Om verdiene er ukjente</span>
+</span></span></code></pre></div><ul>
+<li>Nøkkelordet <code>continue</code> forteller en array å umiddelbart gå til neste iteration.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
                 <a href="/laeringslogg/2024-11-24/">
                     24. november 2024
 
@@ -165,6 +915,8 @@
             </h2>
             <div>
                 <p class="last-posts-list__meta">
+                
+                <span>Red: 21. jun. 2025 | </span>
                 
                 <span>Pub: 24. nov. 2024 | </span>    
                  
@@ -189,8 +941,8 @@
                 <ul>
 <li>Array er en samling av samme type data. Man må angi datatype og størrelse på array:</li>
 </ul>
-<pre tabindex="0"><code>string[] ordreID = new string[3];
-</code></pre><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span>[] ordreID = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">string</span>[<span style="color:#ae81ff">3</span>];
+</span></span></code></pre></div><ul>
 <li>Det er også mulig å angi en array på følgende måte:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span>[] id = [<span style="color:#e6db74">&#34;B13&#34;</span>, <span style="color:#e6db74">&#34;B45&#34;</span>, <span style="color:#e6db74">&#34;B67&#34;</span>]; <span style="color:#75715e">// Innført i C# 12</span>

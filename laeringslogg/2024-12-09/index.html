@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024-12-09</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="">
+  <link rel="canonical" href="/laeringslogg/2024-12-09/" itemprop="url" />
+<meta property="og:url" content="/laeringslogg/2024-12-09/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="2024-12-09">
+  <meta property="og:description" content="csharp I C#-utvikling er feil som oppstår under applikasjonsens kjøretid (i motsetning til konstruksjons-feil som oppstår under konstruksjon-prosessen) refereres til som «exceptions», og «exception handling» er prosessen som utvikleren benytter for å håndtere disse kjøre-tid feilene i koden. «Errors» som oppstår under konstruksjons-prosessen refereres til som «errors» og er ikke en del av «exception handling process». .snl er en «solution»-fil som benyttes av Visual Studio Code for å håndtere prosjekter og opprettes som regel automatisk når man oppretter et nytt prosjekt i VS-Code. .snlfil benyttes av debugger for å identifisere prosjektet som skal kjøres i debug-miljø. launch.json inneholder en eller flere kjøre-konfigurasjoner i konfigurasjonslisten. Kjøre-konfigurasjonen inneholder en eller flere attributter for å støtte ulike debugging-scenarier. Følgende er påkrevd for hver kjøre-konfigurasjon: name: Lesevennlig navn på kjøre-konfigurasjonen. type: Typen debugger å benytte. request: Typen kjøre-konfigurator. PreLaunchTask: Spesifiserer en oppgave å kjøre før debugging av pgorammet. Program: Banen til applikasjonens .dll-fil eller .NET. Where: Rammeverk som debug-prosjektet bygges for. .dll endelsen indikerer at filen er en såkalt «dynamic link library»-fil. Typiske scenarier som krever «exception handling»: Dataprosessering Fil input/output Database-operasjoner Nettverkskommunikasjon Andre eksterne ressurser try { // try code block - kode som kan generere feil } catch { // catch code block - kode som håndterer feil } finally { // finally code block - kode som rydder opp i resurser } «try code block» inneholder overvåket kode som kan forårsake feil. Hvis koden forårsaker en feil, håndteres den av korresponderende «catch»-blokken. «catch»-blokken inneholder kode som kjører dersom det oppstår feil i «try»-blokken. «Catch»-blokken kan håndtere feilen, logge den eller ignorere den. Kan kjøres når alle feil skjer, eller kun spesifikke. «Finally»-blokken inneholder kode som kjører uavhengig av om det har oppstått en feil eller ikke. Brukes gjerne for opprydning av ressurser, som å sørge for at variabler har korrekte verdier og annet. «Exceptions» representeres som objekter, og dermed en instans av en klasse, og inneholder en rekke informasjon. ">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2024-12-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-21T22:14:15+02:00">
+
+
+
+
+
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
+          
+
+          
+
+    
+        
+        
+            
+                
+                 
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om csharp.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om csharp.">
+
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/2024-12-09/">
+                    <span itemprop="name">2024-12-09</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>9. desember 2024</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 21. jun. 2025 | </span>
+            
+            <span>Pub: 9. des. 2024 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/csharp/"> 
+         
+            #csharp</a>
+         
+
+
+        </p>
+    
+        </div>
+        <section>
+    
+            
+        
+    <h2 id="csharp">csharp</h2>
+<ul>
+<li>I C#-utvikling er feil som oppstår under applikasjonsens kjøretid (i motsetning til konstruksjons-feil som oppstår under konstruksjon-prosessen) refereres til som «exceptions», og «exception handling» er prosessen som utvikleren benytter for å håndtere disse kjøre-tid feilene i koden.</li>
+<li>«Errors» som oppstår under konstruksjons-prosessen refereres til som «errors» og er ikke en del av «exception handling process».</li>
+<li><code>.snl</code> er en «solution»-fil som benyttes av Visual Studio Code for å håndtere prosjekter og opprettes som regel automatisk når man oppretter et nytt prosjekt i VS-Code.</li>
+<li><code>.snl</code>fil benyttes av debugger for å identifisere prosjektet som skal kjøres i debug-miljø.</li>
+<li>launch.json inneholder en eller flere kjøre-konfigurasjoner i konfigurasjonslisten. Kjøre-konfigurasjonen inneholder en eller flere attributter for å støtte ulike debugging-scenarier. Følgende er påkrevd for hver kjøre-konfigurasjon:
+<ul>
+<li>name: Lesevennlig navn på kjøre-konfigurasjonen.</li>
+<li>type: Typen debugger å benytte.</li>
+<li>request: Typen kjøre-konfigurator.</li>
+<li>PreLaunchTask: Spesifiserer en oppgave å kjøre før debugging av pgorammet.</li>
+<li>Program: Banen til applikasjonens <code>.dll</code>-fil eller .NET.</li>
+<li>Where: Rammeverk som debug-prosjektet bygges for.</li>
+</ul>
+</li>
+<li><code>.dll</code> endelsen indikerer at filen er en såkalt «dynamic link library»-fil.</li>
+<li>Typiske scenarier som krever «exception handling»:
+<ul>
+<li>Dataprosessering</li>
+<li>Fil input/output</li>
+<li>Database-operasjoner</li>
+<li>Nettverkskommunikasjon</li>
+<li>Andre eksterne ressurser</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>try { // try code block - kode som kan generere feil }
+</span></span><span style="display:flex;"><span>catch { // catch code block - kode som håndterer feil }
+</span></span><span style="display:flex;"><span>finally { // finally code block - kode som rydder opp i resurser }
+</span></span></code></pre></div><ul>
+<li>«try code block» inneholder overvåket kode som kan forårsake feil. Hvis koden forårsaker en feil, håndteres den av korresponderende «catch»-blokken.</li>
+<li>«catch»-blokken inneholder kode som kjører dersom det oppstår feil i «try»-blokken. «Catch»-blokken kan håndtere feilen, logge den eller ignorere den. Kan kjøres når alle feil skjer, eller kun spesifikke.</li>
+<li>«Finally»-blokken inneholder kode som kjører uavhengig av om det har oppstått en feil eller ikke. Brukes gjerne for opprydning av ressurser, som å sørge for at variabler har korrekte verdier og annet.</li>
+<li>«Exceptions» representeres som objekter, og dermed en instans av en klasse, og inneholder en rekke informasjon.</li>
+</ul>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-361eaae5.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-361eaae5"></span>&#32;
+
+<script id="script-361eaae5">
+  var scriptTag = document.getElementById("script-361eaae5");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "90-21-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

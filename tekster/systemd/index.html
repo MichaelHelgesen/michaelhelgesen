@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hva er initieringsprosessen «systemd» i Linux?</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="">
+  <link rel="canonical" href="/tekster/systemd/" itemprop="url" />
+<meta property="og:url" content="/tekster/systemd/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="Hva er initieringsprosessen «systemd» i Linux?">
+  <meta property="og:description" content="Hva er «systemd» i Linux, og hvordan fungerer det?">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tekster">
+    <meta property="article:published_time" content="2025-05-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-04T20:03:20+02:00">
+
+
+
+
+
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
+          
+
+          
+
+<meta name="description" content="Hva er «systemd» i Linux, og hvordan fungerer det?">
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/tekster/">
+                    <span itemprop="name">Tekster</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/tekster/systemd/">
+                    <span itemprop="name">Hva er initieringsprosessen «systemd» i Linux?</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>Hva er initieringsprosessen «systemd» i Linux?</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 4. aug. 2025 | </span>
+            
+            <span>Pub: 29. mai 2025 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/tekstemner/linux/"> 
+         
+        #linux</a>
+         
+
+
+        </p>
+    
+        </div>
+        <section>
+    
+            
+        
+          <p class="ingress">I Linux er «init»-systemet det første programmet som kjøres når maskinen har fullført oppstart («boot» / «after kernal»). Oppgaven til «init» er å starte alle andre tjenester og prosesser som trengs for at operativsystemet skal fungere som ønsket.</p>
+        
+    <p><code>systemctl</code> er den sentrale kommandoen for å kontrollere «init»-systemet, som blant annet brukes til å:</p>
+<ul>
+<li>håndtere tjenester</li>
+<li>sjekke statuser</li>
+<li>endre systemtilstander</li>
+</ul>
+<p>«systemd» kan operere på spesifike enheter eller ressurser som «systemd» vet å håndtere. Disse enhetene er kategorisert etter type og er definert som såkalte «unit files».</p>
+<p>Enhetstypen kan avleses via suffikset i enden av filen. Et eksempel er <code>.service</code> som indikerer en service-enhet.</p>
+<p>Man kan ofte sløyfe suffikset, da «systemd» er smart nok til å forstå at du ønsker å operere på en tjeneste når du bruker «service management»-kommandoer.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sudo systemctl start application.service
+</span></span></code></pre></div><p>kan skrives som</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sudo systemctl start application
+</span></span></code></pre></div><h2 id="status-kommandoer">Status-kommandoer</h2>
+<ul>
+<li><code>start</code>: starte en tjeneste.</li>
+<li><code>stop</code>: stoppe en tjeneste.</li>
+<li><code>restart</code>: starte på nytt og laste inn konfigurasjonsfiler på nytt.</li>
+<li><code>reload</code>: hvis mulig laste inn konfigurasjonsfiler uten å starte på nytt.</li>
+<li><code>enable</code>: angi at en tjeneste skal starte hver gang maskinen booter.
+<ul>
+<li>Dette lager en symlink av systemets fil for tjenesten (ofte i <code>/lib/systemd/system</code> eller <code>/etc/systemd/system</code>) og plasserer den i en mappe hvor systemet ser etter autostart-filer, ofte <code>/etc/systemd/system/sometarget.target.wants</code></li>
+</ul>
+</li>
+<li><code>disable</code>: fjerner tjeneste fra oppstart.</li>
+<li><code>status</code>: sjekke status på tjenesten.
+<ul>
+<li>gir deg status, CGroup og de første linjene fra loggen.</li>
+</ul>
+</li>
+<li><code>is-active</code>: enkel ja / nei</li>
+<li><code>is-enabled</code>: enkel ja / nei</li>
+<li><code>is-failed</code>: enkel ja / nei</li>
+</ul>
+<h2 id="oversikt-over-systemstatus">Oversikt over systemstatus</h2>
+<ul>
+<li><code>list-units</code>: se liste over alle aktive enheter som «systemd» har aktivert og dermed kjenner til.
+<ul>
+<li>Kolonner: enhet, load, active, sub (slags dypere status), description.</li>
+<li>Flagg:
+<ul>
+<li><code>--all</code>: se alle, ikke bare aktive</li>
+<li><code>--state</code>=: status f.eks. «inactive»</li>
+<li><code>--type</code>: type f.eks. «service»</li>
+</ul>
+</li>
+<li><strong>MERK</strong>: Det kan synes en mengde <code>.device</code>-filer i oversikten. Slik jeg forstår det er ikke dette faktiske filer. Det er noe som dynamisk opprettes i forbindelse med hardvare. De inneholder ingen data. De er kun en slags peker til hardvare som operativsystemet kan benytte. En slags liste over komponentene i maskinen. Derfor synes de ikke i <code>list-unit-files</code>, hvor det vises faktiske filer.</li>
+</ul>
+</li>
+<li><code>list-unit-files</code>: se alle enhetsfiler, selv de som ikke er aktivert.</li>
+</ul>
+<h2 id="unit-management">Unit management</h2>
+<ul>
+<li><code>cat [ENHET]</code>: se innholdet i fila.</li>
+<li><code>list-dependencies</code>: Se avhengighetstre. Viser andre tjenester som den angitte trenger eller ønsker. Rekursive resultater vises bare for <code>.target</code>-enheter.
+<ul>
+<li><code>--all</code> For å se alle rekursive resultater</li>
+<li><code>--reverse</code>: Se hva som er avhengig av angitt enhet.</li>
+<li><code>--before</code> og <code>--after</code>: Se andre enheter som er avhengig av at gjeldende enhet starter henholdsvis etter eller før dem selv.</li>
+</ul>
+</li>
+<li><code>show [ENHET]</code>: Liste med egenskaper.
+<ul>
+<li><code>show [ENHET] -p [EGENSKAP]</code>: Viser spesifik egenskap.</li>
+</ul>
+</li>
+<li><code>mask</code>: Hindrer tjenesten i å starte automatisk, eller manuelt. Pekes mot <code>/dev/null</code>. Kalles å «maskere» en tjeneste.</li>
+<li><code>unmask</code>: Fjerne fra «masked».</li>
+</ul>
+<h2 id="redigere-enhetsfiler">Redigere enhetsfiler</h2>
+<ul>
+<li><code>edit [ENHETSFIL]</code>: Redigere filen.
+<ul>
+<li>Åpnes som <code>/etc/systemd/system/[ENHETSFIL].service.d/override.conf</code>. Denne filen kalles en «snippet» (utdrag), og slås sammen med originalen. Utdraget har presedens over originalen.</li>
+<li>Flagg:
+<ul>
+<li><code>--full</code>: Lar oss redigere den gjeldende filen. Endret fil vil lagres under <code>/etc/systemd/system</code>, og tar presedens over systemets enhetsdefinisjon som gjerne ligger under <code>lib/systemd/system</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Etter sletting av fil eller mapper bør <code>systemd</code> lastes på nytt med <code>systemctl daemon-reload</code>.</li>
+</ul>
+<h2 id="justere-systemstatus-linuxrunlevel-med-targets">Justere systemstatus («linuxrunlevel«) med «Targets»</h2>
+<p><code>.target</code> er spesielle enhetsfiler som beskriver en systemstatus eller et synkroniseringspunkt. De utfører ikke noe spesielt selv, men grupperer andre enheter sammen.</p>
+<p>Det kan altså brukes til å sette systemet i spesifikke modus i likhet med «linuxrunlevel». De fungerer som referansepunkt for når gitte funksjoner er tilgjengelige. Slikt sett kan vi spesifisere ønsket modus for hele systemet, fremfor de individuelle enhetene som trengs for å skape ønsket modus.</p>
+<p><code>swap.target</code> er et eksempel. Den brukes for å indikere at swap er klart til bruk. Enheter som er en del av denne prosessen kan synkroniseres mot <code>swap.target</code> ved å indikere i sine konfigurasjoner at de er <code>WantedBy=</code> eller <code>RequiredBy=</code> av <code>swap.target</code>.</p>
+<p>Enheter som krever at <code>swap</code> er klar kan spesifisere det med <code>Wants</code>, <code>Requires=</code> og <code>After=</code> for å indikere arten av forholdet dem i mellom.</p>
+<ul>
+<li><code>get-default</code>: Se standard «target»-fil.</li>
+<li><code>set-default</code>: Angi en standard «target»-fil.</li>
+<li><code>list-unit-files --type=target</code>: Liste alle tilgjengelige «target»-filer.</li>
+<li><code>list-units --type=target</code>: Se alle aktive «targets».</li>
+</ul>
+<p>I motsetning til runlevel kan man ha flere «targets» aktive av gangen. Et aktivt «target» indikerer at <code>systemd</code> har forsøkt å starte alle enheter knyttet til gjeldende «target», og ikke forsøkt å avslutte dem igjen.</p>
+<ul>
+<li><code>isolate [TARGET]</code>: Starter alle enheter assosiert med en «target» og stopper alle som ikke er en del av tilhørende avhengighetstre. Ligner på det å endre runlevel.</li>
+</ul>
+<p>Hvis systemet opererer i et grafisk grensesnitt via <code>graphical.target</code>, kan man stenge dette til fordel for «multi-user» kommandolinje ved å endre systemets modus ved å isolere <code>multi-user.target</code>.  Det kan være lurt å se avhengighetslisten før man gjør dette, i tilfelle man stopper vitale tjenester: <code>list-dependencies [TARGET]</code>.</p>
+<h3 id="snarveier">Snarveier</h3>
+<p>Enkelte kommandoer har snarveier for å spare oss for litt tid. I steden for <code>systemctl isolate rescue.target</code> kan vi skrive <code>systemctl rescue</code>.</p>
+<ul>
+<li><code>rescue</code>: «Single user»-modus.</li>
+<li><code>halt</code>: Sette systemet på pause.</li>
+<li><code>poweroff</code>: Skru av systemet.</li>
+<li><code>reboot</code>: Restarte systemet.</li>
+</ul>
+<p>Enkelte kommandoer lar oss også sløyfe <code>systemctl</code> og lar oss for eksempel bare skrive <code>sudo reboot</code>.</p>
+<h2 id="aktivere--deaktivere-tjenester-ved-oppstart">Aktivere / deaktivere tjenester ved oppstart</h2>
+<ul>
+<li><code>enable [ENHET]</code>: Angir at en enhet skal starte ved oppstart.</li>
+<li><code>disable [ENHET]</code>: Angir at en enhet skal deaktiveres fra å starte ved oppstart.</li>
+</ul>
+<h2 id="sjekke-og-tolke-tjeneste-status">Sjekke og tolke tjeneste-status</h2>
+<ul>
+<li><code>stats [ENHET]</code>: Se status for en enhet.
+<ul>
+<li><code>Active</code>: Om den er aktiv, samt når den ble aktivert og hvor lenge den har vært aktiv.</li>
+<li><code>Loaded</code>: Tjenestefilens plassering og status.</li>
+<li><code>Process</code>: Kommandoen som brukes for å starte tjenesten, samt å avslutte den.</li>
+<li><code>Main PID</code>: Prosess-ID til hovedservice-prosessen.</li>
+<li><code>Status</code>: Kort beskrivelse av status.</li>
+<li><code>CGroup</code>: Liste av prosesser tilknyttet tjenesten.</li>
+</ul>
+</li>
+</ul>
+<h2 id="vanlige-feil-or-feilretting">Vanlige feil or feilretting</h2>
+<p>Kommer du borti «unit not found» eller «failed to start unit» så er det viktig å verifisere navn, og at filen faktisk eksisterer og ligger på riktig sted, som <code>/etc/systemd/system/</code> eller <code>/lib/systemd/system/</code>. Det kan også være vi må sjekke filen for eventuelle syntaksfeil.</p>
+<p>For å sjekke plassering og syntaks kan man skrive <code>sudo systemctl status httpd</code> og
+<code>sudo systemctl cat httpd</code>.</p>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-c77bfd22.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-c77bfd22"></span>&#32;
+
+<script id="script-c77bfd22">
+  var scriptTag = document.getElementById("script-c77bfd22");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "?xuniL i »dmetsys« nessesorpsgnireitini re avH nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

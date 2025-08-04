@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-07-03</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="">
+  <link rel="canonical" href="/laeringslogg/2025-07-03/" itemprop="url" />
+<meta property="og:url" content="/laeringslogg/2025-07-03/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="2025-07-03">
+  <meta property="og:description" content="linux Lært om oppstartsprosessen («boot») i Ubuntu. BIOS / UEFI Bootloader Linux-kjernen («kernel») initramfs «root»-filsystemet monteres Første prosess (PID1), gjerne et «init»-system som systemd systemd BIOS / UEFI BIOS er eldre og mindre fleksibelt sammenlignet med UEFI. UEFI er moderne og mer fancy. UEFI lar oss spesifisere en utvalgt partisjon i egendefinert størrelse for «bootloader». BIOS bruker kun meget begrenset plass i første sektor av disken (MBR). Sjekk sys/firmware/efi om du bruker UEFI eller ikke. Bootloader Bruker gjerne GRUB. Laster kjernen inn i minnet. Initialiserer et minimum av hardvare som trengs for oppstart av systemet. Finner OS-er, og starter det som velges. Kjernen («kernel») Kjernen til OS-et, og selve Linux. Trenger informasjon i startfasen, slik som drivere for å kunne kommunisere med hardvare. De er lagret i initrd eller initramfs og lastes sammens med kjernen. Kan sende parametre til kjernen under boot via GRUB-konfigurasjon. Logger Linux loggfører mye under oppstart som lagres i filer. Når kjernen booter kan den ikke skrive til fil, så den lagrer i noe som kalles «ring buffer» i minnet. Dette kan sees i dmesg, /varlog/dmesg. Kan også se journalctl -k for kjerne-logg, og journalctl -b for boot-logg. Se også /var/log/boot. Etter initialisering vil syslog daemon logge beskjeder. Den opprettholdes ved omstart var/log/messages. Init Starter tjenester og andre programmer som webserver, grafisk grensenitt, nettverk osv. Tenke på det som “jeg trenger tjeneste A og B. Deretter C og D. Men ikke start D før før A og B kjører”. Kan bruke init-systemet etter oppstart for å manipulere prosesser senere. Typer init-systemer: systemd, upstart og SysVinit. Init-prosessen har ID1. Se via ps -p1. systemd Manipulere systemet etter oppstart. Laget rundt konseptet «enheter». «Enhet» kan være tjeneste eller handling. Har navn, typebetegnelse og fil. 12 ulike typer: automount device mount path scope service slice snapshot socket swap target timer ">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2025-07-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-06T22:15:24+02:00">
+
+
+
+
+
+<meta property="og:image" content="//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="/images/mikke.webp"/>
+          
+
+          
+
+    
+        
+        
+            
+                
+                 
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om linux.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om linux.">
+
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/laeringslogg/2025-07-03/">
+                    <span itemprop="name">2025-07-03</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>3. juli 2025</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 6. jul. 2025 | </span>
+            
+            <span>Pub: 3. jul. 2025 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+        </p>
+    
+        </div>
+        <section>
+    
+            
+        
+    <h2 id="linux">linux</h2>
+<ul>
+<li>Lært om oppstartsprosessen («boot») i Ubuntu.
+<ol>
+<li>BIOS / UEFI</li>
+<li>Bootloader</li>
+<li>Linux-kjernen («kernel»)</li>
+<li>initramfs</li>
+<li>«root»-filsystemet monteres</li>
+<li>Første prosess (PID1), gjerne et «init»-system som systemd</li>
+<li>systemd</li>
+</ol>
+<ul>
+<li>BIOS / UEFI
+<ul>
+<li>BIOS er eldre og mindre fleksibelt sammenlignet med UEFI.</li>
+<li>UEFI er moderne og mer fancy.</li>
+<li>UEFI lar oss spesifisere en utvalgt partisjon i egendefinert størrelse for «bootloader». BIOS bruker kun meget begrenset plass i første sektor av disken (MBR).</li>
+<li>Sjekk <code>sys/firmware/efi</code> om du bruker UEFI eller ikke.</li>
+</ul>
+</li>
+<li>Bootloader
+<ul>
+<li>Bruker gjerne GRUB.</li>
+<li>Laster kjernen inn i minnet.</li>
+<li>Initialiserer et minimum av hardvare som trengs for oppstart av systemet.</li>
+<li>Finner OS-er, og starter det som velges.</li>
+</ul>
+</li>
+<li>Kjernen («kernel»)
+<ul>
+<li>Kjernen til OS-et, og selve Linux.</li>
+<li>Trenger informasjon i startfasen, slik som drivere for å kunne kommunisere med hardvare. De er lagret i <code>initrd</code> eller <code>initramfs</code> og lastes sammens med kjernen.</li>
+<li>Kan sende parametre til kjernen under boot via GRUB-konfigurasjon.
+<ul>
+<li>Logger
+<ul>
+<li>Linux loggfører mye under oppstart som lagres i filer.</li>
+<li>Når kjernen booter kan den ikke skrive til fil, så den lagrer i noe som kalles «ring buffer» i minnet. Dette kan sees i <code>dmesg</code>, <code>/varlog/dmesg</code>.</li>
+<li>Kan også se <code>journalctl -k</code> for kjerne-logg, og <code>journalctl -b</code> for boot-logg. Se også <code>/var/log/boot</code>.</li>
+<li>Etter initialisering vil <code>syslog daemon</code> logge beskjeder. Den opprettholdes ved omstart <code>var/log/messages</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Init
+<ul>
+<li>Starter tjenester og andre programmer som webserver, grafisk grensenitt, nettverk osv.</li>
+<li>Tenke på det som &ldquo;jeg trenger tjeneste A og B. Deretter C og D. Men ikke start D før før A og B kjører&rdquo;.</li>
+<li>Kan bruke init-systemet etter oppstart for å manipulere prosesser senere.</li>
+<li>Typer init-systemer: systemd, upstart og SysVinit.</li>
+<li>Init-prosessen har ID1. Se via <code>ps -p1</code>.</li>
+</ul>
+</li>
+<li>systemd
+<ul>
+<li>Manipulere systemet etter oppstart.</li>
+<li>Laget rundt konseptet «enheter».</li>
+<li>«Enhet» kan være tjeneste eller handling.</li>
+<li>Har navn, typebetegnelse og fil.</li>
+<li>12 ulike typer:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>automount
+</span></span><span style="display:flex;"><span>device
+</span></span><span style="display:flex;"><span>mount
+</span></span><span style="display:flex;"><span>path
+</span></span><span style="display:flex;"><span>scope
+</span></span><span style="display:flex;"><span>service
+</span></span><span style="display:flex;"><span>slice
+</span></span><span style="display:flex;"><span>snapshot
+</span></span><span style="display:flex;"><span>socket
+</span></span><span style="display:flex;"><span>swap
+</span></span><span style="display:flex;"><span>target
+</span></span><span style="display:flex;"><span>timer
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-776b8d20.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-776b8d20"></span>&#32;
+
+<script id="script-776b8d20">
+  var scriptTag = document.getElementById("script-776b8d20");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "30-70-5202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/journal/">Journal</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

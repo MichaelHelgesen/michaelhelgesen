@@ -6,8 +6,15 @@
     <description>Recent content in Bash on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Sun, 27 Oct 2024 18:27:43 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 22 Jun 2025 00:09:13 +0200</lastBuildDate>
     <atom:link href="/emneknagger/laeringsemner/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025-03-24</title>
+      <link>/laeringslogg/2025-03-24/</link>
+      <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>/laeringslogg/2025-03-24/</guid>
+      <description>&lt;h2 id=&#34;bash&#34;&gt;bash&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lært om bash-syntaks, og forskjellen på &lt;code&gt;$a&lt;/code&gt;, &lt;code&gt;{$a}&lt;/code&gt;, &lt;code&gt;&amp;quot;{$a}&amp;quot;&lt;/code&gt; samt klammer, krøllparenteser og parenteser.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>2024-09-13</title>
       <link>/laeringslogg/2024-09-13/</link>

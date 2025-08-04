@@ -10,9 +10,8 @@
  <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
     
-
     <meta name="author" content="">
- <link rel="canonical" href="/emneknagger/laeringsemner/linux/" itemprop="url" />
+  <link rel="canonical" href="/emneknagger/laeringsemner/linux/" itemprop="url" />
 <meta property="og:url" content="/emneknagger/laeringsemner/linux/">
   <meta property="og:site_name" content="Michael Helgesen">
   <meta property="og:title" content="Linux">
@@ -145,16 +144,501 @@
 
 <div class="intro sider tag">
 <h1>
-    #linux <sup>16</sup>
+    #linux <sup>24</sup>
 </h1>
     <p class="ingress">Ting jeg har lært om linux</p>
     <span>
+    
+    Jeg har også skrevet tekster om denne emneknaggen. <a href=/emneknagger/tekstemner/linux> Se dem her.</a>
     
     </span>
 </div>
 
     <ul class="last-posts-list">
         
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2025-07-03/">
+                    3. juli 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 6. jul. 2025 | </span>
+                
+                <span>Pub: 3. jul. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Lært om oppstartsprosessen («boot») i Ubuntu.
+<ol>
+<li>BIOS / UEFI</li>
+<li>Bootloader</li>
+<li>Linux-kjernen («kernel»)</li>
+<li>initramfs</li>
+<li>«root»-filsystemet monteres</li>
+<li>Første prosess (PID1), gjerne et «init»-system som systemd</li>
+<li>systemd</li>
+</ol>
+<ul>
+<li>BIOS / UEFI
+<ul>
+<li>BIOS er eldre og mindre fleksibelt sammenlignet med UEFI.</li>
+<li>UEFI er moderne og mer fancy.</li>
+<li>UEFI lar oss spesifisere en utvalgt partisjon i egendefinert størrelse for «bootloader». BIOS bruker kun meget begrenset plass i første sektor av disken (MBR).</li>
+<li>Sjekk <code>sys/firmware/efi</code> om du bruker UEFI eller ikke.</li>
+</ul>
+</li>
+<li>Bootloader
+<ul>
+<li>Bruker gjerne GRUB.</li>
+<li>Laster kjernen inn i minnet.</li>
+<li>Initialiserer et minimum av hardvare som trengs for oppstart av systemet.</li>
+<li>Finner OS-er, og starter det som velges.</li>
+</ul>
+</li>
+<li>Kjernen («kernel»)
+<ul>
+<li>Kjernen til OS-et, og selve Linux.</li>
+<li>Trenger informasjon i startfasen, slik som drivere for å kunne kommunisere med hardvare. De er lagret i <code>initrd</code> eller <code>initramfs</code> og lastes sammens med kjernen.</li>
+<li>Kan sende parametre til kjernen under boot via GRUB-konfigurasjon.
+<ul>
+<li>Logger
+<ul>
+<li>Linux loggfører mye under oppstart som lagres i filer.</li>
+<li>Når kjernen booter kan den ikke skrive til fil, så den lagrer i noe som kalles «ring buffer» i minnet. Dette kan sees i <code>dmesg</code>, <code>/varlog/dmesg</code>.</li>
+<li>Kan også se <code>journalctl -k</code> for kjerne-logg, og <code>journalctl -b</code> for boot-logg. Se også <code>/var/log/boot</code>.</li>
+<li>Etter initialisering vil <code>syslog daemon</code> logge beskjeder. Den opprettholdes ved omstart <code>var/log/messages</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Init
+<ul>
+<li>Starter tjenester og andre programmer som webserver, grafisk grensenitt, nettverk osv.</li>
+<li>Tenke på det som &ldquo;jeg trenger tjeneste A og B. Deretter C og D. Men ikke start D før før A og B kjører&rdquo;.</li>
+<li>Kan bruke init-systemet etter oppstart for å manipulere prosesser senere.</li>
+<li>Typer init-systemer: systemd, upstart og SysVinit.</li>
+<li>Init-prosessen har ID1. Se via <code>ps -p1</code>.</li>
+</ul>
+</li>
+<li>systemd
+<ul>
+<li>Manipulere systemet etter oppstart.</li>
+<li>Laget rundt konseptet «enheter».</li>
+<li>«Enhet» kan være tjeneste eller handling.</li>
+<li>Har navn, typebetegnelse og fil.</li>
+<li>12 ulike typer:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>automount
+</span></span><span style="display:flex;"><span>device
+</span></span><span style="display:flex;"><span>mount
+</span></span><span style="display:flex;"><span>path
+</span></span><span style="display:flex;"><span>scope
+</span></span><span style="display:flex;"><span>service
+</span></span><span style="display:flex;"><span>slice
+</span></span><span style="display:flex;"><span>snapshot
+</span></span><span style="display:flex;"><span>socket
+</span></span><span style="display:flex;"><span>swap
+</span></span><span style="display:flex;"><span>target
+</span></span><span style="display:flex;"><span>timer
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2025-06-30/">
+                    30. juni 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 5. jul. 2025 | </span>
+                
+                <span>Pub: 30. jun. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Port knocking
+<ul>
+<li>«Port knocking» er en måte for å eksternt åpne porter som er stengt bak en brannmur.</li>
+<li>Det fungerer som et hemmelig bankemønster på en dør. Er kombinasjonen av banking riktig, da vil døren åpnes.</li>
+<li>En ekstern klient må «banke» på gitte porter i en spesiell rekkefølge, for deretter å koble seg på f.eks. SSH innen et definert tidsrom.</li>
+<li>Fungerer som en liten ekstra sikkerhet, men er ikke bra nok som eneste sikkerhetsinnstans. Det er som at et nøkkelhull plasseres på et utradisjonelt sted på døra. Litt vanskeligere å nå, men fortsatt ganske synlig.</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2025-06-26/">
+                    26. juni 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 5. jul. 2025 | </span>
+                
+                <span>Pub: 26. jun. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Brannmur:
+<ul>
+<li>Ekstra sikkerhet når man åpner porter.</li>
+<li>Linux har innebygd brannmur som <code>netfilter</code>.</li>
+<li>Vi kan konfigurere denne med program som <code>iptables</code>.</li>
+<li>«Frontend» for <code>iptables</code> er program som <code>ufw</code> som gjør det enklere for oss å konfigurere brannmur.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables -l <span style="color:#75715e"># se gjeldende regler.</span>
+</span></span><span style="display:flex;"><span>iptables -F <span style="color:#75715e"># slett alle regler.</span>
+</span></span><span style="display:flex;"><span>ufw allow <span style="color:#75715e"># gi tillatelse</span>
+</span></span><span style="display:flex;"><span>ufw deny <span style="color:#75715e"># nekte tillatelse</span>
+</span></span><span style="display:flex;"><span>ufw enable <span style="color:#75715e"># aktivere endringer</span>
+</span></span><span style="display:flex;"><span>ufw status verbose <span style="color:#75715e"># se enkel status</span>
+</span></span></code></pre></div>
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2025-06-25/">
+                    25. juni 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 5. jul. 2025 | </span>
+                
+                <span>Pub: 25. jun. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Unix-sockets
+<ul>
+<li>en form for internprosess-kommunikasjon (IPS) som lar prosesser på samme maskin kommunisere med hverander.</li>
+<li>Opererer innenfor kjernen, så raskere og mer pålitelig enn nettverkst-sockets.</li>
+<li>Bruker lokale filbaner for kommunikasjon fremfor IP-adresser og porter.</li>
+<li>Støtter TCP og UDP</li>
+<li>Bruker server - klient modell.</li>
+<li>Fordeler: ytelse, sikkerhet (kan bruke filtillatelser) og fleksibilitet.</li>
+<li><code>-ss</code>: socket status.</li>
+<li><code>ss -tlpn</code>: Se alle prosesser som lytter etter porter.</li>
+</ul>
+</li>
+<li>nmap
+<ul>
+<li><code>nmap localhost</code>: Se åpne porter med mer.</li>
+</ul>
+</li>
+<li>«loopback network device»
+<ul>
+<li>Et virtuelt nettverk-grensesnitt som dirigerer trafikk tilbake til samme maskin.</li>
+<li>Vi kan se et virtuelt nettverk ved at det står <code>%lo</code> i IP-adressen: <code>127.0.0.53%lo:53</code>.</li>
+<li>Omtales også som «lokal DNS» («DNS resolver»). Et eksmepel er <code>systemd-resolved</code>.</li>
+<li>Praktisk for å svare kjapt og enkelt på alle DNS-spørringer.</li>
+<li>Slik jeg forstår det går alle DNS-spørringer innom «loopback network device».</li>
+<li>Vår maskin -&gt; lokal «DNS stub» -&gt; internett, og tilbake.</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2025-06-24/">
+                    24. juni 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Pub: 24. jun. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>udev: Katalogen <code>/dev</code> kalles også «user space dev» («udev»).
+<ul>
+<li>Dette er ikke et pseudo-filsystem, slik som «sysfs» eller «proc».</li>
+<li>Her abstraheres hardvare til filer som vi kan redigere. Det fungerer som en dynamisk enhetsbehandling som er ansvarlig for å opprette, slette og gi nytt navn på filer etter hvert som enheter legges til og fjernes.</li>
+<li>«udev» sikrer i hovedsak at enheter blir gjenkjent og kan brukes av systemet.</li>
+<li>Forskjellen på «udev» og «sysfs» er i hovedsak at «udev» fokuserer på enhetsbehandling og og opprettelse av noder, mens «sysfs» er for tilgang og manipulering av enhetsinformasjon.</li>
+</ul>
+</li>
+<li>D-bus: Et meldingssystem som gjør at applikasjoner kan kommunisere seg i mellom og operere på vegne av hverandre. Tenk på skrivebordet på maskinen som kan varsle om batteri, nettverk, mottatt e-post med mer.
+<ul>
+<li>Prosessene omtales også som interprosesskommunikasjon og fjernprosedyrer.</li>
+</ul>
+</li>
+<li>proc: Et pseudo-filsystem som viser filer som representerer kjernens prosesser.</li>
+<li>Lastbare kjernemoduler: Henviser til drivere for hardvare som kreves for at OS-et kan kommunisere med enhetene.
+<ul>
+<li>ligger under <code>/lib/modules</code>.</li>
+<li>Linux kommer med de fleste drivere allerede i kjernen, men ikke alt.</li>
+<li>Inspiser med <code>lsmod</code> og håndteres med <code>modprobe</code>.</li>
+<li>Kan bruke <code>-f</code> med <code>rmmod</code> for å tvinge avslutning av en modul som er i drift.</li>
+</ul>
+</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2025-06-23/">
+                    23. juni 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Pub: 23. jun. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li><code>bin64</code>: Brukes til å kode og dekode data ved hjelp av Base64-formatet. Det er en metode som representerer en binære data som en streng av ASCII-tegn. Binær tekst-til-kode.</li>
+<li><code>tr</code>: En kommando som konverterer, erstatter og / eller sletter fra standard inndata til utdata.</li>
+<li><code>awk</code>: Avansert tekst-prosessering. Brukes gjerne for analyse og rapportering av datasett.</li>
+<li>«sysfs»: Står for «system filesystem» og er navnet på konseptet om at alt i Linux er en fil. Man hører også dette omtalt som «pseudo file system». Det er et filtre av tilsynelatende mange filer, men disse er virtuelle filer lagret i kjernen («kernel»), og ikke faktiske filer lagret på disk. Disse virtuelle filene representerer hardvare, undersystemer, drivere med mer. Det er som en bro mellom kjernen og brukergrensesnittet, og lar oss inspisere og modifisere informasjon i kjernen.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2025-06-18/">
+                    18. juni 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 22. jun. 2025 | </span>
+                
+                <span>Pub: 18. jun. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>For å åpne filer med spesielle navn som <code>-</code> må vi angi banen: <code>cat ./-</code>.</li>
+<li>Vi kan sette sammen flere argumenter i <code>find</code>. som <code>-user [USERNAME] -group [GRUPPE] -size [STØRRELSE]</code>.</li>
+<li>Skjule &ldquo;error&rdquo; fra en fil med <code>find</code>: <code>2&gt; /dev/null</code>. <code>2</code> er &ldquo;stderr&rdquo;, altså &ldquo;error-strømmen&rdquo;, og den kan vi sende til &ldquo;null&rdquo; slik at det altså ikke returnerer noe.</li>
+<li><code>systemd</code> og <code>systemctl</code>: kommandoer for å kontrollere &ldquo;init-programmet&rdquo;.Det vil si status på operativsystemet under og etter oppstart.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        <li>
+            <h2>
+                <a href="/laeringslogg/2025-06-17/">
+                    17. juni 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Red: 22. jun. 2025 | </span>
+                
+                <span>Pub: 17. jun. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/linux/"> 
+         
+            #linux</a>
+         
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Når noe omtales som &ldquo;service&rdquo; så betyr det at tjenesten starter automatisk ved oppstart.</li>
+<li>Kan kjøre et program uten å låse terminalen ved å skrive <code>&amp;</code> etter kommandoen. F.eks: <code>obsidian &amp;</code>. Kalles en &ldquo;bash job&rdquo;.</li>
+<li>Apache2 er en web-server som kan være vert (&ldquo;host&rdquo;) for nettsider lokalt, og fungere som webhotell på nettet.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
         
         <li>
             <h2>
@@ -441,7 +925,7 @@
             <div>
                 <p class="last-posts-list__meta">
                 
-                <span>Red: 27. okt. 2024 | </span>
+                <span>Red: 25. jan. 2025 | </span>
                 
                 <span>Pub: 4. sep. 2024 | </span>    
                  
@@ -470,7 +954,7 @@
                 
                         
                 <ul>
-<li>Ønsker man å fjerne alt i en mappe fortsett fra én fil kan man i terminalen skrive:</li>
+<li>Ønsker man å fjerne alt i en mappe bortsett fra én fil kan man i terminalen skrive:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>rm -v -rf !(&#34;FIL_SOM_IKKE_SKAL_SLETTES&#34;)
 </span></span></code></pre></div><ul>
