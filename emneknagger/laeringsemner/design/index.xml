@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on Michael Helgesen</title>
-    <link>/emneknagger/laeringsemner/design/</link>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/design/</link>
     <description>Recent content in Design on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-04-26</title>
-      <link>/laeringslogg/2024-04-26/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-26/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</guid>
       <description>&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Det finnes ikke noe tilsvarende javascripts &lt;code&gt;switch&lt;/code&gt; i Hugo. Man må bruke &lt;code&gt;if else&lt;/code&gt; eller &lt;code&gt;with&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;with&lt;/code&gt; endrer konteksten av &amp;ldquo;dott&amp;rdquo; til et uttrykk (&amp;ldquo;expression&amp;rdquo;) og utfører kodeblokken dersom uttrykket er sant.&lt;/li&gt;&#xA;&lt;li&gt;Man kan begrese antall poster i &lt;code&gt;range&lt;/code&gt; med tall:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Med &lt;code&gt;where&lt;/code&gt; kan man &amp;ldquo;pipe&amp;rdquo; eller hekte på nummeret til slutt: &lt;code&gt;{{ where EXPR | 5 }}&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Med &lt;code&gt;range&lt;/code&gt; bruker man &lt;code&gt;first&lt;/code&gt;-nøkkelordet: &lt;code&gt;{{ range first 5 . }}&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;if and&lt;/code&gt; i hugo defineres på følgende måte: &lt;code&gt;{{ if and (eq EXPR) (eq EXPR) }}&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;.Kind&lt;/code&gt; i Hugo returnerer typen side, for eksempel &lt;code&gt;home&lt;/code&gt; &lt;code&gt;page&lt;/code&gt; &lt;code&gt;term&lt;/code&gt; og lignende.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jeg lærte meg at akronymet «CRAP» i design står for:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;contrast&lt;/li&gt;&#xA;&lt;li&gt;repetition&lt;/li&gt;&#xA;&lt;li&gt;alignment&lt;/li&gt;&#xA;&lt;li&gt;proximity&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nvim&#34;&gt;NVIM&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å lukke en bufferfil, så skriver man &lt;code&gt;:bd&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

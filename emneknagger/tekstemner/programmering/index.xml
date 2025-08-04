@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programmering on Michael Helgesen</title>
-    <link>/emneknagger/tekstemner/programmering/</link>
+    <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</link>
     <description>Recent content in Programmering on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sat, 21 Jun 2025 22:34:37 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/tekstemner/programmering/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Min Linux-maskin som en disk i Windows</title>
-      <link>/journal/linuxmaskin-som-disk-i-windows/</link>
+      <link>https://www.michaelhelgesen.no/journal/linuxmaskin-som-disk-i-windows/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>/journal/linuxmaskin-som-disk-i-windows/</guid>
+      <guid>https://www.michaelhelgesen.no/journal/linuxmaskin-som-disk-i-windows/</guid>
       <description>&lt;p&gt;Jeg fikk nylig en Windows-maskin på jobben i forbindelse med læring av C# og .NET. Det ble min fjerde laptop.&lt;/p&gt;&#xA;&lt;p&gt;Nå har jeg en med macOS, to med Linux og en med Windows. Jeg liker best å jobbe med nettsiden via kommandolinjen i Linux, og lurte derfor på om det var mulig å koble seg til Linux-maskinen via Windows, slik at jeg slipper å ha så mange maskiner å forholde meg til.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Endelig mulig å opprette sider i HUGO fra ekstern data!</title>
-      <link>/journal/sider-fra-data-i-hugo/</link>
+      <link>https://www.michaelhelgesen.no/journal/sider-fra-data-i-hugo/</link>
       <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
-      <guid>/journal/sider-fra-data-i-hugo/</guid>
+      <guid>https://www.michaelhelgesen.no/journal/sider-fra-data-i-hugo/</guid>
       <description>&lt;p&gt;I dag kom jeg helt tilfeldig over en &lt;a href=&#34;https://www.youtube.com/watch?v=UnfR2NiEhrM&#34; target=&#34;_blank&#34; class=&#34;external_link&#34;&gt;video på YouTube&lt;svg width=&#34;14px&#34; height=&#34;14px&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&#xA;    &lt;g id=&#34;Interface / External_Link&#34;&gt;&#xA;&lt;path id=&#34;Vector&#34; d=&#34;M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;&#xD;&#xA;    &lt;/g&gt;&#xD;&lt;/svg&gt;&lt;/a&gt; som opplyste om at HUGO nå endelig kan &lt;a href=&#34;https://gohugo.io/content-management/content-adapters/&#34; target=&#34;_blank&#34; class=&#34;external_link&#34;&gt;opprette sider fra ekstern data&lt;svg width=&#34;14px&#34; height=&#34;14px&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&#xA;    &lt;g id=&#34;Interface / External_Link&#34;&gt;&#xA;&lt;path id=&#34;Vector&#34; d=&#34;M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;&#xD;&#xA;    &lt;/g&gt;&#xD;&lt;/svg&gt;&lt;/a&gt; som blant annet JSON, YAML og XML.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Opprette sider i Hugo via API</title>
-      <link>/tekster/opprette-sider-i-hugo-via-api/</link>
+      <link>https://www.michaelhelgesen.no/tekster/opprette-sider-i-hugo-via-api/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/tekster/opprette-sider-i-hugo-via-api/</guid>
+      <guid>https://www.michaelhelgesen.no/tekster/opprette-sider-i-hugo-via-api/</guid>
       <description>&lt;p&gt;Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til &lt;a href=&#34;https://zotero.org&#34; target=&#34;_blank&#34; class=&#34;external_link&#34;&gt;Zotero&lt;svg width=&#34;14px&#34; height=&#34;14px&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&#xA;    &lt;g id=&#34;Interface / External_Link&#34;&gt;&#xA;&lt;path id=&#34;Vector&#34; d=&#34;M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;&#xD;&#xA;    &lt;/g&gt;&#xD;&lt;/svg&gt;&lt;/a&gt;, slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.&lt;/p&gt;</description>
     </item>
   </channel>

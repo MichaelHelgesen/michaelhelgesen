@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fedora on Michael Helgesen</title>
-    <link>/emneknagger/laeringsemner/fedora/</link>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/fedora/</link>
     <description>Recent content in Fedora on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/fedora/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-04-17</title>
-      <link>/laeringslogg/2024-04-17/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-17/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</guid>
       <description>&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;printf &amp;quot;%#v&amp;quot;&lt;/code&gt; printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;transform.Unmarshal&lt;/code&gt; endrer data til &amp;ldquo;map&amp;rdquo; eller &amp;ldquo;array&amp;rdquo; og fungerer med JSON, CSV, XML med mer.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;resource.GetRemote URL&lt;/code&gt; brukes for å koble til eksterne API-er.&lt;/li&gt;&#xA;&lt;li&gt;Å lage sider av data fra eksternt API&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;fedora&#34;&gt;Fedora&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Man kan angi tastatursnarveier for terminal-kommandoer under innstillinger / tastatur / egendefinert. Jeg satt opp &lt;code&gt;Alt + Home&lt;/code&gt; som snarvei for å åpne terminalen.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nvim&#34;&gt;NVIM&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;set wrap linebreak&lt;/code&gt; aktiverer linjebryting uten å dele ord.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

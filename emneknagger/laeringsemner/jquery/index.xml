@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jquery on Michael Helgesen</title>
-    <link>/emneknagger/laeringsemner/jquery/</link>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/jquery/</link>
     <description>Recent content in Jquery on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sat, 30 Nov 2024 09:45:28 +0100</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/jquery/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-11-29</title>
-      <link>/laeringslogg/2024-11-29/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-11-29/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-11-29/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-11-29/</guid>
       <description>&lt;h2 id=&#34;jquery&#34;&gt;jquery&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lærte om håndtering av klasser i jQuery: &lt;code&gt;.addclass&lt;/code&gt;, &lt;code&gt;removeClass&lt;/code&gt;, &lt;code&gt;hasClass&lt;/code&gt; og &lt;code&gt;toggleClass&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Lærte også at en kjede fortsetter dersom alle er sanne:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-jquery&#34; data-lang=&#34;jquery&#34;&gt;$div.hasClass(&amp;#34;active&amp;#34;).$div2.removeClass(&amp;#34;hidden&amp;#34;);&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>
