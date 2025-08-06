@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personvern on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/personvern/</link>
+    <link>https://www.michaelhelgesen/emneknagger/laeringsemner/personvern/</link>
     <description>Recent content in Personvern on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sun, 22 Jun 2025 00:23:04 +0200</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/personvern/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen/emneknagger/laeringsemner/personvern/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025-05-25</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2025-05-25/</link>
+      <link>https://www.michaelhelgesen/laeringslogg/2025-05-25/</link>
       <pubDate>Sun, 25 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2025-05-25/</guid>
+      <guid>https://www.michaelhelgesen/laeringslogg/2025-05-25/</guid>
       <description>&lt;h2 id=&#34;personvern&#34;&gt;personvern&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Det anbefales å bruke Gmail med ekte navn kun til korrespondanse med bank og det offentlige, ellers aldri.&lt;/li&gt;&#xA;&lt;li&gt;Gmail leser all din e-post&lt;/li&gt;&#xA;&lt;li&gt;E-postkryptering fungerer ikke, fordi mail må følge standard SMTP-protokoll som kommer med en &amp;ldquo;header&amp;rdquo; full av informasjon som IP, datamaskin-navn med mer. De kan kun krypteres internt i en felles tjeneste. Hvis vi begge har Proton-mail, så vil de kunne krypteres. Ønsker man kryptert utveksling må man bruke andre tjenester som Signal eller en protokoll som XMPP.&lt;/li&gt;&#xA;&lt;li&gt;Opprett egen e-post per tjeneste som krever e-post. På den måten vet man hvor eventuell spam kommer fra.&lt;/li&gt;&#xA;&lt;li&gt;Bruk Gmail med falskt navn for tjenester som krever en gmail-konto, slik som YouTube.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

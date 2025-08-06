@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Figma on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/figma/</link>
+    <link>https://www.michaelhelgesen/emneknagger/laeringsemner/figma/</link>
     <description>Recent content in Figma on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/figma/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen/emneknagger/laeringsemner/figma/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-05-25</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</link>
+      <link>https://www.michaelhelgesen/laeringslogg/2024-05-25/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-25/</guid>
+      <guid>https://www.michaelhelgesen/laeringslogg/2024-05-25/</guid>
       <description>&lt;h2 id=&#34;figma&#34;&gt;Figma&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Opprette varianter av komponenter&lt;/li&gt;&#xA;&lt;li&gt;Benytte plugins&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-05-24</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</link>
+      <link>https://www.michaelhelgesen/laeringslogg/2024-05-24/</link>
       <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-24/</guid>
+      <guid>https://www.michaelhelgesen/laeringslogg/2024-05-24/</guid>
       <description>&lt;h2 id=&#34;figma&#34;&gt;Figma&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Opprette variabler&lt;/li&gt;&#xA;&lt;li&gt;Lage komponenter&lt;/li&gt;&#xA;&lt;li&gt;«Tokenization»&lt;/li&gt;&#xA;&lt;li&gt;«Frames» vs «groups»&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-05-23</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</link>
+      <link>https://www.michaelhelgesen/laeringslogg/2024-05-23/</link>
       <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-23/</guid>
+      <guid>https://www.michaelhelgesen/laeringslogg/2024-05-23/</guid>
       <description>&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jeg kom bort i et problem med at alle lenker viste et ekstra mellomrom. Det har visst noe med oppsettet å gjøre, som sier noe sånt som at «legg til ny linje i enden av alle filer». Jeg fikk det bort ved å legge til &lt;code&gt;{{- &amp;quot;&amp;quot; -}}&lt;/code&gt; på slutten av «render_link.html hooken» som genererer koden til lenkene.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;figma&#34;&gt;Figma&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lærte å opprette maler&lt;/li&gt;&#xA;&lt;li&gt;Lage 8-punkts rutenett&lt;/li&gt;&#xA;&lt;li&gt;Aktivere «nudge» for en smidigere flytting av bokser. I menyen: «quick actions» -&amp;gt; «nudge»&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

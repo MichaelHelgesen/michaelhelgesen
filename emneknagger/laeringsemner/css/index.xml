@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</link>
+    <link>https://www.michaelhelgesen/emneknagger/laeringsemner/css/</link>
     <description>Recent content in Css on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sat, 21 Jun 2025 23:54:04 +0200</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen/emneknagger/laeringsemner/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025-03-25</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2025-03-25/</link>
+      <link>https://www.michaelhelgesen/laeringslogg/2025-03-25/</link>
       <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2025-03-25/</guid>
+      <guid>https://www.michaelhelgesen/laeringslogg/2025-03-25/</guid>
       <description>&lt;h2 id=&#34;css&#34;&gt;css&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bakgrunnsbilder bør alltiv være et designelement, og ikke en del av konteksten i innholdet. Dersom man ønsker kontekstuelle bilder som bakgrunn, bør de være vanlig &lt;code&gt;img&lt;/code&gt;-element, med position &amp;ldquo;absolute&amp;rdquo;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;typografi&#34;&gt;typografi&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;ldquo;woff2&amp;rdquo; er font-formatet man ideelt sett bør bruke på nettsider i skrivende stund.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-11-14</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-11-14/</link>
+      <link>https://www.michaelhelgesen/laeringslogg/2024-11-14/</link>
       <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-11-14/</guid>
+      <guid>https://www.michaelhelgesen/laeringslogg/2024-11-14/</guid>
       <description>&lt;h2 id=&#34;css&#34;&gt;css&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Når man angir &lt;code&gt;display: flex&lt;/code&gt; kan man også skrive &lt;code&gt;flex-flow: row wrap&lt;/code&gt; for å slippe å skrive &lt;code&gt;flex-wrap: wrap&lt;/code&gt; og &lt;code&gt;flex-direction: row&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-05-09</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</link>
+      <link>https://www.michaelhelgesen/laeringslogg/2024-05-09/</link>
       <pubDate>Thu, 09 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-09/</guid>
+      <guid>https://www.michaelhelgesen/laeringslogg/2024-05-09/</guid>
       <description>&lt;h2 id=&#34;css&#34;&gt;CSS&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jeg fant ut at man kan benytte negative verdier i CSS-variabler. Jeg benyttet dette i footer for å få den til å strekke seg ut til begge sider av nettleseren ved å konvertere til negative verdier.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;footer&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;margin&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;var&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;max) calc(&lt;span style=&#34;color:#a6e22e&#34;&gt;clamp&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;var&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;medium_2), &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;vw&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;var&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;large_2)) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;-1&lt;/span&gt;) calc(&lt;span style=&#34;color:#a6e22e&#34;&gt;clamp&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;var&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;medium_2), &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;vw&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;var&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;large_2)) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;-1&lt;/span&gt;) calc(&lt;span style=&#34;color:#a6e22e&#34;&gt;clamp&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;var&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;medium_2), &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;vw&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;var&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;large_2)) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;-1&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>2024-05-03</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-03/</link>
+      <link>https://www.michaelhelgesen/laeringslogg/2024-05-03/</link>
       <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-03/</guid>
+      <guid>https://www.michaelhelgesen/laeringslogg/2024-05-03/</guid>
       <description>&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I HUGO kan vi gruppere og omrokkere på lister med henholdsvis &lt;code&gt;range .Pages.GroupByDate&lt;/code&gt; og &lt;code&gt;range .Pages.ByDateReverse&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;css&#34;&gt;CSS&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jeg knotet veldig med «HSL»-farger i CSS, men det består altså av «hue», «saturation» og «lightness».&#xA;&lt;ul&gt;&#xA;&lt;li&gt;«Hue» er farge, fra 0 til 366. 0 er rød, 120 er grønn og 240 er blå.&lt;/li&gt;&#xA;&lt;li&gt;«Saturation» er hvor mange prosent grått man vil legge til. 0% er grått mens 100% er den fulle fargen.&lt;/li&gt;&#xA;&lt;li&gt;«Lightness» er hvor lys eller mørk en farge skal være. 0% er svart, 50% er den fulle fargen mens 100% er hvitt.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;hsl(0, 100%, 50%)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Man kan også bruke &lt;code&gt;hsla(0, 100%, 50%, 0.3)&lt;/code&gt; for å legge til gjennomsiktighet. Det er en verdi fra 0 til 1.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
