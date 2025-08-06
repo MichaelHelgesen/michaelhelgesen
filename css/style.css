@@ -140,7 +140,7 @@ p, header nav ul {
 }
 
 :root {
-    --base-color: hsl(35, 100%, 98%);
+    --base-color: hsl(35, 100%, 99%);
     --primary-color: hsl(0, 0%, 8%);
     --accent-color: hsl(360, 90%, 48%, 1);
     --accent-color-light: hsl(360, 90%, 48%, .05);
