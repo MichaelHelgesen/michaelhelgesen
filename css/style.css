@@ -288,10 +288,17 @@ figcaption a:hover {
     background: var(--accent-color);
     color: var(--base-color);
 }
-
+/*
 .kilde-list {
-    /*list-style-type: circle;
-    margin-left: 1rem; */
+    list-style-type: circle;
+    margin-left: 1rem; 
+}
+*/
+.kilde a span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: inherit;
 }
 
 .laeringslogg-homepage li {
@@ -371,6 +378,13 @@ figcaption a:hover {
     font-size: var(--medium_1);
     font-weight: 500;
     display: block;
+}
+
+article p a span {
+    align-items: center;
+    display: inline-flex;
+    gap: 4px;
+    text-decoration: inherit;
 }
 
 article code {
