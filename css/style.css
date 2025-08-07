@@ -5,7 +5,7 @@
   line-height: 1.6;
 }
 
-:where(h1, h2, h3, h4, h5, figure, p, ol, ul) {
+h1, h2, h3, h4, h5, figure, p, ol, ul {
   margin: 0;
 }
 
@@ -18,7 +18,7 @@ article ol, article ul {
     font-size: clamp(1rem, 0.9024rem + 0.4878vi, 1.25rem)
 }
 
-:where(h1, h2, h3, h4, h5) {
+h1, h2, h3, h4, h5 {
   font-size: inherit;
   font-weight: inherit;
   letter-spacing: -0.03ch;
