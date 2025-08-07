@@ -8,6 +8,20 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Css</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devtools</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/devtools/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/devtools/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Linux</title>
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/linux/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
@@ -26,13 +40,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/personvern/</link>
       <pubDate>Sun, 25 May 2025 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/personvern/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Css</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</link>
-      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</guid>
       <description></description>
     </item>
     <item>
@@ -180,13 +187,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/git/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/git/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Devtools</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/devtools/</link>
-      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/devtools/</guid>
       <description></description>
     </item>
     <item>

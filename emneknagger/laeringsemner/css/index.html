@@ -144,7 +144,7 @@
 
 <div class="intro sider tag">
 <h1>
-    #css <sup>4</sup>
+    #css <sup>5</sup>
 </h1>
     <p class="ingress">Ting jeg har lært om css</p>
     <span>
@@ -154,6 +154,76 @@
 
     <ul class="last-posts-list">
         
+        
+        <li>
+            <h2>
+                <a href="https://www.michaelhelgesen.no/laeringslogg/2025-08-07/">
+                    7. august 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
+                
+                <span>Pub: 7. aug. 2025 | </span>    
+                 
+ 
+
+    
+    
+         <a href="/emneknagger/laeringsemner/css/"> 
+        
+        #css</a>, 
+         <a href="/emneknagger/laeringsemner/devtools/"> 
+        
+            #devtools</a>
+        
+
+
+                </p>
+            </div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>Funksjonen <code>:where()</code> i CSS har jeg ingen tidligere erfaring med.</li>
+<li>Det er en funksjon som tar en selektor-liste som argument. Funksjonen velger da alle elementer som kan nås via en av selektorene i den angitte listen.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>:<span style="color:#a6e22e">where</span><span style="color:#f92672">(</span><span style="color:#f92672">header</span><span style="color:#f92672">,</span> <span style="color:#f92672">main</span><span style="color:#f92672">,</span> <span style="color:#f92672">footer</span><span style="color:#f92672">)</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><code>:where()</code> gir 0,0,0 i spesifisitet til selektorene, og er dermed lett å overstyre senere uten å måtte ha en enda mer nøyaktig spesifisering, som kan gjøre det vanskelig å holde kontroll på stilarket.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">btn</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">green</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Krever mer spesifikke selektorer for å overstyre */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">button</span>.<span style="color:#a6e22e">btn</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">green</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>:<span style="color:#a6e22e">where</span><span style="color:#f92672">(</span>.<span style="color:#a6e22e">btn</span><span style="color:#f92672">)</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">green</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Kan overstyre med vanlig spesifisitet */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">btn</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Kjekt å bruke for basisstiler som «reset», «layout» og tema, samt til «utility-klasser».</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
         
         <li>
             <h2>
