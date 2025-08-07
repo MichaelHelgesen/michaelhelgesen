@@ -24,6 +24,12 @@ h1, h2, h3, h4, h5 {
   letter-spacing: -0.03ch;
 }
 
+h1 {
+    font-size: var(--h1-size);
+    line-height: var(--h1-lineheight);
+    font-weight: var(--h1-weight);
+    margin-bottom: var(--medium_1);
+}
 
 img {
   display: block;
@@ -874,12 +880,12 @@ html {
     margin-top:  var(--medium_1);
 }
 
-.intro h1 {
+/*.intro h1 {
     font-size: var(--h1-size);
     line-height: var(--h1-lineheight);
     font-weight: var(--h1-weight);
     margin-bottom: var(--medium_1);
-}
+}*/
 
 .intro.blogg {
     margin-bottom: clamp(4rem, 10vw, 6rem);
