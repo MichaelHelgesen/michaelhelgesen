@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skrivemaskin</title>
+    <title>Next</title>
  <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
     
     <meta name="author" content="">
-  <link rel="canonical" href="http://www.michaelhelgesen.no/emneknagger/tekstemner/skrivemaskin/" itemprop="url" />
-<meta property="og:url" content="http://www.michaelhelgesen.no/emneknagger/tekstemner/skrivemaskin/">
+  <link rel="canonical" href="http://www.michaelhelgesen.no/emneknagger/laeringsemner/next/" itemprop="url" />
+<meta property="og:url" content="http://www.michaelhelgesen.no/emneknagger/laeringsemner/next/">
   <meta property="og:site_name" content="Michael Helgesen">
-  <meta property="og:title" content="Skrivemaskin">
+  <meta property="og:title" content="Next">
   <meta property="og:locale" content="nb">
   <meta property="og:type" content="website">
 
@@ -31,9 +31,9 @@
     
 
 
+<meta name="description" content="Ting jeg har lært om Next i læringsloggen.">
+<meta property="og:description" content="Ting jeg har lært om Next i læringsloggen.">
 
-<meta name="description" content="Tekster jeg har skrevet som omhandler Skrivemaskin.">
-<meta property="og:description" content="Tekster jeg har skrevet som omhandler Skrivemaskin.">
 
 </head>
 
@@ -113,15 +113,15 @@
                 
                 
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="http://www.michaelhelgesen.no/emneknagger/tekstemner/">
-                    <span itemprop="name">Tekstemner</span></a>
+                <a itemprop="item" href="http://www.michaelhelgesen.no/emneknagger/laeringsemner/">
+                    <span itemprop="name">Læringsemner</span></a>
                 /&nbsp;
                 <meta itemprop="position" content='3' />
             </li>         
             
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="http://www.michaelhelgesen.no/emneknagger/tekstemner/skrivemaskin/">
-                    <span itemprop="name">Skrivemaskin</span>
+                <a itemprop="item" href="http://www.michaelhelgesen.no/emneknagger/laeringsemner/next/">
+                    <span itemprop="name">Next</span>
                 </a>
                 <meta itemprop="position" content='4' />
             </li>
@@ -138,60 +138,79 @@
    <main>
        
 
-                
-                
+
+
 
 
 <div class="intro sider tag">
-                <h1>
-                    #Skrivemaskin <sup>1</sup>
-                </h1>
-                <p class="ingress">Tekster som omhandler skrivemaskin</p>
+<h1>
+    #next <sup>1</sup>
+</h1>
+    <p class="ingress">Ting jeg har lært om next</p>
     <span>
     
     </span>
 </div>
-<div >
+
+    <ul class="last-posts-list">
+        
+        
+        <li>
+            <h2>
+                <a href="http://www.michaelhelgesen.no/laeringslogg/2025-08-08/">
+                    8. august 2025
+
+                </a>
+            </h2>
+            <div>
+                <p class="last-posts-list__meta">
                 
-                <ul class="last-posts-list">
-                    
-                    <li>
-                        <span>Journal</span>
-                        <h2>
-                        <a href="http://www.michaelhelgesen.no/journal/facit-tp2-restaurert/">
-                            Facit TP2 skrivemaskin restaurert
-                        </a>
-                        </h2>
-                        <div>
-                            <p class="last-posts-list__meta">
-                                
-                                <span>Red: 6. aug. 2025 | </span>
-                                
-                                <span>Pub: 17. jun. 2025 | </span>    
-                                 
+                <span>Pub: 8. aug. 2025 | </span>    
+                 
  
 
     
     
-         <a href="/emneknagger/tekstemner/skrivemaskin/"> 
-         
-        #skrivemaskin</a>
-         
+         <a href="/emneknagger/laeringsemner/ngrok/"> 
+        
+        #ngrok</a>, 
+         <a href="/emneknagger/laeringsemner/snipcart/"> 
+        
+        #snipcart</a>, 
+         <a href="/emneknagger/laeringsemner/next/"> 
+        
+            #next</a>
+        
 
 
-                            </p>
-                        </div>
-                        
-                        <p class="last-posts-list__ingress">En svensk klassiker som ligger an til å bli en favoritt.</p>
-                        
-                       <a class="readmore" href="http://www.michaelhelgesen.no/journal/facit-tp2-restaurert/">Les videre</a>
-                    </li>
-                    
-                </ul>
-                
+                </p>
             </div>
-        </div>
-</div>
+             
+        <article class="logg">
+            
+            
+                
+                        
+                <ul>
+<li>«Routing» i Next er filbasert. Det betyr at strukturen av filer og mapper bestemmer banene i applikajonen.</li>
+<li>Fjerner behovet for egne konfigurasjonsfiler for «routing».</li>
+<li>Mapper under <code>app</code>-mappen i Next fungerer som rot-baner. En mappe kalt <code>blogg</code> i <code>app</code> vil skape banen <code>/blogg</code>.
+<ul>
+<li>For å gjøre mappen <code>blogg</code> tilgjengelig må vi legge til <code>page.tsx</code> eller <code>page.js</code>. I denne filen eksporteres en React-komponent som vises ved besøk.</li>
+</ul>
+</li>
+<li>«Nested routing» fungerer ved at man har mapper i mapper, for eksempel <code>app/om-oss/kontakt/page.tsx</code> vil konvereres til banen <code>/om-oss/kontakt</code>.</li>
+<li>Dynamisk «routing» brukes hvor man ikke vet navnet på forhånd, som for eksempel bloggposter eller artikler. Da benyttes <code>[]</code> som mappenavn. Eks: <code>app/blogg/[slug]/page.tsx</code> som for eksempel koverteres til <code>/blogg/test-post</code>. Verdien i <code>[]</code> blir en parameter som er tilgjengelig i side-komponenten.</li>
+</ul>
+
+            
+        </article>
+
+        </li>
+                    <li><hr></li>
+        
+        </ul>
+
 
    </main>
    

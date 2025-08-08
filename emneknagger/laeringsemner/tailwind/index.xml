@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tailwind on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/tailwind/</link>
+    <link>http://www.michaelhelgesen.no/emneknagger/laeringsemner/tailwind/</link>
     <description>Recent content in Tailwind on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/tailwind/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.michaelhelgesen.no/emneknagger/laeringsemner/tailwind/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-04-21</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</link>
+      <link>http://www.michaelhelgesen.no/laeringslogg/2024-04-21/</link>
       <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-21/</guid>
+      <guid>http://www.michaelhelgesen.no/laeringslogg/2024-04-21/</guid>
       <description>&lt;h2 id=&#34;javascript&#34;&gt;Javascript&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;hasOwnProperty(property)&lt;/code&gt;: En metode for å sjekke om angit egenskap er definert i gjeldende objekt eller prototype.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Object.setPrototypeOf(currentObject, targetObject)&lt;/code&gt;: Angi et objekt (targetObject) som gjeldende objekt (currentTarget) skal arve fra. Man kan arve metoder og egenskaper fra mange ulike objekter.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;call()&lt;/code&gt;: En metode for å kopiere egenskaper fra en construktor til et annet objekt. Men skal de linkes må det gjøres med &lt;code&gt;Object.setPropertyOf&lt;/code&gt;. Det oppstår ikke en automatisk link ved å bruke &lt;code&gt;call&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;this&lt;/code&gt;: I et objekt eller en prototype-metode refererer &lt;code&gt;this&lt;/code&gt; alltid til objektet før &amp;ldquo;dott&amp;rdquo; (.). Metoder deles, men ikke &amp;ldquo;state&amp;rdquo; eller tilstand.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;| less&lt;/code&gt;: &amp;ldquo;Pipe less&amp;rdquo; er en funksjon som stopper terminal fra å scrolle, og man kan selv styre visningen med piltastene. Et alternativ til &lt;code&gt;| more&lt;/code&gt; hvor man flytter seg en side av gangen ved å trykke mellomrom-tasten.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;tail-wind&#34;&gt;Tail wind&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Installerte Tailwind.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
