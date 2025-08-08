@@ -8,6 +8,20 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Ngrok</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/ngrok/</link>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/ngrok/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Snipcart</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/snipcart/</link>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/snipcart/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Css</title>
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/css/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
