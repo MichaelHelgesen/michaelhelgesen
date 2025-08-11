@@ -8,6 +8,27 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/tekstemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Nextjs</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/nextjs/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/nextjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programmering</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sanity</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/sanity/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/sanity/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Hjemmeserver</title>
       <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/hjemmeserver/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
@@ -75,13 +96,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/linux/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programmering</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</link>
-      <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</guid>
       <description></description>
     </item>
     <item>
