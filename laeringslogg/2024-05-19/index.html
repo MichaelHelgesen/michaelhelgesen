@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="/css/style.css">
     
     <meta name="author" content="">
-  <link rel="canonical" href="http://www.michaelhelgesen.no/laeringslogg/2024-05-19/" itemprop="url" />
-<meta property="og:url" content="http://www.michaelhelgesen.no/laeringslogg/2024-05-19/">
+  <link rel="canonical" href="https://www.michaelhelgesen.no/laeringslogg/2024-05-19/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/laeringslogg/2024-05-19/">
   <meta property="og:site_name" content="Michael Helgesen">
   <meta property="og:title" content="2024-05-19">
   <meta property="og:description" content="Hugo Jeg fant ut at HUGO ikke har støtte for «regular expressions» «look ahead» eller «capture groups». Jeg måtte derfor dele opp prosessen med å hente ut tekst fra en artikkel. Måtte først lage en regex-streng med $regExString := print `(?s)(?i)` $tag `&lt;\/h[0-9]&gt;.*?&lt;h[0-9]|(?s)(?i)` $tag `&lt;\/h[0-9]&gt;.*` (?s) betyr «single line mode» og ignorerer «whitespace» inkludert mellomrom, tabulator og ny linje. (?i) betyr at det ikke tas hensyn til om bokstavene er minuskler eller versaler. | betyr enten det før eller etter | (pipe). Får den ikke treff på søket før |, så søkes etter det på høyre siden. Deretter lage en variabel av søket. {{ $regExMatch := .Content | findRE $regExString }} Av punktet over fikk jeg en liste med treff som deretter måtte itereres over {{ range $regExmatch }}. Deretter måtte jeg opprette en ny regex for å luke bort uønsket HTML-kode. {{ range $regExMatch}} {{ $contentMatch := . | findRE `(?s)&lt;ul&gt;.*?&lt;h|(?s)&lt;ul&gt;.*`}} {{ $content := strings.TrimRight &#34;&lt;h&#34; (index $contentMatch 0)}} {{ $content | safeHTML}} {{ end }} En navigasjonsmeny defineres i config.toml i HUGO: [menus] [[menu main]] name = &#34;Hjem&#34; pageref = &#34;/&#34; weight = 10 Menyen kan vises i maler på følgende vis: {{ range site.Menus.main }}. Med {{- if $page.IsMenuCurrent &#34;main&#34; . }} kan vi gi en menyelement en egen klasse om det er den aktive siden. Og med $page.HasMenuCurrent &#34;main&#34; kan vi gi sørge for at toppnivået i menyen får en egen klasse, selv om vi er på en underside. ">
@@ -26,8 +26,8 @@
 
 
 
-<meta property="og:image" content="http://www.michaelhelgesen.no//images/mikke.webp"/>
-          <meta property="og:image:secure_url" content="http://www.michaelhelgesen.no/images/mikke.webp"/>
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
           
 
           
@@ -112,19 +112,19 @@
 
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="http://www.michaelhelgesen.no/">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/">
                     <span itemprop="name">Hjem</span></a>
                 /&nbsp;
                 <meta itemprop="position" content='1' />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="http://www.michaelhelgesen.no/laeringslogg/">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/laeringslogg/">
                     <span itemprop="name">Læringslogg</span></a>
                 /&nbsp;
                 <meta itemprop="position" content='2' />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="http://www.michaelhelgesen.no/laeringslogg/2024-05-19/">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/laeringslogg/2024-05-19/">
                     <span itemprop="name">2024-05-19</span>
                 </a>
                 <meta itemprop="position" content='3' />
@@ -215,16 +215,16 @@
 <p> 
 Send meg gjerne 
 <style>
-  #span-8208e6e2.cloaked-e-mail:before {
+  #span-99f1045a.cloaked-e-mail:before {
     content:attr(data-domain) "\0040" attr(data-user);
     unicode-bidi:bidi-override;
     direction:rtl;
   }
 </style>
-&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-8208e6e2"></span>&#32;
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-99f1045a"></span>&#32;
 
-<script id="script-8208e6e2">
-  var scriptTag = document.getElementById("script-8208e6e2");
+<script id="script-99f1045a">
+  var scriptTag = document.getElementById("script-99f1045a");
   var link = document.createElement("a");
   var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "91-50-4202 nedis edneågnA=tcejbus".split('').reverse().join('');
   link.href = "mailto" + ":" + address;
@@ -240,6 +240,8 @@ Send meg gjerne
 
 
 
+
+    
 
     
 

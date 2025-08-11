@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="/css/style.css">
     
     <meta name="author" content="">
-  <link rel="canonical" href="http://www.michaelhelgesen.no/laeringslogg/2025-07-03/" itemprop="url" />
-<meta property="og:url" content="http://www.michaelhelgesen.no/laeringslogg/2025-07-03/">
+  <link rel="canonical" href="https://www.michaelhelgesen.no/laeringslogg/2025-07-03/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/laeringslogg/2025-07-03/">
   <meta property="og:site_name" content="Michael Helgesen">
   <meta property="og:title" content="2025-07-03">
   <meta property="og:description" content="linux Lært om oppstartsprosessen («boot») i Ubuntu. BIOS / UEFI Bootloader Linux-kjernen («kernel») initramfs «root»-filsystemet monteres Første prosess (PID1), gjerne et «init»-system som systemd systemd BIOS / UEFI BIOS er eldre og mindre fleksibelt sammenlignet med UEFI. UEFI er moderne og mer fancy. UEFI lar oss spesifisere en utvalgt partisjon i egendefinert størrelse for «bootloader». BIOS bruker kun meget begrenset plass i første sektor av disken (MBR). Sjekk sys/firmware/efi om du bruker UEFI eller ikke. Bootloader Bruker gjerne GRUB. Laster kjernen inn i minnet. Initialiserer et minimum av hardvare som trengs for oppstart av systemet. Finner OS-er, og starter det som velges. Kjernen («kernel») Kjernen til OS-et, og selve Linux. Trenger informasjon i startfasen, slik som drivere for å kunne kommunisere med hardvare. De er lagret i initrd eller initramfs og lastes sammens med kjernen. Kan sende parametre til kjernen under boot via GRUB-konfigurasjon. Logger Linux loggfører mye under oppstart som lagres i filer. Når kjernen booter kan den ikke skrive til fil, så den lagrer i noe som kalles «ring buffer» i minnet. Dette kan sees i dmesg, /varlog/dmesg. Kan også se journalctl -k for kjerne-logg, og journalctl -b for boot-logg. Se også /var/log/boot. Etter initialisering vil syslog daemon logge beskjeder. Den opprettholdes ved omstart var/log/messages. Init Starter tjenester og andre programmer som webserver, grafisk grensenitt, nettverk osv. Tenke på det som “jeg trenger tjeneste A og B. Deretter C og D. Men ikke start D før før A og B kjører”. Kan bruke init-systemet etter oppstart for å manipulere prosesser senere. Typer init-systemer: systemd, upstart og SysVinit. Init-prosessen har ID1. Se via ps -p1. systemd Manipulere systemet etter oppstart. Laget rundt konseptet «enheter». «Enhet» kan være tjeneste eller handling. Har navn, typebetegnelse og fil. 12 ulike typer: automount device mount path scope service slice snapshot socket swap target timer ">
@@ -26,8 +26,8 @@
 
 
 
-<meta property="og:image" content="http://www.michaelhelgesen.no//images/mikke.webp"/>
-          <meta property="og:image:secure_url" content="http://www.michaelhelgesen.no/images/mikke.webp"/>
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
           
 
           
@@ -112,19 +112,19 @@
 
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="http://www.michaelhelgesen.no/">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/">
                     <span itemprop="name">Hjem</span></a>
                 /&nbsp;
                 <meta itemprop="position" content='1' />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="http://www.michaelhelgesen.no/laeringslogg/">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/laeringslogg/">
                     <span itemprop="name">Læringslogg</span></a>
                 /&nbsp;
                 <meta itemprop="position" content='2' />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="http://www.michaelhelgesen.no/laeringslogg/2025-07-03/">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/laeringslogg/2025-07-03/">
                     <span itemprop="name">2025-07-03</span>
                 </a>
                 <meta itemprop="position" content='3' />
@@ -259,16 +259,16 @@
 <p> 
 Send meg gjerne 
 <style>
-  #span-194f0d66.cloaked-e-mail:before {
+  #span-5a40e086.cloaked-e-mail:before {
     content:attr(data-domain) "\0040" attr(data-user);
     unicode-bidi:bidi-override;
     direction:rtl;
   }
 </style>
-&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-194f0d66"></span>&#32;
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-5a40e086"></span>&#32;
 
-<script id="script-194f0d66">
-  var scriptTag = document.getElementById("script-194f0d66");
+<script id="script-5a40e086">
+  var scriptTag = document.getElementById("script-5a40e086");
   var link = document.createElement("a");
   var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "30-70-5202 nedis edneågnA=tcejbus".split('').reverse().join('');
   link.href = "mailto" + ":" + address;
@@ -284,6 +284,8 @@ Send meg gjerne
 
 
 
+
+    
 
     
 

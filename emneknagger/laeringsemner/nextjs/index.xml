@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Snipcart on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/snipcart/</link>
-    <description>Recent content in Snipcart on Michael Helgesen</description>
+    <title>Nextjs on Michael Helgesen</title>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nextjs/</link>
+    <description>Recent content in Nextjs on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Mon, 11 Aug 2025 14:47:22 +0200</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/snipcart/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Aug 2025 14:47:47 +0200</lastBuildDate>
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/nextjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025-08-11</title>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2025-08-11/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2025-08-11/</guid>
+      <description>&lt;h2 id=&#34;nextjs&#34;&gt;nextjs&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å benytte miljøvariabler fra &lt;code&gt;.env&lt;/code&gt;-fil i NextJS, må vi skille mellom hva som skal være tilgjengelig i nettleser og på server.&lt;/li&gt;&#xA;&lt;li&gt;Det som kun skal være tilgjengelig på server kan benytte &lt;code&gt;process.env.VAR-NAVN&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Det som skal være tilgjengelig i nettleseren må bruke &lt;code&gt;process.env.NEXT_PUBLIC_VAR_NAVN&lt;/code&gt;. &lt;code&gt;NEXT_PUBLIC_&lt;/code&gt; må altså være starten av variabel-navnet.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>2025-08-08</title>
       <link>https://www.michaelhelgesen.no/laeringslogg/2025-08-08/</link>
