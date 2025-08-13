@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nextjs</title>
+    <title>2025-08-13</title>
  <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
     
     <meta name="author" content="">
-  <link rel="canonical" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/nextjs/" itemprop="url" />
-<meta property="og:url" content="https://www.michaelhelgesen.no/emneknagger/laeringsemner/nextjs/">
+  <link rel="canonical" href="https://www.michaelhelgesen.no/laeringslogg/2025-08-13/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/laeringslogg/2025-08-13/">
   <meta property="og:site_name" content="Michael Helgesen">
-  <meta property="og:title" content="Nextjs">
+  <meta property="og:title" content="2025-08-13">
+  <meta property="og:description" content="nextjs Lært om oppbygning av applikasjon i Next.js: /my-next-app ├── public/ ├── src/ │ ├── app/ │ │ ├── page.tsx │ │ ├── layout.tsx │ │ ├── kontakt/ │ │ │ └── page.ts │ │ ├── [slug]/ │ │ │ └── page.tsx │ │ └── globale.cs │ │ │ ├── components/ │ │ ├── Header.tsx │ │ ├── Footer.tsx │ │ └── PortableText.tsx │ │ │ ├── lib/ │ │ ├── sanity.t │ │ └── utils.t │ │ │ ├── types/ │ │ └── page.t │ │ │ ├── styles/ │ │ └── globals.css │ │ │ └── hooks/ │ └── useWindowSize.ts │ ├── .env.local ├── next.config.j ├── tsconfig.jso └── package.json public: Statisk innhold som bilder, favicon, PDF-er og så videre. Kopieres til rot ved bygging. src: Organisatorisk mappe. Anbefales for orden. app: Next.js-ruter (App router). page.tsx: Forsiden. layout.tsx: Grunnleggende layout, som &lt;htm&gt;, &lt;head&gt;, &lt;body&gt;. kontakt: Eksempel på statisk underside. page.tsx: Innhold på statisk side /kontakt. [slug]: Dynamiske sider, for eksempel innhold fra CMS. page.tsx: Innhold på dynamiske sider. global.css: Felles CSS/typografi. Kan benyttes for små prosjekter. For større applikasjoner, hvor CSS bør deles opp, brukes heller /styles/globals.css og flere. components: Gjenbrukbare React-komponenter. Header.tsx: Eksempel på React-komponent. lib: Funksjoner, API-kall, konfigurasjoner. sanity.ts: Eksempel. types: Typescript-typer. page.ts: Eksempel. styles: CSS-moduler eller globale stilark. Brukes gjerne for større prosjekter. globals.css: Eksempel. hooks: Egne React-hooks. useWindowSize.ts: Eksempel. .env.local: Miljøvariabler. next.config.js: Konfigurasjon av Next.js. tsconfig.json: Typescript-innstillinger. package.json med mer
+--- .env.local i Next.js: Filen må ligge på rot. Variabler som skal være tilgjengelig i Frontend på inkludere prefikset NEXT_PUBLIC_. Eksempel NEXT_PUBLIC_API_URL. Variabler for backend trenger ikke spesielle prefiks. Brukes på følgende måte i koden: process.env.NEXT_PUBLIC_API_URL. sanity .env.local i Sanity: Variabler som har prefikset SANITY_STUDIO_ blir automatisk inkludert i Sanity CLI-verktøy, utviklingsserveren og «bundler». Brukes på følgende måte: process.env.SANITY_STUDIO_… ">
   <meta property="og:locale" content="nb">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="laeringslogg">
+    <meta property="article:published_time" content="2025-08-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-13T12:56:30+02:00">
 
 
 
@@ -29,10 +34,23 @@
           
 
     
+        
+        
+            
+                
+                
+                      
+                
+            
+                
+                      
+                
+            
+        
+<meta name="description" content="En punktliste over ting jeg lærte om  nextjs og sanity.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om  nextjs og sanity.">
 
 
-<meta name="description" content="Ting jeg har lært om Nextjs i læringsloggen.">
-<meta property="og:description" content="Ting jeg har lært om Nextjs i læringsloggen.">
 
 
 </head>
@@ -61,10 +79,10 @@
       <a href="/journal/">Journal</a>
     </li>
 <li>
-      <a href="/laeringslogg/">Læringslogg</a>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
     </li>
 <li>
-      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+      <a href="/emneknagger/">Emneknagger</a>
     </li>
 <li>
       <a href="/kilder/">Kilder</a>
@@ -99,34 +117,25 @@
 
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="/">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/">
                     <span itemprop="name">Hjem</span></a>
-                /&nbsp; 
+                /&nbsp;
                 <meta itemprop="position" content='1' />
-            </li>         
+            </li>
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="/emneknagger">
-                    <span itemprop="name">Emneknagger</span></a>
-                /&nbsp; 
+                <a itemprop="item" href="https://www.michaelhelgesen.no/laeringslogg/">
+                    <span itemprop="name">Læringslogg</span></a>
+                /&nbsp;
                 <meta itemprop="position" content='2' />
             </li>
-                
-                
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/">
-                    <span itemprop="name">Læringsemner</span></a>
-                /&nbsp;
-                <meta itemprop="position" content='3' />
-            </li>         
-            
             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/nextjs/">
-                    <span itemprop="name">Nextjs</span>
+                <a itemprop="item" href="https://www.michaelhelgesen.no/laeringslogg/2025-08-13/">
+                    <span itemprop="name">2025-08-13</span>
                 </a>
-                <meta itemprop="position" content='4' />
+                <meta itemprop="position" content='3' />
             </li>
     </ol>
-
+    
 
         
     </div>
@@ -136,39 +145,18 @@
 
    
    <main>
-       
+         
 
-
-
-
-
-<div class="intro sider tag">
-<h1>
-    #nextjs <sup>3</sup>
-</h1>
-    <p class="ingress">Ting jeg har lært om nextjs</p>
-    <span>
+<article>
     
-    Jeg har også skrevet tekster om denne emneknaggen. <a href=/emneknagger/tekstemner/nextjs> Se dem her.</a>
+        <div class="intro blogg">
     
-    </span>
-</div>
-
-    <ul class="last-posts-list">
-        
-        
-        <li>
-            <h2>
-                <a href="https://www.michaelhelgesen.no/laeringslogg/2025-08-13/">
-                    13. august 2025
-
-                </a>
-            </h2>
-            <div>
-                <p class="last-posts-list__meta">
-                
-                <span>Pub: 13. aug. 2025 | </span>    
-                 
+    
+        <h1>13. august 2025</h1>
+        <p class="last-posts-list__meta">
+            
+            <span>Pub: 13. aug. 2025 | </span>    
+             
  
 
     
@@ -182,15 +170,15 @@
         
 
 
-                </p>
-            </div>
-             
-        <article class="logg">
+        </p>
+    
+        </div>
+        <section>
+    
             
-            
-                
-                        
-                <ul>
+        
+    <h2 id="nextjs">nextjs</h2>
+<ul>
 <li>Lært om oppbygning av applikasjon i Next.js:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/my-next-app
@@ -290,112 +278,287 @@
 </ul>
 </li>
 </ul>
-
-            
-        </article>
-
-        </li>
-                    <li><hr></li>
-        
-        <li>
-            <h2>
-                <a href="https://www.michaelhelgesen.no/laeringslogg/2025-08-11/">
-                    11. august 2025
-
-                </a>
-            </h2>
-            <div>
-                <p class="last-posts-list__meta">
-                
-                <span>Pub: 11. aug. 2025 | </span>    
-                 
- 
-
-    
-    
-         <a href="/emneknagger/laeringsemner/nextjs/"> 
-         
-            #nextjs</a>
-         
-
-
-                </p>
-            </div>
-             
-        <article class="logg">
-            
-            
-                
-                        
-                <ul>
-<li>For å benytte miljøvariabler fra <code>.env</code>-fil i NextJS, må vi skille mellom hva som skal være tilgjengelig i nettleser og på server.</li>
-<li>Det som kun skal være tilgjengelig på server kan benytte <code>process.env.VAR-NAVN</code>.</li>
-<li>Det som skal være tilgjengelig i nettleseren må bruke <code>process.env.NEXT_PUBLIC_VAR_NAVN</code>. <code>NEXT_PUBLIC_</code> må altså være starten av variabel-navnet.</li>
-</ul>
-
-            
-        </article>
-
-        </li>
-                    <li><hr></li>
-        
-        <li>
-            <h2>
-                <a href="https://www.michaelhelgesen.no/laeringslogg/2025-08-08/">
-                    8. august 2025
-
-                </a>
-            </h2>
-            <div>
-                <p class="last-posts-list__meta">
-                
-                <span>Red: 11. aug. 2025 | </span>
-                
-                <span>Pub: 8. aug. 2025 | </span>    
-                 
- 
-
-    
-    
-         <a href="/emneknagger/laeringsemner/ngrok/"> 
-        
-        #ngrok</a>, 
-         <a href="/emneknagger/laeringsemner/snipcart/"> 
-        
-        #snipcart</a>, 
-         <a href="/emneknagger/laeringsemner/nextjs/"> 
-        
-            #nextjs</a>
-        
-
-
-                </p>
-            </div>
-             
-        <article class="logg">
-            
-            
-                
-                        
-                <ul>
-<li>«Routing» i Next er filbasert. Det betyr at strukturen av filer og mapper bestemmer banene i applikajonen.</li>
-<li>Fjerner behovet for egne konfigurasjonsfiler for «routing».</li>
-<li>Mapper under <code>app</code>-mappen i Next fungerer som rot-baner. En mappe kalt <code>blogg</code> i <code>app</code> vil skape banen <code>/blogg</code>.
+<h2 id="sanity">sanity</h2>
 <ul>
-<li>For å gjøre mappen <code>blogg</code> tilgjengelig må vi legge til <code>page.tsx</code> eller <code>page.js</code>. I denne filen eksporteres en React-komponent som vises ved besøk.</li>
+<li><code>.env.local</code> i Sanity:
+<ul>
+<li>Variabler som har prefikset <code>SANITY_STUDIO_</code> blir automatisk inkludert i Sanity CLI-verktøy, utviklingsserveren og «bundler».</li>
+<li>Brukes på følgende måte: <code>process.env.SANITY_STUDIO_</code>&hellip;</li>
 </ul>
 </li>
-<li>«Nested routing» fungerer ved at man har mapper i mapper, for eksempel <code>app/om-oss/kontakt/page.tsx</code> vil konvereres til banen <code>/om-oss/kontakt</code>.</li>
-<li>Dynamisk «routing» brukes hvor man ikke vet navnet på forhånd, som for eksempel bloggposter eller artikler. Da benyttes <code>[]</code> som mappenavn. Eks: <code>app/blogg/[slug]/page.tsx</code> som for eksempel koverteres til <code>/blogg/test-post</code>. Verdien i <code>[]</code> blir en parameter som er tilgjengelig i side-komponenten.</li>
 </ul>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-6544daa1.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-6544daa1"></span>&#32;
 
-            
-        </article>
+<script id="script-6544daa1">
+  var scriptTag = document.getElementById("script-6544daa1");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "31-80-5202 nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
 
-        </li>
-                    <li><hr></li>
-        
-        </ul>
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
 
 
    </main>
@@ -421,10 +584,10 @@
       <a href="/journal/">Journal</a>
     </li>
 <li>
-      <a href="/laeringslogg/">Læringslogg</a>
+      <a aria-current="true" class="ancestor" href="/laeringslogg/">Læringslogg</a>
     </li>
 <li>
-      <a aria-current="true" class="ancestor" href="/emneknagger/">Emneknagger</a>
+      <a href="/emneknagger/">Emneknagger</a>
     </li>
 <li>
       <a href="/kilder/">Kilder</a>
