@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Michael Helgesen</title>
-    <link>/emneknagger/laeringsemner/git/</link>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/git/</link>
     <description>Recent content in Git on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Thu, 19 Sep 2024 09:19:02 +0200</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-05-06</title>
-      <link>/laeringslogg/2024-05-06/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-05-06/</link>
       <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-05-06/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-05-06/</guid>
       <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å tilbakestille en «git commit» kan vi bruke &lt;code&gt;git reset&lt;/code&gt;. Det vil kansellere alt som er i en «commit» men foreløpig ikke «pushed».&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Vær forsiktig med dette, da endringer utført kan forsvinne. Jeg snakker av erfaring.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-04-23</title>
-      <link>/laeringslogg/2024-04-23/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-23/</link>
       <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-23/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-23/</guid>
       <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hvis man ønsker å angre &lt;code&gt;git commit&lt;/code&gt; kan man skrive &lt;code&gt;git reset&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;isset&lt;/code&gt;: Sjekker om nøkkel eksisterer. For eksempel &lt;code&gt;{{ if isset .Type }}&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;if&lt;/code&gt;: Sjekker om uttrykk er sant.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;if eq&lt;/code&gt;: Sammenligner to argumenter.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;if not&lt;/code&gt;: Returnerer &lt;code&gt;bool&lt;/code&gt; av argument.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;dict &amp;quot;key&amp;quot; &amp;quot;value&amp;quot;&lt;/code&gt;: Kalles å lage en &amp;ldquo;map&amp;rdquo; fra en liste av nøkler og verdier. Er tilsvarende et objekt i JavaScript.&lt;/li&gt;&#xA;&lt;li&gt;Vi kan sende variabler i &amp;ldquo;partial templates&amp;rdquo;: &lt;code&gt;{{ partial &amp;quot;list.html&amp;quot; (dict &amp;quot;A&amp;quot; 1 &amp;quot;B&amp;quot; 2)}}&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

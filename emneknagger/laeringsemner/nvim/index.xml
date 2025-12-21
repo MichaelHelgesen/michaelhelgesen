@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nvim on Michael Helgesen</title>
-    <link>/emneknagger/laeringsemner/nvim/</link>
+    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/</link>
     <description>Recent content in Nvim on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Sun, 27 Oct 2024 18:27:43 +0100</lastBuildDate>
-    <atom:link href="/emneknagger/laeringsemner/nvim/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/nvim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024-09-11</title>
-      <link>/laeringslogg/2024-09-11/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-09-11/</link>
       <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-09-11/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-09-11/</guid>
       <description>&lt;h2 id=&#34;curl&#34;&gt;Curl&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å se statusinformasjon om forespørselen så legger man til &lt;code&gt;-i&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Ønsker man å skrive en kommando over flere linjer i kommandolinjen kan vi benytte &lt;code&gt;\&lt;/code&gt; deretter linjeskift, for å gå til neste linje.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nvim&#34;&gt;NVIM&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å se terminalen i Neovim kan vi skrive &lt;code&gt;:terminal&lt;/code&gt; eller &lt;code&gt;:term&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å lage et Docker «image» fra en Dockerfil skriver man &lt;code&gt;docker build .&lt;/code&gt; fra banen med Dockerfilen i.&lt;/li&gt;&#xA;&lt;li&gt;Ønsker man å gi den en emneknagg kan man skrive følgende: &lt;code&gt;docker build -t EMNEKNAGG .&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;For å starte en Docker «deamon»: &lt;code&gt;systemctl start docker&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Se alle «images»: &lt;code&gt;docker images&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Starte en Docker «container» fra «image»: &lt;code&gt;docker run IMAGE-NAVN&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Angi port ved opprettelse av «container»: &lt;code&gt;docker run -d -p NY_PORT:CONTAINER_PORT IMAGE-NAVN&lt;/code&gt;. &lt;code&gt;-d&lt;/code&gt; betyr at prosessen skal kjøre i bakgrunnen, mens &lt;code&gt;-p&lt;/code&gt; står for port.&lt;/li&gt;&#xA;&lt;li&gt;Docker «compose» lar oss kjøre flere «images» med felles innstillinger. Da slipper man å gjøre det manuelt flere ganger. Først må man lage en fil &lt;code&gt;docker-compose.yml&lt;/code&gt;, med for eksempel følgende kode:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;: &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;web&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;build&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;.&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;: &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;5000:5000&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;: &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;.:/app&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>2024-04-26</title>
-      <link>/laeringslogg/2024-04-26/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-26/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-26/</guid>
       <description>&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Det finnes ikke noe tilsvarende javascripts &lt;code&gt;switch&lt;/code&gt; i Hugo. Man må bruke &lt;code&gt;if else&lt;/code&gt; eller &lt;code&gt;with&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;with&lt;/code&gt; endrer konteksten av &amp;ldquo;dott&amp;rdquo; til et uttrykk (&amp;ldquo;expression&amp;rdquo;) og utfører kodeblokken dersom uttrykket er sant.&lt;/li&gt;&#xA;&lt;li&gt;Man kan begrese antall poster i &lt;code&gt;range&lt;/code&gt; med tall:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Med &lt;code&gt;where&lt;/code&gt; kan man &amp;ldquo;pipe&amp;rdquo; eller hekte på nummeret til slutt: &lt;code&gt;{{ where EXPR | 5 }}&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Med &lt;code&gt;range&lt;/code&gt; bruker man &lt;code&gt;first&lt;/code&gt;-nøkkelordet: &lt;code&gt;{{ range first 5 . }}&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;if and&lt;/code&gt; i hugo defineres på følgende måte: &lt;code&gt;{{ if and (eq EXPR) (eq EXPR) }}&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;.Kind&lt;/code&gt; i Hugo returnerer typen side, for eksempel &lt;code&gt;home&lt;/code&gt; &lt;code&gt;page&lt;/code&gt; &lt;code&gt;term&lt;/code&gt; og lignende.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jeg lærte meg at akronymet «CRAP» i design står for:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;contrast&lt;/li&gt;&#xA;&lt;li&gt;repetition&lt;/li&gt;&#xA;&lt;li&gt;alignment&lt;/li&gt;&#xA;&lt;li&gt;proximity&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nvim&#34;&gt;NVIM&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å lukke en bufferfil, så skriver man &lt;code&gt;:bd&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-04-19</title>
-      <link>/laeringslogg/2024-04-19/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-19/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-19/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-19/</guid>
       <description>&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lærte at &lt;code&gt;url&lt;/code&gt; i frontmatter brukes for å angi manuell adresse til en side.&lt;/li&gt;&#xA;&lt;li&gt;Lært at &lt;code&gt;resources.Copy&lt;/code&gt; kan kopiere en ressurs.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;tags&lt;/code&gt; kan også få eget design ved å legge til `content/tags/[tagnavn]/_index.md&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nvim&#34;&gt;NVIM&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;:e [bane][filnavn]&lt;/code&gt;: åpne ny fil uten å lukke den gjeldende.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;:bn&lt;/code&gt; / &lt;code&gt;br&lt;/code&gt;: Bytte mellom åpne filer.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;:w [filnavn]&lt;/code&gt;: Kopiere gjeldende fil til nytt filnavn, men holde gjeldende fil åpen.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;:sav [filnavn]&lt;/code&gt;: Kopiere gjeldende fil til nytt filnavn, og åpne den nye filen.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;f [bokstav]&lt;/code&gt; / &lt;code&gt;F [bokstav]&lt;/code&gt;: Hoppe frem og tilbake til angitt bokstav.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;t [bokstav]&lt;/code&gt; / &lt;code&gt;T [bokstav]&lt;/code&gt;: Hoppe frem og tilbake til plassen før angitt bokstav.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-04-17</title>
-      <link>/laeringslogg/2024-04-17/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-17/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-17/</guid>
       <description>&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;printf &amp;quot;%#v&amp;quot;&lt;/code&gt; printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;transform.Unmarshal&lt;/code&gt; endrer data til &amp;ldquo;map&amp;rdquo; eller &amp;ldquo;array&amp;rdquo; og fungerer med JSON, CSV, XML med mer.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;resource.GetRemote URL&lt;/code&gt; brukes for å koble til eksterne API-er.&lt;/li&gt;&#xA;&lt;li&gt;Å lage sider av data fra eksternt API&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;fedora&#34;&gt;Fedora&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Man kan angi tastatursnarveier for terminal-kommandoer under innstillinger / tastatur / egendefinert. Jeg satt opp &lt;code&gt;Alt + Home&lt;/code&gt; som snarvei for å åpne terminalen.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nvim&#34;&gt;NVIM&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;set wrap linebreak&lt;/code&gt; aktiverer linjebryting uten å dele ord.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>2024-04-16</title>
-      <link>/laeringslogg/2024-04-16/</link>
+      <link>https://www.michaelhelgesen.no/laeringslogg/2024-04-16/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>/laeringslogg/2024-04-16/</guid>
+      <guid>https://www.michaelhelgesen.no/laeringslogg/2024-04-16/</guid>
       <description>&lt;h2 id=&#34;nvim&#34;&gt;NVIM&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å legge til en ny fil i Explore-modus så taster man prosenttegn &lt;code&gt;%&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;«Redo» i VIM er &lt;code&gt;Ctrl + R&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
