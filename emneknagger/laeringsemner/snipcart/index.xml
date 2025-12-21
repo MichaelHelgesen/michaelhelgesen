@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Snipcart on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/snipcart/</link>
+    <link>/emneknagger/laeringsemner/snipcart/</link>
     <description>Recent content in Snipcart on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
     <lastBuildDate>Mon, 11 Aug 2025 14:47:22 +0200</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/snipcart/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/emneknagger/laeringsemner/snipcart/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025-08-08</title>
-      <link>https://www.michaelhelgesen.no/laeringslogg/2025-08-08/</link>
+      <link>/laeringslogg/2025-08-08/</link>
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/laeringslogg/2025-08-08/</guid>
+      <guid>/laeringslogg/2025-08-08/</guid>
       <description>&lt;h2 id=&#34;ngrok&#34;&gt;ngrok&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;En tjeneste som kan eksponere en lokal utviklingsserver, som &lt;code&gt;http://localhost:3000&lt;/code&gt; til internett via en URL som for eksempel &lt;code&gt;https://fancy-url.ngrok.no&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Installeres med &lt;code&gt;npm install -g ngrok&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Kan enkelt gjøre lokale apper tilgjengelig for eksterne tjenester eller kunder, uten behov for å «deploye» noe.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;snipcart&#34;&gt;snipcart&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Et alternativ til Stripe, Shopify og andre.&lt;/li&gt;&#xA;&lt;li&gt;Tar i skrivende stund kun en bestemt prosent av salget. Ellers gratis å bruke.&lt;/li&gt;&#xA;&lt;li&gt;Enkelt oppsett, og betaling foregår med kort og PayPal.&lt;/li&gt;&#xA;&lt;li&gt;Mange færre funksjoner sammenlignet med for eksempel Shopify.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nextjs&#34;&gt;nextjs&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;«Routing» i Next er filbasert. Det betyr at strukturen av filer og mapper bestemmer banene i applikajonen.&lt;/li&gt;&#xA;&lt;li&gt;Fjerner behovet for egne konfigurasjonsfiler for «routing».&lt;/li&gt;&#xA;&lt;li&gt;Mapper under &lt;code&gt;app&lt;/code&gt;-mappen i Next fungerer som rot-baner. En mappe kalt &lt;code&gt;blogg&lt;/code&gt; i &lt;code&gt;app&lt;/code&gt; vil skape banen &lt;code&gt;/blogg&lt;/code&gt;.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;For å gjøre mappen &lt;code&gt;blogg&lt;/code&gt; tilgjengelig må vi legge til &lt;code&gt;page.tsx&lt;/code&gt; eller &lt;code&gt;page.js&lt;/code&gt;. I denne filen eksporteres en React-komponent som vises ved besøk.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;«Nested routing» fungerer ved at man har mapper i mapper, for eksempel &lt;code&gt;app/om-oss/kontakt/page.tsx&lt;/code&gt; vil konvereres til banen &lt;code&gt;/om-oss/kontakt&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Dynamisk «routing» brukes hvor man ikke vet navnet på forhånd, som for eksempel bloggposter eller artikler. Da benyttes &lt;code&gt;[]&lt;/code&gt; som mappenavn. Eks: &lt;code&gt;app/blogg/[slug]/page.tsx&lt;/code&gt; som for eksempel koverteres til &lt;code&gt;/blogg/test-post&lt;/code&gt;. Verdien i &lt;code&gt;[]&lt;/code&gt; blir en parameter som er tilgjengelig i side-komponenten.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

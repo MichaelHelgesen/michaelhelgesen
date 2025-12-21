@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Michael Helgesen</title>
-    <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/linux/</link>
+    <link>/emneknagger/tekstemner/linux/</link>
     <description>Recent content in Linux on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Mon, 04 Aug 2025 20:03:20 +0200</lastBuildDate>
-    <atom:link href="https://www.michaelhelgesen.no/emneknagger/tekstemner/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Nov 2025 20:51:22 +0100</lastBuildDate>
+    <atom:link href="/emneknagger/tekstemner/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hva er initieringsprosessen «systemd» i Linux?</title>
-      <link>https://www.michaelhelgesen.no/tekster/systemd/</link>
+      <link>/tekster/systemd/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/tekster/systemd/</guid>
+      <guid>/tekster/systemd/</guid>
       <description>&lt;p&gt;&lt;code&gt;systemctl&lt;/code&gt; er den sentrale kommandoen for å kontrollere «init»-systemet, som blant annet brukes til å:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;håndtere tjenester&lt;/li&gt;&#xA;&lt;li&gt;sjekke statuser&lt;/li&gt;&#xA;&lt;li&gt;endre systemtilstander&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;«systemd» kan operere på spesifike enheter eller ressurser som «systemd» vet å håndtere. Disse enhetene er kategorisert etter type og er definert som såkalte «unit files».&lt;/p&gt;&#xA;&lt;p&gt;Enhetstypen kan avleses via suffikset i enden av filen. Et eksempel er &lt;code&gt;.service&lt;/code&gt; som indikerer en service-enhet.&lt;/p&gt;&#xA;&lt;p&gt;Man kan ofte sløyfe suffikset, da «systemd» er smart nok til å forstå at du ønsker å operere på en tjeneste når du bruker «service management»-kommandoer.&lt;/p&gt;</description>
     </item>
   </channel>
