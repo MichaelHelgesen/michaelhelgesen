@@ -8,6 +8,34 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/tekstemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Fyllepenn</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/fyllepenn/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/fyllepenn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Journal</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/journal/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/journal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Skriving</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Takknemlighet</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/takknemlighet/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/takknemlighet/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Nextjs</title>
       <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/nextjs/</link>
       <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
@@ -33,13 +61,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/hjemmeserver/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/hjemmeserver/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Skrivemaskin</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/skrivemaskin/</link>
-      <pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/skrivemaskin/</guid>
       <description></description>
     </item>
     <item>
@@ -85,13 +106,6 @@
       <description></description>
     </item>
     <item>
-      <title>Fyllepenn</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/fyllepenn/</link>
-      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/fyllepenn/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Linux</title>
       <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/linux/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
@@ -99,17 +113,17 @@
       <description></description>
     </item>
     <item>
+      <title>Skrivemaskin</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/skrivemaskin/</link>
+      <pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/skrivemaskin/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Hobby</title>
       <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/hobby/</link>
       <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/hobby/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Skriving</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</link>
-      <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/tekstemner/skriving/</guid>
       <description></description>
     </item>
     <item>
