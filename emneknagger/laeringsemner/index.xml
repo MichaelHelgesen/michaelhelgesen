@@ -8,6 +8,13 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/emneknagger/laeringsemner/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hugo</title>
+      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Nextjs</title>
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/nextjs/</link>
       <pubDate>Wed, 13 Aug 2025 00:00:00 +0000</pubDate>
@@ -152,13 +159,6 @@
       <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/github/</link>
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/github/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/</link>
-      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.michaelhelgesen.no/emneknagger/laeringsemner/hugo/</guid>
       <description></description>
     </item>
     <item>
