@@ -6,14 +6,14 @@
     <description>Recent content in Hjemmeserver on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Thu, 05 Mar 2026 18:01:39 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 22:01:50 +0100</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/serier/hjemmeserver/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Dotfiles til Git</title>
+      <title>Oversikt og kontroll med dotfiles til Git</title>
       <link>https://www.michaelhelgesen.no/tekster/dotfiles/</link>
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/tekster/dotfiles/</guid>
-      <description>&lt;p&gt;Etter at jeg installerte Proxmox og en virtuell maskin (VM) med Ubuntu, undersøkte jeg fremgangsmåten for å dele programmer, installasjoner, dokumentasjon og oppsett mellom serveren, VM-er, og flere av mine laptoper.&lt;/p&gt;&#xA;&lt;p&gt;re er scriptet som kjøres, og resten er argumenter fra terminalen.&#xA;Svaret var «dotfiles». Det er konfigurasjonsfiler som typisk starter med punktum (.bashrc, .vimrc, etc.), og er plassert i hjem-katalogen (&lt;code&gt;/users/USER&lt;/code&gt;). Dotfiles er nemlig personlige filer som er ment å følge brukeren.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Etter at jeg installerte Proxmox og en virtuell maskin (VM) med Ubuntu, undersøkte jeg fremgangsmåten for å dele programmer, installasjoner, dokumentasjon og oppsett mellom serveren, VM-er, og flere av mine laptoper.&lt;/p&gt;&#xA;&lt;p&gt;Svaret var «dotfiles». Det er konfigurasjonsfiler som typisk starter med punktum (.bashrc, .vimrc, etc.), og er plassert i hjem-katalogen (&lt;code&gt;/users/USER&lt;/code&gt;). Dotfiles er nemlig personlige filer som er ment å følge brukeren.&lt;/p&gt;&#xA;&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;&#xA;&lt;p&gt;Det anbefales å lagre «dotfiles» som Git-repositories, for trygg lagring og enkel versjonskontroll og tilgang. Så jeg startet der. Jeg opprettet:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fra Mac til Proxmox</title>
