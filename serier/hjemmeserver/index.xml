@@ -6,14 +6,28 @@
     <description>Recent content in Hjemmeserver on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Mon, 02 Feb 2026 15:03:37 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2026 18:01:39 +0100</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/serier/hjemmeserver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dotfiles til Git</title>
+      <link>https://www.michaelhelgesen.no/tekster/dotfiles/</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/tekster/dotfiles/</guid>
+      <description>&lt;p&gt;Etter at jeg installerte Proxmox og en virtuell maskin (VM) med Ubuntu, undersøkte jeg fremgangsmåten for å dele programmer, installasjoner, dokumentasjon og oppsett mellom serveren, VM-er, og flere av mine laptoper.&lt;/p&gt;&#xA;&lt;p&gt;re er scriptet som kjøres, og resten er argumenter fra terminalen.&#xA;Svaret var «dotfiles». Det er konfigurasjonsfiler som typisk starter med punktum (.bashrc, .vimrc, etc.), og er plassert i hjem-katalogen (&lt;code&gt;/users/USER&lt;/code&gt;). Dotfiles er nemlig personlige filer som er ment å følge brukeren.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fra Mac til Proxmox</title>
+      <link>https://www.michaelhelgesen.no/tekster/fra-mac-til-proxmox/</link>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/tekster/fra-mac-til-proxmox/</guid>
+      <description>&lt;div&gt;Image missing. Looking for mac.webp&lt;/div&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;I og med at jeg ønsker å bli godt kjent med Linux må jeg nødvendigvis også prøve flere av de mange distribusjonene som finnes: Ubuntu, Fedora, Arch og Mint, for å nevne noen.&lt;/p&gt;&#xA;&lt;p&gt;En server som kjører Proxmox er perfekt i et slikt tilfelle. Det lar meg initialisere flere virtuelle maskiner, som fungerer som enkeltstående Linux-installasjoner. Proxmox tilbyr både et grafisk grensesnitt via nettleseren, og en terminal for oppsett og håndtering.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Jeg videreutvikler min hjemmeserver</title>
       <link>https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/</guid>
-      <description>&lt;figure&gt;&#xA;&lt;div class=&#34;relative bg-center imgB-9b63af9d02337eb213f1c55cea0c143c-LQIP&#34;&gt;&#xA;&#x9;&lt;picture&gt;&#xA;&#x9;&#x9;&lt;source type=&#34;image/webp&#34; srcset=&#34;https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu9551210074775556537.webp 640w, https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu18169586578466078682.webp 960w&#34; sizes=&#34;(min-width: 1024px) 100vw, 50vw&#34; /&gt;&#xA;&#x9;&#x9;&lt;source type=&#34;image/jpeg&#34; srcset=&#34;https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu4192494261178743625.jpg 640w, https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu10601641497147468973.jpg 960w&#34; sizes=&#34;(min-width: 1024px) 100vw, 50vw&#34; /&gt;&#xA;&#x9;&#x9;&lt;img class=&#34;w-full h-auto animate-fade&#34; src=&#34;https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu4192494261178743625.jpg&#34; width=&#34;1009&#34; height=&#34;756&#34; alt=&#34;Mac Pro on a table surrounded by keyboard, notes and pens.&#34; title=&#34;&#34; loading=&#34;lazy&#34; /&gt;&#xA;&#x9;&lt;/picture&gt;&#xA;&lt;/div&gt;&lt;figcaption&gt;En Mac Pro 2013 klar for nye oppgaver, etter en real rens.&lt;/figcaption&gt;&lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;Ønsket på sikt er å bygge en driftsikker og energieffektiv server som kan erstatte noen av de mange sky- og abonnementsløsningene til teknologigigantene, samt å vri meg ut av algoritmenes grep. Jeg håper derfor å kunne drifte både bilde-, video- og musikkservere, og kanskje til og med egne servere for webutvikling.&lt;/p&gt;</description>
+      <description>&lt;figure&gt;&#xA;&lt;div class=&#34;relative bg-center imgB-9b63af9d02337eb213f1c55cea0c143c-LQIP&#34;&gt;&#xA;&#x9;&lt;picture&gt;&#xA;&#x9;&#x9;&lt;source type=&#34;image/webp&#34; srcset=&#34;https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu_35b81bf825781dcc.webp 640w, https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu_79d8066fd5ea7d47.webp 960w&#34; sizes=&#34;(min-width: 1024px) 100vw, 50vw&#34; /&gt;&#xA;&#x9;&#x9;&lt;source type=&#34;image/jpeg&#34; srcset=&#34;https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu_7030ed55858ecff0.jpg 640w, https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu_ef58275628f813d4.jpg 960w&#34; sizes=&#34;(min-width: 1024px) 100vw, 50vw&#34; /&gt;&#xA;&#x9;&#x9;&lt;img class=&#34;w-full h-auto animate-fade&#34; src=&#34;https://www.michaelhelgesen.no/tekster/jeg_etablerer_en_hjemmeserver/mac_hu_e9fdb6caffa1b439.jpg&#34; width=&#34;1009&#34; height=&#34;756&#34; alt=&#34;Mac Pro on a table surrounded by keyboard, notes and pens.&#34; title=&#34;&#34; loading=&#34;lazy&#34; /&gt;&#xA;&#x9;&lt;/picture&gt;&#xA;&lt;/div&gt;&lt;figcaption&gt;En Mac Pro 2013 klar for nye oppgaver, etter en real rens.&lt;/figcaption&gt;&lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;Ønsket på sikt er å bygge en driftsikker og energieffektiv server som kan erstatte noen av de mange sky- og abonnementsløsningene til teknologigigantene, samt å vri meg ut av algoritmenes grep. Jeg håper derfor å kunne drifte både bilde-, video- og musikkservere, og kanskje til og med egne servere for webutvikling.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Min første server</title>

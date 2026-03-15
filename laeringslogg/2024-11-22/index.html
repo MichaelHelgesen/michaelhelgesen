@@ -10,17 +10,17 @@
  <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
     
-    <meta name="author" content="">
+    <meta name="author" content="Michael Helgesen">
   <link rel="canonical" href="https://www.michaelhelgesen.no/laeringslogg/2024-11-22/" itemprop="url" />
 <meta property="og:url" content="https://www.michaelhelgesen.no/laeringslogg/2024-11-22/">
   <meta property="og:site_name" content="Michael Helgesen">
   <meta property="og:title" content="2024-11-22">
-  <meta property="og:description" content="Csharp \n og \t står for henholdsvis ny linje og tabulator. Sistnevnte lager mellomrom på størrelsen med fire karakterer. For å vise en bakstrek i tekst uten at det blir registrert som en «escape» skriver vi to bakstreker. Bakstrek kan også brukes for å vise UTF-karakterer, som \u3053. Microsoft skriver at man bør unngå å bruke midlertidig variabel før den brukes slik som dette: string hilsen = $&#34;Hei {navn}&#34;; Console.WriteLine(hilsen); De anbefaler at strengen kombineres der den faktisk skal brukes: Console.WriteLine($&#34;Hei {navn}&#34;); Strenger: «Verbatim string literal ‘@’» brukes for å beholde alle mellomrom i en streng, og for å slippe å omgå bakstrek som tolkes som «escape». «String interpolation» (strenginterpolering) er C#s måte å benytte variabler i strenger, som konverteres til en streng, lik Javascripts «template literals». $&#34;{}&#34;. Man kan slå sammen verbatim og strenginterpolering: $@&#34;Hei!\n\t{navn}&#34;. C# kan midlertidig konvertere fra nummer til streng om man slår sammen «string» og «int», &#34;Jeg er &#34; &#43; 174 &#43; &#34; høy&#34;, men det er best å unngå. Bruk heller strenginterpolering. Variabler: Desimal-operasjoner bør benyttes på en eller flere tall som faktisk er desimaltall: 3.14m &#43; 3; «Typecasting» eller typekonvertering foregår ved å angi ønsket konvertering i parentes foran variabelen som skal konverteres: decimal quotient = (decimal)first / (decimal)second;. .NET: .NET er en utviklingsplattform fra Microsoft som brukes til å lage en rekke applikasjoner, blant annet nettsider, mobil-apper og program. Den inneholder flere ulike programmeringsspråk og et stort bibliotek av metoder og funksjoner med mer. .NET er også kjøremiljøet («runtime environment») for applikasjonene som utvikles. Man må ha .NET for å kjøre C#, men ikke for å skrive det. Strukturen C#-prosjekter er løsninger/prosjekter. Man samler altså flere prosjekter under en løsning («solution»). Det er også flere ulike typer prosjekter å velge mellom. For å opprette et prosjekt i «solutions»-mappen skriver man dotnet new console - MyApp. console er typen prosjekt. _ -o betyr å opprette banen som følger i kommandoen. I prosjekt-mappen opprettes ytterligere to mapper: obj og bin. Førstnevnte inneholder alle objekter som trengs for å lage en EXE-versjon av applikasjonen, mens bin inneholder det faktiske prgrammet etter at det er kompilert. Det opprettes også to filer: selve .cs-fila, som er der vi skriver koden, samt prosjekt.csproj som er en prosjekt-fil med informasjon. Den får samme navn som prosjektet når man oppretter det. For å kompilere en versjon skriver vi dotnet build. For å kjøre prosjektet skriver vi dotnet run. ">
+  <meta property="og:description" content="Csharp \n og \t står for henholdsvis ny linje og tabulator. Sistnevnte lager mellomrom på størrelsen med fire karakterer. For å vise en bakstrek i tekst uten at det blir registrert som en «escape» skriver vi to bakstreker. Bakstrek kan også brukes for å vise UTF-karakterer, som \u3053. Microsoft skriver at man bør unngå å bruke midlertidig variabel før den brukes slik som dette: string hilsen = $&#34;Hei {navn}&#34;; Console.WriteLine(hilsen); De anbefaler at strengen kombineres der den faktisk skal brukes: Console.WriteLine($&#34;Hei {navn}&#34;); Strenger: «Verbatim string literal ‘@’» brukes for å beholde alle mellomrom i en streng, og for å slippe å omgå bakstrek som tolkes som «escape». «String interpolation» (strenginterpolering) er C#s måte å benytte variabler i strenger, som konverteres til en streng, lik Javascripts «template literals». $&#34;{}&#34;. Man kan slå sammen verbatim og strenginterpolering: $@&#34;Hei!\n\t{navn}&#34;. C# kan midlertidig konvertere fra nummer til streng om man slår sammen «string» og «int», &#34;Jeg er &#34; &#43; 174 &#43; &#34; høy&#34;, men det er best å unngå. Bruk heller strenginterpolering. Variabler: Desimal-operasjoner bør benyttes på en eller flere tall som faktisk er desimaltall: 3.14m &#43; 3; «Typecasting» eller typekonvertering foregår ved å angi ønsket konvertering i parentes foran variabelen som skal konverteres: decimal quotient = (decimal)first / (decimal)second;. .NET: .NET er en utviklingsplattform fra Microsoft som brukes til å lage en rekke applikasjoner, blant annet nettsider, mobil-apper og program. Den inneholder flere ulike programmeringsspråk og et stort bibliotek av metoder og funksjoner med mer. .NET er også kjøremiljøet («runtime environment») for applikasjonene som utvikles. Man må ha .NET for å kjøre C#, men ikke for å skrive det. Strukturen C#-prosjekter er løsninger/prosjekter. Man samler altså flere prosjekter under en løsning («solution»). Det er også flere ulike typer prosjekter å velge mellom. For å opprette et prosjekt i «solutions»-mappen skriver man dotnet new console - MyApp. console er typen prosjekt. _ -o betyr å opprette banen som følger i kommandoen. I prosjekt-mappen opprettes ytterligere to mapper: obj og bin. Førstnevnte inneholder alle objekter som trengs for å lage en EXE-versjon av applikasjonen, mens bin inneholder det faktiske prgrammet etter at det er kompilert. Det opprettes også to filer: selve .cs-fila, som er der vi skriver koden, samt prosjekt.csproj som er en prosjekt-fil med informasjon. Den får samme navn som prosjektet når man oppretter det. For å kompilere en versjon skriver vi dotnet build. For å kjøre prosjektet skriver vi dotnet run.">
   <meta property="og:locale" content="nb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="laeringslogg">
     <meta property="article:published_time" content="2024-11-22T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-01-05T13:13:15+01:00">
+    <meta property="article:modified_time" content="2026-03-04T20:23:57+01:00">
 
 
 
@@ -147,7 +147,7 @@
         <h1>22. november 2024</h1>
         <p class="last-posts-list__meta">
             
-                <span>Red: 5. jan. 2026 | </span>
+                <span>Red: 4. mar. 2026 | </span>
             
             <span>Pub: 22. nov. 2024 | </span>    
              
@@ -174,12 +174,12 @@
 <li>Bakstrek kan også brukes for å vise UTF-karakterer, som <code>\u3053</code>.</li>
 <li>Microsoft skriver at man bør unngå å bruke midlertidig variabel før den brukes slik som dette:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> hilsen = <span style="color:#e6db74">$&#34;Hei {navn}&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> hilsen = <span style="color:#e6db74">$&#34;Hei {navn}&#34;</span>;
 </span></span><span style="display:flex;"><span>Console.WriteLine(hilsen);
 </span></span></code></pre></div><ul>
 <li>De anbefaler at strengen kombineres der den faktisk skal brukes:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Hei {navn}&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Hei {navn}&#34;</span>);
 </span></span></code></pre></div><ul>
 <li>Strenger:
 <ul>
@@ -245,6 +245,12 @@ Send meg gjerne
 
 
 
+
+    
+
+    
+
+    
 
     
 

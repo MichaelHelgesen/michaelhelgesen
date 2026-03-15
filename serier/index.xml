@@ -8,10 +8,24 @@
     <language>nb</language>
     <atom:link href="https://www.michaelhelgesen.no/serier/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Node</title>
+      <link>https://www.michaelhelgesen.no/serier/node/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/serier/node/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Hjemmeserver</title>
       <link>https://www.michaelhelgesen.no/serier/hjemmeserver/</link>
-      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/serier/hjemmeserver/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The Master and His Emissary</title>
+      <link>https://www.michaelhelgesen.no/serier/the-master-and-his-emissary/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.michaelhelgesen.no/serier/the-master-and-his-emissary/</guid>
       <description></description>
     </item>
   </channel>

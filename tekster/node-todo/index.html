@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeg lærer Node.js</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="Michael Helgesen">
+  <link rel="canonical" href="https://www.michaelhelgesen.no/tekster/node-todo/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/tekster/node-todo/">
+  <meta property="og:site_name" content="Michael Helgesen">
+  <meta property="og:title" content="Jeg lærer Node.js">
+  <meta property="og:description" content="Bli med når jeg tar steget fra front-end til Node.js. I dette innlegget utforsker jeg fs-modulen, process.argv og filhåndtering.">
+  <meta property="og:locale" content="nb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tekster">
+    <meta property="article:published_time" content="2026-03-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-03-15T21:40:35+01:00">
+
+
+
+
+
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+          
+
+          
+
+<meta name="description" content="Bli med når jeg tar steget fra front-end til Node.js. I dette innlegget utforsker jeg fs-modulen, process.argv og filhåndtering.">
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/tekster/">
+                    <span itemprop="name">Tekster</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/tekster/node-todo/">
+                    <span itemprop="name">Jeg lærer Node.js</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>Jeg lærer Node.js</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 15. mar. 2026 | </span>
+            
+            <span>Pub: 1. mar. 2026 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/tekstemner/node/"> 
+        
+        #node</a>, 
+         <a href="/emneknagger/tekstemner/programmering/"> 
+        
+            #programmering</a>
+        
+
+
+        </p>
+	  
+<div class="serie">
+	<p> Denne teksten inngår i serien <a href="/serier/node"
+      >node</a
+    >.</p>
+<p style="margin-bottom: 0;">Andre artikler i samme serie:</p>
+ 
+<ul class="series" style="margin-top: .5rem;">
+  
+  <li>
+    <b>Jeg lærer Node.js</b>
+  </li>
+  
+</ul>
+
+</div>
+
+
+    
+        </div>
+        <section>
+    
+            
+        
+          <p class="ingress">Som en naturlig forlengelse av mitt hobbyprosjekt med hjemmeserver, har jeg startet å lære Node.js. Her er mine første erfaringer med å bygge et terminal-verktøy for oppgavehåndtering.</p>
+        
+    <p>Som en utvidelse av mitt hobbyprosjekt med oppsett av egen hjemmeserver, har jeg også startet å lære Node.js. Det var et naturlig valg av språk når det kommer til «back-end» programmering, siden jeg har jobbet med Javascript i mange år som «front-end»-utvikler, og i det siste med fokus på Next.js og Sanity CMS, som begge er bygget på React.</p>
+<p>Jeg vurderte om jeg skulle benytte anledningen til å lære C#, Go, PHP eller noe annet, men å solidifisere og videreutvikle Javascript-kunnskapen min har også vært et ønske, så da falt det seg ganske naturlig å velge Node.</p>
+<h2 id="hva-er-nodejs">Hva er Node.js?</h2>
+<p>Node.js er et kjøremiljø for Javascript. Det betyr at språket kan kjøres på servere og lokale maskiner, og ikke bare i nettleseren slik det opprinnelig var utviklet for. Det gjør det mulig å kjøre Javascript overalt. Det passer meg perfekt, da jeg ønsker å utvikle serverprogrammer til eget behov, og ikke minst API-er og webservere. Det kommer også med bred støtte, et aktivt utviklingsmiljø, og tusenvis av pakker via NPM («Node package manager»).</p>
+<p>Node.js ble utviklet av Ryan Dahl og lansert i 2009. Det er bygget på Googles V8-JavaScript-motor (den samme som driver Google Chrome), en rask og asynkron løsning som kompilerer JavaScript til maskinkode under kjøring.</p>
+<h2 id="to-do">TO-DO</h2>
+<p>Mitt første prosjekt ble en tradisjonell «TO-DO»-applikasjon, som jeg ønsket å koble til en fil for å bli kjent med Nodes filsystemhåndtering, i tillegg til innkommende argumenter.</p>
+<p>Jeg startet med <code>process.argv</code>. Det er en liste («array») med alle argumentene fra kommandolinjen, i tillegg til programmet og skriptet som kjører. De to sistnevnte er alltid på plassene <code>[0]</code> og <code>[1]</code>, med alle argumenter fra kommandolinjen som påfølgende.</p>
+<ol>
+<li><code>/usr/bin/node</code> - Programmet som kjører (Node selv)</li>
+<li><code>/home/mikke/repos/todo-cli/args.js</code> - Skriptet som kjører</li>
+<li><code>hei</code> - Argument fra kommandolinjen.</li>
+</ol>
+<p>For å hente kun argumenter brukte jeg <code>slice</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><h2 id="tolke-kommandolinje-argumenter">Tolke kommandolinje-argumenter</h2>
+<p>Basert på <code>process.argv</code>s håntering av argumenter lyttet jeg etter kommandoene <code>add</code>, <code>list</code> og <code>done</code>, som henholdsvis skulle legge til en oppgave, vise alle oppgaver, og fullføre en oppgave:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">args</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;add&#34;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Legg til oppgave&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;list&#34;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;List alle oppgaver&#34;</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;done&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>isNaN(<span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>])) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Marker oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> som ferdig`</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Ugyldig kommando&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Det fungerte fint. Neste steg ble å finne ut hvordan Node lagrer til fil.</p>
+<h2 id="file-system-modulen">«File system»-modulen</h2>
+<p>Node har en innebygd modul <code>fs</code> for håndtering av filer, med en rekke funksjoner. For å lese og skrive til en fil, benyttes <code>fs.readFileSync</code> og <code>fs.appendFileSync</code>. Førstnevnte leser innholdet i en fil, og sistnevnte legger til i en fil. Dette er synkrone utgaver av funksjonene. Det finnes også «async»-versjoner, men de venter jeg litt med. Synkrone operasjoner var mer enn godt nok for mitt lille eksperiment.</p>
+<h3 id="lese-en-fil">Lese en fil</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#39;tasks.md&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">content</span>);
+</span></span></code></pre></div><p>Resultatet av denne kommandoen er rådata: en såkalt buffer med binærdata som bits. En fil kan jo inneholde hva som helst, bilder, video, tekst eller annet, og det aner ikke Node noe om. Formatet må spesifiseres eksplisitt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#39;tasks.md&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">content</span>);
+</span></span></code></pre></div><p>Da vises det som forventet.</p>
+<p>Jeg lærte også at denne funksjonen presenterer hele innholdet, og ikke linje for linje. Man får derfor ikke linjenummer eller muligheten til å iterere over innholdet direkte. Hele filen presenteres som én lang streng.</p>
+<p>Man må i tilfelle selv splitte den til en liste, finne riktig indeks, endre linjen, sette listen sammen til en streng igjen, og deretter skrive tilbake til fil.</p>
+<h3 id="skrive-til-en-fil">Skrive til en fil</h3>
+<p>For å skrive til en fil kan man benytte <code>fs.appendFileSync</code>. Denne funksjonen legger til data bakerst i en fil, og oppretter filen dersom den ikke allerede finnes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Legg til en linje i tasks.md
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">appendFileSync</span>(<span style="color:#e6db74">&#39;tasks.md&#39;</span>, <span style="color:#e6db74">&#39;- [ ] Min første oppgave\n&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Oppgave lagt til!&#39;</span>);
+</span></span></code></pre></div><p>En viktig detalj her er <code>\n</code> på slutten, som indikerer linjeskift («newline»). Uten denne vil oppgavene havne på rekke i én lang linje.</p>
+<h2 id="endre-en-oppgave">Endre en oppgave</h2>
+<p>Så langt har jeg funnet ut hvordan man legger til en oppgave via kommandoen <code>add</code>, og viser alle oppgavene med <code>list</code>.</p>
+<p>Neste steg var å markere en oppgave som gjort. Det vil si at innholdet i linjen skulle endres fra <code>[ ] Kjøpe melk</code> til <code>[X] Kjøpe melk</code>.</p>
+<p>Siden <code>fs.readFileSync</code> ikke itererer, blir prosessen som følger:</p>
+<ol>
+<li>Lese hele filen</li>
+<li>Splitte i linjer</li>
+<li>Endre ønsket linje (for eksempel linje nummer 3)</li>
+<li>Sette linjene sammen igjen</li>
+<li>Skrive hele innholdet tilbake til filen</li>
+</ol>
+<p>Så jeg måtte splitte opp <code>tasks.md</code>, endre, lagre til ny midlertidig variabel, og deretter overskrive <code>tasks.md</code> med det oppdaterte innholdet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">args</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;add&#34;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">appendFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#e6db74">`- [ ] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">\n`</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;La til oppgave&#34;</span>, <span style="color:#a6e22e">task</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;list&#34;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Alle oppgaver:\n&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>))
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;done&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>isNaN(<span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>])) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Marker oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> som ferdig`</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>).<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editedFile</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (Number(<span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">===</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">changeIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">task</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#34;]&#34;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`- [x] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#a6e22e">changeIndex</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">editedFile</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">task</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#a6e22e">editedFile</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\n&#34;</span>))
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Ugyldig kommando&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="backup">Backup</h2>
+<p>Jeg syntes det hørtes skummelt ut å overskrive en fil som nevnt over. Hva om noe går galt, og dataene eller filen slettes? Jeg undersøkte dermed litt rundt en enkel backup.</p>
+<p>Målet er selvsagt en database, men nå nøyer jeg meg med å kopiere <code>tasks.md</code> til <code>tasks.md.bak</code> via <code>fs.copyFileSync</code> før jeg endrer noe. Da har jeg i det minste én mulighet for å tilbakestille dersom noe skulle skje.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">args</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// create a backup
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">backup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">copyFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#e6db74">&#34;tasks.md.bak&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;add&#34;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">appendFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#e6db74">`- [ ] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">\n`</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;La til oppgave&#34;</span>, <span style="color:#a6e22e">task</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;list&#34;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Alle oppgaver:\n&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>))
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;done&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>isNaN(<span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>])) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Marker oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> som ferdig`</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>).<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editedFile</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (Number(<span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">===</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">changeIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">task</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#34;]&#34;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`- [x] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#a6e22e">changeIndex</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">editedFile</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">task</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#e6db74">&#34;tasks.md&#34;</span>, <span style="color:#a6e22e">editedFile</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\n&#34;</span>))
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Ugyldig kommando&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="edge-cases-valideringer-refaktorering-og-andre-endringer">«Edge-cases», valideringer, refaktorering og andre endringer</h2>
+<p>Med kunnskapen tilegnet meg over, jobbet jeg videre med koden for å implementere valideringer av argumenter, refaktorering av kode, bytte til &lsquo;switch&rsquo;, nummerering av oppgaver, muligheten for å endre en oppgave fra gjort til uferdig, sletting av en oppgave og generell robusthet og kodekvalitet:</p>
+<h3 id="valideringer-jeg-implementerte">Valideringer jeg implementerte:</h3>
+<ul>
+<li>Er argumentet et tall?</li>
+<li>Er nummeret innenfor gyldig område?</li>
+<li>Er oppgaven allerede markert som ferdig/uferdig?</li>
+<li>Håndtering av tomme filer</li>
+</ul>
+<h3 id="refaktoreringer">Refaktoreringer:</h3>
+<ul>
+<li>Byttet fra if-else-kjede til <code>switch</code> for bedre lesbarhet</li>
+<li>Ekstraherte <code>checkTask()</code> som unified funksjon for check/uncheck</li>
+<li>Separate valideringsfunksjoner for fil og oppgaver</li>
+</ul>
+<h3 id="komplett-kode-ved-dette-steget">Komplett kode ved dette steget:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use strict&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">args</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tasksFileName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tasks.md&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">completedFileName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;completed.md&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fileContentTasks</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fileContentCompleted</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Check for valid argument
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkForValidArgument</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">secondArg</span>.<span style="color:#a6e22e">trim</span>().<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Må angi et argument&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Validate file
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateFile</span>(...<span style="color:#a6e22e">files</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">file</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// create file if it doesnt exist
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">existsSync</span>(<span style="color:#e6db74">`./</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">file</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)) {<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">file</span>, <span style="color:#e6db74">&#34;&#34;</span>)};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readFile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">file</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>).<span style="color:#a6e22e">trim</span>(<span style="color:#e6db74">&#34;&#34;</span>).<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// avoid empty line on top of document
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">readFile</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">readFile</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {<span style="color:#a6e22e">readFile</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>};
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">file</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">tasksFileName</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fileContentTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readFile</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">completedFileName</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fileContentCompleted</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readFile</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Validate tasks
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkForValidTask</span>(<span style="color:#a6e22e">status</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (isNaN(<span style="color:#a6e22e">secondArg</span>) <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>Number.<span style="color:#a6e22e">isInteger</span>(Number(<span style="color:#a6e22e">secondArg</span>)) <span style="color:#f92672">||</span> <span style="color:#a6e22e">secondArg</span>.<span style="color:#a6e22e">trim</span>().<span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Må være et nummer uten desimaler&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  } 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Angi kun ett tall uten mellomrom&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">fileContentCompleted</span>.<span style="color:#a6e22e">length</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Ingen </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fullførte &#34;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">oppgaver i listen`</span>); 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">status</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Nummer utenfor rekkevidde.&#34;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">status</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">fileContentCompleted</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Nummer utenfor rekkevidde.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// write files
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeFiles</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\n&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">completedFileName</span>, <span style="color:#a6e22e">fileContentCompleted</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\n&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// create a backup
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">backup</span>(...<span style="color:#a6e22e">files</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">file</span>) =&gt; <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">copyFileSync</span>(<span style="color:#a6e22e">file</span>, <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">file</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.bak`</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// list tasks
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">listTasks</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readFileTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>).<span style="color:#a6e22e">trim</span>(<span style="color:#e6db74">&#34;&#34;</span>).<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readFileCompleted</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">completedFileName</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>).<span style="color:#a6e22e">trim</span>(<span style="color:#e6db74">&#34;&#34;</span>).<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Oppgaver som venter:&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">readFileTasks</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">task</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;0&#34;</span>)
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">. [ ] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;\nFullførte oppgaver:&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">readFileCompleted</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">task</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;0&#34;</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> (<span style="color:#a6e22e">readFileTasks</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">readFileTasks</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">readFileTasks</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">. [x] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// move task to opposite file
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">moveTask</span>(<span style="color:#a6e22e">status</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">backup</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">completedFileName</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">editedFile</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">fileContentTasks</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">fileContentCompleted</span>).<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ((<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">:</span> (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span>)) <span style="color:#f92672">!=</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">editedFile</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">task</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      (<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">fileContentCompleted</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">fileContentTasks</span>).<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">task</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }); 
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">fileContentTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editedFile</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">fileContentCompleted</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editedFile</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Marker oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">secondArg</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> som </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;ferdig&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;uferdig&#34;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">writeFiles</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// delete a task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deleteTask</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">backup</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">completedFileName</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">newArray</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (isNaN(<span style="color:#a6e22e">secondArg</span>) <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>Number.<span style="color:#a6e22e">isInteger</span>(Number(<span style="color:#a6e22e">secondArg</span>)) <span style="color:#f92672">||</span> <span style="color:#a6e22e">secondArg</span>.<span style="color:#a6e22e">trim</span>().<span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) { 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Angi et gyldig tall uten desimaler og mellomrom&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (Number(<span style="color:#a6e22e">secondArg</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> Number(<span style="color:#a6e22e">secondArg</span>) <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Her er det selvsagt bedre med filter, enn å kutte to ganger
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">newArray</span>.<span style="color:#a6e22e">push</span>(...(<span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)));
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">newArray</span>.<span style="color:#a6e22e">push</span>(...(<span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#a6e22e">secondArg</span>)));
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fileContentTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newArray</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFiles</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Sletter oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">secondArg</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (Number(<span style="color:#a6e22e">secondArg</span>) <span style="color:#f92672">&lt;=</span>  <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">fileContentCompleted</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Her er det selvsagt bedre med filter, enn å kutte to ganger
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">newArray</span>.<span style="color:#a6e22e">push</span>(...(<span style="color:#a6e22e">fileContentCompleted</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>))));
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">newArray</span>.<span style="color:#a6e22e">push</span>(...(<span style="color:#a6e22e">fileContentCompleted</span>.<span style="color:#a6e22e">slice</span>((<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">fileContentTasks</span>.<span style="color:#a6e22e">length</span>))));
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fileContentCompleted</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newArray</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFiles</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Sletter oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">secondArg</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Nummer utenfor rekkevidde&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">firstArg</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;add&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span><span style="color:#a6e22e">checkForValidArgument</span>() ) { <span style="color:#66d9ef">return</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>(<span style="color:#a6e22e">tasksFileName</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">backup</span>(<span style="color:#a6e22e">tasksFileName</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">appendFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">\n`</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;La til oppgave&#34;</span>, <span style="color:#a6e22e">task</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;check&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">completedFileName</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span><span style="color:#a6e22e">checkForValidTask</span>(<span style="color:#66d9ef">true</span>) ) { <span style="color:#66d9ef">return</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">moveTask</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;uncheck&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">completedFileName</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span><span style="color:#a6e22e">checkForValidTask</span>(<span style="color:#66d9ef">false</span>) ) { <span style="color:#66d9ef">return</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">moveTask</span>(<span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;del&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">completedFileName</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">deleteTask</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;list&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">completedFileName</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">listTasks</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Ugyldig kommando&#34;</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Det ble en enkel Node-applikasjon, som blant annet lærte meg:</p>
+<h3 id="node-spesifikke-konsepter">Node-spesifikke konsepter:</h3>
+<ul>
+<li><code>fs</code>-modulen: readFileSync, writeFileSync, appendFileSync, copyFileSync</li>
+<li>Filer returnerer buffer (binærdata) - må spesifisere <code>utf8</code></li>
+<li><code>process.argv</code> for kommandolinje-argumenter</li>
+<li>Filer leses som én lang streng, ikke linje-for-linje</li>
+</ul>
+<h3 id="generelle-erkjennelser">Generelle erkjennelser:</h3>
+<ul>
+<li>Filoperasjoner krever: les alt -&gt; endre -&gt; skriv alt tilbake</li>
+<li>Backup før destruktive operasjoner er essensielt</li>
+<li>Switch vs if-else: bedre struktur og lesbarhet i større kommandohåndtering.</li>
+<li>«Edge cases» må planlegges nøye og testes (tomme filer, ugyldige nummer, osv.)</li>
+</ul>
+<h2 id="del-to">Del to</h2>
+<p>Et naturlig neste steg blir å erstatte oppgaver som ren tekst i en «markdown»-fil, til fordel for JSON-objekter i en <code>.json</code>-fil.</p>
+<p>Dette gir mange flere muligheter når det kommer til struktur og innhold i hver enkelt oppgave, samtidig som det gjør dataene mye lettere å håndtere programmatisk.</p>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-1.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-1"></span>&#32;
+
+<script id="script-1">
+  var scriptTag = document.getElementById("script-1");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "sj.edoN reræl geJ nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>
