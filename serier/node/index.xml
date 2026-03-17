@@ -6,14 +6,14 @@
     <description>Recent content in Node on Michael Helgesen</description>
     <generator>Hugo</generator>
     <language>nb</language>
-    <lastBuildDate>Sun, 15 Mar 2026 21:40:35 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 22:36:21 +0100</lastBuildDate>
     <atom:link href="https://www.michaelhelgesen.no/serier/node/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jeg lærer Node.js</title>
       <link>https://www.michaelhelgesen.no/tekster/node-todo/</link>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://www.michaelhelgesen.no/tekster/node-todo/</guid>
-      <description>&lt;p&gt;Som en utvidelse av mitt hobbyprosjekt med oppsett av egen hjemmeserver, har jeg også startet å lære Node.js. Det var et naturlig valg av språk når det kommer til «back-end» programmering, siden jeg har jobbet med Javascript i mange år som «front-end»-utvikler, og i det siste med fokus på Next.js og Sanity CMS, som begge er bygget på React.&lt;/p&gt;&#xA;&lt;p&gt;Jeg vurderte om jeg skulle benytte anledningen til å lære C#, Go, PHP eller noe annet, men å solidifisere og videreutvikle Javascript-kunnskapen min har også vært et ønske, så da falt det seg ganske naturlig å velge Node.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Node.js var et naturlig valg av språk når det kommer til «back-end» programmering, siden jeg har jobbet med Javascript i mange år som «front-end»-utvikler, og i det siste med fokus på Next.js og Sanity CMS, som begge er bygget på React.&lt;/p&gt;&#xA;&lt;p&gt;Jeg vurderte om jeg skulle benytte anledningen til å lære C#, Go, PHP eller noe annet, men å solidifisere og videreutvikle Javascript-kunnskapen min har også vært et ønske, så da falt det seg ganske naturlig å velge Node.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
