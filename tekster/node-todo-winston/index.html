@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logging av interne feil med Winston</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="Michael Helgesen">
+  <link rel="canonical" href="https://www.michaelhelgesen.no/tekster/node-todo-winston/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/tekster/node-todo-winston/">
+	<meta property="og:site_name" content="Michael Helgesen">
+	<meta property="og:title" content="Logging av interne feil med Winston">
+	<meta property="og:description" content="Jeg implementerer loggeverktøyet Winston for å registrere interne serverfeil i Node.">
+	<meta property="og:locale" content="nb">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="tekster">
+		<meta property="article:published_time" content="2026-06-06T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-06-17T18:21:28+02:00">
+
+
+
+
+
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+          
+
+          
+
+<meta name="description" content="Jeg implementerer loggeverktøyet Winston for å registrere interne serverfeil i Node.">
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/tekster/">
+                    <span itemprop="name">Tekster</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/tekster/node-todo-winston/">
+                    <span itemprop="name">Logging av interne feil med Winston</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>Logging av interne feil med Winston</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 17. juni 2026 | </span>
+            
+            <span>Pub: 6. juni 2026 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/tekstemner/node/"> 
+        
+        #node</a>, 
+         <a href="/emneknagger/tekstemner/programmering/"> 
+        
+            #programmering</a>
+        
+
+
+        </p>
+	  
+<div class="serie">
+	<p> Denne teksten inngår i serien <a href="/serier/node"
+      >node</a
+    >.</p>
+<p style="margin-bottom: 0;">Andre artikler i samme serie:</p>
+ 
+<ul class="series" style="margin-top: .5rem;">
+  
+  <li>
+    <b>Logging av interne feil med Winston</b>
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-morgan/">Loggføring av HTTP-forespørsler med Morgan</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-express/">Node i «Express»-fart</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-error/">Feilhåndtering og feilkoder</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-http/">Fra kommandolinjen til server i Node</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-json/">Fra Markdown til JSON</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo/">Jeg lærer Node.js</a>
+    
+  </li>
+  
+</ul>
+
+</div>
+
+
+    
+        </div>
+        <section>
+    
+            
+        
+          <p class="ingress">Winston er et generelt loggingsbibliotek som gir muligheten til å logge hva som helst, hvor som helst i koden, og er et naturlig tillegg til Morgan.</p>
+        
+    <p>I forrige <a href="/tekster/node-todo-morgan/">
+    Node-innlegg</a> satt jeg opp Morgan, som logger HTTP-forespørsler. Men hva med feil på server og i andre interne operasjoner?</p>
+<p>Det er her <a href="https://www.npmjs.com/package/winston" target="_blank" class="external_link">
+    
+            
+                
+                    <span>Winston
+                        <svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Interface / External_Link">
+                        <path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                        </svg></span></a> kommer inn: et loggeverktøy som gjerne brukes i kombinasjon med Morgan, og som lar oss loggføre langt flere ting. Den kan også separere loggføringen via såkalte «transports», slik at enkelte feilmeldinger for eksempel kan logges i en database, mens andre sendes til konsollen og/eller lagres til en fil.</p>
+<p>Winston er ikke en «middleware» (mellomvare på norsk), på lik linje med Morgan, men et støtteprogram. Konvensjonen er å legge slike i egen mappe <code>utils</code>. Så det første jeg gjorde var å opprette <code>utils/logger/winston.js</code>.</p>
+<p>I denne filen startet jobben med å sette opp:</p>
+<ul>
+<li>Hva slags meldinger som skal logges (nivåer)</li>
+<li>Hvor de skal sendes (transports)</li>
+<li>Hvordan de skal formateres</li>
+</ul>
+<p>Winston bruker en prioritert skala for graden av logging i applikasjonen, og opererer med følgende fra mest til minst alvorlig:</p>
+<ol>
+<li><code>error</code> — noe gikk galt og krever oppmerksomhet</li>
+<li><code>warn</code> — noe er mistenkelig, men appen fortsetter</li>
+<li><code>info</code> — normale vellykkede operasjoner (oppgave lagret, slettet osv.)</li>
+<li><code>debug</code> — detaljert <code>info</code> nyttig under utvikling (f.eks. hva slags data kom inn)</li>
+</ol>
+<blockquote>
+<p>MERK: Programmet tar med alle versjoner fra angitt nivå og oppover. Settes <code>info</code> vil alt fra <code>info</code> og opp til «error» logges.</p>
+</blockquote>
+<p>Jeg startet med å kopiere eksempelet fra NPM:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">winston</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;winston&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">logger</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">winston</span>.<span style="color:#a6e22e">createLogger</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">level</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;info&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">format</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">winston</span>.<span style="color:#a6e22e">format</span>.<span style="color:#a6e22e">json</span>(),
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">defaultMeta</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;user-service&#39;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">transports</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// - Write all logs with importance level of `error` or higher to `error.log`
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//   (i.e., error, fatal, but not other levels)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">winston</span>.<span style="color:#a6e22e">transports</span>.<span style="color:#a6e22e">File</span>({ <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;error.log&#39;</span>, <span style="color:#a6e22e">level</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;error&#39;</span> }),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// - Write all logs with importance level of `info` or higher to `combined.log`
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//   (i.e., fatal, error, warn, and info, but not trace)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">winston</span>.<span style="color:#a6e22e">transports</span>.<span style="color:#a6e22e">File</span>({ <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;combined.log&#39;</span> }),
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// If we&#39;re not in production then log to the `console` with the format:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;production&#39;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">winston</span>.<span style="color:#a6e22e">transports</span>.<span style="color:#a6e22e">Console</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">format</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">winston</span>.<span style="color:#a6e22e">format</span>.<span style="color:#a6e22e">simple</span>(),
+</span></span><span style="display:flex;"><span>  }));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Deretter gjaldt det å finne strategiske steder å logge, og uten at det blir for mye. «Log noise», hvor viktige meldinger drukner i alt for mange loggføringer, kan nemlig fort bli en utfordring.</p>
+<p>Jeg ønsket logging av positive hendelser som:</p>
+<ul>
+<li>backup laget</li>
+<li>server startet</li>
+<li>oppgave endret status</li>
+<li>oppgave slettet</li>
+<li>oppgave lagt til</li>
+</ul>
+<p>Og logging av feil ved:</p>
+<ul>
+<li>validering av fil</li>
+<li>mislykket backup</li>
+<li>feil ved skriving til fil</li>
+</ul>
+<h2 id="winston-og-trycatch">Winston og «try/catch»</h2>
+<p>Implementeringen av Winston gav meg nyttig repetisjon av Javascripts «try/catch» og dens &ldquo;kasting&rdquo; av feil, og hvordan dette utarter seg gjennom applikasjonen. Dette omtales gjerne som «bubbling» eller «error propagation».</p>
+<p>Målet var å kun loggføre der hvor feilen oppsto. Følgende kode er et godt eksempel på utgangspunktet jeg jobbet ut i fra:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// create a backup
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">backup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">copyFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.bak`</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// write files
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">taskObjects</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create todo-object
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">data</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">trim</span>()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;createdDate&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;T&#34;</span>)[<span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;task&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">object</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#39;/&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;string&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> created`</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. Creation of to-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed. Name, date or ID is missing.`</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>;
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">status</span>(<span style="color:#a6e22e">statusCode</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">resObj</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">status</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;SyntaxError&#34;</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">&#34;Something went wrong.&#34;</span>);      
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>Ruten <code>POST</code> kaller <code>taskObjectGenerator</code> som kaller <code>writeFile</code>, og <code>writeFile</code> kaller <code>backup</code>. I dette eksempelet har ingen av funksjonene noen «try/catch». Dersom de feiler, vil feilen &ldquo;boble&rdquo; oppover og til slutt krasje prosessen, uten mulighet til å registrere feil der hvor de oppstår.</p>
+<p><code>backup</code> er et slikt sted, hvor fanging av feil er viktig, så jeg startet der ved å etablere en «try/catch»-blokk som kaster feilen videre:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">backup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">copyFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.bak`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">`Backup created`</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Backup failed: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">stack</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">error</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Funksjonen ble flyttet inn i <code>try</code>, sammen med en Winston-logging.</p>
+<p>I <code>catch</code> logges feilens navn, beskjed og «stack trace», som er en slags brødsmulesti som viser hvor kallet kom fra, før feilen oppsto.</p>
+<p>Hvis <code>throw</code> utelates, vil feilen &ldquo;svelges&rdquo; i denne <code>catch</code>-en, og resten av applikasjonen vil kjøre videre som om ingen ting har hendt. Det var ikke ønsket oppførsel. Jeg ville ikke at det skulle skrives til fil, hvis <code>backup</code> ikke ble gjennomført.</p>
+<p>Oppsummert kan vi si følgende om feilhåndtering med «try/catch»:</p>
+<ul>
+<li>Uten «try/catch» — feilen bobler automatisk oppover til den enten fanges av en <code>catch</code> høyere opp, eller krasjer prosessen hvis ingen fanger den.</li>
+<li>«try/catch» uten <code>throw</code> — feilen slukes, programmet fortsetter som om ingenting skjedde.</li>
+<li>«try/catch» med <code>throw</code> — feilen fanges, du gjør noe (logger), og kaster den videre oppover, noe som vil avbryte den aktuelle operasjonen, men IKKE krasje prosessen, så lenge den fanges opp høyere opp i kjeden.</li>
+</ul>
+<p>Der er altså «try/catch» som fanger feilen. En funksjon uten «try/catch» er rett og slett gjennomsiktig for feil — de passerer rett igjennom.</p>
+<p>Så, ved feil i <code>backup</code> vil nå ingen av de påfølgende funksjonene i rekken kjøre, og operasjonen dermed avsluttes. Jeg jobbet meg deretter videre oppover i «stack»-en, og la inn «try/catch» også i <code>writeFile</code>, i tilfelle noe skulle gå galt ved skriving til fil eller JSON-parsing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// write file
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">taskObjects</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Write to file failed: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">stack</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">error</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Men her plasserte jeg <code>backup</code> på en lite hensiktsmessig måte i <code>writeFile</code>s <code>try</code>. Det vil si at hvis <code>backup</code> feiler, vil jeg få dobbel logging. Både i <code>backup</code> selv, men også i <code>writefile</code>. Det er selvsagt unødvendig. Jeg flyttet derfor <code>backup</code> ut av <code>try</code>. Det er som nevnt konvensjon å logge feilen der hvor den oppstår.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// write file
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">taskObjects</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Write to file failed: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">stack</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">error</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>taskObjectGenerator</code> trenger ingen «try/catch» slik jeg vurderer det, siden den kun oppretter et objekt og kaller <code>writeFile</code>. Validering av inndata er allerede ivaretatt. Det er ikke slik at man trenger try/catch overalt, bare der man faktisk vil gjøre noe med feilen.</p>
+<p>Jeg oppdaterte også <code>validateFile</code> med «try/catch» og logging:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateFile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// create file if it doesnt exist
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">existsSync</span>(<span style="color:#e6db74">`./</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;[]&#34;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#39;File created&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>));
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Error during file validation: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">stack</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">error</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Også <code>POST</code>-ruten, det øverste stadiet, fikk «try/catch».</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#39;/&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;string&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> created`</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">`Success. To-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> created`</span>)
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. Creation of to-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed. Name, date or ID is missing.`</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">`Error. Creation of to-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed. Name, date or ID is missing.`</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>;
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">status</span>(<span style="color:#a6e22e">statusCode</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">resObj</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">status</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;SyntaxError&#34;</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">&#34;Something went wrong.&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Error: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">. Task not created`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">debug</span>(<span style="color:#e6db74">`Incoming body keys: </span><span style="color:#e6db74">${</span>Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">body</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>Her la jeg til en <code>debug</code>-logging for ekstra informasjon, som kun registreres dersom programmet kjører i «developer»-modus, men også her i <code>POST</code> hadde jeg noen unødvendige linjer.</p>
+<p>I <code>catch</code>-blokken logger jeg en error, men det er egentlig overflødig, siden jeg logger i både <code>writeFile</code> og <code>backup</code>, som kjøres som en del av opprettelsen av en oppgave. Og jeg logger jo «stack trace» i de meldingene, slik at jeg kan se hvilke funksjoner og ruter som har kalt funksjonen som feiler.</p>
+<p>Legg merke til at jeg lot loggingen stå i <code>if-else</code>-blokken. Det er fordi dette er et nivå som ikke innebærer noen funksjoner som logger. Men jeg angir det som «warn», ikke «error», fordi i dette tilfelle er det ikke en feil i programmet, men i dataene fra klienten.</p>
+<pre tabindex="0"><code>
+## Konsepter
+
+Jeg brukte litt tid på å forstå «try/catch» under denne øvelsen, noe som var veldig nyttig. I tillegg lærte jeg et par andre viktige konsepter:
+
+- «fail fast»: sørg for å håndtere feil kjapt
+- separation of concerns: del opp koden i hensiktsmessige deler
+- «log noise»: unngå å logge alt for mye. Det vil bare skape uoversiktlige og massive logg-filer
+- centralized error handling: feil bobler til et sted som tar seg av responsen til klienten
+- logg der feilen faktisk oppstår, ikke overalt den passerer gjennom
+
+Merk: «try/catch» har også finally, en blokk som kjører kode etter «try/catch» uavhengig av om feilen fanges eller «kastes». En finally-blokk vil alltid kjøre, og brukes gjerne for å rydde ressurser, stenge nettverkstilkoblinger og nullstille kode.
+
+Til slutt testet jeg ulike scenarier med Curl, for å sjekke om loggene fungerte, og at logikken og nivå var korrekt. Her følger et utdrag:
+
+```text
+Example app listening on port 3000
+info: Server started {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:32:35.244Z&#34;}
+info: List of tasks delivered {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:32:49.864Z&#34;}
+info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:16.081Z&#34;}
+info: Success. To-do Lære Winston created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:16.081Z&#34;}
+error: Error. Creation of to-do 123 failed. Name, date or ID is missing. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:35.335Z&#34;}
+info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:17.969Z&#34;}
+info: TO-DO with ID 1778914531405 created. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:17.969Z&#34;}
+info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:46.333Z&#34;}
+info: TO-DO with ID 1778914531405 created. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:46.334Z&#34;}
+warn: No ID with given ID 999999 found. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:08.069Z&#34;}
+info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:39.512Z&#34;}
+info: Task with ID 1778914531405 deleted. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:39.513Z&#34;}
+warn: Error. No to-do with ID 999999 found {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:37:07.485Z&#34;}
+</code></pre><p>Med både Winston- og Morganlogging på plass føler jeg meg klar til neste steg, som er testing med Jest: et verktøy som hjelper oss å unngå feil ved å teste hver individuelle funksjon.</p>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-1.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-1"></span>&#32;
+
+<script id="script-1">
+  var scriptTag = document.getElementById("script-1");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "notsniW dem lief enretni va gniggoL nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

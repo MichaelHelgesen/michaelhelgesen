@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fra Markdown til JSON</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="Michael Helgesen">
+  <link rel="canonical" href="https://www.michaelhelgesen.no/tekster/node-todo-json/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/tekster/node-todo-json/">
+	<meta property="og:site_name" content="Michael Helgesen">
+	<meta property="og:title" content="Fra Markdown til JSON">
+	<meta property="og:description" content="Jeg erstatter bruken av Markdown-filer med JSON for en mer effektiv og ryddig Node-applikasjon.">
+	<meta property="og:locale" content="nb">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="tekster">
+		<meta property="article:published_time" content="2026-04-01T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-05-06T21:55:55+02:00">
+
+
+
+
+
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+          
+
+          
+
+<meta name="description" content="Jeg erstatter bruken av Markdown-filer med JSON for en mer effektiv og ryddig Node-applikasjon.">
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/tekster/">
+                    <span itemprop="name">Tekster</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/tekster/node-todo-json/">
+                    <span itemprop="name">Fra Markdown til JSON</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>Fra Markdown til JSON</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 6. mai 2026 | </span>
+            
+            <span>Pub: 1. apr. 2026 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/tekstemner/node/"> 
+        
+        #node</a>, 
+         <a href="/emneknagger/tekstemner/programmering/"> 
+        
+            #programmering</a>
+        
+
+
+        </p>
+	  
+<div class="serie">
+	<p> Denne teksten inngår i serien <a href="/serier/node"
+      >node</a
+    >.</p>
+<p style="margin-bottom: 0;">Andre artikler i samme serie:</p>
+ 
+<ul class="series" style="margin-top: .5rem;">
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-winston/">Logging av interne feil med Winston</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-morgan/">Loggføring av HTTP-forespørsler med Morgan</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-express/">Node i «Express»-fart</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-error/">Feilhåndtering og feilkoder</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-http/">Fra kommandolinjen til server i Node</a>
+    
+  </li>
+  
+  <li>
+    <b>Fra Markdown til JSON</b>
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo/">Jeg lærer Node.js</a>
+    
+  </li>
+  
+</ul>
+
+</div>
+
+
+    
+        </div>
+        <section>
+    
+            
+        
+          <p class="ingress">Det er enklere og mer oversiktlig å arbeide med strukturert data fremfor ustrukturert tekst. Derfor valgte jeg å konvertere Node-applikasjonen min fra å bruke Markdown til bransjestandarden JSON.</p>
+        
+    <p>I forrige <a href="/tekster/node-todo/">
+    Node-innlegg</a> gjorde jeg meg kjent med <code>fs</code>-metoden i Node, for filbehandling. Jeg endte opp med fire filer til sammen:</p>
+<ol>
+<li>Ferdige oppgaver</li>
+<li>Backup av ferdige oppgaver</li>
+<li>Uferdige oppgaver</li>
+<li>Backup av uferdige oppgaver</li>
+</ol>
+<p>Med JSON halverte jeg antallet ved å konvertere oppgavene fra enkle tekststrenger til JavaScript-objekter med utfyllende informasjon.</p>
+<p>Så jeg gikk fra fire Markdown-filer som dette&hellip;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Lage app for bokregistrering
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Lage app for musikk-registrering
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Lage app for bok, musikk og CD-registrering
+</span></span></code></pre></div><p>&hellip; til to JSON-filer som dette:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;createdDate&#34;</span>: <span style="color:#e6db74">&#34;2026-02-26&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;done&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1772116260687</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;task&#34;</span>: <span style="color:#e6db74">&#34;dette er en test2&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;createdDate&#34;</span>: <span style="color:#e6db74">&#34;2026-02-27&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;done&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1772192130897</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;task&#34;</span>: <span style="color:#e6db74">&#34;dette er en test7&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h2 id="json">JSON</h2>
+<p>JavaScript Object Notation (JSON) er en metode for å transportere data som strukturert tekst, og brukes mye i web-applikasjoner som å sende informasjon mellom en server og en klient. Slik sett passer det perfekt for min lille to-do-app.</p>
+<p>Det er et standardformat som er basert på JavaScript, men er i seg selv et språk-uavhengig format som de fleste programmeringsspråk støtter.</p>
+<p>JSON bygger på to datastrukturer som er &ldquo;nøkkelpar&rdquo; og lister («arrayer»). Det er ganske enkelt sammenlignet med for eksempel XML, og resulterer i raskere overføringer og mindre filstørrelser.</p>
+<p>Formatet ble opprinnelig spesifisert av Douglas Crockford tidlig på 2000-tallet, og støtter følgende datatyper:</p>
+<ul>
+<li>Tall</li>
+<li>Tekst (String)</li>
+<li>Bolske verdier («true/false»)</li>
+<li>Lister («arrays»)</li>
+<li>Objekter (nøkkel:verdi-par)</li>
+<li>Null (tom verdi)</li>
+</ul>
+<p>JSON gir langt bedre fleksibilitet enn tekststrenger basert på indeks. Jeg kan lagre mer data per oppgave, og det blir mye enklere å filtrere mellom utførte og uferdige oppgaver i én og samme fil</p>
+<p>Så første steg var å bestemme hva to-do-objektet skulle inneholde. Jeg landet på følgende:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;createdDate&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;T&#34;</span>)[<span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;task&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">task</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><code>createdDate</code>: Dato for opprettelse. Jeg valgte å fjerne klokkeslettet med split, slik at jeg kun satt igjen med datoen.</li>
+<li><code>id</code>: Unik ID basert på dagens dato ned til millisekunder</li>
+<li><code>task</code>: Oppgaven</li>
+<li><code>done</code>: Status</li>
+</ul>
+<p>Jeg erfarte også at JSON er litt strengere med syntaksen. Jeg hadde nemlig komma bak siste nøkkelpar, og da feilet koden:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;createdDate&#34;</span>: <span style="color:#e6db74">&#34;2026-02-26&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;done&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1772116260687</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;task&#34;</span>: <span style="color:#e6db74">&#34;dette er en test2&#34;</span>,
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>JSON støtter heller ikke kommentarer i koden.</p>
+<h2 id="en-liste-med-objekter">En liste med objekter</h2>
+<p>En JSON-fil kan enten starte med et objekt eller en liste på toppnivå. Det betydde at jeg måtte legge opp til en ny fil <code>tasks.json</code> i koden, dersom den ikke allerede eksisterer. Og jeg måtte sørge for at den alltid starter med en liste <code>[]</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tasksFileName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tasks.json&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">taskObjects</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Validate file
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateFile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// create file if it doesnt exist
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">existsSync</span>(<span style="color:#e6db74">`./</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>) <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;&#34;</span>) {<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;[]&#34;</span>)};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Jeg kunne kvitte meg med <code>trim</code> og <code>split</code> som jeg hadde tidligere, fordi Nodes innebygde JSON-metode <code>JSON.parse</code> fikser det for oss. Den konverterer tekst til objekter, og omvendt med <code>JSON.stringify()</code>. Disse metodene er for øvrig også innebygd i JavaScript, og til og med i nettleseren.</p>
+<p>Her er et eksempel på hvor mye kode som kan fjernes ved å konvertere til JSON:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// ------ GAMMEL KODE ------- //
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Validate file
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateFile</span>(...<span style="color:#a6e22e">files</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">file</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// create file if it doesnt exist
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">existsSync</span>(<span style="color:#e6db74">`./</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">file</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)) {<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">file</span>, <span style="color:#e6db74">&#34;&#34;</span>)};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readFile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">file</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>).<span style="color:#a6e22e">trim</span>(<span style="color:#e6db74">&#34;&#34;</span>).<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// avoid empty line on top of document
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">readFile</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">readFile</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {<span style="color:#a6e22e">readFile</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>};
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">file</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">tasksFileName</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fileContentTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readFile</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">completedFileName</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fileContentCompleted</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readFile</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ------ SLUTT GAMMEL KODE ------ //
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ------ NY KODE ...... //
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateFile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// create file if it doesnt exist
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">existsSync</span>(<span style="color:#e6db74">`./</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)) {<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;[]&#34;</span>)};
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>));
+</span></span></code></pre></div><h2 id="objekt-generator">Objekt-generator</h2>
+<p>Neste steg var å lage en funksjon som konstruerte objekter basert på innkommende oppgave via <code>add</code>-argumentet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">task</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;createdDate&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;T&#34;</span>)[<span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;task&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">task</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">object</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">writeFile</span>();
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Jeg oppdaterte også <code>writeFile</code>-funksjonen til å konvertere tilbake fra JSON-objekt til streng:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// write files
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeFile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">taskObjects</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Opprinnelig la jeg <code>JSON.stringify</code> i selve objekt-generatoren, før kallet på <code>writefile</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// taskObjectGenerator
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">task</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;task&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">task</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">object</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">taskObjects</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">writeFile</span>()
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// write files
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeFile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Det var en dårlig løsning, for hva om man trenger <code>taskObjects</code> som array senere i programmet? Det tryggeste er derfor å holde den som en array hele veien, helt til filen skal skrives. Jeg flyttet derfor <code>JSON.stringify</code> inn i <code>writeFile</code>-funksjonen som vist lenger opp.</p>
+<h2 id="presentere-oppgaver">Presentere oppgaver</h2>
+<p>Jeg fortsatte med <code>listTasks</code>-funkjsonen som også kunne forenkles en del. Også her fjernet jeg <code>trim</code> og <code>split</code> til fordel for <code>filter</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// list tasks
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">listTasks</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">finishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Oppgaver som venter:&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">unfinishedTasks</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;0&#34;</span>)
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">unfinishedTasks</span>.<span style="color:#a6e22e">forEach</span>(({<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">task</span>}, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">$</span>{<span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>}. [ ] <span style="color:#a6e22e">$</span>{<span style="color:#a6e22e">task</span>});
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;\nOppgaver som er gjort:&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">finishedTasks</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;0&#34;</span>)
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">finishedTasks</span>.<span style="color:#a6e22e">forEach</span>(({<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">task</span>}, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">$</span>{(<span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">unfinishedTasks</span>.<span style="color:#a6e22e">length</span>}. [<span style="color:#a6e22e">x</span>] <span style="color:#a6e22e">$</span>{<span style="color:#a6e22e">task</span>});
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="endre-status-på-oppgaver">Endre status på oppgaver</h2>
+<p>Så kom jeg til funksjonen for å endre status på en oppgave. Også denne kunne forkortes betraktelig ettersom jeg hadde gått over til objekter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// check or uncheck task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkTask</span>(<span style="color:#a6e22e">status</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">finishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">finishedTasks</span>).<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ((<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">:</span> (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">unfinishedTasks</span>.<span style="color:#a6e22e">length</span>)) <span style="color:#f92672">==</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span> <span style="color:#f92672">=</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>;
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  }); 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Marker oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">secondArg</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> som </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;ferdig&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;uferdig&#34;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">writeFile</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>INFO</strong>
+Det kan være nyttig å minne om referanser vs. verdier i JavaScript. Primitive verdier som tall, strenger og boolske verdier kopieres når de tilordnes en variabel. Det gjelder ikke objekter og lister. Vi får en referanse til minnet hvor originalen befinner seg. Så en variabel med en filtrert liste inneholder ingen &ldquo;ekte&rdquo; verdier selv, men kun henvisninger til originallisten.</p>
+<h2 id="slette-oppgaver">Slette oppgaver</h2>
+<p><code>deleteTask</code>-funksjonen kunne jeg også vesentlig forkorte, samtidig som jeg forbedret den.</p>
+<p>Jeg opprettet to variabler for henholdsvis uferdige og fullførte oppgaver. Deretter brukte jeg <code>spread</code>  og <code>filter</code> for å slå de sammen igjen. Dette var for å sikre riktig sortering: uferdige først, ferdige etterpå, slik at nummereringen stemmer overens med det <code>listTasks</code> viser.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// delete a task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deleteTask</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">finishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">unfinishedTasks</span>, ...<span style="color:#a6e22e">finishedTasks</span>].<span style="color:#a6e22e">filter</span>((<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">index</span>) =&gt; <span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">secondArg</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Sletter oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">secondArg</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><h2 id="endelig-resultat">Endelig resultat</h2>
+<p>Etter flere optimaliseringer og refaktoreringer satt jeg igjen med følgende kode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use strict&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">args</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstArg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tasksFileName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tasks.json&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">taskObjects</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Check for valid argument
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkForValidArgument</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">secondArg</span>.<span style="color:#a6e22e">trim</span>().<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Må angi et argument&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Validate file
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateFile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// create file if it doesnt exist
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">existsSync</span>(<span style="color:#e6db74">`./</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)) {<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;[]&#34;</span>)};
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Validate tasks
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkForValidTask</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">finishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (isNaN(<span style="color:#a6e22e">secondArg</span>) <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>Number.<span style="color:#a6e22e">isInteger</span>(Number(<span style="color:#a6e22e">secondArg</span>)) <span style="color:#f92672">||</span> <span style="color:#a6e22e">secondArg</span>.<span style="color:#a6e22e">trim</span>().<span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Må være et nummer uten desimaler&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  } 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Angi kun ett tall uten mellomrom&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Nummer utenfor rekkevidde.&#34;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// write files
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeFile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">taskObjects</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// create a backup
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">backup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">copyFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.bak`</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// list tasks
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">listTasks</span>() { 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">finishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Oppgaver som venter:&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">unfinishedTasks</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;0&#34;</span>)
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">unfinishedTasks</span>.<span style="color:#a6e22e">forEach</span>(({<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">task</span>}, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">. [ ] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;\nOppgaver som er gjort:&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">finishedTasks</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;0&#34;</span>)
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">finishedTasks</span>.<span style="color:#a6e22e">forEach</span>(({<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">task</span>}, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span>(<span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">unfinishedTasks</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74">. [x] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// check or uncheck task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkTask</span>(<span style="color:#a6e22e">status</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">finishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">finishedTasks</span>).<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ((<span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">:</span> (<span style="color:#a6e22e">secondArg</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">unfinishedTasks</span>.<span style="color:#a6e22e">length</span>)) <span style="color:#f92672">==</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span> <span style="color:#f92672">=</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>;
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  }); 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Marker oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">secondArg</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> som </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;ferdig&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;uferdig&#34;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">writeFile</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// delete a task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deleteTask</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">unfinishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">finishedTasks</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">done</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">unfinishedTasks</span>, ...<span style="color:#a6e22e">finishedTasks</span>].<span style="color:#a6e22e">filter</span>((<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">index</span>) =&gt; <span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">secondArg</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Sletter oppgave </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">secondArg</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">task</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;createdDate&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;T&#34;</span>)[<span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;task&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">task</span>,
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">object</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">writeFile</span>();
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">firstArg</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;add&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span><span style="color:#a6e22e">checkForValidArgument</span>() ) { <span style="color:#66d9ef">return</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">task</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;La til oppgave&#34;</span>, <span style="color:#a6e22e">task</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;check&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span><span style="color:#a6e22e">checkForValidTask</span>() ) { <span style="color:#66d9ef">return</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">checkTask</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;uncheck&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span><span style="color:#a6e22e">checkForValidTask</span>() ) { <span style="color:#66d9ef">return</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">checkTask</span>(<span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;del&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span><span style="color:#a6e22e">checkForValidTask</span>()) { <span style="color:#66d9ef">return</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">deleteTask</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;list&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">validateFile</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">listTasks</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Ugyldig kommando&#34;</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Neste steg på reisen blir å implementere Express.</p>
+</section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-1.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-1"></span>&#32;
+
+<script id="script-1">
+  var scriptTag = document.getElementById("script-1");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "NOSJ lit nwodkraM arF nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<hr class="single">
+    <section class="backlinks">
+        <h2>Andre tekster som henviser til denne: </h2>
+            <ul class="taglist single">
+                
+                <li>
+            <a href="https://www.michaelhelgesen.no/tekster/node-todo-http/">
+            <h3>Fra kommandolinjen til server i Node</h3>
+            <div>
+                <p class="last-posts-list__meta">
+                <span style="font-weight: 600">Tekster</span> | 
+                
+                
+                <span>Red: 16. mai 2026 | </span>
+                
+                <span>Pub: 1. mai 2026</span>    
+                
+                </p>
+            </div>
+            </a>
+        </li>
+                
+            </ul>
+    </section>
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

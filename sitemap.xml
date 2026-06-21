@@ -3,9 +3,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://www.michaelhelgesen.no/tekster/node-todo/</loc>
+      <loc>https://www.michaelhelgesen.no/tekster/node-todo-winston/</loc>
       
-        <lastmod>2026-03-17T22:36:21+01:00</lastmod>
+        <lastmod>2026-06-17T18:21:28+02:00</lastmod>
       
       
     </url>
@@ -13,7 +13,7 @@
     <url>
       <loc>https://www.michaelhelgesen.no/serier/node/</loc>
       
-        <lastmod>2026-03-17T22:36:21+01:00</lastmod>
+        <lastmod>2026-06-17T18:21:28+02:00</lastmod>
       
       
     </url>
@@ -21,13 +21,61 @@
     <url>
       <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/node/</loc>
       
-        <lastmod>2026-03-17T22:36:21+01:00</lastmod>
+        <lastmod>2026-06-17T18:21:28+02:00</lastmod>
       
       
     </url>
   
     <url>
       <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/programmering/</loc>
+      
+        <lastmod>2026-06-17T18:21:28+02:00</lastmod>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://www.michaelhelgesen.no/tekster/node-todo-morgan/</loc>
+      
+        <lastmod>2026-06-15T22:20:52+02:00</lastmod>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://www.michaelhelgesen.no/tekster/node-todo-express/</loc>
+      
+        <lastmod>2026-06-10T23:11:57+02:00</lastmod>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://www.michaelhelgesen.no/tekster/node-todo-error/</loc>
+      
+        <lastmod>2026-06-13T08:37:08+02:00</lastmod>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://www.michaelhelgesen.no/tekster/node-todo-http/</loc>
+      
+        <lastmod>2026-05-16T08:39:26+02:00</lastmod>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://www.michaelhelgesen.no/tekster/node-todo-json/</loc>
+      
+        <lastmod>2026-05-06T21:55:55+02:00</lastmod>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://www.michaelhelgesen.no/tekster/node-todo/</loc>
       
         <lastmod>2026-03-17T22:36:21+01:00</lastmod>
       
@@ -445,7 +493,7 @@
     <url>
       <loc>https://www.michaelhelgesen.no/tekster/facit-tp2-restaurert/</loc>
       
-        <lastmod>2026-03-04T20:23:57+01:00</lastmod>
+        <lastmod>2026-06-10T21:50:07+02:00</lastmod>
       
       
     </url>
@@ -453,7 +501,7 @@
     <url>
       <loc>https://www.michaelhelgesen.no/emneknagger/tekstemner/skrivemaskin/</loc>
       
-        <lastmod>2026-03-04T20:23:57+01:00</lastmod>
+        <lastmod>2026-06-10T21:50:07+02:00</lastmod>
       
       
     </url>

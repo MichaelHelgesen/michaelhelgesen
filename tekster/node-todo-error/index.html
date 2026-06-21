@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feilhåndtering og feilkoder</title>
+ <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <meta name="author" content="Michael Helgesen">
+  <link rel="canonical" href="https://www.michaelhelgesen.no/tekster/node-todo-error/" itemprop="url" />
+<meta property="og:url" content="https://www.michaelhelgesen.no/tekster/node-todo-error/">
+	<meta property="og:site_name" content="Michael Helgesen">
+	<meta property="og:title" content="Feilhåndtering og feilkoder">
+	<meta property="og:description" content="Slik oppdaterte jeg Node-applikasjonen med try/catch og serverstatuskoder.">
+	<meta property="og:locale" content="nb">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="tekster">
+		<meta property="article:published_time" content="2026-05-15T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-06-13T08:37:08+02:00">
+
+
+
+
+
+<meta property="og:image" content="https://www.michaelhelgesen.no//images/mikke.webp"/>
+          <meta property="og:image:secure_url" content="https://www.michaelhelgesen.no/images/mikke.webp"/>
+          
+
+          
+
+<meta name="description" content="Slik oppdaterte jeg Node-applikasjonen med try/catch og serverstatuskoder.">
+
+
+
+</head>
+
+    <body>
+    
+    
+
+
+
+
+<header>
+    <div class="logo">
+        <a href="/">MH</a>
+    </div>
+    <div>
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+        
+           
+
+
+
+
+
+
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/">
+                    <span itemprop="name">Hjem</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='1' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/tekster/">
+                    <span itemprop="name">Tekster</span></a>
+                /&nbsp;
+                <meta itemprop="position" content='2' />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="https://www.michaelhelgesen.no/tekster/node-todo-error/">
+                    <span itemprop="name">Feilhåndtering og feilkoder</span>
+                </a>
+                <meta itemprop="position" content='3' />
+            </li>
+    </ol>
+    
+
+        
+    </div>
+</header>
+ 
+   
+
+   
+   <main>
+         
+
+<article>
+    
+        <div class="intro blogg">
+    
+    
+        <h1>Feilhåndtering og feilkoder</h1>
+        <p class="last-posts-list__meta">
+            
+                <span>Red: 13. juni 2026 | </span>
+            
+            <span>Pub: 15. mai 2026 | </span>    
+             
+ 
+
+    
+    
+         <a href="/emneknagger/tekstemner/node/"> 
+        
+        #node</a>, 
+         <a href="/emneknagger/tekstemner/programmering/"> 
+        
+            #programmering</a>
+        
+
+
+        </p>
+	  
+<div class="serie">
+	<p> Denne teksten inngår i serien <a href="/serier/node"
+      >node</a
+    >.</p>
+<p style="margin-bottom: 0;">Andre artikler i samme serie:</p>
+ 
+<ul class="series" style="margin-top: .5rem;">
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-winston/">Logging av interne feil med Winston</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-morgan/">Loggføring av HTTP-forespørsler med Morgan</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-express/">Node i «Express»-fart</a>
+    
+  </li>
+  
+  <li>
+    <b>Feilhåndtering og feilkoder</b>
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-http/">Fra kommandolinjen til server i Node</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo-json/">Fra Markdown til JSON</a>
+    
+  </li>
+  
+  <li>
+    
+    <a href="https://www.michaelhelgesen.no/tekster/node-todo/">Jeg lærer Node.js</a>
+    
+  </li>
+  
+</ul>
+
+</div>
+
+
+    
+        </div>
+        <section>
+    
+            
+        
+          <p class="ingress">Med serverstatuskoder, «try/catch»-blokker og bedre fordeling av ansvar i koden, vil «to-do»-applikasjonen være bedre rustet til å håndtere feil både i selve programmet og i innkommende data fra klienten.</p>
+        
+    <p>I forrige <a href="/tekster/node-todo-http/">
+    Node-innlegg</a> opprettet jeg en server med Nodes egen HTTP-modul, som overvåket alle innkommende henvendelser og behandlet dem.</p>
+<p>Men hva om noen ber om sletting av en oppgave som ikke finnes? Eller sender manglende og kanskje feil data? Det er applikasjonens oppgave å fange opp dette, og returnere en korrekt og tilfredsstillende beskjed til klienten, som kan forstå hva som har skjedd.</p>
+<h2 id="serverkoder">Serverkoder</h2>
+<p>Vi kan sende en konkret, manuelt forfattet beskjed, men vi bør også sende en standard relevant server-kode, som 200, 404 eller 503. Det finnes <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status#server_error_responses" target="_blank" class="external_link">
+    
+            
+                flere
+                hundre
+                koder
+                for
+                ulike
+                
+                    <span>tilstander
+                        <svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Interface / External_Link">
+                        <path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                        </svg></span></a>, men i denne enkle applikasjonen trenger vi bare en håndfull, og kort fortalt er 2xx suksessmelding, 4xx klientfeil og 5xx serverfeil.</p>
+<p>Koden min var derfor på dette stadiet problematisk, siden jeg hadde etablert en «header» som returnerte 200, uavhengig av typen forespørsel. Det er selvsagt ikke god praksis.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>((<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;GET&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;/tasks&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">taskObjects</span>,
+</span></span><span style="display:flex;"><span>    }));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span></code></pre></div><p><code>writeHead</code> må defineres i de respektive endepunktene.</p>
+<p>Jeg startet med slettingen av en oppgave. Den så slik ut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;DELETE&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;/tasks/&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">deleteTask</span>(Number(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>)[<span style="color:#ae81ff">2</span>]), <span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;DELETING&#39;</span>,
+</span></span><span style="display:flex;"><span>    }));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Jeg definerte først to variabler: en for responsmeldingen <code>resObj</code>, og en for statuskoden <code>statuscode</code>. Verdien bestemmes ut ifra responsen fra <code>deleteTask</code>-funksjonen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;DELETE&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;/tasks/&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskID</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>)[<span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">deleteTask</span>(<span style="color:#a6e22e">taskID</span>, <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> deleted`</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. No to-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> found`</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">404</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="ekstra-feilhåndtering-i-funksjoner">Ekstra feilhåndtering i funksjoner</h2>
+<p>Jeg måtte også oppdatere <code>deleteTask</code>-funksjonen til å returnere en booleansk verdi: <code>true</code> hvis ID-en eksisterte og oppgaven ble slettet, og <code>false</code> dersom ID-en er ukjent.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// delete a task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deleteTask</span>(<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">checkForID</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">checkForID</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>((<span style="color:#a6e22e">obj</span>) =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Jeg oppdaterte <code>PUT</code> og <code>POST</code> og henholdsvis <code>checkTask</code>- og <code>taskObjectGenerator</code>-funksjonene. Legg merke til at jeg i <code>taskObjectGenerator</code> sjekker om data eksisterer, og at den ikke er en tom streng.</p>
+<p>I <code>PUT</code> og <code>POST</code> har jeg også lagt til en ekstra sjekk av typen data som kommer inn, for å sikre at det er henholdsvis boolsk verdi, og streng.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// check or uncheck task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkTask</span>(<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">status</span>, <span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">checkForID</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">checkForID</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">task</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">task</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">id</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {...<span style="color:#a6e22e">task</span>, <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">status</span>};
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>	        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">task</span>;    
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create todo-object
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">data</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">trim</span>()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;createdDate&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;T&#34;</span>)[<span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;task&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">object</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;/tasks&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;data&#34;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">body</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;end&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;string&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> created`</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. Creation of to-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed. Name, date or ID is missing.`</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>));
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;PUT&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;/tasks/&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;data&#34;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">body</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;end&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskID</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>)[<span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;boolean&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">checkTask</span>(<span style="color:#a6e22e">taskID</span>, <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span> , <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> changed to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. No to-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> found.`</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">404</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>));
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>} 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span></code></pre></div><p>Til slutt, i if-else-blokken, la jeg inn en 404:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">404</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Error. Page not found&#39;</span>
+</span></span><span style="display:flex;"><span>    }));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Og øverst i <code>GET</code> en 200. Denne kan sløyfes, siden status 200 er standard hvis ikke annet er angitt, men det er alltid bedre å være eksplisitt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;GET&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;/tasks&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">taskObjects</span>,
+</span></span><span style="display:flex;"><span>    }));
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><h2 id="trycatch">try/catch</h2>
+<p>Nå har jeg en sjekk for dataene som kommer fra klienten, at den ikke er feil eller mangler. Men hva om noe skjer med serveren eller i applikasjonen? Hva skal da returneres?</p>
+<p>Da benyttes «try/catch». Hvis noe i try-blokken feiler, og gir en «exception», altså en uventet feil som avbryter programmet, så sendes den til «catch»-blokken som tar over, og gir oss en mulighet til å gi beskjed til klienten, med mindre det er en fatal error selvsagt, som krasjer hele serveren og/eller applikasjonen.</p>
+<p>Jeg startet med <code>POST</code>, og flyttet alt i <code>req.on(&quot;end&quot;, () =&gt;</code> inn i en «try/catch»:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;/tasks&#34;</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;data&#34;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">body</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;end&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;string&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> created`</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>          } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. Creation of to-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed. Name, date or ID is missing.`</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>;
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>));
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;SyntaxError&#34;</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Something went wrong`</span>
+</span></span><span style="display:flex;"><span>          }));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Merk at jeg ikke sender <code>error</code>-meldingen fra <code>catch</code> til klienten. Den kan inneholde sensitiv informasjon om serveren, og er heller ment til feillogg for systemadministrator/applikasjonsutvikler, noe jeg antagelig vil utforske i neste steg av utviklingen.</p>
+<p>Jeg sender heller en manuell melding og statuskode. Først satte jeg koden til 500, men det ble ikke helt presist. 500 indikerer jo en serverfeil, og det stemmer ikke overens dersom det er klientens JSON som er ugyldig. Det kan vi løse med å sjekke navnet på <code>error</code>-meldingen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;SyntaxError&#34;</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span></code></pre></div><p>Jeg gjorde det samme med <code>PUT</code>, og oppdaterte til slutt <code>DELETE</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;PUT&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;/tasks/&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;data&#34;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">body</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;end&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskID</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>)[<span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;boolean&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">checkTask</span>(<span style="color:#a6e22e">taskID</span>, <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span> , <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> changed to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. No to-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> found.`</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">404</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>));
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;SyntaxError&#34;</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Something went wrong.`</span>
+</span></span><span style="display:flex;"><span>          }));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>   } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;DELETE&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;/tasks/&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskID</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>)[<span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">deleteTask</span>(<span style="color:#a6e22e">taskID</span>, <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> deleted`</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. No to-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> found`</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">404</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>));
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">500</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Something went wrong.&#34;</span>
+</span></span><span style="display:flex;"><span>      }));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Alle varianter ble testet med Curl, og til min store fryd så det ut til å fungere.</p>
+<h2 id="konvertering-til-express">Konvertering til Express</h2>
+<p>I og med at «try/catch» returnerer feilmeldinger som er ment for utviklere og serveradministratorer, tenker jeg at en loggføring av applikasjonen er et naturlig neste steg. Det finnes tredjeparts-moduler for dette som Winston, men den er laget spesielt for rammeverket Express, en annen tredjepartsmodul som erstatter HTTP-modulen. Derfor bør jeg først konvertere nåværende kode, før jeg starter på loggingen.</p>
+<p>Og som alltid, her er den fullstendige så langt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use strict&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;node:http&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tasksFileName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tasks.json&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Validate file
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateFile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// create file if it doesnt exist
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">existsSync</span>(<span style="color:#e6db74">`./</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;[]&#34;</span>)
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// create a backup
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">backup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">copyFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tasksFileName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.bak`</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// write files
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">backup</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">tasksFileName</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">taskObjects</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// check or uncheck task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkTask</span>(<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">status</span>, <span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">checkForID</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">checkForID</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">task</span> =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">task</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">id</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {...<span style="color:#a6e22e">task</span>, <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">status</span>};
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">task</span>;    
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create todo-object
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">data</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">trim</span>()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;createdDate&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>().<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;T&#34;</span>)[<span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;done&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;task&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">object</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// delete a task
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deleteTask</span>(<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">taskObjects</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">checkForID</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">obj</span> =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">checkForID</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskObjects</span>.<span style="color:#a6e22e">filter</span>((<span style="color:#a6e22e">obj</span>) =&gt; <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">writeFile</span>(<span style="color:#a6e22e">taskObjects</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Opprett en lokal server som skal motta data
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>((<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;GET&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;/tasks&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">200</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">taskObjects</span>,
+</span></span><span style="display:flex;"><span>    }));
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;/tasks&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;data&#34;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">body</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;end&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;string&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">taskObjectGenerator</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span>, <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> created`</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. Creation of to-do </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">task</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> failed. Name, date or ID is missing.`</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>));
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;SyntaxError&#34;</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Somethin went wrong.&#34;</span>
+</span></span><span style="display:flex;"><span>        }));
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;PUT&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;/tasks/&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;data&#34;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">body</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;end&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskID</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>)[<span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;boolean&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">checkTask</span>(Number(<span style="color:#a6e22e">taskID</span>), <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span> , <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> changed to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. No to-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> found.`</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">404</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>))
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;SyntaxError&#34;</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">500</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Something went wrong.`</span>
+</span></span><span style="display:flex;"><span>        }));
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">method</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;DELETE&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;/tasks/&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskObjects</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">validateFile</span>();
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskID</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;/&#34;</span>)[<span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">resObj</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">statusCode</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">deleteTask</span>(Number(<span style="color:#a6e22e">taskID</span>), <span style="color:#a6e22e">taskObjects</span>)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Success. To-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> deleted`</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resObj</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Error. No to-do with ID </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">taskID</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> found`</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">404</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#a6e22e">statusCode</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">resObj</span>))
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">500</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Something went wrong.&#34;</span>
+</span></span><span style="display:flex;"><span>      }));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">writeHead</span>(<span style="color:#ae81ff">404</span>, { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Error. Page not found&#39;</span>
+</span></span><span style="display:flex;"><span>    }));
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">8000</span>);
+</span></span></code></pre></div></section>
+</article>
+<hr class="single">
+<section class="mail">
+<h2>Ris, ros eller respons?</h2>
+<p> 
+Send meg gjerne 
+<style>
+  #span-1.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-1"></span>&#32;
+
+<script id="script-1">
+  var scriptTag = document.getElementById("script-1");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('') + "?" + "redoklief go gniretdnåhlieF nedis edneågnA=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+
+ om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<hr class="single">
+    <section class="backlinks">
+        <h2>Andre tekster som henviser til denne: </h2>
+            <ul class="taglist single">
+                
+                <li>
+            <a href="https://www.michaelhelgesen.no/tekster/node-todo-express/">
+            <h3>Node i «Express»-fart</h3>
+            <div>
+                <p class="last-posts-list__meta">
+                <span style="font-weight: 600">Tekster</span> | 
+                
+                
+                <span>Red: 10. juni 2026 | </span>
+                
+                <span>Pub: 23. mai 2026</span>    
+                
+                </p>
+            </div>
+            </a>
+        </li>
+                
+            </ul>
+    </section>
+
+
+   </main>
+   
+
+    
+        
+
+
+
+
+
+<footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    <nav>
+        <ul>
+<li>
+      <a href="/">Hjem</a>
+    </li>
+<li>
+      <a aria-current="true" class="ancestor" href="/tekster/">Tekster</a>
+    </li>
+<li>
+      <a href="/laeringslogg/">Læringslogg</a>
+    </li>
+<li>
+      <a href="/emneknagger/">Emneknagger</a>
+    </li>
+<li>
+      <a href="/kilder/">Kilder</a>
+    </li>
+<li>
+      <a href="/bibliotek/">Bibliotek</a>
+    </li>
+<li>
+      <a href="/lenker/">Lenker</a>
+    </li>
+<li>
+      <a href="/galleri/">Galleri</a>
+    </li>
+<li>
+      <a href="/kunstig-intelligens/">KI</a>
+    </li>
+<li>
+      <a href="/na/">Nå</a>
+    </li>
+<li>
+      <a href="/om/">Om</a>
+    </li>
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p><a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="88" height="31 "title="Laget av et menneske" src="/images/MadeByAHuman_01.png" }} /></a></footer>
+
+
+   
+</body>
+</html>

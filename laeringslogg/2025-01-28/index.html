@@ -13,14 +13,14 @@
     <meta name="author" content="Michael Helgesen">
   <link rel="canonical" href="https://www.michaelhelgesen.no/laeringslogg/2025-01-28/" itemprop="url" />
 <meta property="og:url" content="https://www.michaelhelgesen.no/laeringslogg/2025-01-28/">
-  <meta property="og:site_name" content="Michael Helgesen">
-  <meta property="og:title" content="2025-01-28">
-  <meta property="og:description" content="sanity Fullførte kurset Handling schema changes confidently og lærte om endringer av skjema, migrering av data, eksport og import av data. Vi kan laste opp hele datasett npx sanity@latest dataset import ~/path/to/production.tar.gz production. Kan validere med npx sanity@latest documents validate. For å endre navn på et felt kan man gå frem på følgende måte: Legge til nytt felt med nytt navn. Deaktivere gammelt felt deprecated: { reason: &#34;Use the event Format field insteda.&#34;} Oppdatere spørringen for å hente fra den nye feltet, med mulighet til å falle tilbake på gammelt felt. Oppdatere GROQ-spørring i front-end filer til å støtte begge felt ved bruk av «coalesce»: &#34;eventType&#34;: coalesce(format, eventType). Koden over betyr at man skal bruke format, om den har verdi, og knytte den til eventType. Om format er tom, skal eventType brukes. Lag et migrasjonsscript for å forberede flytting av data fra gammelt felt til nytt: npx sanity@latest migration create &#34;Replace event type with event format&#34;. I scriptet sett to og from til korrekte feltnavn. Kjør npx sanity@latest migration listfor å vise migrasjonslister. Kjør en «dry run» for å se hvordan en migrasjon vil påvirke studio: npx sanity@latest migration run replace-event-type-with-event-format. Eksporter gammel database: npx sanity@latest dataset export production. Ønsker du å tilbakestille til et stadie før migreringen, bruk: npx sanity@latest dataset import production.tar.gz production --replace. Kjør migrering med npx sanity@latest migration run replace-event-type-with-event-format --no-dry-run. Kjør validate på nytt for å se etter 0 errors: npx sanity@latest documents validate -y Fjern støtten for gammelt felt. Slett fra GROQ i front-end: &#34;eventType&#34;: coalesce(format, eventType) Endre i front-end. I dette tilfellet fra eventType til format Man kan også bruke en tilnærming Sanity kaller «indempotent». Betyr at man skal kunne kjøre migrasjonen flere ganger med samme resultat. Hindre at migrering skaper uønskede endringer. Kan bruke filter i scriptet for å velge kun de dokumentene som skal migreres. Ikke alltid filter kan brukes, da kan vi legge til en nøkkel når vi migrerer og hoppe over dokumenter som allerede har nøkler. Filter: import {defineMigration, at, setIfMissing, unset} from &#39;sanity/migrate&#39; const from = &#39;eventType&#39; const to = &#39;format&#39; export default defineMigration({ title: &#39;Replace event type with event format&#39;, // documentTypes: [&#39;event&#39;], filter: &#39;_type == &#34;event&#34; &amp;&amp; defined(eventType) &amp;&amp; !defined(format)&#39;, migrate: { document(doc, context) { return [at(to, setIfMissing(doc[from])), at(from, unset())] }, }, }) idempotenceKey (nøkkel): import {defineMigration, at, setIfMissing, unset, insert} from &#39;sanity/migrate&#39; // should be unique for the migration but never change const idempotenceKey = &#39;xyz&#39; const from = &#39;eventType&#39; const to = &#39;format&#39; export default defineMigration({ title: &#39;Replace event type with event format&#39;, // documentTypes: [&#39;event&#39;], filter: &#39;_type == &#34;event&#34; &amp;&amp; defined(eventType) &amp;&amp; !defined(format)&#39;, migrate: { document(doc, context) { if ((doc?._migrations as string[] || []).includes(idempotenceKey)) { // Document already migrated, so we can skip return } return [ at(to, setIfMissing(doc[from])), at(from, unset()), //… add idempotence key at(&#39;_migrations&#39;, setIfMissing([])), at(&#39;_migrations&#39;, insert(idempotenceKey, &#39;after&#39;, 0)), ] }, }, })">
-  <meta property="og:locale" content="nb">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="laeringslogg">
-    <meta property="article:published_time" content="2025-01-28T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-03-04T20:23:57+01:00">
+	<meta property="og:site_name" content="Michael Helgesen">
+	<meta property="og:title" content="2025-01-28">
+	<meta property="og:description" content="sanity Fullførte kurset Handling schema changes confidently og lærte om endringer av skjema, migrering av data, eksport og import av data. Vi kan laste opp hele datasett npx sanity@latest dataset import ~/path/to/production.tar.gz production. Kan validere med npx sanity@latest documents validate. For å endre navn på et felt kan man gå frem på følgende måte: Legge til nytt felt med nytt navn. Deaktivere gammelt felt deprecated: { reason: &#34;Use the event Format field insteda.&#34;} Oppdatere spørringen for å hente fra den nye feltet, med mulighet til å falle tilbake på gammelt felt. Oppdatere GROQ-spørring i front-end filer til å støtte begge felt ved bruk av «coalesce»: &#34;eventType&#34;: coalesce(format, eventType). Koden over betyr at man skal bruke format, om den har verdi, og knytte den til eventType. Om format er tom, skal eventType brukes. Lag et migrasjonsscript for å forberede flytting av data fra gammelt felt til nytt: npx sanity@latest migration create &#34;Replace event type with event format&#34;. I scriptet sett to og from til korrekte feltnavn. Kjør npx sanity@latest migration listfor å vise migrasjonslister. Kjør en «dry run» for å se hvordan en migrasjon vil påvirke studio: npx sanity@latest migration run replace-event-type-with-event-format. Eksporter gammel database: npx sanity@latest dataset export production. Ønsker du å tilbakestille til et stadie før migreringen, bruk: npx sanity@latest dataset import production.tar.gz production --replace. Kjør migrering med npx sanity@latest migration run replace-event-type-with-event-format --no-dry-run. Kjør validate på nytt for å se etter 0 errors: npx sanity@latest documents validate -y Fjern støtten for gammelt felt. Slett fra GROQ i front-end: &#34;eventType&#34;: coalesce(format, eventType) Endre i front-end. I dette tilfellet fra eventType til format Man kan også bruke en tilnærming Sanity kaller «indempotent». Betyr at man skal kunne kjøre migrasjonen flere ganger med samme resultat. Hindre at migrering skaper uønskede endringer. Kan bruke filter i scriptet for å velge kun de dokumentene som skal migreres. Ikke alltid filter kan brukes, da kan vi legge til en nøkkel når vi migrerer og hoppe over dokumenter som allerede har nøkler. Filter: import {defineMigration, at, setIfMissing, unset} from &#39;sanity/migrate&#39; const from = &#39;eventType&#39; const to = &#39;format&#39; export default defineMigration({ title: &#39;Replace event type with event format&#39;, // documentTypes: [&#39;event&#39;], filter: &#39;_type == &#34;event&#34; &amp;&amp; defined(eventType) &amp;&amp; !defined(format)&#39;, migrate: { document(doc, context) { return [at(to, setIfMissing(doc[from])), at(from, unset())] }, }, }) idempotenceKey (nøkkel): import {defineMigration, at, setIfMissing, unset, insert} from &#39;sanity/migrate&#39; // should be unique for the migration but never change const idempotenceKey = &#39;xyz&#39; const from = &#39;eventType&#39; const to = &#39;format&#39; export default defineMigration({ title: &#39;Replace event type with event format&#39;, // documentTypes: [&#39;event&#39;], filter: &#39;_type == &#34;event&#34; &amp;&amp; defined(eventType) &amp;&amp; !defined(format)&#39;, migrate: { document(doc, context) { if ((doc?._migrations as string[] || []).includes(idempotenceKey)) { // Document already migrated, so we can skip return } return [ at(to, setIfMissing(doc[from])), at(from, unset()), //… add idempotence key at(&#39;_migrations&#39;, setIfMissing([])), at(&#39;_migrations&#39;, insert(idempotenceKey, &#39;after&#39;, 0)), ] }, }, })">
+	<meta property="og:locale" content="nb">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="laeringslogg">
+		<meta property="article:published_time" content="2025-01-28T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-03-04T20:23:57+01:00">
 
 
 
@@ -147,7 +147,7 @@
         <h1>28. januar 2025</h1>
         <p class="last-posts-list__meta">
             
-                <span>Red: 4. mar. 2026 | </span>
+                <span>Red: 4. mars 2026 | </span>
             
             <span>Pub: 28. jan. 2025 | </span>    
              
@@ -303,6 +303,18 @@ Send meg gjerne
 
 
 
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
