@@ -20,7 +20,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="tekster">
 		<meta property="article:published_time" content="2026-06-06T00:00:00+00:00">
-		<meta property="article:modified_time" content="2026-06-17T18:21:28+02:00">
+		<meta property="article:modified_time" content="2026-06-22T21:21:50+02:00">
 
 
 
@@ -135,7 +135,7 @@
         <h1>Logging av interne feil med Winston</h1>
         <p class="last-posts-list__meta">
             
-                <span>Red: 17. juni 2026 | </span>
+                <span>Red: 22. juni 2026 | </span>
             
             <span>Pub: 6. juni 2026 | </span>    
              
@@ -429,37 +429,32 @@
 </span></span></code></pre></div><p>Her la jeg til en <code>debug</code>-logging for ekstra informasjon, som kun registreres dersom programmet kjører i «developer»-modus, men også her i <code>POST</code> hadde jeg noen unødvendige linjer.</p>
 <p>I <code>catch</code>-blokken logger jeg en error, men det er egentlig overflødig, siden jeg logger i både <code>writeFile</code> og <code>backup</code>, som kjøres som en del av opprettelsen av en oppgave. Og jeg logger jo «stack trace» i de meldingene, slik at jeg kan se hvilke funksjoner og ruter som har kalt funksjonen som feiler.</p>
 <p>Legg merke til at jeg lot loggingen stå i <code>if-else</code>-blokken. Det er fordi dette er et nivå som ikke innebærer noen funksjoner som logger. Men jeg angir det som «warn», ikke «error», fordi i dette tilfelle er det ikke en feil i programmet, men i dataene fra klienten.</p>
-<pre tabindex="0"><code>
-## Konsepter
-
-Jeg brukte litt tid på å forstå «try/catch» under denne øvelsen, noe som var veldig nyttig. I tillegg lærte jeg et par andre viktige konsepter:
-
-- «fail fast»: sørg for å håndtere feil kjapt
-- separation of concerns: del opp koden i hensiktsmessige deler
-- «log noise»: unngå å logge alt for mye. Det vil bare skape uoversiktlige og massive logg-filer
-- centralized error handling: feil bobler til et sted som tar seg av responsen til klienten
-- logg der feilen faktisk oppstår, ikke overalt den passerer gjennom
-
-Merk: «try/catch» har også finally, en blokk som kjører kode etter «try/catch» uavhengig av om feilen fanges eller «kastes». En finally-blokk vil alltid kjøre, og brukes gjerne for å rydde ressurser, stenge nettverkstilkoblinger og nullstille kode.
-
-Til slutt testet jeg ulike scenarier med Curl, for å sjekke om loggene fungerte, og at logikken og nivå var korrekt. Her følger et utdrag:
-
-```text
-Example app listening on port 3000
-info: Server started {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:32:35.244Z&#34;}
-info: List of tasks delivered {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:32:49.864Z&#34;}
-info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:16.081Z&#34;}
-info: Success. To-do Lære Winston created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:16.081Z&#34;}
-error: Error. Creation of to-do 123 failed. Name, date or ID is missing. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:35.335Z&#34;}
-info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:17.969Z&#34;}
-info: TO-DO with ID 1778914531405 created. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:17.969Z&#34;}
-info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:46.333Z&#34;}
-info: TO-DO with ID 1778914531405 created. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:46.334Z&#34;}
-warn: No ID with given ID 999999 found. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:08.069Z&#34;}
-info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:39.512Z&#34;}
-info: Task with ID 1778914531405 deleted. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:39.513Z&#34;}
-warn: Error. No to-do with ID 999999 found {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:37:07.485Z&#34;}
-</code></pre><p>Med både Winston- og Morganlogging på plass føler jeg meg klar til neste steg, som er testing med Jest: et verktøy som hjelper oss å unngå feil ved å teste hver individuelle funksjon.</p>
+<h2 id="konsepter">Konsepter</h2>
+<p>Jeg brukte litt tid på å forstå «try/catch» under denne øvelsen, noe som var veldig nyttig. I tillegg lærte jeg et par andre viktige konsepter:</p>
+<ul>
+<li>«fail fast»: sørg for å håndtere feil kjapt</li>
+<li>separation of concerns: del opp koden i hensiktsmessige deler</li>
+<li>«log noise»: unngå å logge alt for mye. Det vil bare skape uoversiktlige og massive logg-filer</li>
+<li>centralized error handling: feil bobler til et sted som tar seg av responsen til klienten</li>
+<li>logg der feilen faktisk oppstår, ikke overalt den passerer gjennom</li>
+</ul>
+<p>Merk: «try/catch» har også finally, en blokk som kjører kode etter «try/catch» uavhengig av om feilen fanges eller «kastes». En finally-blokk vil alltid kjøre, og brukes gjerne for å rydde ressurser, stenge nettverkstilkoblinger og nullstille kode.</p>
+<p>Til slutt testet jeg ulike scenarier med Curl, for å sjekke om loggene fungerte, og at logikken og nivå var korrekt. Her følger et utdrag:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Example app listening on port 3000
+</span></span><span style="display:flex;"><span>info: Server started {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:32:35.244Z&#34;}
+</span></span><span style="display:flex;"><span>info: List of tasks delivered {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:32:49.864Z&#34;}
+</span></span><span style="display:flex;"><span>info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:16.081Z&#34;}
+</span></span><span style="display:flex;"><span>info: Success. To-do Lære Winston created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:16.081Z&#34;}
+</span></span><span style="display:flex;"><span>error: Error. Creation of to-do 123 failed. Name, date or ID is missing. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:33:35.335Z&#34;}
+</span></span><span style="display:flex;"><span>info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:17.969Z&#34;}
+</span></span><span style="display:flex;"><span>info: TO-DO with ID 1778914531405 created. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:17.969Z&#34;}
+</span></span><span style="display:flex;"><span>info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:46.333Z&#34;}
+</span></span><span style="display:flex;"><span>info: TO-DO with ID 1778914531405 created. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:35:46.334Z&#34;}
+</span></span><span style="display:flex;"><span>warn: No ID with given ID 999999 found. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:08.069Z&#34;}
+</span></span><span style="display:flex;"><span>info: Backup created {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:39.512Z&#34;}
+</span></span><span style="display:flex;"><span>info: Task with ID 1778914531405 deleted. {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:36:39.513Z&#34;}
+</span></span><span style="display:flex;"><span>warn: Error. No to-do with ID 999999 found {&#34;service&#34;:&#34;todo-app&#34;,&#34;timestamp&#34;:&#34;2026-06-04T20:37:07.485Z&#34;}
+</span></span></code></pre></div><p>Med både Winston- og Morganlogging på plass føler jeg meg klar til neste steg, som er testing med Jest: et verktøy som hjelper oss å unngå feil ved å teste hver individuelle funksjon.</p>
 </section>
 </article>
 <hr class="single">
